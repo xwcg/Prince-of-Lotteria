@@ -41,7 +41,8 @@ void game_start()
 }
 
 void game_restart(void) {
-	level_load(level_name);
+	//level_load(level_name);
+	level_load_ext(level_name);
 }
 
 var vDummy2 = 0;
@@ -80,6 +81,7 @@ void level_load_ext(STRING* _lvl) {
 		set(panLoad, LIGHT | SHOW);
 		set(panLoadBar, LIGHT | SHOW);
 		
+		wait(1);
 		level_load(_lvl);
 	}
 }
