@@ -1,0 +1,6 @@
+1. music Ordner umbenennen, so dass er nicht mehr gefunden wird beim publishen
+2. von SED aus publish mit create resource. Alle Meldungen zu fehlenden Files per YES ignorieren.
+3. music Ordner wieder zurückbenennen und nach main.cd kopieren
+4. credits.ini nach main.cd kopieren
+5. starter, readme und sonstwas rüberkopieren
+5. main.cd nach published umbenennen und zippen
