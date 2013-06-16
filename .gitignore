@@ -5,6 +5,7 @@
 acklog.txt
 *.$$M
 *.$$w
+*.$$p
 *.bak
 *.raw
 
