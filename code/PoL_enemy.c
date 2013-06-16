@@ -196,6 +196,7 @@ void PoL_enemy_die()
 	var anim=0;
 	if(my==player)
 	player=NULL;
+	my.PoL_is_enemy = 0; // fixed by padmalcom
 	PoL_enemy_dead_enemies++;
 	set(my,PASSABLE);
 	while(anim<100&&my)
