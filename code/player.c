@@ -214,7 +214,7 @@ void move_player() {
 		#endif
 		
 		// If player jumps against the ceiling...
-		/*if (nTraceUp < 10) {
+		if (nTraceUp < 10) {
 			
 			// And doesn't use the jetpack...
 			if (!key_space || fPlayerJetpack <= 0) {
@@ -225,7 +225,7 @@ void move_player() {
 			} else {
 				vecPlayerMoveSpeed.z = -0.1 * time_step; // error 0
 			}
-		}*/
+		}
 		
 		// Can fall down?
 		nTraceDown = c_trace(player.x, vector(player.x,player.y,player.z-5000), IGNORE_ME | IGNORE_PASSABLE | USE_BOX);
@@ -359,7 +359,7 @@ void move_player() {
 			
 			if (my.PL_ATTACKING_PERCENTAGE >= 30 && !is(me, PL_ATTACKED_ONCE)) {
 				// Check if enemy is hit	
-				c_scan(my.x,my.pan,vector(120,0,200), IGNORE_ME | SCAN_ENTS);
+				c_scan(my.x,my.pan,vector(120,0,200), IGNORE_ME | SCAN_ENTS | SCAN_FLAG2);
 				if (you != NULL) {
 					if (is(you, PoL_is_enemy)) {
 						you.PoL_enemy_health -=1;
