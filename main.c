@@ -31,6 +31,8 @@
 void main() {
 	fps_max = 60; // By Felix, hatte probleme mit Stockender Framerate (nach oben)
 	d3d_antialias = 9; //beautifying by firo
+	mip_shaded = 2; // more beautifying by michael
+	mip_flat = 2;	// more beautifying by michael
 	preload_mode = 2+4; //avoid crumbling platform jerk
 	freeze_mode = 1;
 	random_seed(0);
