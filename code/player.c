@@ -359,7 +359,7 @@ void move_player() {
 			
 			if (my.PL_ATTACKING_PERCENTAGE >= 30 && !is(me, PL_ATTACKED_ONCE)) {
 				// Check if enemy is hit	
-				c_scan(my.x,my.pan,vector(120,0,200), IGNORE_ME | SCAN_ENTS);
+				c_scan(my.x,my.pan,vector(120,0,200), IGNORE_ME | SCAN_ENTS | SCAN_FLAG2);
 				if (you != NULL) {
 					if (is(you, PoL_is_enemy)) {
 						you.PoL_enemy_health -=1;
