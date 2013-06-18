@@ -1,0 +1,848 @@
+// WMP2
+// WMPIO V 1.30
+// Created 19.06.2013
+
+version 710
+
+blocks 0
+entities 45
+objects 45
+
+wed {
+	palette {
+		00 00 00  0f 0f 0f  1f 1f 1f  2f 2f 2f  3f 3f 3f  4b 4b 4b  5b 5b 5b  6b 6b 6b  7b 7b 7b  8b 8b 8b  9b 9b 9b  ab ab ab  bb bb bb  cb cb cb  db db db  eb eb eb  
+		0f 0b 07  17 0f 0b  1f 17 0b  27 1b 0f  2f 23 13  37 2b 17  3f 2f 17  4b 37 1b  53 3b 1b  5b 43 1f  63 4b 1f  6b 53 1f  73 57 1f  7b 5f 23  83 67 23  8f 6f 23  
+		0b 0b 0f  13 13 1b  1b 1b 27  27 27 33  2f 2f 3f  37 37 4b  3f 3f 57  47 47 67  4f 4f 73  5b 5b 7f  63 63 8b  6b 6b 97  73 73 a3  7b 7b af  83 83 bb  8b 8b cb  
+		00 00 00  07 07 00  0b 0b 00  13 13 00  1b 1b 00  23 23 00  2b 2b 07  2f 2f 07  37 37 07  3f 3f 07  47 47 07  4b 4b 0b  53 53 0b  5b 5b 0b  63 63 0b  6b 6b 0f  
+		07 00 00  0f 00 00  17 00 00  1f 00 00  27 00 00  2f 00 00  37 00 00  3f 00 00  47 00 00  4f 00 00  57 00 00  5f 00 00  67 00 00  6f 00 00  77 00 00  7f 00 00  
+		13 13 00  1b 1b 00  23 23 00  2f 2b 00  37 2f 00  43 37 00  4b 3b 07  57 43 07  5f 47 07  6b 4b 0b  77 53 0f  83 57 13  8b 5b 13  97 5f 1b  a3 63 1f  af 67 23  
+		23 13 07  2f 17 0b  3b 1f 0f  4b 23 13  57 2b 17  63 2f 1f  73 37 23  7f 3b 2b  8f 43 33  9f 4f 33  af 63 2f  bf 77 2f  cf 8f 2b  df ab 27  ef cb 1f  ff f3 1b  
+		0b 07 00  1b 13 00  2b 23 0f  37 2b 13  47 33 1b  53 37 23  63 3f 2b  6f 47 33  7f 53 3f  8b 5f 47  9b 6b 53  a7 7b 5f  b7 87 6b  c3 93 7b  d3 a3 8b  e3 b3 97  
+		ab 8b a3  9f 7f 97  93 73 87  8b 67 7b  7f 5b 6f  77 53 63  6b 4b 57  5f 3f 4b  57 37 43  4b 2f 37  43 27 2f  37 1f 23  2b 17 1b  23 13 13  17 0b 0b  0f 07 07  
+		bb 73 9f  af 6b 8f  a3 5f 83  97 57 77  8b 4f 6b  7f 4b 5f  73 43 53  6b 3b 4b  5f 33 3f  53 2b 37  47 23 2b  3b 1f 23  2f 17 1b  23 13 13  17 0b 0b  0f 07 07  
+		db c3 bb  cb b3 a7  bf a3 9b  af 97 8b  a3 87 7b  97 7b 6f  87 6f 5f  7b 63 53  6b 57 47  5f 4b 3b  53 3f 33  43 33 27  37 2b 1f  27 1f 17  1b 13 0f  0f 0b 07  
+		6f 83 7b  67 7b 6f  5f 73 67  57 6b 5f  4f 63 57  47 5b 4f  3f 53 47  37 4b 3f  2f 43 37  2b 3b 2f  23 33 27  1f 2b 1f  17 23 17  0f 1b 13  0b 13 0b  07 0b 07  
+		ff f3 1b  ef df 17  db cb 13  cb b7 0f  bb a7 0f  ab 97 0b  9b 83 07  8b 73 07  7b 63 07  6b 53 00  5b 47 00  4b 37 00  3b 2b 00  2b 1f 00  1b 0f 00  0b 07 00  
+		00 00 ff  0b 0b ef  13 13 df  1b 1b cf  23 23 bf  2b 2b af  2f 2f 9f  2f 2f 8f  2f 2f 7f  2f 2f 6f  2f 2f 5f  2b 2b 4f  23 23 3f  1b 1b 2f  13 13 1f  0b 0b 0f  
+		2b 00 00  3b 00 00  4b 07 00  5f 07 00  6f 0f 00  7f 17 07  93 1f 07  a3 27 0b  b7 33 0f  c3 4b 1b  cf 63 2b  db 7f 3b  e3 97 4f  e7 ab 5f  ef bf 77  f7 d3 8b  
+		a7 7b 3b  b7 9b 37  c7 c3 37  e7 e3 57  7f bf ff  ab e7 ff  d7 ff ff  67 00 00  8b 00 00  b3 00 00  d7 00 00  ff 00 00  ff f3 93  ff f7 c7  ff ff ff  9f 5b 53  
+	}
+
+	wad {
+		0 0 0 0 0
+		<wad0001.wad> 1
+	}
+
+	folder {
+		<G:\dev\projects\PrinceOfLotteria\Prince-of-Lotteria\models> 1
+	}
+}
+
+level 0 {   // Root
+	<lottifant.$$w>
+	<palette.pcx>
+	30
+	310
+	45
+	<..\main.c>
+	100.000000 100.000000 100.000000
+	19.607843 39.215687 100.000000
+	100.000000 19.607843 19.607843
+	-0.000000 -0.000000 -0.000000
+	34.901962 65.098038 74.901962
+	36.862743 28.235294 -0.000000
+}
+
+model 1 {   // pathPieceI_mdl_080
+	0.75 0.75 0.75
+	<pathPieceI.mdl>
+	pathPieceI_mdl_080
+	ndef
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+start 2 {   // pos_000
+	pos_000
+}
+
+model 3 {   // zorrofantDummy_080
+	1 1 1
+	<zorrofantDummy.mdl>
+	zorrofantDummy_080
+	ndef
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 4 {   // zorrofantDummy_089
+	1 1 1
+	<rockball.mdl>
+	zorrofantDummy_089
+	ndef
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 5 {   // zorrofantDummy_090
+	1.5 1.5 1.5
+	<rock.mdl>
+	zorrofantDummy_090
+	ndef
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 6 {   // zorrofantDummy_093
+	1.5 1.5 1.5
+	<rock.mdl>
+	zorrofantDummy_093
+	ndef
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 7 {   // pathPieceA_mdl_094
+	0.75 0.75 0.75
+	<pathPieceA.mdl>
+	pathPieceA_mdl_094
+	ndef
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 8 {   // pathPieceA_mdl_100
+	0.75 0.75 0.75
+	<pathPieceJ.mdl>
+	pathPieceA_mdl_100
+	ndef
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 9 {   // pathPieceI_mdl_101
+	0.75 0.75 0.75
+	<pathPieceI.mdl>
+	pathPieceI_mdl_101
+	ndef
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 10 {   // pathPieceA_mdl_104
+	0.75 0.75 0.75
+	<pathPieceJ.mdl>
+	pathPieceA_mdl_104
+	ndef
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 11 {   // zorrofantDummy_105
+	2.5 2.5 2.5
+	<rock.mdl>
+	zorrofantDummy_105
+	ndef
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 12 {   // zorrofantDummy_108
+	1.92279 1.92279 1.92279
+	<rock.mdl>
+	zorrofantDummy_108
+	ndef
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 13 {   // pathPieceI_mdl_108
+	0.75 0.75 0.75
+	<pathPieceC.mdl>
+	pathPieceI_mdl_108
+	ndef
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 14 {   // pathPieceI_mdl_111
+	0.75 0.75 0.75
+	<pathEdgeL.mdl>
+	pathPieceI_mdl_111
+	ndef
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 15 {   // pathPieceI_mdl_112
+	0.75 0.75 0.75
+	<pathPieceB.mdl>
+	pathPieceI_mdl_112
+	ndef
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 16 {   // pathPieceA_mdl_113
+	0.75 0.75 0.75
+	<pathPieceJ.mdl>
+	pathPieceA_mdl_113
+	ndef
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 17 {   // pathPieceI_mdl_114
+	0.75 0.75 0.75
+	<pathPieceG.mdl>
+	pathPieceI_mdl_114
+	ndef
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 18 {   // pathPieceI_mdl_119
+	0.75 0.75 0.75
+	<pathPieceH.mdl>
+	pathPieceI_mdl_119
+	ndef
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 19 {   // pathPieceI_mdl_120
+	0.75 0.75 0.75
+	<pathEdgeL.mdl>
+	pathPieceI_mdl_120
+	ndef
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 20 {   // pathPieceI_mdl_121
+	0.75 0.75 0.75
+	<pathEdgeL.mdl>
+	pathPieceI_mdl_121
+	ndef
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 21 {   // pathPieceI_mdl_122
+	0.75 0.75 0.75
+	<pathPieceH.mdl>
+	pathPieceI_mdl_122
+	ndef
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 22 {   // pathPieceI_mdl_125
+	0.75 0.75 0.75
+	<pathEdgeR.mdl>
+	pathPieceI_mdl_125
+	ndef
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 23 {   // pathPieceI_mdl_126
+	0.75 0.75 0.75
+	<pathBridge.mdl>
+	pathPieceI_mdl_126
+	ndef
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 24 {   // pathPieceI_mdl_127
+	0.75 0.75 0.75
+	<pathPieceE.mdl>
+	pathPieceI_mdl_127
+	ndef
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 25 {   // pathPieceI_mdl_128
+	0.75 0.75 0.75
+	<pathEdgeL.mdl>
+	pathPieceI_mdl_128
+	ndef
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 26 {   // pathPieceI_mdl_112
+	0.75 0.75 0.75
+	<pathPieceB.mdl>
+	pathPieceI_mdl_112
+	ndef
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 27 {   // pathPieceI_mdl_137
+	0.75 0.75 0.75
+	<pathPieceI.mdl>
+	pathPieceI_mdl_137
+	ndef
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 28 {   // pathPieceA_mdl_144
+	0.75 0.75 0.75
+	<pathPieceJ.mdl>
+	pathPieceA_mdl_144
+	ndef
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 29 {   // pathPieceA_mdl_147
+	0.75 0.75 0.75
+	<pathPieceJ.mdl>
+	pathPieceA_mdl_147
+	ndef
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 30 {   // pathPieceA_mdl_148
+	0.75 0.75 0.75
+	<pathPieceJ.mdl>
+	pathPieceA_mdl_148
+	ndef
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 31 {   // pathPieceI_mdl_149
+	0.75 0.75 0.75
+	<pathPieceE.mdl>
+	pathPieceI_mdl_149
+	ndef
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 32 {   // pathPieceI_mdl_150
+	0.75 0.75 0.75
+	<pathPieceE.mdl>
+	pathPieceI_mdl_150
+	ndef
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 33 {   // pathPieceI_mdl_151
+	0.75 0.75 0.75
+	<pathPieceG.mdl>
+	pathPieceI_mdl_151
+	ndef
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 34 {   // pathPieceI_mdl_152
+	0.75 0.75 0.75
+	<pathPieceA.mdl>
+	pathPieceI_mdl_152
+	ndef
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 35 {   // pathPieceI_mdl_155
+	0.75 0.75 0.75
+	<pathPieceI.mdl>
+	pathPieceI_mdl_155
+	ndef
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 36 {   // pathPieceA_mdl_156
+	0.8 0.8 0.8
+	<pathPieceJ.mdl>
+	pathPieceA_mdl_156
+	ndef
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 37 {   // pathPieceI_mdl_157
+	0.75 0.75 0.75
+	<pathPieceB.mdl>
+	pathPieceI_mdl_157
+	ndef
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 38 {   // pathPieceA_mdl_158
+	0.75 0.75 0.75
+	<pathPieceJ.mdl>
+	pathPieceA_mdl_158
+	ndef
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 39 {   // pathPieceA_mdl_159
+	0.75 0.75 0.75
+	<pathPieceJ.mdl>
+	pathPieceA_mdl_159
+	ndef
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 40 {   // pathPieceA_mdl_160
+	0.75 0.75 0.75
+	<pathPieceF.mdl>
+	pathPieceA_mdl_160
+	ndef
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 41 {   // pathPieceI_mdl_161
+	0.75 0.75 0.75
+	<pathPieceA.mdl>
+	pathPieceI_mdl_161
+	ndef
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 42 {   // pathPieceA_mdl_164
+	0.8 0.8 0.8
+	<pathPieceJ.mdl>
+	pathPieceA_mdl_164
+	ndef
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 43 {   // pathPieceA_mdl_167
+	0.75 0.75 0.75
+	<pathPieceF.mdl>
+	pathPieceA_mdl_167
+	ndef
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 44 {   // pathPieceA_mdl_168
+	0.75 0.75 0.75
+	<pathPieceF.mdl>
+	pathPieceA_mdl_168
+	ndef
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+object 0 {  // Root
+	(0 0 0) (0 0 0) (1 1 1)
+	object 1, 2, 3, 4, 5, 6, 7, 8, 9, 10
+	object 11, 12, 13, 14, 15, 16, 17, 18, 19, 20
+	object 21, 22, 23, 24, 25, 26, 27, 28, 29, 30
+	object 31, 32, 33, 34, 35, 36, 37, 38, 39, 40
+	object 41, 42, 43, 44
+	level 0
+}
+
+object 1 {  // pathPieceI_mdl_080
+	(-484 0 312) (-0 -0 0.261799) (0.75 0.75 0.75)
+	model 1
+}
+
+object 2 {  // pos_000
+	(0 -1508 0) (1.570796 0 0) (1 1 1)
+	start 2
+}
+
+object 3 {  // zorrofantDummy_080
+	(0 0 0) (-0 0 0) (1 1 1)
+	model 3
+}
+
+object 4 {  // zorrofantDummy_089
+	(-328 0.000001 584) (-0 0 0) (1 1 1)
+	model 4
+}
+
+object 5 {  // zorrofantDummy_090
+	(-184 0 448) (-0 0 0) (1.5 1.5 1.5)
+	model 5
+}
+
+object 6 {  // zorrofantDummy_093
+	(-8 0.000001 -112) (-0 0 0) (1.5 1.5 1.5)
+	model 6
+}
+
+object 7 {  // pathPieceA_mdl_094
+	(0 0 -504) (-0 0 0) (0.75 0.75 0.75)
+	model 7
+}
+
+object 8 {  // pathPieceA_mdl_100
+	(-1040 0.000001 -40) (-0 0 0) (0.75 0.75 0.75)
+	model 8
+}
+
+object 9 {  // pathPieceI_mdl_101
+	(1079 0 -355) (-0 0 0) (0.75 0.75 0.75)
+	model 9
+}
+
+object 10 {  // pathPieceA_mdl_104
+	(518 -122 -1174) (-0 0 0) (0.75 0.75 0.75)
+	model 10
+}
+
+object 11 {  // zorrofantDummy_105
+	(-251 89 -59) (-0 0 0) (2.5 2.5 2.5)
+	model 11
+}
+
+object 12 {  // zorrofantDummy_108
+	(-350 -71 -92) (-0 0 0) (1.92279 1.92279 1.92279)
+	model 12
+}
+
+object 13 {  // pathPieceI_mdl_108
+	(3520 0 -928) (-0 -0 0.087266) (0.75 0.75 0.75)
+	model 13
+}
+
+object 14 {  // pathPieceI_mdl_111
+	(1584 0 -762) (-0 0 0) (0.75 0.75 0.75)
+	model 14
+}
+
+object 15 {  // pathPieceI_mdl_112
+	(6158 0 -1280) (-0 0 0) (0.75 0.75 0.75)
+	model 15
+}
+
+object 16 {  // pathPieceA_mdl_113
+	(5432 -122 -1567) (-0 0 0) (0.75 0.75 0.75)
+	model 16
+}
+
+object 17 {  // pathPieceI_mdl_114
+	(7657 0 -1646) (-0 0 0) (0.75 0.75 0.75)
+	model 17
+}
+
+object 18 {  // pathPieceI_mdl_119
+	(8919 -18 -1303) (-0 0 0) (0.75 0.75 0.75)
+	model 18
+}
+
+object 19 {  // pathPieceI_mdl_120
+	(8440 -18 -1299) (-0 0 0) (0.75 0.75 0.75)
+	model 19
+}
+
+object 20 {  // pathPieceI_mdl_121
+	(8789 46 -1121) (-0 0 0) (0.75 0.75 0.75)
+	model 20
+}
+
+object 21 {  // pathPieceI_mdl_122
+	(9268 46 -1125) (-0 0 0) (0.75 0.75 0.75)
+	model 21
+}
+
+object 22 {  // pathPieceI_mdl_125
+	(9747 46 -1121) (-0 0 0) (0.75 0.75 0.75)
+	model 22
+}
+
+object 23 {  // pathPieceI_mdl_126
+	(10282 0 -808) (-0 0 0) (0.75 0.75 0.75)
+	model 23
+}
+
+object 24 {  // pathPieceI_mdl_127
+	(11674 0 -1299) (-0 0 0) (0.75 0.75 0.75)
+	model 24
+}
+
+object 25 {  // pathPieceI_mdl_128
+	(10823 0 -1117) (-0 0 0) (0.75 0.75 0.75)
+	model 25
+}
+
+object 26 {  // pathPieceI_mdl_112
+	(13174 0 -1701) (-0 0 0) (0.75 0.75 0.75)
+	model 26
+}
+
+object 27 {  // pathPieceI_mdl_137
+	(14252 0 -1727) (-0 0 0) (0.75 0.75 0.75)
+	model 27
+}
+
+object 28 {  // pathPieceA_mdl_144
+	(14805 0 -2546) (-0 0 0) (0.75 0.75 0.75)
+	model 28
+}
+
+object 29 {  // pathPieceA_mdl_147
+	(15359 0 -2828) (-0 0 0) (0.75 0.75 0.75)
+	model 29
+}
+
+object 30 {  // pathPieceA_mdl_148
+	(15898 0 -3105) (-0 0 0) (0.75 0.75 0.75)
+	model 30
+}
+
+object 31 {  // pathPieceI_mdl_149
+	(16876 0 -3047) (-0 0 0) (0.75 0.75 0.75)
+	model 31
+}
+
+object 32 {  // pathPieceI_mdl_150
+	(18375 0 -3440) (-0 0 0) (0.75 0.75 0.75)
+	model 32
+}
+
+object 33 {  // pathPieceI_mdl_151
+	(19873 0 -3833) (-0 0 0) (0.75 0.75 0.75)
+	model 33
+}
+
+object 34 {  // pathPieceI_mdl_152
+	(21372 0 -3641) (-0 0 0) (0.75 0.75 0.75)
+	model 34
+}
+
+object 35 {  // pathPieceI_mdl_155
+	(22450 0 -3492) (-0 0 0) (0.75 0.75 0.75)
+	model 35
+}
+
+object 36 {  // pathPieceA_mdl_156
+	(23885 0 -3422) (-0 0 0) (0.8 0.8 0.8)
+	model 36
+}
+
+object 37 {  // pathPieceI_mdl_157
+	(22868 0 -4285) (-0 0 0) (0.75 0.75 0.75)
+	model 37
+}
+
+object 38 {  // pathPieceA_mdl_158
+	(23885 0 -4822) (-0 0 0) (0.75 0.75 0.75)
+	model 38
+}
+
+object 39 {  // pathPieceA_mdl_159
+	(22130 -153 -4252) (-0 0 0) (0.75 0.75 0.75)
+	model 39
+}
+
+object 40 {  // pathPieceA_mdl_160
+	(22974.333984 0 -2373) (-0 0 0) (0.75 0.75 0.75)
+	model 40
+}
+
+object 41 {  // pathPieceI_mdl_161
+	(24879 0 -3053) (-0 0 0) (0.75 0.75 0.75)
+	model 41
+}
+
+object 42 {  // pathPieceA_mdl_164
+	(25301 0 -2065) (-0 0 0) (0.8 0.8 0.8)
+	model 42
+}
+
+object 43 {  // pathPieceA_mdl_167
+	(22071.333984 0 -2607) (-0 0 0) (0.75 0.75 0.75)
+	model 43
+}
+
+object 44 {  // pathPieceA_mdl_168
+	(21122.333984 0 -2828) (-0 0 0) (0.75 0.75 0.75)
+	model 44
+}
+
