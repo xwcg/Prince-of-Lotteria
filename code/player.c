@@ -1,14 +1,26 @@
 #ifndef _PLAYER_C_
 #define _PLAYER_C_
 
+/*
 #include "gui.h"
 #include "PoL_enemy.h"
 #include "zorroMesh.h"
 #include "traps.h"
 #include "platform.h"
 #include "sky.h" //fix by firo
+#include "camera.h"
+*/
 
-//#define PL_DEBUG
+#include "player.h"
+#include <particles.c>
+#include "gui.h"
+#include "platform.h"
+#include "traps.h"
+#include "PoL_enemy.h"
+#include "sky.h"
+#include "zorroMesh.h"
+#include "camera.h"
+
 // -----------------------------------------------------------------------------------
 // Particles
 // -----------------------------------------------------------------------------------
@@ -46,17 +58,6 @@ void pBlood(PARTICLE *p) {
 	p.size = 40+random(10);
 	p.event = pAlphaFade;
 }
-
-
-// -----------------------------------------------------------------------------------
-// player sounds
-// -----------------------------------------------------------------------------------
-
-SOUND* snd_narrator_death_spikes = "death_by_spikes.wav";
-SOUND* snd_narrator_death_drown  = "death_by_drowning.wav";
-SOUND* snd_narrator_death_fire   = "death_by_fire.wav";
-SOUND* snd_narrator_death_lava   = "death_by_lava.wav";
-SOUND* snd_narrator_death_stones = "death_by_rock.wav";
 
 // -----------------------------------------------------------------------------------
 // Player code
@@ -461,4 +462,4 @@ void activate_jetpack() {
 	zorroMeshOptions(player, TRUE, FALSE, TRUE);
 }
 
-#endif
+#endif /* _PLAYER_C_ */

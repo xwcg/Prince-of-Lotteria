@@ -1,6 +1,8 @@
 #ifndef _PLAYER_H_
 #define _PLAYER_H_
 
+//#define PL_DEBUG
+
 #define PL_GRAVITY               8
 #define PL_MAX_JUMP_TIME         1
 #define PL_MAX_JUMP_HEIGHT       110
@@ -60,10 +62,16 @@ SOUND* sndJump05              = "..\\sounds\\jump05.wav";
 SOUND* sndLife01              = "..\\sounds\\life01.wav";
 SOUND* sndLife02              = "..\\sounds\\life02.wav";
 
+SOUND* snd_narrator_death_spikes = "death_by_spikes.wav";
+SOUND* snd_narrator_death_drown  = "death_by_drowning.wav";
+SOUND* snd_narrator_death_fire   = "death_by_fire.wav";
+SOUND* snd_narrator_death_lava   = "death_by_lava.wav";
+SOUND* snd_narrator_death_stones = "death_by_rock.wav";
+
 action actPlayer();
 
 void activate_jetpack();
 
 #include "player.c"
 
-#endif
+#endif /* _PLAYER_H_ */
