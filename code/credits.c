@@ -36,6 +36,8 @@ void creditsReset ()
 	
 	g_entCreditsTerrain = NULL;
 	
+	g_bCreditsAllExplode = false;
+	
 	on_space = NULL;
 	
 	level_load(NULL);
