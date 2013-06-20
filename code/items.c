@@ -1,30 +1,11 @@
-/*
- *******************************************************************************
- * items.c
- * Creation date: 08.06.2013
- * Author:        Firoball
- *
- *******************************************************************************
- * $Date: 2011-02-23 22:27:12 +0100 (Mi, 23 Feb 2011) $
- * $Revision: 6 $
- * $Author: Firo $
- *
- *******************************************************************************
- * Description
- *
- * Script for collectible items
- *
- * Comments
- * 
- * for short descriptions see comments in items.h
- *
- *******************************************************************************
- */
+#ifndef ITEMS_C
+#define ITEMS_C
 
+
+//#include "player.h"
+
+#include "items.h"
 #include <mtlfx.c>
-#include "player.h"
-
-SOUND* sndCollect = "collect.wav";
 
 action item_coin()
 {
@@ -74,8 +55,6 @@ action item_life()
 	}
 	item_fade();
 }
-
-SOUND* snd_narrator_jetpack = "jetpack.wav";
 
 action item_jetpack()
 {
@@ -163,8 +142,10 @@ void item_jetpack_evt()
 	{
 		my->event = NULL;
 		set (me, is_collected);
+		
 		ent_playsound(me, sndCollect, 1000);
-		PoL_playerSetJetpack(TRUE);
+		zorroHasJetpack(player, true);
+		
 		activate_jetpack();
 		achievement("firstjetpack");
 	}
@@ -195,3 +176,4 @@ void item_particle (PARTICLE *p)
 	p->event = item_particleFader;
 }
 
+#endif /* ITEMS_C */
