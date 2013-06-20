@@ -1,16 +1,6 @@
 #ifndef _PLAYER_C_
 #define _PLAYER_C_
 
-/*
-#include "gui.h"
-#include "PoL_enemy.h"
-#include "zorroMesh.h"
-#include "traps.h"
-#include "platform.h"
-#include "sky.h" //fix by firo
-#include "camera.h"
-*/
-
 #include "player.h"
 #include <particles.c>
 #include "gui.h"
@@ -94,7 +84,8 @@ void move_player() {
 	VECTOR vecPlayerMoveSpeed;
 	vec_set(vecPlayerMoveSpeed,nullvector);
 	
-	while(1) {
+	while (1)
+	{
 		player.PL_JUMP_HEIGHT = PL_MAX_JUMP_HEIGHT;
 		if(key_force.x > 0){my.pan = 0;}
 		if(key_force.x < 0){my.pan = -180;}
@@ -399,6 +390,9 @@ void move_player() {
 		
 		animate_player(vecPlayerMoveSpeed.x * time_step);
 		
+		// update camera
+		cameraMove(my, 1200, 80);
+		
 		wait(1);
 	}
 	
@@ -437,7 +431,8 @@ void move_player() {
 	}
 }
 
-void actPlayer() {
+void actPlayer ()
+{
 	move_friction = 0.3; // Fixed by padmalcom to avoid to get stuck on slopes
 	ent_preload(me);
 	player = me;
@@ -452,9 +447,9 @@ void actPlayer() {
 	wait(1);
 	vec_set(player.min_x,vector(-40,-40,-55)); 
 	vec_set(player.max_x,vector(40,40,60));
+	
 	zorroMeshOptions(me, FALSE, FALSE, FALSE);
 	move_player();
-	move_camera();
 }
 
 void activate_jetpack() {

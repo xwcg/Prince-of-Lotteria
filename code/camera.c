@@ -3,6 +3,52 @@
 
 #include "camera.h"
 
+void cameraMove (ENTITY* e, var distance, var arc)
+{
+	static VECTOR vecEntLast;
+	
+	camera->arc += (arc - camera->arc) * g_cameraArcBlendFac;
+	
+	if (e != NULL)
+	{
+		BOOL bZoom = key_space;
+		var yOffset = distance + bZoom * distance * g_cameraZoomFac;
+		
+		static VECTOR diff;
+		vec_diff(&diff, e->x, &vecEntLast);
+		
+		static ANGLE cameraAngle;
+		static VECTOR cameraPos;
+		
+		vec_set(&cameraAngle, nullvector);
+		vec_set(&cameraPos, nullvector);
+		
+		cameraAngle.pan = 90;
+		
+		cameraPos.y = -yOffset;
+		
+		if (abs(diff.x) > g_cameraDeaddist * time_step)
+		{
+			cameraAngle.pan += sign(-diff.x) * g_cameraAngLimit;
+			cameraPos.x = sign(diff.x) * g_cameraLookaheadX * time_step;
+		}
+		
+		if (abs(diff.z) > g_cameraDeaddist * time_step)
+		{
+			cameraAngle.tilt += sign(diff.z) * g_cameraAngLimit;
+			cameraPos.z = sign(diff.z) * g_cameraLookaheadZ * time_step;
+		}
+		
+		vec_add(&cameraPos, e->x);
+		
+		vec_lerp(camera->x, camera->x, &cameraPos, g_cameraPosBlendFac);
+		vec_lerp(camera->pan, camera->pan, &cameraAngle, g_cameraAngBlendFac);
+		
+		vec_set(&vecEntLast, e->x);
+	}
+}
+
+// deprecated!
 void move_camera ()
 {
 	// don't allow to turn the camera

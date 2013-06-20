@@ -27,6 +27,7 @@ void main ()
 {
 	fps_max = 60;
 	video_mode = 10;
+	mouse_pointer = 0;
 	
 	d3d_antialias = 9;
 	mip_shaded = 2;
