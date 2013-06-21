@@ -1,14 +1,13 @@
 #ifndef _TRIGGER_C_
 #define _TRIGGER_C_
 
-#include "sky.h"
+//#include "sky.h"
 
-SOUND* snd_narrator_start = "first_movement.wav";
-SOUND* snd_narrator_sky = "sky.wav";
-SOUND* snd_narrator_enemy = "enemy.wav";
-SOUND* snd_narrator_lottifant = "lottifant.wav";
+#include "trigger.h"
+#include "credits.h"
 
-action trigger_wall() {
+action trigger_wall ()
+{
 	wait(1);
 	while(1) {
 		if (player != NULL) {
@@ -35,7 +34,9 @@ action trigger_credits() {
 				media_stop(vGameMusicHandle);
 				gui_hide();
 				sky_active = 0; //fix by firo
-				credits_run();
+				
+				creditsInit();
+				
 				return;
 			}
 		}
@@ -69,4 +70,5 @@ action trigger_visible() {
 		wait(1);
 	}
 }
-#endif
+
+#endif /* _TRIGGER_C_ */
