@@ -7,6 +7,7 @@
 #include <strio.c>
 #include "menu.h"
 #include "zorroMesh.h"
+#include "lyrics.h"
 
 void creditsInit ()
 {
@@ -18,6 +19,8 @@ void creditsReset ()
 {
 	creditsFinished = 0;
 	currentRow = 0;
+	
+	camera->clip_far = 18000;
 	
 	vec_set(&g_vecCreditsCamShake, nullvector);
 	
@@ -47,7 +50,7 @@ void creditsReset ()
 
 void creditsExit ()
 {
-	creditsReset();	
+	creditsReset();
 	menu_open();
 }
 
@@ -59,12 +62,13 @@ void creditsStart ()
 	static char strIni [256];
 	sprintf(strIni, "%s\\credits.ini", _chr(work_dir));
 	
-	// start music
+	// start music and lyrics
 	{
 		if (g_fhCreditsSong != 0)
 			media_stop(g_fhCreditsSong);
 		
 		g_fhCreditsSong = media_play("music\\CloneFall.ogg", NULL, 100);
+		lyricsStart(NULL, g_txtCreditsLyrics, g_fhCreditsSong);
 	}
 	
 	int pos = 0;
@@ -78,8 +82,8 @@ void creditsStart ()
 	creditsHead2.flags |= SHOW;
 	creditsBody2.flags |= SHOW;
 	
-	creditsHead2.pos_y = screen_size.y - 150;
-	creditsBody2.pos_y = screen_size.y - 100;
+	creditsHead2.pos_y = screen_size.y - g_lyricsBarHeight - 150;
+	creditsBody2.pos_y = screen_size.y - g_lyricsBarHeight - 100;
 		
 	int size1 = 300;
 	int size2 = 600;
@@ -164,7 +168,7 @@ void creditsStart ()
 			
 		wait(-0.6 * itemDuration);
 		
-		var scrollspeed = 120;
+		var scrollspeed = 100;
 		
 		for (fade = 0; fade < 100; fade += fadespeed * time_step)
 		{
@@ -373,6 +377,8 @@ action credits_lotti ()
 	{
 		my.z = my.alpha - 125;
 		my.pan = 5.4 * my.alpha;
+		ent_animate(me, "idle", 5 * total_ticks + init, ANM_CYCLE);
+		
 		wait(1);
 	}
 

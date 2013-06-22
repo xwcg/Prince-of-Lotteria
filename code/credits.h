@@ -43,10 +43,10 @@
 	STRING *creditsText2Head = "#256";
 	STRING *creditsText2Body = "#256";
 	
-	TEXT *creditsHead1 = { string = creditsText1Head; font = creditsFontHead; pos_y = 100; }
-	TEXT *creditsBody1 = { string = creditsText1Body; font = creditsFontBody; pos_y = 150; }
-	TEXT *creditsHead2 = { string = creditsText2Head; font = creditsFontHead; flags = ARIGHT; pos_y = 0; }
-	TEXT *creditsBody2 = { string = creditsText2Body; font = creditsFontBody; flags = ARIGHT; pos_y = 0; }
+	TEXT *creditsHead1 = { string = creditsText1Head; font = creditsFontHead; flags = SHADOW; pos_y = 100; }
+	TEXT *creditsBody1 = { string = creditsText1Body; font = creditsFontBody; flags = SHADOW; pos_y = 150; }
+	TEXT *creditsHead2 = { string = creditsText2Head; font = creditsFontHead; flags = ARIGHT | SHADOW; pos_y = 0; }
+	TEXT *creditsBody2 = { string = creditsText2Body; font = creditsFontBody; flags = ARIGHT | SHADOW; pos_y = 0; }
 
 	FONT *creditsFontHead = "Arial#26";
 	FONT *creditsFontBody = "Arial#20";
@@ -93,6 +93,60 @@
 			}
 		}";
 	}
+	
+// lyrics
+
+TEXT* g_txtCreditsLyrics =
+{
+    string  =  (
+                "0.0 ",
+                "22.9 That was the game,",
+                "28.0 it was shitty and a shame,",
+                "34.9 JCL did cry just then,",
+                "41.6 over, and over... aga-i-i-i-n.",
+                "49.2 ‘Cause of this crap game,",
+                "54.6 he killed a batch of clones again",
+                "61.1 didn't even see it comi-i-i-ing",
+                "68.0 flushed away, in the ca-a-a-an.",
+                "75.8 Kill the Lotters,",
+                "79.2 when he’s Zorro,",
+                "82.2 he will hunt Ghosts,",
+                "85.6 face the boss, forever - at Clonefall.",
+                "92.0 ",
+                "95.3 Clonefall is in your heart,",
+                "102.8 mad insanity's just the start,",
+                "110.3 You should go. and cry in the dark.",
+                "114.2 You think you know Lotti, let me tell you a thing:",
+                "119.8 he’s a master Clone-Lo-o-o-o-o-rd.",
+                "126.3 Kill the Lotters, (kill the Lotters)",
+                "129.1 when he’s Zorro, (when he’s Zorro)",
+                "132.7 so he'll hunt ghosts, (he will hunt ghosts)",
+                "135.7 face the boss, forever",
+                "139.2 Kill the Lotters, (kill the Lotters)",
+                "142.4 when he’s Zorro, (when he’s Zorro)",
+                "145.5 he will hunt ghosts, (he will hunt ghosts)",
+                "149.1 face the boss, forever - at Clonefall.",
+                "155.0 ",
+                "159.3 Where you go, he knows,",
+                "162.9 what you see, he sees,",
+                "165.5 you can never defeat him,",
+                "169.0 without one infinity",
+                "172.5 and a clone farm",
+                "175.6 and high tech alarms,",
+                "179.5 he cut the fingers from his hand,",
+                "181.6 and he’ll expand.",
+                "186.1 Kill the Lotters, (kill the Lotters)",
+                "189.1 when he’s Zorro. (when he’s zorro)",
+                "192.7 he will hunt ghosts, (he will hunt ghosts)",
+                "196.0 face the boss, forever",
+                "199.1 kill the Lotters, (Kill the Lotters)",
+                "202.6 when he’s Zorro, (when he’s Zorro)",
+                "205.8 he will hunt Ghosts. (he will hunt ghosts)",
+                "209.2 face the boss, forever - at Clonefall.",
+                "216.0 "
+               );
+}
+
 
 #include "credits.c"
 
