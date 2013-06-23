@@ -433,6 +433,9 @@ void move_player() {
 
 void actPlayer ()
 {
+	if (sky_active == 0)
+		skychange();
+
 	move_friction = 0.3; // Fixed by padmalcom to avoid to get stuck on slopes
 	ent_preload(me);
 	player = me;

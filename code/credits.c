@@ -8,6 +8,7 @@
 #include "menu.h"
 #include "zorroMesh.h"
 #include "lyrics.h"
+#include "gui.h"
 
 void creditsInit ()
 {
@@ -18,6 +19,8 @@ void creditsInit ()
 void creditsReset ()
 {
 	g_bCrFirstLotti = false;
+	
+	gui_hide();
 	
 	creditsFinished = 0;
 	currentRow = 0;

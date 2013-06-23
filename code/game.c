@@ -3,6 +3,7 @@
 
 #include "game.h"
 #include "player.h"
+#include "lvlLottifant.h"
 
 void game_start()
 {
@@ -25,6 +26,7 @@ void game_start()
 	nPlayerLifes = 3; //fix by firo
 	flying_man = 0;//fix by firo
 	level_load_ext("level01_v7.wmb"); // by padmalcom
+	//lvlLfInit();
 	//level_load_ext("bosslevel.wmb");
 	VECTOR* vecPlayerPosition = vector(-432,-80,40);
 	wait(3);
