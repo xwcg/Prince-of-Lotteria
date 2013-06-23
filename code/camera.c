@@ -3,7 +3,8 @@
 
 #include "camera.h"
 
-void cameraMove (ENTITY* e, var distance, var arc)
+//void cameraMove (ENTITY* e, var distance, var raiseZ, var arc)
+void cameraMove (ENTITY* e, ENTITY* e2, var distance, var raiseZ, var arc)
 {
 	static VECTOR vecEntLast;
 	
@@ -11,8 +12,15 @@ void cameraMove (ENTITY* e, var distance, var arc)
 	
 	if (e != NULL)
 	{
+			ENTITY* er = e2;
+		if (er == NULL)
+			er = e;
+			
+		var distAdd = vec_dist(e->x, er->x);
+		var d = distance + distAdd;
+		
 		BOOL bZoom = key_space;
-		var yOffset = distance + bZoom * distance * g_cameraZoomFac;
+		var yOffset = d + bZoom * d * g_cameraZoomFac;
 		
 		static VECTOR diff;
 		vec_diff(&diff, e->x, &vecEntLast);
@@ -39,13 +47,28 @@ void cameraMove (ENTITY* e, var distance, var arc)
 			cameraPos.z = sign(diff.z) * g_cameraLookaheadZ * time_step;
 		}
 		
-		vec_add(&cameraPos, e->x);
+		cameraPos.z += raiseZ;
+		
+		VECTOR vecE;
+		vec_lerp(&vecE, e->x, er->x, 0.5);
+			
+		vec_add(&cameraPos, &vecE);
 		
 		vec_lerp(camera->x, camera->x, &cameraPos, g_cameraPosBlendFac);
 		vec_lerp(camera->pan, camera->pan, &cameraAngle, g_cameraAngBlendFac);
 		
 		vec_set(&vecEntLast, e->x);
 	}
+}
+
+void cameraMove (ENTITY* e, var distance, var raiseZ, var arc)
+{
+	cameraMove(e, NULL, distance, raiseZ, arc);
+}
+
+void cameraMove (ENTITY* e, var distance, var arc)
+{
+	cameraMove(e, distance, 0, arc);
 }
 
 // deprecated!
