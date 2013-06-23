@@ -1,11 +1,8 @@
 #ifndef _GAME_C_
 #define _GAME_C_
 
-#include "gui.h"
-#include "sky.h"
-#include "platform.h"
-
-var vDummy = 0;
+#include "game.h"
+#include "player.h"
 
 void game_start()
 {
@@ -28,7 +25,7 @@ void game_start()
 	nPlayerLifes = 3; //fix by firo
 	flying_man = 0;//fix by firo
 	level_load_ext("level01_v7.wmb"); // by padmalcom
-	//level_load("bosslevel.wmb");
+	//level_load_ext("bosslevel.wmb");
 	VECTOR* vecPlayerPosition = vector(-432,-80,40);
 	wait(3);
 	skychange();
@@ -44,8 +41,6 @@ void game_restart(void) {
 	//level_load(level_name);
 	level_load_ext(level_name);
 }
-
-var vDummy2 = 0;
 
 void on_level_event(var _percent) {
 	if (panLoadBar != NULL) {

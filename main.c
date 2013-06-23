@@ -1,7 +1,5 @@
 #include <acknex.h>
-#include <windows.h>
 #include <default.c>
-#include <particles.c>
 
 #define PRAGMA_PATH "code"
 #define PRAGMA_PATH "music"
@@ -10,32 +8,41 @@
 #define PRAGMA_LEVEL "bosslevel.wmp"
 
 #include "credits.h"
-#include "credits.c"
 #include "achievements.h"
-#include "PoL_playermeshswitcher.c"
-#include "camera.c"
 #include "game.h"
-#include "menu.h"
 #include "platform.h"
 #include "traps.h"
 #include "items.h"
 #include "player.h"
+#include "menu.h"
 #include "gui.h"
 #include "PoL_enemy.h"
 #include "zorroMesh.h"
 #include "level_effects.c"
-#include "menu.c"
+#include "credits.h"
 #include "trigger.h"
 #include "geist.c"
 
-void main() {
-	fps_max = 60; // By Felix, hatte probleme mit Stockender Framerate (nach oben)
-	d3d_antialias = 9; //beautifying by firo
-	mip_shaded = 2; // more beautifying by michael
-	mip_flat = 2;	// more beautifying by michael
-	preload_mode = 2+4; //avoid crumbling platform jerk
+void main ()
+{
+	fps_max = 60;
+	video_mode = 10;
+	mouse_pointer = 0;
+	
+	d3d_antialias = 9;
+	mip_shaded = 2;
+	mip_flat = 2;
+	
+	preload_mode = 2+4;
+	
 	freeze_mode = 1;
+	
 	random_seed(0);
-	video_mode = 10; // By padmalcom (was 12)
+	
 	menu_open();
+	// <<intro>>
+	//game_start(); // level 1
+	// <<level2>>
+	// <<musical>>
+	//creditsInit();
 }
