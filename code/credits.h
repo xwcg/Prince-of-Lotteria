@@ -24,6 +24,8 @@
 
 	void creditsSpace ();
 	
+	BOOL crLottiUpdate (ENTITY* e);
+	
 // music, sfx
 
 	var g_fhCreditsSong = 0;
@@ -31,10 +33,37 @@
 	
 // globals
 
+	#define CR_LOTTI_FILE "zorroLotti.mdl"
+	
+	int g_crRow = 0;
+
 	var creditsFinished = 0;
 	int currentRow = 0;
 	VECTOR g_vecCreditsCamShake;
 	BOOL g_bCreditsAllExplode = false;
+	
+	BOOL g_bCrFirstLotti = false;
+	
+	MATERIAL* g_mtlLotti =
+	{
+		effect = "lottiGpu.fx";
+	}
+
+	#define crInit skill1
+	#define crSwordAtBelt skill2
+	#define crExploder skill3
+	#define crTime skill4
+	#define crAccel skill5 // 6,7
+	#define crSpeed skill8 // 9,10
+	#define crPercent skill11
+	#define crState skill12
+	#define crEffTimer skill13
+	
+	ENTITY* g_crLottiPreload =
+	{
+		type = "zorroLotti.mdl";
+		material = g_mtlLotti;
+	}	
 	
 // gui
 
