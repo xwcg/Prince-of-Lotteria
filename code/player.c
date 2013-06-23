@@ -258,6 +258,17 @@ void move_player() {
 			}	
 		}
 		
+		// On slope? Increase movement speed
+		#ifdef PL_DEBUG
+			draw_text("Normal: ", 10, 400, COLOR_RED);
+			draw_text(str_for_num(NULL, normal.z), 200, 400, COLOR_RED);
+		#endif
+		
+		// Correct movement for slopes
+		if (normal.z < 1 && normal.z > 0.7) {
+			vecPlayerMoveSpeed.x *= 2.5 - normal.z;
+		}
+		
 		// Fallen in spikes?
 		nTraceDown = c_trace(player.x, vector(player.x,player.y,player.z-10), IGNORE_ME | USE_BOX);
 		if (HIT_TARGET) {
@@ -384,7 +395,7 @@ void move_player() {
 		#endif
 		
 		// Execute the move
-		move_friction = 0; // Fix by Felix, Verhindert 80% aller Stucks
+		//move_friction = 0; // Fix by Felix, Verhindert 80% aller Stucks
 		c_move(me,nullvector,vecPlayerMoveSpeed.x,IGNORE_PASSABLE | IGNORE_PASSENTS | GLIDE | ACTIVATE_TRIGGER);
 		my.y = my.PL_PLAYER_POS_Y;
 		
@@ -433,7 +444,7 @@ void move_player() {
 
 void actPlayer ()
 {
-	move_friction = 0.3; // Fixed by padmalcom to avoid to get stuck on slopes
+	move_friction = 0.0; // Fixed by padmalcom to avoid to get stuck on slopes
 	ent_preload(me);
 	player = me;
 	player.PL_JUMP_TIME = 1;
