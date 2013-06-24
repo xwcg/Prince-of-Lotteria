@@ -82,7 +82,8 @@ TEXT* g_txtAchievements =
 		"firstjetpack$Jetpack collected!#Congratulations! Don't smash your head.*ackGeneric1.tga",
 		"firstcube$First Acknex Cube collected!#Oh my precious...*ackGeneric2.tga",
 		"firstlive$Extra live acquired!#Waste it wisely...*ackGeneric3.tga",
-		"firstlevel$First level completed!#The next level will need even more tries to complete!*ackGeneric3.tga",
+		"firstlevel$First level completed!#The next level will be something complete different!*ackGeneric3.tga",
+		"lottifantlevel$Riding level completed!#The next level will need even more tries to complete!*ackGeneric3.tga",
 		"lottifant$Lottifant found!!#Oh my god it's soooo cute...^^*ackGeneric2.tga"
 	);
 }
