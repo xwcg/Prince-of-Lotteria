@@ -3,15 +3,17 @@
 
 #include "player.h"
 
-void gui_init() {
+void gui_init ()
+{
 	panJetpackBorder = pan_create("", 2);
 	panJetpackBorder.bmap = bmapJetpackColor;
 	panJetpack = pan_create("", 3);
 	panJetpack.bmap = bmapJetpackBorder;
 	
-	panHeart1 = pan_create("", 2);
-	panHeart2 = pan_create("", 2);
-	panHeart3 = pan_create("", 2);
+	panHeartArr[0] = panHeart1 = pan_create("", 2);
+	panHeartArr[1] = panHeart2 = pan_create("", 2);
+	panHeartArr[2] = panHeart3 = pan_create("", 2);
+	
 	panHeart1.bmap = bmapZorroLife;
 	panHeart2.bmap = bmapZorroLife;
 	panHeart3.bmap = bmapZorroLife;
@@ -30,6 +32,8 @@ void gui_init() {
 	txtGameOver.font = font_create("Arial#90b");
 	vec_set(txtGameOver.blue, vector(0,0,255));
 	str_cpy((txtGameOver.pstring)[0], "Game Over");
+	
+	g_bGuiInitialized = true;
 }
 
 //fix by firo - start
@@ -39,7 +43,11 @@ void gui_reinit()
 }
 //fix by firo - end
 
-void gui_hide() {
+void gui_hide ()
+{
+	if (!g_bGuiInitialized)
+		return;
+		
 	reset(panJetpackBorder, SHOW);
 	reset(panJetpack, SHOW);
 	reset(panHeart1, SHOW);
@@ -50,11 +58,14 @@ void gui_hide() {
 	reset(txtLifes, SHOW);
 }
 
-void gui_show() {
-	if (flying_man) { //fix by firo
+void gui_show ()
+{
+	if (flying_man)
+	{
 		set(panJetpackBorder, SHOW);
 		set(panJetpack, SHOW);
 	}
+	
 	set(panHeart1, SHOW);
 	set(panHeart2, SHOW);
 	set(panHeart3, SHOW);
@@ -78,28 +89,25 @@ void gui_update_jetpack(var _percentage) {
 	}
 }
 
-void gui_update_hearts() {
-	if (player != NULL) {
-		if (player.PL_HEALTH > 0) {
-			set(panHeart3, SHOW);
-		} else {
-			reset(panHeart3, SHOW);
-		}
-		if (player.PL_HEALTH > 1) {
-			set(panHeart2, SHOW);
-		} else {
-			reset(panHeart2, SHOW);
+void gui_update_hearts ()
+{
+	if (player != NULL)
+	{
+		int i;
+		
+		for (i = 0; i < 3; i++)
+		{
+			if (panHeartArr[i] != NULL)
+			{
+				if (player->PL_HEALTH >= 3-i)
+					set(panHeartArr[i], SHOW);
+				else
+					reset(panHeartArr[i], SHOW);
+			}
 		}
 		
-		if (player.PL_HEALTH > 2) {
-			set(panHeart1, SHOW);
-		} else {
-			reset(panHeart1, SHOW);
-		}
-		
-		if (txtLifes != NULL) {
+		if (txtLifes != NULL)
 			str_for_num((txtLifes.pstring)[0], nPlayerLifes);
-		}
 	}
 }
 

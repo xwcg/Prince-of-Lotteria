@@ -23,6 +23,8 @@ void game_start()
 	media_stop(vMediaHandle);
 	vMediaHandle = 0;
 	
+	fog_color = 0;
+	
 	nPlayerLifes = 3; //fix by firo
 	flying_man = 0;//fix by firo
 	level_load_ext("level01_v7.wmb"); // by padmalcom

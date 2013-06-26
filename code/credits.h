@@ -59,11 +59,13 @@
 	#define crState skill12
 	#define crEffTimer skill13
 	
+	/*
 	ENTITY* g_crLottiPreload =
 	{
 		type = "zorroLotti.mdl";
 		material = g_mtlLotti;
 	}	
+	*/
 	
 // gui
 
