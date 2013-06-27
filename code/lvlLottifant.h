@@ -8,7 +8,7 @@
 	void lvlLfInit ();
 	void lvlLfReset ();
 	void lvlLfStart ();
-	void lvlLfExit ();
+	void lvlLfExit (BOOL bNextLevel);
 	
 // defines
 
@@ -35,8 +35,8 @@
 // globals
 
 	var g_lvlLfGravity = 10;
-	var g_lvlLfRideForce = 400;
-	var g_lvlLfJumpForce = 32;
+	var g_lvlLfRideForce = 410;
+	var g_lvlLfJumpForce = 33;
 	var g_lvlLfSpeedMax = 30;
 	var g_lvlLfDownForce = 600;
 
