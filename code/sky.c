@@ -3,9 +3,7 @@
 
 #include "sky.h"
 
-var sky_active; //fix by firo
-
-void skychange ()
+void skychange (float s)
 {
 	COLOR oldColor, newColor;
 	var factor = 0.0;
@@ -16,7 +14,7 @@ void skychange ()
 	sky_active = 1; //fix by firo
 	while (sky_active == 1) //fix by firo
 	{
-		factor += 0.2 * time_step;
+		factor += s * 0.2 * time_step;
 		factor = clamp(factor, 0.0, 1.0);
 		
 		vec_lerp(screen_color.blue, oldColor.blue, newColor.blue, factor);
@@ -33,6 +31,11 @@ void skychange ()
 	}
 	vec_set(screen_color.blue, vector(0,0,0)); //fix by firo
 	vec_set(sky_color.blue, screen_color.blue); //fix by firo
+}
+
+void skychange ()
+{
+	skychange(1);
 }
 
 #endif /* sky_c */
