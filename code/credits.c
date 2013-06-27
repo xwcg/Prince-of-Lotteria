@@ -18,6 +18,8 @@ void creditsInit ()
 
 void creditsReset ()
 {
+	sky_active = 0;
+	
 	g_bCrFirstLotti = false;
 	
 	gui_hide();
@@ -25,15 +27,12 @@ void creditsReset ()
 	creditsFinished = 0;
 	currentRow = 0;
 	
-	camera->clip_far = 18000;
+	camera->clip_far = 30000;
 	
 	vec_set(&g_vecCreditsCamShake, nullvector);
 	
-	if (g_fhCreditsSong != 0)
-	{
-		media_stop(g_fhCreditsSong);
-		g_fhCreditsSong = 0;
-	}
+	media_stop(0);
+	g_fhCreditsSong = 0;
 	
 	reset(g_txtCreditsSpace, SHOW);
 	
@@ -42,15 +41,13 @@ void creditsReset ()
 	reset(creditsBody1, SHOW);
 	reset(creditsBody2, SHOW);
 	
-	g_entCreditsTerrain = NULL;
-	
 	g_bCreditsAllExplode = false;
 	
 	on_space = NULL;
 	
 	level_load(NULL);
 	
-	ent_preload(g_crLottiPreload);
+	//ent_preload(g_crLottiPreload);
 	
 	freeze_mode = 0;
 }
@@ -61,9 +58,28 @@ void creditsExit ()
 	menu_open();
 }
 
+void creditsFog ()
+{
+	camera.fog_start = 128;
+	camera.fog_end = 4000;
+	fog_color = 1;
+	
+	VECTOR fogColor;
+	vec_set(&fogColor, vector(d3d_fogcolor1.blue, d3d_fogcolor1.green, d3d_fogcolor1.red));
+	
+	while (!creditsFinished)
+	{
+		vec_lerp(d3d_fogcolor1.blue, &fogColor, &sky_color, 0.5);
+		wait(1);
+	}
+}
+
 void creditsStart ()
 {
-	wait(1);
+	reset(camera, SHOW);
+	//wait(1);
+	
+	skychange(0.1);
 		
 	static char strIni [256];
 	sprintf(strIni, "%s\\credits.ini", _chr(work_dir));
@@ -96,32 +112,19 @@ void creditsStart ()
 	
 	camera.arc = 65;
 	
-	d3d_fogcolor4.red = 123;
-	d3d_fogcolor4.green = 174;
-	d3d_fogcolor4.blue = 163;	
-	
-	camera.fog_start = 4096;
-	camera.fog_end = 8192;
-	fog_color = 4;
-	
-	sun_light = 100;
-	vec_set(sun_color, vector(255,255,255));
-	vec_set(ambient_color, vec_scale(vector(255,255,255), 0.25));
-	sun_angle.pan = 45;
-	sun_angle.tilt = 30;
-	
 	detail_size = 64;	
 	
-	level_load(NULL);
-	
-	ent_create("credits.hmp", vector(0, 0, -64), acCreditsTerrain);
-	ent_create("acknex.mdl", nullvector, acCreditsSign);
-	ent_createlayer("Sky_1+6.tga", SKY | CUBE, 2);
+	level_load("credits.wmb");
+	creditsFog();
 	
 	credits_populate();
 	
 	var x = 0;
 	var len = 0;
+	
+	wait(1);
+	
+	set(camera, SHOW);
 	
 	while (media_playing(g_fhCreditsSong) > 0 && !key_q)
 	{
@@ -219,7 +222,16 @@ void creditsStart ()
 	
 	creditsFinished = 1;
 	
-	wait(-5.0);	
+	var et = 5 * 16;
+	
+	while (et > 0)
+	{
+		camera->tilt += time_step * 0.2;
+		camera->arc += time_step * 0.2;
+		
+		et -= time_step;
+		wait(1);
+	}
 	
 	// show space text
 	{
@@ -246,21 +258,23 @@ void credits_populate ()
 	
 	while (!creditsFinished)
 	{
+		camera->pan = 90;
+	
 		VECTOR pos;
 		
-		pos.x = 256 + 128 * g_crRow;
-		pos.y = 128 * column - 64 * g_crRow;
+		pos.y = 256 + 128 * g_crRow;
+		pos.x = -128 * column + 64 * g_crRow;
 		pos.z = 8;
 		
 		ENTITY* e = ent_create(CR_LOTTI_FILE, pos, credits_lotti);
 		
-		e->pan = 170 + random(20);
+		e->pan = camera->pan + 180 + (10 - random(20)) * sign(g_crRow);
 		e->flags |= TRANSLUCENT;
 		
 		for (e->alpha = 0; e->alpha < 100; e->alpha += fadespeed * time_step)
 		{
 			camera.z = cambase + camspeed * (g_crRow) + camspeed * ((var)(column + 0.005 * e->alpha) / (g_crRow+1));
-			camera.x = -camspeed * (g_crRow) - camspeed * ((var)(column + 0.005 * e->alpha) / (g_crRow+1));
+			camera.y = -camspeed * (g_crRow) - camspeed * ((var)(column + 0.005 * e->alpha) / (g_crRow+1));
 			
 			vec_add(camera->x, &g_vecCreditsCamShake);
 
@@ -276,7 +290,7 @@ void credits_populate ()
 		for (i = 0; i < 100; i += fadespeed * time_step)
 		{
 			camera.z = cambase + camspeed * (g_crRow) + camspeed * ((var)(column + 0.5 + 0.005 * i) / (g_crRow+1));
-			camera.x = -camspeed * (g_crRow) - camspeed * ((var)(column + 0.5 + 0.005 * i) / (g_crRow+1));
+			camera.y = -camspeed * (g_crRow) - camspeed * ((var)(column + 0.5 + 0.005 * i) / (g_crRow+1));
 			
 			vec_add(camera->x, &g_vecCreditsCamShake);
 			
@@ -332,7 +346,7 @@ void creditsCamShake ()
 	
 	while (f > 0)
 	{
-		g_vecCreditsCamShake.x += strength - random(strength * 2);
+		g_vecCreditsCamShake.y += strength - random(strength * 2);
 		g_vecCreditsCamShake.z += strength - random(strength * 2);
 		
 		f--;
@@ -370,11 +384,6 @@ action acCreditsTerrain ()
 
 action acCreditsSign ()
 {
-	while (g_entCreditsTerrain == NULL)
-		wait(1);
-		
-	vec_for_vertex(my->x, g_entCreditsTerrain, 493);
-	
 	my->flags |= NOFOG;
 	my->material = creditsBlinker;	
 }
@@ -382,7 +391,7 @@ action acCreditsSign ()
 BOOL crLottiUpdateRaise (ENTITY* e)
 {
 	e->z = e->alpha - 125;
-	e->pan = 5.4 * e->alpha;
+	e->pan = e->skill1 - (100 - e->alpha) * 5.4;
 	ent_animate(e, "idle", 5 * total_ticks + e->crInit, ANM_CYCLE);
 	
 	return (e->alpha >= 100);
@@ -453,6 +462,7 @@ BOOL crLottiUpdate (ENTITY* e)
 		          zorroMeshOptions(e, false, e->crSwordAtBelt, false);
 		          e->material = g_mtlLotti;
 		          e->crInit = random(100);
+				  e->skill1 = e->pan;
 				  
 				  if (g_crRow > 1)
 					e->crExploder = (random(100) < 20);

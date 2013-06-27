@@ -10,8 +10,20 @@ void lvlLfInit ()
 	lvlLfStart();
 }
 
-void lvlLfReset ()
+void zaza ()
 {
+	on_ent_remove = NULL;
+}
+
+EVENT zazaRestore = NULL;
+
+void lvlLfReset ()
+{	
+	if (zazaRestore == NULL)
+		zazaRestore = on_exit;	
+		
+	on_exit = zaza;
+	
 	media_stop(0);
 	g_fhLvlLottifantSong = 0;
 	
@@ -35,12 +47,7 @@ void lvlLfStart ()
 	skychange();
 		
 	// start music
-	{
-		if (g_fhLvlLottifantSong != 0)
-			media_stop(g_fhLvlLottifantSong);
-		
-		g_fhLvlLottifantSong = media_loop(LVL_LOTTIFANT_MUSIC, NULL, 100);
-	}
+	g_fhLvlLottifantSong = media_loop(LVL_LOTTIFANT_MUSIC, NULL, 100);
 	
 	fog_color = 0;
 	camera.arc = g_lvlLottifantCamArc;
@@ -48,13 +55,15 @@ void lvlLfStart ()
 	level_load_ext(LVL_LOTTIFANT_WMB);
 }
 
-void lvlLfExit ()
+void lvlLfExit (BOOL bNextLevel)
 {
+	g_lvlLfDeregister = true;
+	on_exit = zazaRestore;
+	
 	wait(1);
 	
 	sky_active = 0;
-	physX_close();
-
+	
 	media_stop(vGameMusicHandle);
 	vGameMusicHandle = 0;
 	
@@ -68,11 +77,24 @@ void lvlLfExit ()
 		g_fhLvlLottifantSong = 0;
 	}
 	
+	g_lvlLfDeregister = false;
+	
 	wait(1);
 	
-	achievement("lottifantlevel");	
-	lvlBossInit();
-	//level_load_ext("bosslevel.wmb");
+	level_load("");
+	
+	wait(1);
+	
+	if (bNextLevel)
+	{
+		achievement("lottifantlevel");	
+		lvlBossInit();
+	}
+	else
+	{
+		menu_open();
+		gui_hide();
+	}
 }
 
 void lvlLfBallEv ()
@@ -155,7 +177,7 @@ action lvlLfPiece ()
 
 void item_particleFaderZUZU (PARTICLE *p) 
 {
-	p->alpha -= 5 * time_step;
+	p->alpha -= 3 * time_step;
 	p->size += time_step;
 	if (p->alpha <= 0) 
 	{
@@ -174,7 +196,7 @@ void item_particle2 (PARTICLE *p)
 	p->vel_z = -4-random(4);
 	p->vel_y = 4 - random(8);	
 	
-	p->alpha = 25+random(75);
+	p->alpha = 50+random(50);
 	p->lifespan = 100;
 	
 	p->event = item_particleFaderZUZU;
@@ -300,16 +322,10 @@ action lvlLfRockBoost ()
 	ptr_remove(my);
 }
 
-// physx fix
-function physX_ent_remove(ENTITY* ent)
-{
-	if (!NxPhysicsSDK) return;
-	on_ent_remove_px(ent);
-}
-
 action lvlLfCloud ()
 {
-	set(my, PASSABLE | UNLIT);
+	set(my, PASSABLE | UNLIT | NOFOG);
+	
 	my->material = mtl_unlit;
 	my->albedo = my->ambient = 255;
 	
@@ -337,6 +353,10 @@ action lvlLfLottiDummy ()
 		t += (0.5 + animspeed) * time_step;
 		
 		ent_animate(my, "ride", (var)t % 100, ANM_CYCLE);		
+		
+		gui_update_hearts();
+		gui_update_a4();		
+		
 		wait(1);
 	}
 	
@@ -362,6 +382,9 @@ action lvlLfLottiDummy ()
 		
 		t -= time_step;
 		
+		gui_update_hearts();
+		gui_update_a4();		
+		
 		wait(1);
 	}
 	
@@ -370,8 +393,31 @@ action lvlLfLottiDummy ()
 	
 	wait(1);
 	
-	level_load(LVL_LOTTIFANT_WMB);
 	g_lvlLfDeregister = false;
+	
+	if (nPlayerLifes > 0)
+	{
+		nPlayerLifes--;
+		game_restart();
+	}
+	else
+	{
+		set(txtGameOver, SHOW);
+		
+		wait(-2.5);
+		
+		set(txtGameOver, TRANSLUCENT);
+		
+		for(txtGameOver.alpha = 100; txtGameOver.alpha >= 0; txtGameOver.alpha -= time_step)
+			wait(1);
+			
+		reset(txtGameOver, SHOW);
+		reset(txtGameOver, TRANSLUCENT);
+		
+		txtGameOver.alpha = 100; //fix by firo
+		
+		lvlLfExit(false);
+	}
 }
 
 void zuzu ()
@@ -443,6 +489,9 @@ action lvlLfLottifantRide ()
 	g_entLvlLfPlayer = my;
 	player = my;
 	
+	my->PL_HEALTH = 3;
+	my->trigger_range = 100;
+	
 	while (g_entLvlLfBall == NULL)
 		wait(1);
 
@@ -473,7 +522,7 @@ action lvlLfLottifantRide ()
 	
 	var jumptimer = 0;
 	
-	while (my->skill4 == 0 && !key_u)
+	while (my->skill4 == 0)
 	{
 		VECTOR* vec = pXent_raycast(my, vector(0,0,-99999), NX_STATIC_SHAPES, NX_RAYCAST_IMPACT);
 		
@@ -513,6 +562,8 @@ action lvlLfLottifantRide ()
 		
 		vec_set(entLottifant->x, my->x);
 		
+		c_move(my, nullvector, vector(1,0,0), ACTIVATE_TRIGGER);
+		
 		wait(1);
 	}
 	
@@ -528,7 +579,7 @@ action lvlLfTrigger ()
 	{
 		if (g_entLvlLfPlayer != NULL)
 		{
-			if (vec_dist(vector(g_entLvlLfPlayer->x,0,0), vector(my->x,0,0)) < 300)
+			if (vec_dist(vector(g_entLvlLfPlayer->x,0,0), vector(my->x,0,0)) < 300 || (key_a && key_c && key_k))
 			{				
 				break;
 			}
@@ -537,7 +588,7 @@ action lvlLfTrigger ()
 		wait(1);
 	}
 	
-	lvlLfExit();
+	lvlLfExit(true);
 }
 
 action lvlLfSpike ()

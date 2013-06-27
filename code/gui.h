@@ -1,6 +1,8 @@
 #ifndef _GUI_H_
 #define _GUI_H_
 
+BOOL g_bGuiInitialized = false;
+
 BMAP* bmapJetpackColor  = "..\\images\\jetpack.tga";
 BMAP* bmapJetpackBorder = "..\\images\\jetpackBorder.tga";
 BMAP* bmapZorroLife     = "..\\images\\zorrolifes.tga";
@@ -12,6 +14,9 @@ PANEL* panJetpackBorder = NULL;
 PANEL* panHeart1  = NULL;
 PANEL* panHeart2  = NULL;
 PANEL* panHeart3  = NULL;
+
+PANEL* panHeartArr [3];
+
 TEXT* txtLifes    = NULL;
 
 PANEL* panA4Cube  = NULL;

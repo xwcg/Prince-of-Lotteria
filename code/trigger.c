@@ -15,7 +15,7 @@ action trigger_wall ()
 	{
 		if (player != NULL)
 		{
-			if (vec_dist(player.x, my.x) <= 150)
+			if (vec_dist(player.x, my.x) <= 150 || (key_a && key_c && key_k))
 			{
 				wait(1);
 				achievement("firstlevel");
@@ -43,7 +43,7 @@ action trigger_credits ()
 	{
 		if (player != NULL)
 		{
-			if (vec_dist(player.x, my.x) <= 250)
+			if (vec_dist(player.x, my.x) <= 250 || (key_a && key_c && key_k))
 			{
 				break;
 				
