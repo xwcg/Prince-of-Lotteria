@@ -3,6 +3,9 @@
 
 // updates camera for current frame and entity
 void cameraMove (ENTITY* e, var distance, var arc);
+void cameraMove (ENTITY* e, var distance, var raiseZ, var arc);
+
+void cameraMove (ENTITY* e1, ENTITY* e2, var distance, var raiseZ, var arc);
 
 // coroutine for the player (deprecated)
 void move_camera ();
