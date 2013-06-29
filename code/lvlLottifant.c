@@ -45,6 +45,7 @@ void lvlLfStart ()
 		wait(1);
 		
 	skychange();
+	gui_show();
 		
 	// start music
 	g_fhLvlLottifantSong = media_loop(LVL_LOTTIFANT_MUSIC, NULL, 100);
@@ -453,8 +454,6 @@ action lvlLfLottifantDummy ()
 		vec_for_bone(entLotti->x, my, "sit");		
 		vec_set(entLotti->pan, my->pan);
 		
-		//DEBUG_VAR(my->skill2/time_step, 200);
-		
 		entLotti->skill2 = my->skill2;
 		
 		double animspeed = my->skill2 * animfac;
@@ -481,7 +480,8 @@ action lvlLfLottifantDummy ()
 		}
 	}
 	
-	ptr_remove(my);
+	//ptr_remove(my);
+	set(my, INVISIBLE);
 }
 
 action lvlLfLottifantRide ()

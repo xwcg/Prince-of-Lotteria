@@ -18,7 +18,7 @@
 	#define LVL_LOTTIFANT_PX_GROUP_PLAYER 5
 	
 	#define LVL_LOTTIFANT_WMB "lottifant.wmb"
-	#define LVL_LOTTIFANT_MUSIC "music\\POL_game_looped.wav"
+	#define LVL_LOTTIFANT_MUSIC "music\\lottifantLoop.ogg"
 	
 	#define LF_LOTTI_FILE "zorroLotti_sit.mdl"
 	

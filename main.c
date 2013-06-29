@@ -23,7 +23,10 @@
 #include "credits.h"
 #include "trigger.h"
 #include "geist.c"
+
+#include "lvlTemple.h"
 #include "lvlLottifant.h"
+#include "lvlBoss.h"
 
 void main ()
 {

@@ -25,6 +25,7 @@ void lvlBossStart ()
 		wait(1);
 		
 	skychange();
+	gui_show();
 		
 	// start music
 	{
@@ -54,6 +55,21 @@ void lvlBossExit ()
 	
 	achievement("lottifant");
 	creditsInit();
+}
+
+action lvlBossTriggerExit ()
+{
+	while (1)
+	{
+		if (player != NULL)
+			if (vec_dist(player.x, my.x) <= 250 || (key_a && key_c && key_k))
+				break;
+		
+		wait(1);
+	}
+	
+	proc_mode = PROC_GLOBAL;
+	lvlBossExit();
 }
 
 #endif /* lvlBoss_c */

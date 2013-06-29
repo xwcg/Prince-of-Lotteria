@@ -3,6 +3,7 @@
 
 #include "game.h"
 #include "player.h"
+#include "lvlTemple.h"
 #include "lvlLottifant.h"
 
 void game_start()
@@ -14,31 +15,23 @@ void game_start()
 	pan_setdigits(panBlack, 0, 5, 5, "Press [Space] to skip", font_create("Arial#24b"), 1, vDummy);
 	pan_setcolor(panBlack, 1, 1, vector(255,255,255));
 	set(panBlack, SHOW | LIGHT);
-	var vMediaHandle = media_play("music\\lotteria_intro_with_music.wav", NULL, 100);
+	var vMediaHandle = media_play(LVL_INTRO_MUSIC, NULL, 100);
+	
 	while(key_esc || key_space || key_enter) wait(1);
+	
 	while(media_playing(vMediaHandle) && !key_esc && !key_space && !key_enter) {
 		wait(1);
 	}
-	ptr_remove(panBlack); //fix by firo (cleanup due to restart after game over)
+	
+	ptr_remove(panBlack);
 	media_stop(vMediaHandle);
 	vMediaHandle = 0;
 	
-	fog_color = 0;
-	
-	nPlayerLifes = 3; //fix by firo
-	flying_man = 0;//fix by firo
-	level_load_ext("level01_v7.wmb"); // by padmalcom
-	//lvlLfInit();
-	//level_load_ext("bosslevel.wmb");
-	VECTOR* vecPlayerPosition = vector(-432,-80,40);
-	wait(3);
-	skychange();
-	freeze_mode = 0;
+	nPlayerLifes = 3;
+	flying_man = 0;
 	gui_start();
-	gui_show();
-	vGameMusicHandle = media_play("music\\POL_game_intro.wav", NULL, 70);
-	wait(-8);
-	vGameMusicHandle = media_loop("music\\POL_game_looped.wav", NULL, 50);
+	
+	lvlTempleInit();
 }
 
 void game_restart(void) {

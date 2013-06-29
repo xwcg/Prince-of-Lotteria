@@ -13,6 +13,8 @@ void game_start ();
 void game_restart ();
 void level_load_ext (STRING* _lvl);
 
+#define LVL_INTRO_MUSIC "music\\intro.ogg"
+
 #include "game.c"
 
 #endif // #ifndef _GAME_H_
