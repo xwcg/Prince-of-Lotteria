@@ -13,8 +13,11 @@
 
 	#define LVL_TEMPLE_WMB "level01_v7.wmb"
 	
-	#define LVL_TEMPLE_INTRO "music\\templeIntro.ogg"
-	#define LVL_TEMPLE_MUSIC "music\\templeLoop.ogg"
+// sounds
+
+	// music
+	SOUND* g_musicTempleIntro = "templeIntro.ogg";
+	SOUND* g_musicTempleLoop = "templeLoop.ogg";
 
 // globals
 

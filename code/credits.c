@@ -31,7 +31,7 @@ void creditsReset ()
 	
 	vec_set(&g_vecCreditsCamShake, nullvector);
 	
-	media_stop(0);
+	snd_stop(g_fhCreditsSong);
 	g_fhCreditsSong = 0;
 	
 	reset(g_txtCreditsSpace, SHOW);
@@ -86,10 +86,9 @@ void creditsStart ()
 	
 	// start music and lyrics
 	{
-		if (g_fhCreditsSong != 0)
-			media_stop(g_fhCreditsSong);
+		snd_stop(g_fhCreditsSong);
+		g_fhCreditsSong = snd_play(g_musicCredits, 100, 0);
 		
-		g_fhCreditsSong = media_play("music\\CloneFall.ogg", NULL, 100);
 		lyricsStart(NULL, g_txtCreditsLyrics, g_fhCreditsSong);
 	}
 	
@@ -126,7 +125,7 @@ void creditsStart ()
 	
 	set(camera, SHOW);
 	
-	while (media_playing(g_fhCreditsSong) > 0 && !key_q)
+	while (snd_playing(g_fhCreditsSong) > 0 && !key_q)
 	{
 		static char section [256];
 		sprintf(section, "Credit%d", pos + 1);
@@ -210,7 +209,7 @@ void creditsStart ()
 		wait(1);
 	} 
 	
-	media_stop(g_fhCreditsSong);
+	snd_stop(g_fhCreditsSong);
 	
 	creditsHead1.flags &= ~SHOW;
 	creditsBody1.flags &= ~SHOW;

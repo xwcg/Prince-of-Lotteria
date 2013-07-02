@@ -24,7 +24,7 @@ void lvlLfReset ()
 		
 	on_exit = zaza;
 	
-	media_stop(0);
+	snd_stop(g_fhLvlLottifantSong);
 	g_fhLvlLottifantSong = 0;
 	
 	level_load(NULL);
@@ -48,7 +48,7 @@ void lvlLfStart ()
 	gui_show();
 		
 	// start music
-	g_fhLvlLottifantSong = media_loop(LVL_LOTTIFANT_MUSIC, NULL, 100);
+	g_fhLvlLottifantSong = snd_loop(g_musicLottifant, 100, 0);
 	
 	fog_color = 0;
 	camera.arc = g_lvlLottifantCamArc;
@@ -65,7 +65,7 @@ void lvlLfExit (BOOL bNextLevel)
 	
 	sky_active = 0;
 	
-	media_stop(vGameMusicHandle);
+	snd_stop(vGameMusicHandle);
 	vGameMusicHandle = 0;
 	
 	player = NULL;
@@ -74,7 +74,7 @@ void lvlLfExit (BOOL bNextLevel)
 	
 	if (g_fhLvlLottifantSong != 0)
 	{
-		media_stop(g_fhLvlLottifantSong);
+		snd_stop(g_fhLvlLottifantSong);
 		g_fhLvlLottifantSong = 0;
 	}
 	

@@ -11,7 +11,7 @@ void lvlBossInit ()
 
 void lvlBossReset ()
 {
-	media_stop(0);
+	snd_stop(g_fhLvlBossSong);
 	g_fhLvlBossSong = 0;
 	
 	level_load(NULL);
@@ -29,9 +29,7 @@ void lvlBossStart ()
 		
 	// start music
 	{
-		if (g_fhLvlBossSong != 0)
-			media_stop(g_fhLvlBossSong);
-		
+		snd_stop(g_fhLvlBossSong);
 		g_fhLvlBossSong = media_loop(LVL_BOSS_MUSIC, NULL, 100);
 	}
 	

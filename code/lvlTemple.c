@@ -12,7 +12,7 @@ void lvlTempleInit ()
 
 void lvlTempleReset ()
 {
-	media_stop(0);
+	snd_stop(g_fhLvlTempleSong);
 	g_fhLvlTempleSong = 0;
 	
 	level_load(NULL);
@@ -25,18 +25,18 @@ void lvlTempleMusic ()
 	g_fhLvlTempleIntro = 0;
 	g_fhLvlTempleSong = 0;
 	
-	g_fhLvlTempleIntro = media_play(LVL_TEMPLE_INTRO, NULL, 100);
+	g_fhLvlTempleIntro = snd_play(g_musicTempleIntro, 100, 0);
 	
-	while (g_bLvlTempleRunning && g_fhLvlTempleIntro != 0 && media_playing(g_fhLvlTempleIntro))
+	while (g_bLvlTempleRunning && g_fhLvlTempleIntro != 0 && snd_playing(g_fhLvlTempleIntro))
 		wait(1);
 
 	g_fhLvlTempleIntro = 0;
 
 	if (g_bLvlTempleRunning)
 	{
-		g_fhLvlTempleSong = media_loop(LVL_TEMPLE_MUSIC, NULL, 100);
+		g_fhLvlTempleSong = snd_loop(g_musicTempleLoop, 100, 0);
 		
-		while (g_bLvlTempleRunning && g_fhLvlTempleSong != 0 && media_playing(g_fhLvlTempleSong))
+		while (g_bLvlTempleRunning && g_fhLvlTempleSong != 0 && snd_playing(g_fhLvlTempleSong))
 			wait(1);
 			
 		g_fhLvlTempleSong = 0;
@@ -67,8 +67,10 @@ void lvlTempleExit (BOOL bNextLevel)
 	sky_active = 0;
 	g_bLvlTempleRunning = false;
 	
-	media_stop(0);
+	snd_stop(g_fhLvlTempleIntro);
 	g_fhLvlTempleIntro = 0;
+	
+	snd_stop(g_fhLvlTempleSong);
 	g_fhLvlTempleSong = 0;
 	
 	player = NULL;

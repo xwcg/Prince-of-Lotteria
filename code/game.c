@@ -3,6 +3,7 @@
 
 #include "game.h"
 #include "player.h"
+#include "lvlIntro.h"
 #include "lvlTemple.h"
 #include "lvlLottifant.h"
 
@@ -15,16 +16,18 @@ void game_start()
 	pan_setdigits(panBlack, 0, 5, 5, "Press [Space] to skip", font_create("Arial#24b"), 1, vDummy);
 	pan_setcolor(panBlack, 1, 1, vector(255,255,255));
 	set(panBlack, SHOW | LIGHT);
-	var vMediaHandle = media_play(LVL_INTRO_MUSIC, NULL, 100);
 	
-	while(key_esc || key_space || key_enter) wait(1);
+	var vMediaHandle = snd_play(g_musicIntro, 100, 0);
 	
-	while(media_playing(vMediaHandle) && !key_esc && !key_space && !key_enter) {
+	while (key_esc || key_space || key_enter)
 		wait(1);
-	}
+	
+	while (snd_playing(vMediaHandle) && !key_esc && !key_space && !key_enter)
+		wait(1);
 	
 	ptr_remove(panBlack);
-	media_stop(vMediaHandle);
+	
+	snd_stop(vMediaHandle);
 	vMediaHandle = 0;
 	
 	nPlayerLifes = 3;

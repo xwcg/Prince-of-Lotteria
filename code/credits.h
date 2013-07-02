@@ -26,12 +26,16 @@
 	
 	BOOL crLottiUpdate (ENTITY* e);
 	
-// music, sfx
+// sounds
 
-	var g_fhCreditsSong = 0;
+	// music
+	SOUND* g_musicCredits = "CloneFall.ogg";
+	
 	SOUND *creditsExplo = "explo.wav";
 	
 // globals
+	
+	var g_fhCreditsSong = 0;
 
 	#define CR_LOTTI_FILE "zorroLotti.mdl"
 	

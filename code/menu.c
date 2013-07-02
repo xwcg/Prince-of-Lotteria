@@ -45,7 +45,7 @@ void menu_open ()
 	
 	wait(3); // Fixed or crash :)
 	
-	media_stop(0);
+	snd_stop(4);
 	var menuLoop = snd_loop(menuBackgroundMusic, 100, 0);
 	
 	var time = 0;
