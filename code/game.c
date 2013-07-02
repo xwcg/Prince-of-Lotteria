@@ -9,32 +9,53 @@
 
 void game_start()
 {
-	PANEL* panBlack = pan_create(" ", 100);
-	vec_set(panBlack.blue, vector(8,8,8));
-	panBlack.size_x = screen_size.x;
-	panBlack.size_y = screen_size.y;
-	pan_setdigits(panBlack, 0, 5, 5, "Press [Space] to skip", font_create("Arial#24b"), 1, vDummy);
-	pan_setcolor(panBlack, 1, 1, vector(255,255,255));
-	set(panBlack, SHOW | LIGHT);
+	#ifndef SKIP_INTRO
 	
-	var vMediaHandle = snd_play(g_musicIntro, 100, 0);
+		PANEL* panBlack = pan_create(" ", 100);
+		vec_set(panBlack.blue, vector(8,8,8));
+		panBlack.size_x = screen_size.x;
+		panBlack.size_y = screen_size.y;
+		pan_setdigits(panBlack, 0, 5, 5, "Press [Space] to skip", font_create("Arial#24b"), 1, vDummy);
+		pan_setcolor(panBlack, 1, 1, vector(255,255,255));
+		set(panBlack, SHOW | LIGHT);
+		
+		var vMediaHandle = snd_play(g_musicIntro, 100, 0);
+		
+		while (key_esc || key_space || key_enter)
+			wait(1);
+		
+		while (snd_playing(vMediaHandle) && !key_esc && !key_space && !key_enter)
+			wait(1);
+		
+		ptr_remove(panBlack);
+		
+		snd_stop(vMediaHandle);
+		vMediaHandle = 0;
 	
-	while (key_esc || key_space || key_enter)
-		wait(1);
-	
-	while (snd_playing(vMediaHandle) && !key_esc && !key_space && !key_enter)
-		wait(1);
-	
-	ptr_remove(panBlack);
-	
-	snd_stop(vMediaHandle);
-	vMediaHandle = 0;
+	#endif
 	
 	nPlayerLifes = 3;
 	flying_man = 0;
 	gui_start();
 	
-	lvlTempleInit();
+	// standard start level = temple
+	#ifndef SKIP_TO
+		lvlTempleInit();
+	#else
+		
+		#ifdef SKIP_TO_LOTTIFANTLEVEL
+			lvlLfInit();
+		#endif
+	
+		#ifdef SKIP_TO_BOSSLEVEL
+			lvlBossInit();
+		#endif
+		
+		#ifdef SKIP_TO_CREDITS
+			creditsInit();
+		#endif
+		
+	#endif
 }
 
 void game_restart(void) {

@@ -28,10 +28,7 @@ void lvlBossStart ()
 	gui_show();
 		
 	// start music
-	{
-		snd_stop(g_fhLvlBossSong);
-		g_fhLvlBossSong = media_loop(LVL_BOSS_MUSIC, NULL, 100);
-	}
+	g_fhLvlBossSong = snd_loop(g_musicBoss, 100, 0);
 	
 	fog_color = 0;
 	camera.arc = g_lvlBossCamArc;
@@ -52,6 +49,7 @@ void lvlBossExit ()
 	wait(1);
 	
 	achievement("lottifant");
+	
 	creditsInit();
 }
 

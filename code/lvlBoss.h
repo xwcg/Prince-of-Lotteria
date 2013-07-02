@@ -12,7 +12,13 @@ void lvlBossExit ();
 var g_lvlBossCamArc = 75;
 var g_lvlBossCamDist = 1200;
 
-var g_fhLvlBossSong = 0;
+// sounds
+
+	SOUND* g_musicBoss = "templeLoop.ogg";
+
+// globals
+
+	var g_fhLvlBossSong = 0;
 
 #include "lvlBoss.c"
 

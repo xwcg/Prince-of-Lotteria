@@ -51,6 +51,8 @@
 	VECTOR g_vecEntLvlBallLast;
 	
 	ENTITY* g_entLvlLfPlayer = NULL;
+	
+	EVENT on_exit_restore = NULL; // hack
 
 #include "lvlLottifant.c"
 

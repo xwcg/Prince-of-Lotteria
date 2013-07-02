@@ -9,6 +9,7 @@
 	void creditsReset ();
 	void creditsExit ();
 	void creditsStart ();
+	void creditsText ();
 
 	action acCreditsTerrain ();
 	action acCreditsSign ();
@@ -31,7 +32,8 @@
 	// music
 	SOUND* g_musicCredits = "CloneFall.ogg";
 	
-	SOUND *creditsExplo = "explo.wav";
+	SOUND* creditsExplo = "explo.wav";
+	SOUND* g_sndJetpackCredits = "jetpackCredits.ogg";
 	
 // globals
 	

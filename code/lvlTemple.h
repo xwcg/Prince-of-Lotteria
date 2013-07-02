@@ -18,6 +18,8 @@
 	// music
 	SOUND* g_musicTempleIntro = "templeIntro.ogg";
 	SOUND* g_musicTempleLoop = "templeLoop.ogg";
+	
+	SOUND* g_sndBatFly = "batFly.ogg";
 
 // globals
 

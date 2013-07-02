@@ -8,6 +8,20 @@
 #define PRAGMA_LEVEL "level01_v7.wmp"
 #define PRAGMA_LEVEL "bosslevel.wmp"
 
+//- dev cheats ---------------------------------------------------------------------------
+
+	//#define SKIP_INTRO
+
+	// activate SKIP_TO and a target to redefine start level
+	//#define SKIP_TO
+	//#define SKIP_TO_LOTTIFANTLEVEL
+	//#define SKIP_TO_BOSSLEVEL
+	//#define SKIP_TO_CREDITS
+
+	//#define SKIP_CREDITS
+	
+//----------------------------------------------------------------------------------------
+
 #include "credits.h"
 #include "achievements.h"
 #include "game.h"
@@ -47,10 +61,4 @@ void main ()
 	random_seed(0);
 	
 	menu_open();
-	// <<intro>>
-	//game_start(); // level 1
-	//lvlLfInit(); // level 2 - Lottifant
-	// << boss level >>
-	// <<musical>>
-	//creditsInit();
 }
