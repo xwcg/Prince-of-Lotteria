@@ -61,4 +61,6 @@ void main ()
 	random_seed(0);
 	
 	menu_open();
+	
+	game_hotkeys();
 }

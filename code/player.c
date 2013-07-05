@@ -267,7 +267,7 @@ void move_player() {
 		// Correct movement for slopes
 		if (normal.z < 1 && normal.z > 0.7) {
 			vecPlayerMoveSpeed.x *= 2.5 - normal.z;
-		}		
+		}
 		
 		// Fallen in spikes?
 		nTraceDown = c_trace(player.x, vector(player.x,player.y,player.z-10), IGNORE_ME | USE_BOX);

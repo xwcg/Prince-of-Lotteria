@@ -100,4 +100,28 @@ void level_load_ext(STRING* _lvl) {
 	}
 }
 
+void game_hotkeys() {
+	panMute = pan_create("", 200);
+	panMute.bmap = bmapMute;
+	
+	while(1) {
+		if (key_f9) {
+			while(key_f9) wait(1);
+			
+			// Reposition because of possible resolution change
+			panMute.pos_x = screen_size.x - bmap_width(bmapMute) - 10;
+			panMute.pos_y = screen_size.y - bmap_height(bmapMute) - 10;
+			
+			if ((master_vol == -1) || (master_vol > 0)) {
+				set(panMute, SHOW);
+				master_vol = 0;
+			} else {
+				reset(panMute, SHOW);
+				master_vol = 100;
+			}
+		}
+		wait(1);
+	}
+}
+
 #endif // #ifndef _GAME_C_
