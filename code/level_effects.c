@@ -63,36 +63,40 @@ void smoke(PARTICLE *p)
 	p.event = p_alphafade_smoke;
 }
 
-action actTorch()
+action actTorch ()
 {
 	VECTOR tip;
-	vec_for_vertex(tip, my, 2);
-	ENTITY *dummy = ent_create("sphere.mdl", tip, NULL);
-	vec_scale(dummy.scale_x, 1);
-	dummy.flags = INVISIBLE | PASSABLE;
-	dummy.skill_a = 100;
-	dummy.skill_b = 0;
-	dummy.red = 255;
-	dummy.green = 192;
-	dummy.blue = 0;
-	dummy.clipfactor = 9000;
+	vec_for_vertex(&tip, my, 2);
 	
-	var dist = 0;
-	var target_d = 0;
+	ENTITY* dummy = ent_create(NULL, &tip, NULL);
 	
-	var vParticles = 0;	
-	while(1)
+	set(dummy, PASSABLE);
+	vec_set(dummy->blue, vector(0, 192, 255));
+	dummy->clipfactor = 9000;
+	
+	var vParticles = 0;
+	
+	while (1)
 	{
 		vParticles += time_step;
 		if (vParticles > 3)
 		{
-			if (vec_dist(player.x, my.x) < 1500)
+			if (player != NULL)
 			{
-				effect(flame, 3, dummy.x, nullvector);
-				effect(smoke, 3, vector(dummy.x + random(1), dummy.y + random(1), dummy.z + 20), nullvector);
+				if (vec_dist(player->x, my->x) < 1500)
+				{
+					VECTOR pos;
+					vec_set(&pos, dummy->x);
+					vec_add(&pos, vector(2-random(4), random(2), random(20)));
+					
+					effect(flame, 3, dummy->x, nullvector);					
+					effect(smoke, 3, &pos, nullvector);
+				}
 			}
+			
 			vParticles -= 3;
 		}
+		
 		wait(1);
 	}
 }

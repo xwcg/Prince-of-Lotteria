@@ -10,21 +10,19 @@ void lvlLfInit ()
 	lvlLfStart();
 }
 
-void zaza ()
+void on_exit_lotti ()
 {
 	on_ent_remove = NULL;
 }
 
-EVENT zazaRestore = NULL;
-
 void lvlLfReset ()
 {	
-	if (zazaRestore == NULL)
-		zazaRestore = on_exit;	
+	if (on_exit_restore == NULL)
+		on_exit_restore = on_exit;	
 		
-	on_exit = zaza;
+	on_exit = on_exit_lotti;
 	
-	media_stop(0);
+	snd_stop(g_fhLvlLottifantSong);
 	g_fhLvlLottifantSong = 0;
 	
 	level_load(NULL);
@@ -45,9 +43,10 @@ void lvlLfStart ()
 		wait(1);
 		
 	skychange();
+	gui_show();
 		
 	// start music
-	g_fhLvlLottifantSong = media_loop(LVL_LOTTIFANT_MUSIC, NULL, 100);
+	g_fhLvlLottifantSong = snd_loop(g_musicLottifant, 100, 0);
 	
 	fog_color = 0;
 	camera.arc = g_lvlLottifantCamArc;
@@ -58,13 +57,13 @@ void lvlLfStart ()
 void lvlLfExit (BOOL bNextLevel)
 {
 	g_lvlLfDeregister = true;
-	on_exit = zazaRestore;
+	on_exit = on_exit_restore;
 	
 	wait(1);
 	
 	sky_active = 0;
 	
-	media_stop(vGameMusicHandle);
+	snd_stop(vGameMusicHandle);
 	vGameMusicHandle = 0;
 	
 	player = NULL;
@@ -73,7 +72,7 @@ void lvlLfExit (BOOL bNextLevel)
 	
 	if (g_fhLvlLottifantSong != 0)
 	{
-		media_stop(g_fhLvlLottifantSong);
+		snd_stop(g_fhLvlLottifantSong);
 		g_fhLvlLottifantSong = 0;
 	}
 	
@@ -175,7 +174,7 @@ action lvlLfPiece ()
 	pXent_settype(my, 0, 0);
 }
 
-void item_particleFaderZUZU (PARTICLE *p) 
+void lvlLfRockpiecePart_ev (PARTICLE *p) 
 {
 	p->alpha -= 3 * time_step;
 	p->size += time_step;
@@ -185,9 +184,8 @@ void item_particleFaderZUZU (PARTICLE *p)
 	}
 }
 
-void item_particle2 (PARTICLE *p) 
+void lvlLfRockpiecePart (PARTICLE *p) 
 {
-	//vec_sub(&p->blue, vector(random(32), random(32), random(32)));
 	set(p, MOVE | TRANSLUCENT);
 
 	p->bmap = getRandomBmapBankBmap(g_bbLfCollisionDust);
@@ -199,7 +197,7 @@ void item_particle2 (PARTICLE *p)
 	p->alpha = 50+random(50);
 	p->lifespan = 100;
 	
-	p->event = item_particleFaderZUZU;
+	p->event = lvlLfRockpiecePart_ev;
 }
 
 void lvlLfRockpiece ()
@@ -230,7 +228,7 @@ void lvlLfRockpiece ()
 			
 			static VECTOR vecVertex;
 			vec_for_vertex(&vecVertex, my, numVertices);
-			effect(item_particle2, 1, &vecVertex, nullvector);
+			effect(lvlLfRockpiecePart, 1, &vecVertex, nullvector);
 		}
 		else
 			timer -= time_step;
@@ -453,8 +451,6 @@ action lvlLfLottifantDummy ()
 		vec_for_bone(entLotti->x, my, "sit");		
 		vec_set(entLotti->pan, my->pan);
 		
-		//DEBUG_VAR(my->skill2/time_step, 200);
-		
 		entLotti->skill2 = my->skill2;
 		
 		double animspeed = my->skill2 * animfac;
@@ -481,7 +477,8 @@ action lvlLfLottifantDummy ()
 		}
 	}
 	
-	ptr_remove(my);
+	//ptr_remove(my);
+	set(my, INVISIBLE);
 }
 
 action lvlLfLottifantRide ()
@@ -588,6 +585,8 @@ action lvlLfTrigger ()
 		wait(1);
 	}
 	
+	snd_stopall(4);
+	snd_play(g_sndDoor, 100, 0);
 	lvlLfExit(true);
 }
 

@@ -9,6 +9,7 @@
 	void creditsReset ();
 	void creditsExit ();
 	void creditsStart ();
+	void creditsText ();
 
 	action acCreditsTerrain ();
 	action acCreditsSign ();
@@ -26,12 +27,17 @@
 	
 	BOOL crLottiUpdate (ENTITY* e);
 	
-// music, sfx
+// sounds
 
-	var g_fhCreditsSong = 0;
-	SOUND *creditsExplo = "explo.wav";
+	// music
+	SOUND* g_musicCredits = "CloneFall.ogg";
+	
+	SOUND* creditsExplo = "explo.wav";
+	SOUND* g_sndJetpackCredits = "jetpackCredits.ogg";
 	
 // globals
+	
+	var g_fhCreditsSong = 0;
 
 	#define CR_LOTTI_FILE "zorroLotti.mdl"
 	

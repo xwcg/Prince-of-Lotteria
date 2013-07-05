@@ -7,12 +7,18 @@ void lvlBossStart ();
 void lvlBossExit ();
 
 #define LVL_BOSS_WMB "bosslevel.wmb"
-#define LVL_BOSS_MUSIC "music\\POL_game_looped.wav"
+#define LVL_BOSS_MUSIC "music\\templeLoop.ogg"
 
 var g_lvlBossCamArc = 75;
 var g_lvlBossCamDist = 1200;
 
-var g_fhLvlBossSong = 0;
+// sounds
+
+	SOUND* g_musicBoss = "templeLoop.ogg";
+
+// globals
+
+	var g_fhLvlBossSong = 0;
 
 #include "lvlBoss.c"
 

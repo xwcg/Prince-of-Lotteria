@@ -13,6 +13,10 @@ void game_start ();
 void game_restart ();
 void level_load_ext (STRING* _lvl);
 
+// sounds
+
+	SOUND* g_sndDoor = "door.ogg";
+
 #include "game.c"
 
 #endif // #ifndef _GAME_H_

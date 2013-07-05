@@ -18,14 +18,15 @@
 	#define LVL_LOTTIFANT_PX_GROUP_PLAYER 5
 	
 	#define LVL_LOTTIFANT_WMB "lottifant.wmb"
-	#define LVL_LOTTIFANT_MUSIC "music\\POL_game_looped.wav"
-	
 	#define LF_LOTTI_FILE "zorroLotti_sit.mdl"
 	
 	BOOL g_lvlLfDeregister = false;
 	
 // sounds
 
+	// music
+	SOUND* g_musicLottifant = "lottifantLoop.ogg";
+	
 	SOUND* g_sndLvlLfRockBreak = "rockBreakApart.ogg";
 	
 // sprites
@@ -50,6 +51,8 @@
 	VECTOR g_vecEntLvlBallLast;
 	
 	ENTITY* g_entLvlLfPlayer = NULL;
+	
+	EVENT on_exit_restore = NULL; // hack
 
 #include "lvlLottifant.c"
 
