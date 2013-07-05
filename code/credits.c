@@ -12,8 +12,14 @@
 
 void creditsInit ()
 {
-	creditsReset();
-	creditsStart();
+	#ifndef SKIP_CREDITS
+	
+		creditsReset();
+		creditsStart();
+		
+	#else
+		creditsExit();
+	#endif
 }
 
 void creditsReset ()
@@ -31,7 +37,7 @@ void creditsReset ()
 	
 	vec_set(&g_vecCreditsCamShake, nullvector);
 	
-	media_stop(0);
+	snd_stopall(4);
 	g_fhCreditsSong = 0;
 	
 	reset(g_txtCreditsSpace, SHOW);
@@ -46,8 +52,6 @@ void creditsReset ()
 	on_space = NULL;
 	
 	level_load(NULL);
-	
-	//ent_preload(g_crLottiPreload);
 	
 	freeze_mode = 0;
 }
@@ -77,19 +81,45 @@ void creditsFog ()
 void creditsStart ()
 {
 	reset(camera, SHOW);
-	//wait(1);
+	
+	wait(1);
 	
 	skychange(0.1);
+	
+	detail_size = 64;	
+	level_load("credits.wmb");
+
+	creditsFog();
+	credits_populate();
+	creditsText();
+	
+	camera.arc = 65;
+	
+	wait(1);
+	
+	set(camera, SHOW);
+	
+	while (!creditsFinished)
+	{
+		if (key_a && key_c && key_k)
+			break;
 		
+		wait(1);
+	}	
+	
+	g_bCreditsAllExplode = true;
+}
+
+void creditsText ()
+{
 	static char strIni [256];
 	sprintf(strIni, "%s\\credits.ini", _chr(work_dir));
 	
 	// start music and lyrics
 	{
-		if (g_fhCreditsSong != 0)
-			media_stop(g_fhCreditsSong);
+		snd_stop(g_fhCreditsSong);
+		g_fhCreditsSong = snd_play(g_musicCredits, 100, 0);
 		
-		g_fhCreditsSong = media_play("music\\CloneFall.ogg", NULL, 100);
 		lyricsStart(NULL, g_txtCreditsLyrics, g_fhCreditsSong);
 	}
 	
@@ -110,23 +140,10 @@ void creditsStart ()
 	int size1 = 300;
 	int size2 = 600;
 	
-	camera.arc = 65;
-	
-	detail_size = 64;	
-	
-	level_load("credits.wmb");
-	creditsFog();
-	
-	credits_populate();
-	
 	var x = 0;
 	var len = 0;
 	
-	wait(1);
-	
-	set(camera, SHOW);
-	
-	while (media_playing(g_fhCreditsSong) > 0 && !key_q)
+	while (snd_playing(g_fhCreditsSong) != 0 && !g_bCreditsAllExplode)
 	{
 		static char section [256];
 		sprintf(section, "Credit%d", pos + 1);
@@ -155,9 +172,9 @@ void creditsStart ()
 			creditsHead1.pos_x = -size1 + 1.5 * size1 * (1 - pow(1 - 0.01 * fade, 2));
 			creditsBody1.pos_x = -size1 + 1.7 * size1 * (1 - pow(1 - 0.01 * fade, 2));
 			
-			if (key_q)
+			if (g_bCreditsAllExplode)
 				break;
-				
+			
 			wait(1);
 		}
 		
@@ -166,16 +183,19 @@ void creditsStart ()
 			creditsHead2.pos_x = screen_size.x + size2 - 1.2 * size2 * (1 - pow(1 - 0.01 * fade, 2));
 			creditsBody2.pos_x = screen_size.x + size2 - 1.3 * size2 * (1 - pow(1 - 0.01 * fade, 2));
 			
-			if(key_q)
+			if (g_bCreditsAllExplode)
 				break;
-				
+			
 			wait(1);
 		}
 		
-		if(key_q)
-			break;
-			
-		wait(-0.6 * itemDuration);
+		var t_id = 0.6 * itemDuration * 16;
+		
+		while (t_id > 0 && !g_bCreditsAllExplode)
+		{
+			t_id -= time_step;
+			wait(1);
+		}
 		
 		var scrollspeed = 100;
 		
@@ -186,7 +206,7 @@ void creditsStart ()
 			if (fade > 20)
 				creditsBody1.pos_x += scrollspeed * time_step;
 				
-			if (key_q)
+			if (g_bCreditsAllExplode)
 				break;
 				
 			wait(1);
@@ -199,7 +219,7 @@ void creditsStart ()
 			if (fade > 20)
 				creditsBody2.pos_x -= scrollspeed * time_step;
 				
-			if(key_q)
+			if (g_bCreditsAllExplode)
 				break;
 				
 			wait(1);
@@ -210,17 +230,16 @@ void creditsStart ()
 		wait(1);
 	} 
 	
-	media_stop(g_fhCreditsSong);
+	snd_stopall(4);
 	
 	creditsHead1.flags &= ~SHOW;
 	creditsBody1.flags &= ~SHOW;
 	creditsHead2.flags &= ~SHOW;
 	creditsBody2.flags &= ~SHOW;
 	
-	//currentRow = 25000;
 	g_bCreditsAllExplode = true;
 	
-	creditsFinished = 1;
+	creditsFinished = true;
 	
 	var et = 5 * 16;
 	
@@ -256,7 +275,7 @@ void credits_populate ()
 	double tilt = -14;
 	double tiltSpeed = 0.0025;
 	
-	while (!creditsFinished)
+	while (!creditsFinished && !g_bCreditsAllExplode)
 	{
 		camera->pan = 90;
 	
@@ -487,6 +506,8 @@ BOOL crLottiUpdate (ENTITY* e)
 		             vec_set(e->crAccel, vector(2.5 * (random(1) - 0.5), 2.5 * (random(1) - 0.5), 1 + random(2)));
 		          else
 		             vec_set(e->crAccel, vector(0.25 * (random(1) - 0.5), 0.25 * (random(1) - 0.5), 1 + random(2)));
+					 
+				  ent_playsound(e, g_sndJetpackCredits, 6000);
 	
 		          vec_to_angle(e.pan, e->crAccel);
 		          e.tilt -= 90;

@@ -75,15 +75,18 @@ action moving_spikes()
 action falling_stone()
 {
 	set (me, is_trap);
-	while (player == NULL) wait (1);
+	
+	while (player == NULL)
+		wait(1);
+	
 	my->alpha = 100;
 	vec_scale (&my->scale_x, random(0.4) + 0.6);
 	var vOffset = random(300) - 150;
 	
-	while(my->alpha > 0)
+	while (my->alpha > 0)
 	{
 		wait (1);
-		if ((absv(player.x - my.x) < STONE_TRIGGERDIST) && (my->z > player->z) && !is(me, is_triggered))
+		if ((absv(player.x - my.x) < STONE_TRIGGERDIST) && (my->z > player->z) && (absv(my->z - player->z) < STONE_TRIGGERDIST_Z) && !is(me, is_triggered))
 		{
 			set (me, is_triggered);
 			my->emask = ENABLE_BLOCK;
@@ -108,7 +111,8 @@ action falling_stone()
 			my->alpha = maxv(my->alpha - (time_step * 7), 0);
 		}
 	}
-	ptr_remove(me);
+	
+	ptr_remove(my);
 }
 
 action falling_stalactite()
