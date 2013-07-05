@@ -6,6 +6,8 @@
 	action actPlayer();
 	void move_player ();
 	void activate_jetpack();
+	
+	void snd_player_jump ();
 
 // defines
 

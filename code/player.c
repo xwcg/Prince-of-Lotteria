@@ -11,9 +11,29 @@
 #include "zorroMesh.h"
 #include "camera.h"
 
-// -----------------------------------------------------------------------------------
-// Particles
-// -----------------------------------------------------------------------------------
+void snd_player_jump ()
+{
+	switch ((int)(random(5)))
+	{
+		case 0: snd_play(sndJump01, 100, 0); break;
+		case 1: snd_play(sndJump02, 100, 0); break;
+		case 2: snd_play(sndJump03, 100, 0); break;
+		case 3: snd_play(sndJump04, 100, 0); break;
+		case 4: snd_play(sndJump05, 100, 0); break;
+	}
+}
+
+void snd_player_wohoo ()
+{
+	switch ((int)(random(5)))
+	{
+		case 0: snd_play(sndJetpack01, 100, 0); break;
+		case 1: snd_play(sndJetpack02, 100, 0); break;
+		case 2: snd_play(sndJetpack03, 100, 0); break;
+		case 3: snd_play(sndJetpack04, 100, 0); break;
+		case 4: snd_play(sndJetpack05, 100, 0); break;
+	}
+}
 
 void pAlphaFade(PARTICLE *p) {
 	p.alpha -= p.skill_a*time_step;
@@ -131,14 +151,7 @@ void move_player ()
 			player.PL_IS_JUMPING = 1;
 			my.PL_ANIMATION_PERCENTAGE = 0;
 
-			switch ((int)(random(5)))
-			{
-				case 0: snd_play(sndJump01, 100, 0); break;
-				case 1: snd_play(sndJump02, 100, 0); break;
-				case 2: snd_play(sndJump03, 100, 0); break;
-				case 3: snd_play(sndJump04, 100, 0); break;
-				case 4: snd_play(sndJump05, 100, 0); break;
-			}
+			snd_player_jump();
 		}
 		
 		// If player is jumping...
@@ -169,22 +182,7 @@ void move_player ()
 					// wohoooo
 					if (vPlayerWoho == 0)
 					{
-						nSndRandom = integer(random(100));
-						
-						if (nSndRandom < 25)
-							snd_play(sndJetpack01, 1000, 0);
-						else
-							if (nSndRandom < 50)
-								snd_play(sndJetpack02, 1000, 0);
-							else
-								if (nSndRandom < 75)
-									snd_play(sndJetpack03, 1000, 0);
-								else
-									if (nSndRandom < 98)
-										snd_play(sndJetpack04, 1000, 0);
-									else
-										snd_play(sndJetpack05, 1000, 0);
-										
+						snd_player_wohoo();
 						vPlayerWoho = 1;
 					}
 					
