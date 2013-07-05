@@ -32,6 +32,7 @@
 #define SPIKE_TIMER_DOWN       1
 #define SPIKE_SPEED            20
 #define STONE_TRIGGERDIST      200
+#define STONE_TRIGGERDIST_Z    600
 #define STONE_SPEED            30
 #define STALACTITE_TRIGGERDIST 30
 #define STALACTITE_SPEED       60

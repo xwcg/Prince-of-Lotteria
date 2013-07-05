@@ -11,7 +11,7 @@ void lvlBossInit ()
 
 void lvlBossReset ()
 {
-	media_stop(0);
+	snd_stop(g_fhLvlBossSong);
 	g_fhLvlBossSong = 0;
 	
 	level_load(NULL);
@@ -25,14 +25,10 @@ void lvlBossStart ()
 		wait(1);
 		
 	skychange();
+	gui_show();
 		
 	// start music
-	{
-		if (g_fhLvlBossSong != 0)
-			media_stop(g_fhLvlBossSong);
-		
-		g_fhLvlBossSong = media_loop(LVL_BOSS_MUSIC, NULL, 100);
-	}
+	g_fhLvlBossSong = snd_loop(g_musicBoss, 100, 0);
 	
 	fog_color = 0;
 	camera.arc = g_lvlBossCamArc;
@@ -53,7 +49,23 @@ void lvlBossExit ()
 	wait(1);
 	
 	achievement("lottifant");
+	
 	creditsInit();
+}
+
+action lvlBossTriggerExit ()
+{
+	while (1)
+	{
+		if (player != NULL)
+			if (vec_dist(player.x, my.x) <= 250 || (key_a && key_c && key_k))
+				break;
+		
+		wait(1);
+	}
+	
+	proc_mode = PROC_GLOBAL;
+	lvlBossExit();
 }
 
 #endif /* lvlBoss_c */

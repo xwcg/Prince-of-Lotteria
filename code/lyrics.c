@@ -29,7 +29,7 @@ void lyricsStart (char* filename, TEXT* txtSrc, var fhMusic)
 		
 		var quadAlpha = 0;
 		
-		while (media_playing(fhMusic) && nextLyrics >= 0 && displayedLyrics < numLyrics)
+		while (snd_playing(fhMusic) && nextLyrics >= 0 && displayedLyrics < numLyrics)
 		{
 			quadAlpha = clamp(quadAlpha + 5 * time_step, 0, g_lyricsBarAlpha);
 			
