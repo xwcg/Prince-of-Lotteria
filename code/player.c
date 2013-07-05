@@ -430,13 +430,17 @@ void move_player() {
 				wait(1);
 			reset(txtGameOver, SHOW);
 			reset(txtGameOver, TRANSLUCENT);
-			txtGameOver.alpha = 100; //fix by firo
+			txtGameOver.alpha = 100;
 			
-			media_stop(vGameMusicHandle); //fix by firo
-			sky_active = 0;//fix by firo
+			snd_stop(vGameMusicHandle);
+			
+			sky_active = 0;
+			
 			level_load(NULL);
-			menu_open();//fix by firo
-			gui_hide();//fix by firo
+			
+			menu_open();
+			gui_hide();
+			
 			return;
 		}
 	}

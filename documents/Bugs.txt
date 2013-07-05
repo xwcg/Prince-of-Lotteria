@@ -34,7 +34,7 @@ menu_start crasht wenn ein wait(3) entfernt wird -> -Dauerhafte Lösung benötigt.
 
 [FIXED]
 -Der Narrator ist im Vergleich zum Rest viel zu leise. 
-    * Zu leise!? Bei mir ist er eher zu laut. Hängt wohl an der Kombination media_ und snd_ zusammen..?
+    * Zu leise!? Bei mir ist er eher zu laut. Hängt wohl an der Kombination XXXXX und snd_ zusammen..?
        <= alle Erzähler sind mit snd_play, soweit ich das gesehen habe auch mit voller (100) Lautstärke
     * ich höre den narrator garnicht. Hab die zwei extra packete von 3dgs mitinstalliert, hat sonst noch wer das problem? ~Michael
     * Ich musste die lautstärke voll aufdrehen um den Sprecher am anfang verstehen zu können ~Kitsu
