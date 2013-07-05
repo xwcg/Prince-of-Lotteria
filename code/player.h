@@ -3,7 +3,7 @@
 
 //#define PL_DEBUG
 
-#define PL_GRAVITY               8
+#define PL_GRAVITY               1 // Fixed by padmalcom - was "8"
 #define PL_MAX_JUMP_TIME         1
 #define PL_MAX_JUMP_HEIGHT       110
 #define PL_JETPACK_REFRESH_STEP  0.5
@@ -29,13 +29,12 @@ float fPlayerJetpackCooldown  = 0;
 var vPlayerSndHandle          = 0;
 var vPlayerWoho					= 0;
 
-var flying_man				= 0;
+var flying_man                = 0;
 
 var godmode                   = 0;
 
 int nPlayerLifes              = 3;
 
-//BMAP* bmapSmoke = "..\\images\\smoke.tga";
 BMAP* bmapBlood = "..\\images\\blood.tga";
 
 SOUND* sndAttack01            = "..\\sounds\\attack01.wav";
