@@ -131,7 +131,7 @@ action lvlLfBall ()
 	pXent_setbodyflag(my, NX_BF_FROZEN_PAN, 1);
 	pXent_setbodyflag(my, NX_BF_FROZEN_ROLL, 1);
 	
-	pXent_setmaxspeed(my, 180);
+	pXent_setmaxspeed(my, g_lvlLfBallSpeedMax);
 	
 	pXent_setmass(my, 200);
 
@@ -150,7 +150,7 @@ action lvlLfBall ()
 		if (d < 2 && my->x < 23500)
 			lvlLfBallEv();
 			
-		pXent_addforceglobal(my, vector(0, 0, -120 * time_step), my->x);
+		pXent_addforceglobal(my, vector(0, 0, -g_lvlLfBallDownForce * time_step), my->x);
 		
 		vec_set(&g_vecEntLvlBallLast, my->x);
 		
@@ -540,18 +540,22 @@ action lvlLfLottifantRide ()
 		else
 			jumptimer = 0;
 			
-		var dist = vec_dist(vector(my->x,0,0), vector(entLottifant->x,0,0));		
-	
-		if (dist / time_step < g_lvlLfSpeedMax) 
-			pXent_addforceglobal(my, vector(key_force.x * g_lvlLfRideForce * time_step, 0, 0), my->x);		
+		var dist = vec_dist(vector(my->x,0,0), vector(entLottifant->x,0,0));
+		var force = 1 + minv(key_force.x * 2, 0);
 		
+		if (dist / time_step < g_lvlLfSpeedMax) 
+		{
+			
+			pXent_addforceglobal(my, vector(force * g_lvlLfRideForce * time_step, 0, 0), my->x);
+		}
+			
 		pXent_addforceglobal(my, vector(0, 0, -g_lvlLfDownForce * time_step), my->x);
 			
 		cameraMove(my, g_lvlLottifantCamDist, 200, g_lvlLottifantCamArc);
 		//cameraMove(my, g_entLvlLfBall, g_lvlLottifantCamDist, 200, g_lvlLottifantCamArc);
 		
-		if (sign(key_force.x) != 0)
-			direction = sign(key_force.x);
+		if (sign(force) != 0)
+			direction = sign(force);
 			
 		entLottifant->skill1 = direction;
 		entLottifant->skill2 = dist; //vec_dist(vector(my->x,0,0), vector(entLottifant->x,0,0));
