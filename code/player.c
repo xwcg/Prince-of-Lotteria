@@ -267,7 +267,11 @@ void move_player() {
 		// Correct movement for slopes
 		if (normal.z < 1 && normal.z > 0.7) {
 			vecPlayerMoveSpeed.x *= 2.5 - normal.z;
+<<<<<<< HEAD
 		}
+=======
+		}		
+>>>>>>> master
 		
 		// Fallen in spikes?
 		nTraceDown = c_trace(player.x, vector(player.x,player.y,player.z-10), IGNORE_ME | USE_BOX);
@@ -444,7 +448,14 @@ void move_player() {
 
 void actPlayer ()
 {
+<<<<<<< HEAD
 	move_friction = 0.0; // Fixed by padmalcom to avoid to get stuck on slopes
+=======
+	if (sky_active == 0)
+		skychange();
+
+	move_friction = 0.3; // Fixed by padmalcom to avoid to get stuck on slopes
+>>>>>>> master
 	ent_preload(me);
 	player = me;
 	player.PL_JUMP_TIME = 1;

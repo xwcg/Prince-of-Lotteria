@@ -1,12 +1,12 @@
 // WMP2
 // WMPIO V 1.30
-// Created 19.06.2013
+// Created 26.06.2013
 
 version 710
 
 blocks 0
-entities 45
-objects 45
+entities 272
+objects 272
 
 wed {
 	palette {
@@ -57,8 +57,8 @@ model 1 {   // pathPieceI_mdl_080
 	0.75 0.75 0.75
 	<pathPieceI.mdl>
 	pathPieceI_mdl_080
-	ndef
-	0 0 0 0 0 0 0 0
+	lvlLfPiece
+	0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 	0000
 	0
 	50
@@ -66,16 +66,12 @@ model 1 {   // pathPieceI_mdl_080
 	ndef
 }
 
-start 2 {   // pos_000
-	pos_000
-}
-
-model 3 {   // zorrofantDummy_080
+model 2 {   // zorrofantDummy_080
 	1 1 1
-	<zorrofantDummy.mdl>
+	<lottifant_ride.mdl>
 	zorrofantDummy_080
-	ndef
-	0 0 0 0 0 0 0 0
+	lvlLfLottifantRide
+	0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 	0000
 	0
 	50
@@ -83,11 +79,11 @@ model 3 {   // zorrofantDummy_080
 	ndef
 }
 
-model 4 {   // zorrofantDummy_089
-	1 1 1
+model 3 {   // zorrofantDummy_089
+	1.106988 1.106988 1.106988
 	<rockball.mdl>
 	zorrofantDummy_089
-	ndef
+	lvlLfBall
 	0 0 0 0 0 0 0 0
 	0000
 	0
@@ -96,11 +92,11 @@ model 4 {   // zorrofantDummy_089
 	ndef
 }
 
-model 5 {   // zorrofantDummy_090
-	1.5 1.5 1.5
+model 4 {   // zorrofantDummy_090
+	1.792196 1.792196 1.792196
 	<rock.mdl>
 	zorrofantDummy_090
-	ndef
+	lvlLfStartRock
 	0 0 0 0 0 0 0 0
 	0000
 	0
@@ -109,11 +105,11 @@ model 5 {   // zorrofantDummy_090
 	ndef
 }
 
-model 6 {   // zorrofantDummy_093
+model 5 {   // zorrofantDummy_093
 	1.5 1.5 1.5
 	<rock.mdl>
 	zorrofantDummy_093
-	ndef
+	lvlLfRock
 	0 0 0 0 0 0 0 0
 	0000
 	0
@@ -122,12 +118,12 @@ model 6 {   // zorrofantDummy_093
 	ndef
 }
 
-model 7 {   // pathPieceA_mdl_094
+model 6 {   // pathPieceA_mdl_094
 	0.75 0.75 0.75
 	<pathPieceA.mdl>
 	pathPieceA_mdl_094
-	ndef
-	0 0 0 0 0 0 0 0
+	lvlLfPiece
+	0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 	0000
 	0
 	50
@@ -135,12 +131,12 @@ model 7 {   // pathPieceA_mdl_094
 	ndef
 }
 
-model 8 {   // pathPieceA_mdl_100
+model 7 {   // pathPieceA_mdl_100
 	0.75 0.75 0.75
 	<pathPieceJ.mdl>
 	pathPieceA_mdl_100
-	ndef
-	0 0 0 0 0 0 0 0
+	lvlLfPiece
+	0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 	0000
 	0
 	50
@@ -148,12 +144,12 @@ model 8 {   // pathPieceA_mdl_100
 	ndef
 }
 
-model 9 {   // pathPieceI_mdl_101
+model 8 {   // pathPieceI_mdl_101
 	0.75 0.75 0.75
 	<pathPieceI.mdl>
 	pathPieceI_mdl_101
-	ndef
-	0 0 0 0 0 0 0 0
+	lvlLfPiece
+	0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 	0000
 	0
 	50
@@ -161,12 +157,12 @@ model 9 {   // pathPieceI_mdl_101
 	ndef
 }
 
-model 10 {   // pathPieceA_mdl_104
+model 9 {   // pathPieceA_mdl_104
 	0.75 0.75 0.75
 	<pathPieceJ.mdl>
 	pathPieceA_mdl_104
-	ndef
-	0 0 0 0 0 0 0 0
+	lvlLfPiece
+	0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 	0000
 	0
 	50
@@ -174,11 +170,11 @@ model 10 {   // pathPieceA_mdl_104
 	ndef
 }
 
-model 11 {   // zorrofantDummy_105
+model 10 {   // zorrofantDummy_105
 	2.5 2.5 2.5
 	<rock.mdl>
 	zorrofantDummy_105
-	ndef
+	lvlLfRock
 	0 0 0 0 0 0 0 0
 	0000
 	0
@@ -187,11 +183,11 @@ model 11 {   // zorrofantDummy_105
 	ndef
 }
 
-model 12 {   // zorrofantDummy_108
+model 11 {   // zorrofantDummy_108
 	1.92279 1.92279 1.92279
 	<rock.mdl>
 	zorrofantDummy_108
-	ndef
+	lvlLfRock
 	0 0 0 0 0 0 0 0
 	0000
 	0
@@ -200,12 +196,12 @@ model 12 {   // zorrofantDummy_108
 	ndef
 }
 
-model 13 {   // pathPieceI_mdl_108
+model 12 {   // pathPieceI_mdl_108
 	0.75 0.75 0.75
 	<pathPieceC.mdl>
 	pathPieceI_mdl_108
-	ndef
-	0 0 0 0 0 0 0 0
+	lvlLfPiece
+	0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 	0000
 	0
 	50
@@ -213,12 +209,12 @@ model 13 {   // pathPieceI_mdl_108
 	ndef
 }
 
-model 14 {   // pathPieceI_mdl_111
+model 13 {   // pathPieceI_mdl_111
 	0.75 0.75 0.75
 	<pathEdgeL.mdl>
 	pathPieceI_mdl_111
-	ndef
-	0 0 0 0 0 0 0 0
+	lvlLfPiece
+	0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 	0000
 	0
 	50
@@ -226,12 +222,12 @@ model 14 {   // pathPieceI_mdl_111
 	ndef
 }
 
-model 15 {   // pathPieceI_mdl_112
+model 14 {   // pathPieceI_mdl_112
 	0.75 0.75 0.75
 	<pathPieceB.mdl>
 	pathPieceI_mdl_112
-	ndef
-	0 0 0 0 0 0 0 0
+	lvlLfPiece
+	0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 	0000
 	0
 	50
@@ -239,12 +235,12 @@ model 15 {   // pathPieceI_mdl_112
 	ndef
 }
 
-model 16 {   // pathPieceA_mdl_113
+model 15 {   // pathPieceA_mdl_113
 	0.75 0.75 0.75
 	<pathPieceJ.mdl>
 	pathPieceA_mdl_113
-	ndef
-	0 0 0 0 0 0 0 0
+	lvlLfPiece
+	0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 	0000
 	0
 	50
@@ -252,12 +248,12 @@ model 16 {   // pathPieceA_mdl_113
 	ndef
 }
 
-model 17 {   // pathPieceI_mdl_114
+model 16 {   // pathPieceI_mdl_114
 	0.75 0.75 0.75
 	<pathPieceG.mdl>
 	pathPieceI_mdl_114
-	ndef
-	0 0 0 0 0 0 0 0
+	lvlLfPiece
+	0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 	0000
 	0
 	50
@@ -265,64 +261,12 @@ model 17 {   // pathPieceI_mdl_114
 	ndef
 }
 
-model 18 {   // pathPieceI_mdl_119
-	0.75 0.75 0.75
-	<pathPieceH.mdl>
-	pathPieceI_mdl_119
-	ndef
-	0 0 0 0 0 0 0 0
-	0000
-	0
-	50
-	ndef
-	ndef
-}
-
-model 19 {   // pathPieceI_mdl_120
-	0.75 0.75 0.75
-	<pathEdgeL.mdl>
-	pathPieceI_mdl_120
-	ndef
-	0 0 0 0 0 0 0 0
-	0000
-	0
-	50
-	ndef
-	ndef
-}
-
-model 20 {   // pathPieceI_mdl_121
-	0.75 0.75 0.75
-	<pathEdgeL.mdl>
-	pathPieceI_mdl_121
-	ndef
-	0 0 0 0 0 0 0 0
-	0000
-	0
-	50
-	ndef
-	ndef
-}
-
-model 21 {   // pathPieceI_mdl_122
-	0.75 0.75 0.75
-	<pathPieceH.mdl>
-	pathPieceI_mdl_122
-	ndef
-	0 0 0 0 0 0 0 0
-	0000
-	0
-	50
-	ndef
-	ndef
-}
-
-model 22 {   // pathPieceI_mdl_125
+model 17 {   // pathPieceI_mdl_125
 	0.75 0.75 0.75
 	<pathEdgeR.mdl>
 	pathPieceI_mdl_125
-	ndef
-	0 0 0 0 0 0 0 0
+	lvlLfPiece
+	0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 	0000
 	0
 	50
@@ -330,25 +274,25 @@ model 22 {   // pathPieceI_mdl_125
 	ndef
 }
 
-model 23 {   // pathPieceI_mdl_126
+model 18 {   // pathPieceI_mdl_126
 	0.75 0.75 0.75
 	<pathBridge.mdl>
 	pathPieceI_mdl_126
 	ndef
 	0 0 0 0 0 0 0 0
-	0000
+	0000001000000000
 	0
 	50
 	ndef
 	ndef
 }
 
-model 24 {   // pathPieceI_mdl_127
+model 19 {   // pathPieceI_mdl_127
 	0.75 0.75 0.75
 	<pathPieceE.mdl>
 	pathPieceI_mdl_127
-	ndef
-	0 0 0 0 0 0 0 0
+	lvlLfPiece
+	0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 	0000
 	0
 	50
@@ -356,12 +300,12 @@ model 24 {   // pathPieceI_mdl_127
 	ndef
 }
 
-model 25 {   // pathPieceI_mdl_128
+model 20 {   // pathPieceI_mdl_128
 	0.75 0.75 0.75
 	<pathEdgeL.mdl>
 	pathPieceI_mdl_128
-	ndef
-	0 0 0 0 0 0 0 0
+	lvlLfPiece
+	0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 	0000
 	0
 	50
@@ -369,12 +313,12 @@ model 25 {   // pathPieceI_mdl_128
 	ndef
 }
 
-model 26 {   // pathPieceI_mdl_112
+model 21 {   // pathPieceI_mdl_112
 	0.75 0.75 0.75
 	<pathPieceB.mdl>
 	pathPieceI_mdl_112
-	ndef
-	0 0 0 0 0 0 0 0
+	lvlLfPiece
+	0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 	0000
 	0
 	50
@@ -382,12 +326,12 @@ model 26 {   // pathPieceI_mdl_112
 	ndef
 }
 
-model 27 {   // pathPieceI_mdl_137
+model 22 {   // pathPieceI_mdl_137
 	0.75 0.75 0.75
 	<pathPieceI.mdl>
 	pathPieceI_mdl_137
-	ndef
-	0 0 0 0 0 0 0 0
+	lvlLfPiece
+	0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 	0000
 	0
 	50
@@ -395,12 +339,12 @@ model 27 {   // pathPieceI_mdl_137
 	ndef
 }
 
-model 28 {   // pathPieceA_mdl_144
+model 23 {   // pathPieceA_mdl_144
 	0.75 0.75 0.75
 	<pathPieceJ.mdl>
 	pathPieceA_mdl_144
-	ndef
-	0 0 0 0 0 0 0 0
+	lvlLfPiece
+	0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 	0000
 	0
 	50
@@ -408,12 +352,12 @@ model 28 {   // pathPieceA_mdl_144
 	ndef
 }
 
-model 29 {   // pathPieceA_mdl_147
+model 24 {   // pathPieceA_mdl_147
 	0.75 0.75 0.75
 	<pathPieceJ.mdl>
 	pathPieceA_mdl_147
-	ndef
-	0 0 0 0 0 0 0 0
+	lvlLfPiece
+	0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 	0000
 	0
 	50
@@ -421,12 +365,12 @@ model 29 {   // pathPieceA_mdl_147
 	ndef
 }
 
-model 30 {   // pathPieceA_mdl_148
+model 25 {   // pathPieceA_mdl_148
 	0.75 0.75 0.75
 	<pathPieceJ.mdl>
 	pathPieceA_mdl_148
-	ndef
-	0 0 0 0 0 0 0 0
+	lvlLfPiece
+	0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 	0000
 	0
 	50
@@ -434,12 +378,12 @@ model 30 {   // pathPieceA_mdl_148
 	ndef
 }
 
-model 31 {   // pathPieceI_mdl_149
+model 26 {   // pathPieceI_mdl_149
 	0.75 0.75 0.75
 	<pathPieceE.mdl>
 	pathPieceI_mdl_149
-	ndef
-	0 0 0 0 0 0 0 0
+	lvlLfPiece
+	0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 	0000
 	0
 	50
@@ -447,12 +391,12 @@ model 31 {   // pathPieceI_mdl_149
 	ndef
 }
 
-model 32 {   // pathPieceI_mdl_150
+model 27 {   // pathPieceI_mdl_150
 	0.75 0.75 0.75
 	<pathPieceE.mdl>
 	pathPieceI_mdl_150
-	ndef
-	0 0 0 0 0 0 0 0
+	lvlLfPiece
+	0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 	0000
 	0
 	50
@@ -460,38 +404,12 @@ model 32 {   // pathPieceI_mdl_150
 	ndef
 }
 
-model 33 {   // pathPieceI_mdl_151
-	0.75 0.75 0.75
-	<pathPieceG.mdl>
-	pathPieceI_mdl_151
-	ndef
-	0 0 0 0 0 0 0 0
-	0000
-	0
-	50
-	ndef
-	ndef
-}
-
-model 34 {   // pathPieceI_mdl_152
-	0.75 0.75 0.75
-	<pathPieceA.mdl>
-	pathPieceI_mdl_152
-	ndef
-	0 0 0 0 0 0 0 0
-	0000
-	0
-	50
-	ndef
-	ndef
-}
-
-model 35 {   // pathPieceI_mdl_155
+model 28 {   // pathPieceI_mdl_155
 	0.75 0.75 0.75
 	<pathPieceI.mdl>
 	pathPieceI_mdl_155
-	ndef
-	0 0 0 0 0 0 0 0
+	lvlLfPiece
+	0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 	0000
 	0
 	50
@@ -499,12 +417,12 @@ model 35 {   // pathPieceI_mdl_155
 	ndef
 }
 
-model 36 {   // pathPieceA_mdl_156
+model 29 {   // pathPieceA_mdl_156
 	0.8 0.8 0.8
 	<pathPieceJ.mdl>
 	pathPieceA_mdl_156
-	ndef
-	0 0 0 0 0 0 0 0
+	lvlLfPiece
+	0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 	0000
 	0
 	50
@@ -512,25 +430,12 @@ model 36 {   // pathPieceA_mdl_156
 	ndef
 }
 
-model 37 {   // pathPieceI_mdl_157
-	0.75 0.75 0.75
-	<pathPieceB.mdl>
-	pathPieceI_mdl_157
-	ndef
-	0 0 0 0 0 0 0 0
-	0000
-	0
-	50
-	ndef
-	ndef
-}
-
-model 38 {   // pathPieceA_mdl_158
+model 30 {   // pathPieceA_mdl_158
 	0.75 0.75 0.75
 	<pathPieceJ.mdl>
 	pathPieceA_mdl_158
-	ndef
-	0 0 0 0 0 0 0 0
+	lvlLfPiece
+	0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 	0000
 	0
 	50
@@ -538,12 +443,12 @@ model 38 {   // pathPieceA_mdl_158
 	ndef
 }
 
-model 39 {   // pathPieceA_mdl_159
+model 31 {   // pathPieceA_mdl_159
 	0.75 0.75 0.75
 	<pathPieceJ.mdl>
 	pathPieceA_mdl_159
-	ndef
-	0 0 0 0 0 0 0 0
+	lvlLfPiece
+	0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 	0000
 	0
 	50
@@ -551,12 +456,12 @@ model 39 {   // pathPieceA_mdl_159
 	ndef
 }
 
-model 40 {   // pathPieceA_mdl_160
+model 32 {   // pathPieceA_mdl_160
 	0.75 0.75 0.75
 	<pathPieceF.mdl>
 	pathPieceA_mdl_160
-	ndef
-	0 0 0 0 0 0 0 0
+	lvlLfPiece
+	0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 	0000
 	0
 	50
@@ -564,12 +469,12 @@ model 40 {   // pathPieceA_mdl_160
 	ndef
 }
 
-model 41 {   // pathPieceI_mdl_161
+model 33 {   // pathPieceI_mdl_161
 	0.75 0.75 0.75
 	<pathPieceA.mdl>
 	pathPieceI_mdl_161
-	ndef
-	0 0 0 0 0 0 0 0
+	lvlLfPiece
+	0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 	0000
 	0
 	50
@@ -577,10 +482,1288 @@ model 41 {   // pathPieceI_mdl_161
 	ndef
 }
 
-model 42 {   // pathPieceA_mdl_164
+model 34 {   // pathPieceA_mdl_164
 	0.8 0.8 0.8
 	<pathPieceJ.mdl>
 	pathPieceA_mdl_164
+	lvlLfPiece
+	0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 35 {   // pathPieceI_mdl_171
+	0.75 0.75 0.75
+	<pathPieceI.mdl>
+	pathPieceI_mdl_171
+	lvlLfPiece
+	0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 36 {   // zorrofantDummy_174
+	2.278663 2.278663 2.278663
+	<rock.mdl>
+	zorrofantDummy_174
+	lvlLfStartRock
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 37 {   // zorrofantDummy_175
+	1.792196 1.792196 1.792196
+	<rock.mdl>
+	zorrofantDummy_175
+	lvlLfStartRock
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 38 {   // zorrofantDummy_183
+	2.278663 2.278663 2.278663
+	<rock.mdl>
+	zorrofantDummy_183
+	lvlLfStartRock
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 39 {   // zorrofantDummy_184
+	2.278663 2.278663 2.278663
+	<rock.mdl>
+	zorrofantDummy_184
+	lvlLfStartRock
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 40 {   // zorrofantDummy_185
+	1.933161 1.933161 1.933161
+	<rock.mdl>
+	zorrofantDummy_185
+	lvlLfStartRock
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 41 {   // zorrofantDummy_186
+	2.796916 2.796916 2.796916
+	<rock.mdl>
+	zorrofantDummy_186
+	lvlLfStartRock
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 42 {   // zorrofantDummy_189
+	2.278663 2.278663 2.278663
+	<rock.mdl>
+	zorrofantDummy_189
+	lvlLfStartRock
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 43 {   // zorrofantDummy_190
+	2.278663 2.278663 2.278663
+	<rock.mdl>
+	zorrofantDummy_190
+	lvlLfStartRock
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 44 {   // zorrofantDummy_191
+	2.223904 2.223904 2.223904
+	<rock.mdl>
+	zorrofantDummy_191
+	lvlLfStartRock
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 45 {   // zorrofantDummy_192
+	2.144031 2.144031 2.144031
+	<rock.mdl>
+	zorrofantDummy_192
+	lvlLfStartRock
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 46 {   // zorrofantDummy_200
+	1.973992 1.973992 1.973992
+	<rock.mdl>
+	zorrofantDummy_200
+	lvlLfStartRock
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 47 {   // zorrofantDummy_202
+	2.308572 2.308572 2.308572
+	<rock.mdl>
+	zorrofantDummy_202
+	lvlLfStartRock
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 48 {   // zorrofantDummy_204
+	1.860591 1.860591 1.860591
+	<rock.mdl>
+	zorrofantDummy_204
+	lvlLfStartRock
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 49 {   // zorrofantDummy_230
+	2.562961 2.562961 2.562961
+	<rock.mdl>
+	zorrofantDummy_230
+	lvlLfStartRock
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 50 {   // pathPieceI_mdl_235
+	0.75 0.75 0.75
+	<pathPieceB.mdl>
+	pathPieceI_mdl_235
+	lvlLfPiece
+	0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 51 {   // pathPieceI_mdl_237
+	0.75 0.75 0.75
+	<pathBridge.mdl>
+	pathPieceI_mdl_237
+	ndef
+	0 0 0 0 0 0 0 0
+	0000001000000000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 52 {   // pathPieceI_mdl_238
+	0.75 0.75 0.75
+	<pathEdgeR.mdl>
+	pathPieceI_mdl_238
+	lvlLfPiece
+	0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 53 {   // pathPieceA_mdl_239
+	0.75 0.75 0.75
+	<pathPieceJ.mdl>
+	pathPieceA_mdl_239
+	lvlLfPiece
+	0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 54 {   // pathPieceA_mdl_240
+	0.75 0.75 0.75
+	<pathPieceJ.mdl>
+	pathPieceA_mdl_240
+	lvlLfPiece
+	0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 55 {   // pathPieceA_mdl_241
+	0.75 0.75 0.75
+	<pathPieceJ.mdl>
+	pathPieceA_mdl_241
+	lvlLfPiece
+	0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 56 {   // pathPieceI_mdl_245
+	0.75 0.75 0.75
+	<pathPieceE.mdl>
+	pathPieceI_mdl_245
+	lvlLfPiece
+	0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 57 {   // pathPieceI_mdl_246
+	0.75 0.75 0.75
+	<pathPieceE.mdl>
+	pathPieceI_mdl_246
+	lvlLfPiece
+	0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 58 {   // zorrofantDummy_249
+	2.528809 2.528809 2.528809
+	<rock.mdl>
+	zorrofantDummy_249
+	lvlLfStartRock
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 59 {   // zorrofantDummy_251
+	2.528809 2.528809 2.528809
+	<rock.mdl>
+	zorrofantDummy_251
+	lvlLfStartRock
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 60 {   // zorrofantDummy_252
+	2.528809 2.528809 2.528809
+	<rock.mdl>
+	zorrofantDummy_252
+	lvlLfStartRock
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 61 {   // zorrofantDummy_254
+	2.528809 2.528809 2.528809
+	<rock.mdl>
+	zorrofantDummy_254
+	lvlLfStartRock
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 62 {   // zorrofantDummy_255
+	2.888092 2.888092 2.888092
+	<rock.mdl>
+	zorrofantDummy_255
+	lvlLfStartRock
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 63 {   // zorrofantDummy_256
+	3.157555 3.157555 3.157555
+	<rock.mdl>
+	zorrofantDummy_256
+	lvlLfStartRock
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 64 {   // zorrofantDummy_257
+	2.528809 2.528809 2.528809
+	<rock.mdl>
+	zorrofantDummy_257
+	lvlLfStartRock
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 65 {   // zorrofantDummy_260
+	2.528809 2.528809 2.528809
+	<rock.mdl>
+	zorrofantDummy_260
+	lvlLfStartRock
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 66 {   // zorrofantDummy_261
+	2.528809 2.528809 2.528809
+	<rock.mdl>
+	zorrofantDummy_261
+	lvlLfStartRock
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 67 {   // zorrofantDummy_262
+	2.528809 2.528809 2.528809
+	<rock.mdl>
+	zorrofantDummy_262
+	lvlLfStartRock
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 68 {   // zorrofantDummy_263
+	2.528809 2.528809 2.528809
+	<rock.mdl>
+	zorrofantDummy_263
+	lvlLfStartRock
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 69 {   // pathPieceA_mdl_268
+	0.75 0.75 0.75
+	<pathPieceF.mdl>
+	pathPieceA_mdl_268
+	lvlLfPiece
+	0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 70 {   // zorrofantDummy_273
+	2.278663 2.278663 2.278663
+	<rock.mdl>
+	zorrofantDummy_273
+	lvlLfStartRock
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 71 {   // zorrofantDummy_274
+	1 1 1
+	<rockboost.mdl>
+	zorrofantDummy_274
+	lvlLfRockBoost
+	0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 72 {   // zorrofantDummy_277
+	1 1 1
+	<rockboost.mdl>
+	zorrofantDummy_277
+	lvlLfRockBoost
+	0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 73 {   // zorrofantDummy_278
+	1 1 1
+	<rockboost.mdl>
+	zorrofantDummy_278
+	lvlLfRockBoost
+	0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 74 {   // zorrofantDummy_279
+	1 1 1
+	<rockboost.mdl>
+	zorrofantDummy_279
+	lvlLfRockBoost
+	0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 75 {   // zorrofantDummy_282
+	2.562961 2.562961 2.562961
+	<rock.mdl>
+	zorrofantDummy_282
+	lvlLfStartRock
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 76 {   // zorrofantDummy_283
+	2.562961 2.562961 2.562961
+	<rock.mdl>
+	zorrofantDummy_283
+	lvlLfStartRock
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 77 {   // zorrofantDummy_284
+	2.562961 2.562961 2.562961
+	<rock.mdl>
+	zorrofantDummy_284
+	lvlLfStartRock
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 78 {   // pathPieceI_mdl_152
+	0.75 0.75 0.75
+	<pathPieceA.mdl>
+	pathPieceI_mdl_152
+	lvlLfPiece
+	0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 79 {   // zorrofantDummy_289
+	2.562961 2.562961 2.562961
+	<rock.mdl>
+	zorrofantDummy_289
+	lvlLfStartRock
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 80 {   // zorrofantDummy_290
+	2.562961 2.562961 2.562961
+	<rock.mdl>
+	zorrofantDummy_290
+	lvlLfStartRock
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 81 {   // zorrofantDummy_291
+	2.562961 2.562961 2.562961
+	<rock.mdl>
+	zorrofantDummy_291
+	lvlLfStartRock
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 82 {   // zorrofantDummy_295
+	2.562961 2.562961 2.562961
+	<rock.mdl>
+	zorrofantDummy_295
+	lvlLfStartRock
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 83 {   // pathPieceI_mdl_300
+	0.75 0.75 0.75
+	<pathPieceE.mdl>
+	pathPieceI_mdl_300
+	lvlLfPiece
+	0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 84 {   // cloud0_tga_300
+	2 2 2
+	<cloud0.tga>
+	cloud0_tga_300
+	lvlLfCloud
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 85 {   // cloud0_tga_308
+	2.263377 2.263377 2.263377
+	<cloud1.tga>
+	cloud0_tga_308
+	lvlLfCloud
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 86 {   // cloud0_tga_310
+	2.263377 2.263377 2.263377
+	<cloud2.tga>
+	cloud0_tga_310
+	lvlLfCloud
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 87 {   // cloud0_tga_311
+	2 2 2
+	<cloud0.tga>
+	cloud0_tga_311
+	lvlLfCloud
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 88 {   // cloud0_tga_312
+	2.263377 2.263377 2.263377
+	<cloud1.tga>
+	cloud0_tga_312
+	lvlLfCloud
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 89 {   // cloud0_tga_313
+	2.263377 2.263377 2.263377
+	<cloud2.tga>
+	cloud0_tga_313
+	lvlLfCloud
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 90 {   // cloud0_tga_314
+	2 2 2
+	<cloud0.tga>
+	cloud0_tga_314
+	lvlLfCloud
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 91 {   // cloud0_tga_315
+	2.263377 2.263377 2.263377
+	<cloud1.tga>
+	cloud0_tga_315
+	lvlLfCloud
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 92 {   // cloud0_tga_316
+	2.263377 2.263377 2.263377
+	<cloud2.tga>
+	cloud0_tga_316
+	lvlLfCloud
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 93 {   // cloud0_tga_320
+	2 2 2
+	<cloud0.tga>
+	cloud0_tga_320
+	lvlLfCloud
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 94 {   // cloud0_tga_321
+	2.263377 2.263377 2.263377
+	<cloud1.tga>
+	cloud0_tga_321
+	lvlLfCloud
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 95 {   // cloud0_tga_322
+	2.263377 2.263377 2.263377
+	<cloud2.tga>
+	cloud0_tga_322
+	lvlLfCloud
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 96 {   // cloud0_tga_332
+	2 2 2
+	<cloud0.tga>
+	cloud0_tga_332
+	lvlLfCloud
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 97 {   // cloud0_tga_333
+	2.263377 2.263377 2.263377
+	<cloud1.tga>
+	cloud0_tga_333
+	lvlLfCloud
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 98 {   // cloud0_tga_334
+	2.263377 2.263377 2.263377
+	<cloud2.tga>
+	cloud0_tga_334
+	lvlLfCloud
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 99 {   // cloud0_tga_335
+	2 2 2
+	<cloud0.tga>
+	cloud0_tga_335
+	lvlLfCloud
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 100 {   // cloud0_tga_336
+	2.263377 2.263377 2.263377
+	<cloud1.tga>
+	cloud0_tga_336
+	lvlLfCloud
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 101 {   // cloud0_tga_337
+	2.263377 2.263377 2.263377
+	<cloud2.tga>
+	cloud0_tga_337
+	lvlLfCloud
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 102 {   // cloud0_tga_341
+	2 2 2
+	<cloud0.tga>
+	cloud0_tga_341
+	lvlLfCloud
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 103 {   // cloud0_tga_342
+	2.263377 2.263377 2.263377
+	<cloud1.tga>
+	cloud0_tga_342
+	lvlLfCloud
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 104 {   // cloud0_tga_343
+	2.263377 2.263377 2.263377
+	<cloud2.tga>
+	cloud0_tga_343
+	lvlLfCloud
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 105 {   // cloud0_tga_300
+	2 2 2
+	<cloud0.tga>
+	cloud0_tga_300
+	lvlLfCloud
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 106 {   // cloud0_tga_308
+	2.263377 2.263377 2.263377
+	<cloud1.tga>
+	cloud0_tga_308
+	lvlLfCloud
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 107 {   // cloud0_tga_310
+	2.263377 2.263377 2.263377
+	<cloud2.tga>
+	cloud0_tga_310
+	lvlLfCloud
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+start 108 {   // pos_001
+	pos_001
+}
+
+model 109 {   // zorrofantDummy_326
+	2.313904 2.313904 2.313904
+	<rock.mdl>
+	zorrofantDummy_326
+	lvlLfStartRock
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 110 {   // zorrofantDummy_327
+	2.308572 2.308572 2.308572
+	<rock.mdl>
+	zorrofantDummy_327
+	lvlLfStartRock
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 111 {   // pathPieceA_mdl_328
+	0.75 0.75 0.75
+	<pathPieceJ.mdl>
+	pathPieceA_mdl_328
+	lvlLfPiece
+	0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 112 {   // zorrofantDummy_329
+	2.562961 2.562961 2.562961
+	<rock.mdl>
+	zorrofantDummy_329
+	lvlLfStartRock
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 113 {   // pathPieceI_mdl_330
+	0.75 0.75 0.75
+	<bridge_dummy.mdl>
+	pathPieceI_mdl_330
+	lvlLfPiece
+	0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+	0000000100000000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 114 {   // pathPieceI_mdl_331
+	0.75 0.75 0.75
+	<bridge_dummy.mdl>
+	pathPieceI_mdl_331
+	lvlLfPiece
+	0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+	0000000100000000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 115 {   // zorrofantDummy_333
+	2.562961 2.562961 2.562961
+	<rock.mdl>
+	zorrofantDummy_333
+	lvlLfStartRock
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 116 {   // pathPieceI_mdl_334
+	0.75 0.75 0.75
+	<pathPieceI.mdl>
+	pathPieceI_mdl_334
+	lvlLfPiece
+	0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 117 {   // zorrofantDummy_335
+	2.278663 2.278663 2.278663
+	<rock.mdl>
+	zorrofantDummy_335
+	lvlLfStartRock
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 118 {   // zorrofantDummy_336
+	1.677634 1.677634 1.677634
+	<rock.mdl>
+	zorrofantDummy_336
+	lvlLfStartRock
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 119 {   // zorrofantDummy_338
+	1 1 1
+	<rockboost.mdl>
+	zorrofantDummy_338
+	lvlLfRockBoost
+	0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 120 {   // zorrofantDummy_339
+	1 1 1
+	<rockboost.mdl>
+	zorrofantDummy_339
+	lvlLfRockBoost
+	0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 121 {   // zorrofantDummy_340
+	1 1 1
+	<rockboost.mdl>
+	zorrofantDummy_340
+	lvlLfRockBoost
+	0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 122 {   // zorrofantDummy_341
+	1 1 1
+	<rockboost.mdl>
+	zorrofantDummy_341
+	lvlLfRockBoost
+	0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 123 {   // zorrofantDummy_342
+	1 1 1
+	<rockboost.mdl>
+	zorrofantDummy_342
+	lvlLfRockBoost
+	0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 124 {   // zorrofantDummy_343
+	1 1 1
+	<rockboost.mdl>
+	zorrofantDummy_343
+	lvlLfRockBoost
+	0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 125 {   // zorrofantDummy_344
+	1 1 1
+	<rockboost.mdl>
+	zorrofantDummy_344
+	lvlLfRockBoost
+	0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 126 {   // zorrofantDummy_345
+	1 1 1
+	<rockboost.mdl>
+	zorrofantDummy_345
+	lvlLfRockBoost
+	0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 127 {   // spikes_mdl_345
+	1 1 1
+	<spikes2.mdl>
+	spikes_mdl_345
+	lvlLfSpike
+	0 0 0 0 0 0 0 0
+	0000001000000000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 128 {   // spikes_mdl_349
+	1 1 1
+	<spikes2.mdl>
+	spikes_mdl_349
+	lvlLfSpike
+	0 0 0 0 0 0 0 0
+	0000001000000000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 129 {   // spikes_mdl_351
+	1 1 1
+	<spikes2.mdl>
+	spikes_mdl_351
+	lvlLfSpike
+	0 0 0 0 0 0 0 0
+	0000001000000000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 130 {   // spikes_mdl_354
+	1 1 1
+	<spikes2.mdl>
+	spikes_mdl_354
+	lvlLfSpike
+	0 0 0 0 0 0 0 0
+	0000001000000000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 131 {   // spikes_mdl_356
+	1 1 1
+	<spikes2.mdl>
+	spikes_mdl_356
+	lvlLfSpike
+	0 0 0 0 0 0 0 0
+	0000001000000000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 132 {   // spikes_mdl_359
+	1 1 1
+	<spikes2.mdl>
+	spikes_mdl_359
+	lvlLfSpike
+	0 0 0 0 0 0 0 0
+	0000001000000000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 133 {   // spikes_mdl_362
+	1 1 1
+	<spikes2.mdl>
+	spikes_mdl_362
 	ndef
 	0 0 0 0 0 0 0 0
 	0000
@@ -590,10 +1773,10 @@ model 42 {   // pathPieceA_mdl_164
 	ndef
 }
 
-model 43 {   // pathPieceA_mdl_167
-	0.75 0.75 0.75
-	<pathPieceF.mdl>
-	pathPieceA_mdl_167
+model 134 {   // spikes_mdl_364
+	1 1 1
+	<spikes2.mdl>
+	spikes_mdl_364
 	ndef
 	0 0 0 0 0 0 0 0
 	0000
@@ -603,11 +1786,1779 @@ model 43 {   // pathPieceA_mdl_167
 	ndef
 }
 
-model 44 {   // pathPieceA_mdl_168
-	0.75 0.75 0.75
-	<pathPieceF.mdl>
-	pathPieceA_mdl_168
+model 135 {   // spikes_mdl_365
+	0.776176 0.776176 0.776176
+	<spikes2.mdl>
+	spikes_mdl_365
+	lvlLfSpike
+	0 0 0 0 0 0 0 0
+	0000001000000000
+	0
+	50
 	ndef
+	ndef
+}
+
+model 136 {   // spikes_mdl_368
+	1.740645 1.740645 1.740645
+	<lionhead.mdl>
+	spikes_mdl_368
+	ndef
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 137 {   // pathPieceA_mdl_372
+	0.8 0.8 0.8
+	<pathPieceJ.mdl>
+	pathPieceA_mdl_372
+	lvlLfPiece
+	0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 138 {   // pathPieceA_mdl_374
+	0.8 0.8 0.8
+	<pathPieceJ.mdl>
+	pathPieceA_mdl_374
+	lvlLfPiece
+	0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 139 {   // spikes_mdl_378
+	1.495026 1.495026 1.495026
+	<door.mdl>
+	spikes_mdl_378
+	lvlLfTrigger
+	0 0 0 0 0 0 0 0
+	0000001000000000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 140 {   // zorrofantDummy_385
+	1.340917 1.340917 1.340917
+	<chest1.mdl>
+	zorrofantDummy_385
+	ndef
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 141 {   // pathPieceI_mdl_393
+	0.75 0.75 0.75
+	<pathPieceA.mdl>
+	pathPieceI_mdl_393
+	lvlLfPiece
+	0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 142 {   // pathPieceA_mdl_394
+	0.8 0.8 0.8
+	<pathPieceJ.mdl>
+	pathPieceA_mdl_394
+	lvlLfPiece
+	0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 143 {   // pathPieceA_mdl_396
+	0.664153 0.664153 0.664153
+	<pathPieceJ.mdl>
+	pathPieceA_mdl_396
+	lvlLfPiece
+	0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 144 {   // tree3_mdl_398
+	0.886364 0.886364 0.886364
+	<tree3.mdl>
+	tree3_mdl_398
+	ndef
+	0 0 0 0 0 0 0 0
+	0001001000000000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 145 {   // tree3_mdl_401
+	0.886364 0.886364 0.886364
+	<tree3.mdl>
+	tree3_mdl_401
+	ndef
+	0 0 0 0 0 0 0 0
+	0001001000000000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 146 {   // tree3_mdl_404
+	0.886364 0.886364 0.886364
+	<tree3.mdl>
+	tree3_mdl_404
+	ndef
+	0 0 0 0 0 0 0 0
+	0001001000000000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 147 {   // tree3_mdl_405
+	0.886364 0.886364 0.886364
+	<tree3.mdl>
+	tree3_mdl_405
+	ndef
+	0 0 0 0 0 0 0 0
+	0001001000000000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 148 {   // tree3_mdl_408
+	0.886364 0.886364 0.886364
+	<tree3.mdl>
+	tree3_mdl_408
+	ndef
+	0 0 0 0 0 0 0 0
+	0001001000000000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 149 {   // tree3_mdl_409
+	0.886364 0.886364 0.886364
+	<tree3.mdl>
+	tree3_mdl_409
+	ndef
+	0 0 0 0 0 0 0 0
+	0001001000000000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 150 {   // tree3_mdl_410
+	0.886364 0.886364 0.886364
+	<tree3.mdl>
+	tree3_mdl_410
+	ndef
+	0 0 0 0 0 0 0 0
+	0001001000000000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 151 {   // Fence-1_mdl_411
+	0.501323 0.501323 0.501323
+	<Fence-1.mdl>
+	Fence-1_mdl_411
+	ndef
+	0 0 0 0 0 0 0 0
+	0000001000000000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 152 {   // Fence-1_mdl_415
+	0.501323 0.501323 0.501323
+	<Fence-1.mdl>
+	Fence-1_mdl_415
+	ndef
+	0 0 0 0 0 0 0 0
+	0000001000000000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 153 {   // Fence-1_mdl_416
+	0.501323 0.501323 0.501323
+	<Fence-1.mdl>
+	Fence-1_mdl_416
+	ndef
+	0 0 0 0 0 0 0 0
+	0000001000000000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 154 {   // Fence-1_mdl_417
+	0.501323 0.501323 0.501323
+	<Fence-1.mdl>
+	Fence-1_mdl_417
+	ndef
+	0 0 0 0 0 0 0 0
+	0000001000000000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 155 {   // Fence-1_mdl_418
+	0.501323 0.501323 0.501323
+	<Fence-1.mdl>
+	Fence-1_mdl_418
+	ndef
+	0 0 0 0 0 0 0 0
+	0000001000000000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 156 {   // Fence-1_mdl_419
+	0.501323 0.501323 0.501323
+	<Fence-1.mdl>
+	Fence-1_mdl_419
+	ndef
+	0 0 0 0 0 0 0 0
+	0000001000000000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 157 {   // Fence-1_mdl_420
+	0.501323 0.501323 0.501323
+	<Fence-1.mdl>
+	Fence-1_mdl_420
+	ndef
+	0 0 0 0 0 0 0 0
+	0000001000000000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 158 {   // Fence-1_mdl_421
+	0.501323 0.501323 0.501323
+	<Fence-1.mdl>
+	Fence-1_mdl_421
+	ndef
+	0 0 0 0 0 0 0 0
+	0000001000000000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 159 {   // Fence-1_mdl_422
+	0.501323 0.501323 0.501323
+	<Fence-1.mdl>
+	Fence-1_mdl_422
+	ndef
+	0 0 0 0 0 0 0 0
+	0000001000000000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 160 {   // cloud0_tga_423
+	2 2 2
+	<cloud0.tga>
+	cloud0_tga_423
+	lvlLfCloud
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 161 {   // cloud0_tga_424
+	2.263377 2.263377 2.263377
+	<cloud1.tga>
+	cloud0_tga_424
+	lvlLfCloud
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 162 {   // cloud0_tga_425
+	2.263377 2.263377 2.263377
+	<cloud2.tga>
+	cloud0_tga_425
+	lvlLfCloud
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 163 {   // spikes_mdl_427
+	0.776176 0.776176 0.776176
+	<spikes2.mdl>
+	spikes_mdl_427
+	lvlLfSpike
+	0 0 0 0 0 0 0 0
+	0000001000000000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 164 {   // spikes_mdl_428
+	0.776176 0.776176 0.776176
+	<spikes2.mdl>
+	spikes_mdl_428
+	lvlLfSpike
+	0 0 0 0 0 0 0 0
+	0000001000000000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 165 {   // spikes_mdl_429
+	0.776176 0.776176 0.776176
+	<spikes2.mdl>
+	spikes_mdl_429
+	lvlLfSpike
+	0 0 0 0 0 0 0 0
+	0000001000000000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 166 {   // spikes_mdl_430
+	0.776176 0.776176 0.776176
+	<spikes2.mdl>
+	spikes_mdl_430
+	lvlLfSpike
+	0 0 0 0 0 0 0 0
+	0000001000000000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 167 {   // spikes_mdl_431
+	1 1 1
+	<spikes2.mdl>
+	spikes_mdl_431
+	ndef
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 168 {   // a4Cube_mdl_431
+	1 1 1
+	<a4Cube.mdl>
+	a4Cube_mdl_431
+	item_coin
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 169 {   // a4Cube_mdl_435
+	1 1 1
+	<a4Cube.mdl>
+	a4Cube_mdl_435
+	item_coin
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 170 {   // a4Cube_mdl_436
+	1 1 1
+	<a4Cube.mdl>
+	a4Cube_mdl_436
+	item_coin
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 171 {   // a4Cube_mdl_437
+	1 1 1
+	<a4Cube.mdl>
+	a4Cube_mdl_437
+	item_coin
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 172 {   // a4Cube_mdl_438
+	1 1 1
+	<a4Cube.mdl>
+	a4Cube_mdl_438
+	item_coin
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 173 {   // a4Cube_mdl_439
+	1 1 1
+	<a4Cube.mdl>
+	a4Cube_mdl_439
+	item_coin
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 174 {   // a4Cube_mdl_440
+	1 1 1
+	<a4Cube.mdl>
+	a4Cube_mdl_440
+	item_coin
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 175 {   // a4Cube_mdl_441
+	1 1 1
+	<a4Cube.mdl>
+	a4Cube_mdl_441
+	item_coin
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 176 {   // a4Cube_mdl_442
+	1 1 1
+	<a4Cube.mdl>
+	a4Cube_mdl_442
+	item_coin
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 177 {   // a4Cube_mdl_443
+	1 1 1
+	<a4Cube.mdl>
+	a4Cube_mdl_443
+	item_coin
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 178 {   // a4Cube_mdl_444
+	1 1 1
+	<a4Cube.mdl>
+	a4Cube_mdl_444
+	item_coin
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 179 {   // a4Cube_mdl_445
+	1 1 1
+	<a4Cube.mdl>
+	a4Cube_mdl_445
+	item_coin
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 180 {   // a4Cube_mdl_446
+	1 1 1
+	<a4Cube.mdl>
+	a4Cube_mdl_446
+	item_coin
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 181 {   // a4Cube_mdl_447
+	1 1 1
+	<a4Cube.mdl>
+	a4Cube_mdl_447
+	item_coin
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 182 {   // a4Cube_mdl_448
+	1 1 1
+	<a4Cube.mdl>
+	a4Cube_mdl_448
+	item_coin
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 183 {   // a4Cube_mdl_449
+	1 1 1
+	<a4Cube.mdl>
+	a4Cube_mdl_449
+	item_coin
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 184 {   // a4Cube_mdl_450
+	1 1 1
+	<a4Cube.mdl>
+	a4Cube_mdl_450
+	item_coin
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 185 {   // a4Cube_mdl_451
+	1 1 1
+	<a4Cube.mdl>
+	a4Cube_mdl_451
+	item_coin
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 186 {   // a4Cube_mdl_452
+	1 1 1
+	<a4Cube.mdl>
+	a4Cube_mdl_452
+	item_coin
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 187 {   // a4Cube_mdl_453
+	1 1 1
+	<a4Cube.mdl>
+	a4Cube_mdl_453
+	item_coin
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 188 {   // a4Cube_mdl_454
+	1 1 1
+	<a4Cube.mdl>
+	a4Cube_mdl_454
+	item_coin
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 189 {   // a4Cube_mdl_455
+	1 1 1
+	<a4Cube.mdl>
+	a4Cube_mdl_455
+	item_coin
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 190 {   // a4Cube_mdl_456
+	1 1 1
+	<a4Cube.mdl>
+	a4Cube_mdl_456
+	item_coin
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 191 {   // a4Cube_mdl_457
+	1 1 1
+	<a4Cube.mdl>
+	a4Cube_mdl_457
+	item_coin
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 192 {   // a4Cube_mdl_459
+	1 1 1
+	<a4Cube.mdl>
+	a4Cube_mdl_459
+	item_coin
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 193 {   // a4Cube_mdl_460
+	1 1 1
+	<a4Cube.mdl>
+	a4Cube_mdl_460
+	item_coin
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 194 {   // a4Cube_mdl_461
+	1 1 1
+	<a4Cube.mdl>
+	a4Cube_mdl_461
+	item_coin
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 195 {   // a4Cube_mdl_462
+	1 1 1
+	<a4Cube.mdl>
+	a4Cube_mdl_462
+	item_coin
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 196 {   // a4Cube_mdl_463
+	1 1 1
+	<a4Cube.mdl>
+	a4Cube_mdl_463
+	item_coin
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 197 {   // a4Cube_mdl_487
+	1 1 1
+	<a4Cube.mdl>
+	a4Cube_mdl_487
+	item_coin
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 198 {   // a4Cube_mdl_488
+	1 1 1
+	<a4Cube.mdl>
+	a4Cube_mdl_488
+	item_coin
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 199 {   // a4Cube_mdl_489
+	1 1 1
+	<a4Cube.mdl>
+	a4Cube_mdl_489
+	item_coin
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 200 {   // a4Cube_mdl_490
+	1 1 1
+	<a4Cube.mdl>
+	a4Cube_mdl_490
+	item_coin
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 201 {   // a4Cube_mdl_491
+	1 1 1
+	<a4Cube.mdl>
+	a4Cube_mdl_491
+	item_coin
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 202 {   // a4Cube_mdl_492
+	1 1 1
+	<a4Cube.mdl>
+	a4Cube_mdl_492
+	item_coin
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 203 {   // a4Cube_mdl_493
+	1 1 1
+	<a4Cube.mdl>
+	a4Cube_mdl_493
+	item_coin
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 204 {   // a4Cube_mdl_494
+	1 1 1
+	<a4Cube.mdl>
+	a4Cube_mdl_494
+	item_coin
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 205 {   // a4Cube_mdl_495
+	1 1 1
+	<a4Cube.mdl>
+	a4Cube_mdl_495
+	item_coin
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 206 {   // a4Cube_mdl_496
+	1 1 1
+	<a4Cube.mdl>
+	a4Cube_mdl_496
+	item_coin
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 207 {   // a4Cube_mdl_497
+	1 1 1
+	<a4Cube.mdl>
+	a4Cube_mdl_497
+	item_coin
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 208 {   // a4Cube_mdl_498
+	1 1 1
+	<a4Cube.mdl>
+	a4Cube_mdl_498
+	item_coin
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 209 {   // a4Cube_mdl_499
+	1 1 1
+	<a4Cube.mdl>
+	a4Cube_mdl_499
+	item_coin
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 210 {   // a4Cube_mdl_500
+	1 1 1
+	<a4Cube.mdl>
+	a4Cube_mdl_500
+	item_coin
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 211 {   // a4Cube_mdl_501
+	1 1 1
+	<a4Cube.mdl>
+	a4Cube_mdl_501
+	item_coin
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 212 {   // a4Cube_mdl_502
+	1 1 1
+	<a4Cube.mdl>
+	a4Cube_mdl_502
+	item_coin
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 213 {   // a4Cube_mdl_503
+	1 1 1
+	<a4Cube.mdl>
+	a4Cube_mdl_503
+	item_coin
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 214 {   // a4Cube_mdl_504
+	1 1 1
+	<a4Cube.mdl>
+	a4Cube_mdl_504
+	item_coin
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 215 {   // a4Cube_mdl_505
+	1 1 1
+	<a4Cube.mdl>
+	a4Cube_mdl_505
+	item_coin
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 216 {   // a4Cube_mdl_506
+	1 1 1
+	<a4Cube.mdl>
+	a4Cube_mdl_506
+	item_coin
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 217 {   // a4Cube_mdl_508
+	1 1 1
+	<a4Cube.mdl>
+	a4Cube_mdl_508
+	item_coin
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 218 {   // a4Cube_mdl_511
+	1 1 1
+	<a4Cube.mdl>
+	a4Cube_mdl_511
+	item_coin
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 219 {   // a4Cube_mdl_512
+	1 1 1
+	<a4Cube.mdl>
+	a4Cube_mdl_512
+	item_coin
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 220 {   // a4Cube_mdl_514
+	1 1 1
+	<a4Cube.mdl>
+	a4Cube_mdl_514
+	item_coin
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 221 {   // a4Cube_mdl_516
+	1 1 1
+	<a4Cube.mdl>
+	a4Cube_mdl_516
+	item_coin
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 222 {   // a4Cube_mdl_518
+	1 1 1
+	<a4Cube.mdl>
+	a4Cube_mdl_518
+	item_coin
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 223 {   // a4Cube_mdl_520
+	1 1 1
+	<a4Cube.mdl>
+	a4Cube_mdl_520
+	item_coin
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 224 {   // a4Cube_mdl_522
+	1 1 1
+	<a4Cube.mdl>
+	a4Cube_mdl_522
+	item_coin
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 225 {   // a4Cube_mdl_524
+	1 1 1
+	<a4Cube.mdl>
+	a4Cube_mdl_524
+	item_coin
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 226 {   // a4Cube_mdl_526
+	1 1 1
+	<a4Cube.mdl>
+	a4Cube_mdl_526
+	item_coin
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 227 {   // a4Cube_mdl_527
+	1 1 1
+	<a4Cube.mdl>
+	a4Cube_mdl_527
+	item_coin
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 228 {   // a4Cube_mdl_528
+	1 1 1
+	<a4Cube.mdl>
+	a4Cube_mdl_528
+	item_coin
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 229 {   // a4Cube_mdl_529
+	1 1 1
+	<a4Cube.mdl>
+	a4Cube_mdl_529
+	item_coin
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 230 {   // a4Cube_mdl_530
+	1 1 1
+	<a4Cube.mdl>
+	a4Cube_mdl_530
+	item_coin
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 231 {   // a4Cube_mdl_531
+	1 1 1
+	<a4Cube.mdl>
+	a4Cube_mdl_531
+	item_coin
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 232 {   // a4Cube_mdl_532
+	1 1 1
+	<a4Cube.mdl>
+	a4Cube_mdl_532
+	item_coin
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 233 {   // a4Cube_mdl_533
+	1 1 1
+	<a4Cube.mdl>
+	a4Cube_mdl_533
+	item_coin
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 234 {   // a4Cube_mdl_534
+	1 1 1
+	<a4Cube.mdl>
+	a4Cube_mdl_534
+	item_coin
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 235 {   // spikes_mdl_537
+	0.776176 0.776176 0.776176
+	<spikes2.mdl>
+	spikes_mdl_537
+	lvlLfSpike
+	0 0 0 0 0 0 0 0
+	0000001000000000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 236 {   // spikes_mdl_540
+	0.776176 0.776176 0.776176
+	<spikes2.mdl>
+	spikes_mdl_540
+	lvlLfSpike
+	0 0 0 0 0 0 0 0
+	0000001000000000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 237 {   // spikes_mdl_542
+	0.776176 0.776176 0.776176
+	<spikes2.mdl>
+	spikes_mdl_542
+	lvlLfSpike
+	0 0 0 0 0 0 0 0
+	0000001000000000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 238 {   // spikes_mdl_543
+	0.776176 0.776176 0.776176
+	<spikes2.mdl>
+	spikes_mdl_543
+	lvlLfSpike
+	0 0 0 0 0 0 0 0
+	0000001000000000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 239 {   // spikes_mdl_545
+	0.776176 0.776176 0.776176
+	<spikes2.mdl>
+	spikes_mdl_545
+	lvlLfSpike
+	0 0 0 0 0 0 0 0
+	0000001000000000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 240 {   // spikes_mdl_547
+	0.776176 0.776176 0.776176
+	<spikes2.mdl>
+	spikes_mdl_547
+	lvlLfSpike
+	0 0 0 0 0 0 0 0
+	0000001000000000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 241 {   // spikes_mdl_550
+	0.776176 0.776176 0.776176
+	<spikes2.mdl>
+	spikes_mdl_550
+	lvlLfSpike
+	0 0 0 0 0 0 0 0
+	0000001000000000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 242 {   // spikes_mdl_551
+	0.776176 0.776176 0.776176
+	<spikes2.mdl>
+	spikes_mdl_551
+	lvlLfSpike
+	0 0 0 0 0 0 0 0
+	0000001000000000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 243 {   // spikes_mdl_552
+	0.776176 0.776176 0.776176
+	<spikes2.mdl>
+	spikes_mdl_552
+	lvlLfSpike
+	0 0 0 0 0 0 0 0
+	0000001000000000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 244 {   // spikes_mdl_553
+	0.776176 0.776176 0.776176
+	<spikes2.mdl>
+	spikes_mdl_553
+	lvlLfSpike
+	0 0 0 0 0 0 0 0
+	0000001000000000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 245 {   // spikes_mdl_557
+	0.776176 0.776176 0.776176
+	<spikes2.mdl>
+	spikes_mdl_557
+	lvlLfSpike
+	0 0 0 0 0 0 0 0
+	0000001000000000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 246 {   // spikes_mdl_558
+	0.776176 0.776176 0.776176
+	<spikes2.mdl>
+	spikes_mdl_558
+	lvlLfSpike
+	0 0 0 0 0 0 0 0
+	0000001000000000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 247 {   // spikes_mdl_559
+	0.776176 0.776176 0.776176
+	<spikes2.mdl>
+	spikes_mdl_559
+	lvlLfSpike
+	0 0 0 0 0 0 0 0
+	0000001000000000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 248 {   // spikes_mdl_560
+	0.776176 0.776176 0.776176
+	<spikes2.mdl>
+	spikes_mdl_560
+	lvlLfSpike
+	0 0 0 0 0 0 0 0
+	0000001000000000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 249 {   // lotter_dummy_560
+	1 1 1
+	<lotter_dummy.mdl>
+	lotter_dummy_560
+	item_life
+	0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 250 {   // a4Cube_mdl_566
+	1 1 1
+	<a4Cube.mdl>
+	a4Cube_mdl_566
+	item_coin
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 251 {   // spikes_mdl_568
+	0.776176 0.776176 0.776176
+	<spikes2.mdl>
+	spikes_mdl_568
+	lvlLfSpike
+	0 0 0 0 0 0 0 0
+	0000001000000000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 252 {   // a4Cube_mdl_569
+	1 1 1
+	<a4Cube.mdl>
+	a4Cube_mdl_569
+	item_coin
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 253 {   // a4Cube_mdl_570
+	1 1 1
+	<a4Cube.mdl>
+	a4Cube_mdl_570
+	item_coin
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 254 {   // a4Cube_mdl_571
+	1 1 1
+	<a4Cube.mdl>
+	a4Cube_mdl_571
+	item_coin
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 255 {   // a4Cube_mdl_572
+	1 1 1
+	<a4Cube.mdl>
+	a4Cube_mdl_572
+	item_coin
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 256 {   // a4Cube_mdl_573
+	1 1 1
+	<a4Cube.mdl>
+	a4Cube_mdl_573
+	item_coin
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 257 {   // a4Cube_mdl_574
+	1 1 1
+	<a4Cube.mdl>
+	a4Cube_mdl_574
+	item_coin
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 258 {   // a4Cube_mdl_575
+	1 1 1
+	<a4Cube.mdl>
+	a4Cube_mdl_575
+	item_coin
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 259 {   // a4Cube_mdl_576
+	1 1 1
+	<a4Cube.mdl>
+	a4Cube_mdl_576
+	item_coin
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 260 {   // a4Cube_mdl_577
+	1 1 1
+	<a4Cube.mdl>
+	a4Cube_mdl_577
+	item_coin
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 261 {   // a4Cube_mdl_578
+	1 1 1
+	<a4Cube.mdl>
+	a4Cube_mdl_578
+	item_coin
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 262 {   // a4Cube_mdl_579
+	1 1 1
+	<a4Cube.mdl>
+	a4Cube_mdl_579
+	item_coin
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 263 {   // cloud0_tga_580
+	2 2 2
+	<cloud0.tga>
+	cloud0_tga_580
+	lvlLfCloud
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 264 {   // cloud0_tga_581
+	2 2 2
+	<cloud0.tga>
+	cloud0_tga_581
+	lvlLfCloud
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 265 {   // cloud0_tga_582
+	2.263377 2.263377 2.263377
+	<cloud2.tga>
+	cloud0_tga_582
+	lvlLfCloud
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 266 {   // cloud0_tga_583
+	2.263377 2.263377 2.263377
+	<cloud1.tga>
+	cloud0_tga_583
+	lvlLfCloud
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 267 {   // cloud0_tga_584
+	2.263377 2.263377 2.263377
+	<cloud1.tga>
+	cloud0_tga_584
+	lvlLfCloud
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 268 {   // cloud0_tga_587
+	2.263377 2.263377 2.263377
+	<cloud1.tga>
+	cloud0_tga_587
+	lvlLfCloud
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 269 {   // cloud0_tga_588
+	2.263377 2.263377 2.263377
+	<cloud1.tga>
+	cloud0_tga_588
+	lvlLfCloud
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 270 {   // cloud0_tga_589
+	2.263377 2.263377 2.263377
+	<cloud1.tga>
+	cloud0_tga_589
+	lvlLfCloud
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 271 {   // cloud0_tga_590
+	2.263377 2.263377 2.263377
+	<cloud1.tga>
+	cloud0_tga_590
+	lvlLfCloud
 	0 0 0 0 0 0 0 0
 	0000
 	0
@@ -622,7 +3573,30 @@ object 0 {  // Root
 	object 11, 12, 13, 14, 15, 16, 17, 18, 19, 20
 	object 21, 22, 23, 24, 25, 26, 27, 28, 29, 30
 	object 31, 32, 33, 34, 35, 36, 37, 38, 39, 40
-	object 41, 42, 43, 44
+	object 41, 42, 43, 44, 45, 46, 47, 48, 49, 50
+	object 51, 52, 53, 54, 55, 56, 57, 58, 59, 60
+	object 61, 62, 63, 64, 65, 66, 67, 68, 69, 70
+	object 71, 72, 73, 74, 75, 76, 77, 78, 79, 80
+	object 81, 82, 83, 84, 85, 86, 87, 88, 89, 90
+	object 91, 92, 93, 94, 95, 96, 97, 98, 99, 100
+	object 101, 102, 103, 104, 105, 106, 107, 108, 109, 110
+	object 111, 112, 113, 114, 115, 116, 117, 118, 119, 120
+	object 121, 122, 123, 124, 125, 126, 127, 128, 129, 130
+	object 131, 132, 133, 134, 135, 136, 137, 138, 139, 140
+	object 141, 142, 143, 144, 145, 146, 147, 148, 149, 150
+	object 151, 152, 153, 154, 155, 156, 157, 158, 159, 160
+	object 161, 162, 163, 164, 165, 166, 167, 168, 169, 170
+	object 171, 172, 173, 174, 175, 176, 177, 178, 179, 180
+	object 181, 182, 183, 184, 185, 186, 187, 188, 189, 190
+	object 191, 192, 193, 194, 195, 196, 197, 198, 199, 200
+	object 201, 202, 203, 204, 205, 206, 207, 208, 209, 210
+	object 211, 212, 213, 214, 215, 216, 217, 218, 219, 220
+	object 221, 222, 223, 224, 225, 226, 227, 228, 229, 230
+	object 231, 232, 233, 234, 235, 236, 237, 238, 239, 240
+	object 241, 242, 243, 244, 245, 246, 247, 248, 249, 250
+	object 251, 252, 253, 254, 255, 256, 257, 258, 259, 260
+	object 261, 262, 263, 264, 265, 266, 267, 268, 269, 270
+	object 271
 	level 0
 }
 
@@ -631,218 +3605,1353 @@ object 1 {  // pathPieceI_mdl_080
 	model 1
 }
 
-object 2 {  // pos_000
-	(0 -1508 0) (1.570796 0 0) (1 1 1)
-	start 2
+object 2 {  // zorrofantDummy_080
+	(115 0 415) (-0 0 0) (1 1 1)
+	model 2
 }
 
-object 3 {  // zorrofantDummy_080
-	(0 0 0) (-0 0 0) (1 1 1)
+object 3 {  // zorrofantDummy_089
+	(-308 0 797) (-0 0 0) (1.106988 1.106988 1.106988)
 	model 3
 }
 
-object 4 {  // zorrofantDummy_089
-	(-328 0.000001 584) (-0 0 0) (1 1 1)
+object 4 {  // zorrofantDummy_090
+	(-198 -153 401) (1.637468 0.049086 -2.347181) (1.792196 1.792196 1.792196)
 	model 4
 }
 
-object 5 {  // zorrofantDummy_090
-	(-184 0 448) (-0 0 0) (1.5 1.5 1.5)
+object 5 {  // zorrofantDummy_093
+	(-87 0.000001 287) (-0 0 0) (1.5 1.5 1.5)
 	model 5
 }
 
-object 6 {  // zorrofantDummy_093
-	(-8 0.000001 -112) (-0 0 0) (1.5 1.5 1.5)
+object 6 {  // pathPieceA_mdl_094
+	(0 0 -504) (-0 0 0) (0.75 0.75 0.75)
 	model 6
 }
 
-object 7 {  // pathPieceA_mdl_094
-	(0 0 -504) (-0 0 0) (0.75 0.75 0.75)
+object 7 {  // pathPieceA_mdl_100
+	(-1040 0.000001 -40) (-0 0 0) (0.75 0.75 0.75)
 	model 7
 }
 
-object 8 {  // pathPieceA_mdl_100
-	(-1040 0.000001 -40) (-0 0 0) (0.75 0.75 0.75)
+object 8 {  // pathPieceI_mdl_101
+	(1079 0 -355) (-0 0 0) (0.75 0.75 0.75)
 	model 8
 }
 
-object 9 {  // pathPieceI_mdl_101
-	(1079 0 -355) (-0 0 0) (0.75 0.75 0.75)
+object 9 {  // pathPieceA_mdl_104
+	(518 -122 -1174) (-0 0 0) (0.75 0.75 0.75)
 	model 9
 }
 
-object 10 {  // pathPieceA_mdl_104
-	(518 -122 -1174) (-0 0 0) (0.75 0.75 0.75)
+object 10 {  // zorrofantDummy_105
+	(342 -41 -78) (-0 0 0) (2.5 2.5 2.5)
 	model 10
 }
 
-object 11 {  // zorrofantDummy_105
-	(-251 89 -59) (-0 0 0) (2.5 2.5 2.5)
+object 11 {  // zorrofantDummy_108
+	(27 -23 209) (-0 0 0) (1.92279 1.92279 1.92279)
 	model 11
 }
 
-object 12 {  // zorrofantDummy_108
-	(-350 -71 -92) (-0 0 0) (1.92279 1.92279 1.92279)
+object 12 {  // pathPieceI_mdl_108
+	(3520 0 -928) (-0 -0 0.087266) (0.75 0.75 0.75)
 	model 12
 }
 
-object 13 {  // pathPieceI_mdl_108
-	(3520 0 -928) (-0 -0 0.087266) (0.75 0.75 0.75)
+object 13 {  // pathPieceI_mdl_111
+	(1584 0 -762) (-0 0 0) (0.75 0.75 0.75)
 	model 13
 }
 
-object 14 {  // pathPieceI_mdl_111
-	(1584 0 -762) (-0 0 0) (0.75 0.75 0.75)
+object 14 {  // pathPieceI_mdl_112
+	(6158 0 -1280) (-0 0 0) (0.75 0.75 0.75)
 	model 14
 }
 
-object 15 {  // pathPieceI_mdl_112
-	(6158 0 -1280) (-0 0 0) (0.75 0.75 0.75)
+object 15 {  // pathPieceA_mdl_113
+	(5432 -122 -1567) (-0 0 0) (0.75 0.75 0.75)
 	model 15
 }
 
-object 16 {  // pathPieceA_mdl_113
-	(5432 -122 -1567) (-0 0 0) (0.75 0.75 0.75)
+object 16 {  // pathPieceI_mdl_114
+	(24091 0 -10299) (-0 0 0) (0.75 0.75 0.75)
 	model 16
 }
 
-object 17 {  // pathPieceI_mdl_114
-	(7657 0 -1646) (-0 0 0) (0.75 0.75 0.75)
+object 17 {  // pathPieceI_mdl_125
+	(12215 0 -4784) (-0 0 0) (0.75 0.75 0.75)
 	model 17
 }
 
-object 18 {  // pathPieceI_mdl_119
-	(8919 -18 -1303) (-0 0 0) (0.75 0.75 0.75)
+object 18 {  // pathPieceI_mdl_126
+	(12750 0 -4471) (-0 0 0) (0.75 0.75 0.75)
 	model 18
 }
 
-object 19 {  // pathPieceI_mdl_120
-	(8440 -18 -1299) (-0 0 0) (0.75 0.75 0.75)
+object 19 {  // pathPieceI_mdl_127
+	(14142 0 -4962) (-0 0 0) (0.75 0.75 0.75)
 	model 19
 }
 
-object 20 {  // pathPieceI_mdl_121
-	(8789 46 -1121) (-0 0 0) (0.75 0.75 0.75)
+object 20 {  // pathPieceI_mdl_128
+	(13291 0 -4780) (-0 0 0) (0.75 0.75 0.75)
 	model 20
 }
 
-object 21 {  // pathPieceI_mdl_122
-	(9268 46 -1125) (-0 0 0) (0.75 0.75 0.75)
+object 21 {  // pathPieceI_mdl_112
+	(15642 0 -5364) (-0 0 0) (0.75 0.75 0.75)
 	model 21
 }
 
-object 22 {  // pathPieceI_mdl_125
-	(9747 46 -1121) (-0 0 0) (0.75 0.75 0.75)
+object 22 {  // pathPieceI_mdl_137
+	(16720 0 -5390) (-0 0 0) (0.75 0.75 0.75)
 	model 22
 }
 
-object 23 {  // pathPieceI_mdl_126
-	(10282 0 -808) (-0 0 0) (0.75 0.75 0.75)
+object 23 {  // pathPieceA_mdl_144
+	(17584 0 -6885) (-0 0 0) (0.75 0.75 0.75)
 	model 23
 }
 
-object 24 {  // pathPieceI_mdl_127
-	(11674 0 -1299) (-0 0 0) (0.75 0.75 0.75)
+object 24 {  // pathPieceA_mdl_147
+	(18138 0 -7167) (-0 0 0) (0.75 0.75 0.75)
 	model 24
 }
 
-object 25 {  // pathPieceI_mdl_128
-	(10823 0 -1117) (-0 0 0) (0.75 0.75 0.75)
+object 25 {  // pathPieceA_mdl_148
+	(18677 0 -7444) (-0 0 0) (0.75 0.75 0.75)
 	model 25
 }
 
-object 26 {  // pathPieceI_mdl_112
-	(13174 0 -1701) (-0 0 0) (0.75 0.75 0.75)
+object 26 {  // pathPieceI_mdl_149
+	(19471 0 -7894) (-0 -0 0.261799) (0.75 0.75 0.75)
 	model 26
 }
 
-object 27 {  // pathPieceI_mdl_137
-	(14252 0 -1727) (-0 0 0) (0.75 0.75 0.75)
+object 27 {  // pathPieceI_mdl_150
+	(20817.207031 0 -8661.578125) (-0 -0 0.261799) (0.75 0.75 0.75)
 	model 27
 }
 
-object 28 {  // pathPieceA_mdl_144
-	(14805 0 -2546) (-0 0 0) (0.75 0.75 0.75)
+object 28 {  // pathPieceI_mdl_155
+	(23293.646484 0 -9380.008789) (-0 -0 0.261799) (0.75 0.75 0.75)
 	model 28
 }
 
-object 29 {  // pathPieceA_mdl_147
-	(15359 0 -2828) (-0 0 0) (0.75 0.75 0.75)
+object 29 {  // pathPieceA_mdl_156
+	(24904 0 -9600) (-0 0 0) (0.8 0.8 0.8)
 	model 29
 }
 
-object 30 {  // pathPieceA_mdl_148
-	(15898 0 -3105) (-0 0 0) (0.75 0.75 0.75)
+object 30 {  // pathPieceA_mdl_158
+	(24904 0 -11000) (-0 0 0) (0.75 0.75 0.75)
 	model 30
 }
 
-object 31 {  // pathPieceI_mdl_149
-	(16876 0 -3047) (-0 0 0) (0.75 0.75 0.75)
+object 31 {  // pathPieceA_mdl_159
+	(23149 -153 -10430) (-0 0 0) (0.75 0.75 0.75)
 	model 31
 }
 
-object 32 {  // pathPieceI_mdl_150
-	(18375 0 -3440) (-0 0 0) (0.75 0.75 0.75)
+object 32 {  // pathPieceA_mdl_160
+	(23400 0 -8698) (-0 0 0) (0.75 0.75 0.75)
 	model 32
 }
 
-object 33 {  // pathPieceI_mdl_151
-	(19873 0 -3833) (-0 0 0) (0.75 0.75 0.75)
+object 33 {  // pathPieceI_mdl_161
+	(27396 0 -9231) (-0 0 0) (0.75 0.75 0.75)
 	model 33
 }
 
-object 34 {  // pathPieceI_mdl_152
-	(21372 0 -3641) (-0 0 0) (0.75 0.75 0.75)
+object 34 {  // pathPieceA_mdl_164
+	(26618 0 -8243) (-0 0 0) (0.8 0.8 0.8)
 	model 34
 }
 
-object 35 {  // pathPieceI_mdl_155
-	(22450 0 -3492) (-0 0 0) (0.75 0.75 0.75)
+object 35 {  // pathPieceI_mdl_171
+	(-1078 0.000001 724) (-0 -0 0.523598) (0.75 0.75 0.75)
 	model 35
 }
 
-object 36 {  // pathPieceA_mdl_156
-	(23885 0 -3422) (-0 0 0) (0.8 0.8 0.8)
+object 36 {  // zorrofantDummy_174
+	(-242 -2 443) (-0 0 0) (2.278663 2.278663 2.278663)
 	model 36
 }
 
-object 37 {  // pathPieceI_mdl_157
-	(22868 0 -4285) (-0 0 0) (0.75 0.75 0.75)
+object 37 {  // zorrofantDummy_175
+	(-226 154 433) (-0.192625 -0.535581 3.075677) (1.792196 1.792196 1.792196)
 	model 37
 }
 
-object 38 {  // pathPieceA_mdl_158
-	(23885 0 -4822) (-0 0 0) (0.75 0.75 0.75)
+object 38 {  // zorrofantDummy_183
+	(1487 83 -342) (-0 0 0) (2.278663 2.278663 2.278663)
 	model 38
 }
 
-object 39 {  // pathPieceA_mdl_159
-	(22130 -153 -4252) (-0 0 0) (0.75 0.75 0.75)
+object 39 {  // zorrofantDummy_184
+	(3579 97 -673) (-0 0 0) (2.278663 2.278663 2.278663)
 	model 39
 }
 
-object 40 {  // pathPieceA_mdl_160
-	(22974.333984 0 -2373) (-0 0 0) (0.75 0.75 0.75)
+object 40 {  // zorrofantDummy_185
+	(3716 -44 -639) (-0 0 0) (1.933161 1.933161 1.933161)
 	model 40
 }
 
-object 41 {  // pathPieceI_mdl_161
-	(24879 0 -3053) (-0 0 0) (0.75 0.75 0.75)
+object 41 {  // zorrofantDummy_186
+	(3784 134 -650) (-0 0 0) (2.796916 2.796916 2.796916)
 	model 41
 }
 
-object 42 {  // pathPieceA_mdl_164
-	(25301 0 -2065) (-0 0 0) (0.8 0.8 0.8)
+object 42 {  // zorrofantDummy_189
+	(5625 -386 -767) (-0 0 0) (2.278663 2.278663 2.278663)
 	model 42
 }
 
-object 43 {  // pathPieceA_mdl_167
-	(22071.333984 0 -2607) (-0 0 0) (0.75 0.75 0.75)
+object 43 {  // zorrofantDummy_190
+	(8232 -114 -1481) (-0 0 0) (2.278663 2.278663 2.278663)
 	model 43
 }
 
-object 44 {  // pathPieceA_mdl_168
-	(21122.333984 0 -2828) (-0 0 0) (0.75 0.75 0.75)
+object 44 {  // zorrofantDummy_191
+	(8427 -64 -1481) (-0 0 0) (2.223904 2.223904 2.223904)
 	model 44
+}
+
+object 45 {  // zorrofantDummy_192
+	(8272 113 -1481) (-0 0 0) (2.144031 2.144031 2.144031)
+	model 45
+}
+
+object 46 {  // zorrofantDummy_200
+	(15246 10 -4794) (-0 0 0) (1.973992 1.973992 1.973992)
+	model 46
+}
+
+object 47 {  // zorrofantDummy_202
+	(17592 27 -6116) (-0 0 0) (2.308572 2.308572 2.308572)
+	model 47
+}
+
+object 48 {  // zorrofantDummy_204
+	(18594 14 -6669) (-0 0 0) (1.860591 1.860591 1.860591)
+	model 48
+}
+
+object 49 {  // zorrofantDummy_230
+	(23012.5 122 -9042.75) (-0 0 0) (2.562961 2.562961 2.562961)
+	model 49
+}
+
+object 50 {  // pathPieceI_mdl_235
+	(11361 0 -4600) (-0 0 0) (0.75 0.75 0.75)
+	model 50
+}
+
+object 51 {  // pathPieceI_mdl_237
+	(9047 0 -1545) (-0 0 0) (0.75 0.75 0.75)
+	model 51
+}
+
+object 52 {  // pathPieceI_mdl_238
+	(8512 0 -1858) (-0 0 0) (0.75 0.75 0.75)
+	model 52
+}
+
+object 53 {  // pathPieceA_mdl_239
+	(9770 0 -2193) (-0 0 0) (0.75 0.75 0.75)
+	model 53
+}
+
+object 54 {  // pathPieceA_mdl_240
+	(10284 0 -3020) (-0 0 0) (0.75 0.75 0.75)
+	model 54
+}
+
+object 55 {  // pathPieceA_mdl_241
+	(10837 0 -3924) (-0 0 0) (0.75 0.75 0.75)
+	model 55
+}
+
+object 56 {  // pathPieceI_mdl_245
+	(7658 0.000001 -1646) (-0 0 0) (0.75 0.75 0.75)
+	model 56
+}
+
+object 57 {  // pathPieceI_mdl_246
+	(9034 0.000001 -2202) (-0 0 0) (0.75 0.75 0.75)
+	model 57
+}
+
+object 58 {  // zorrofantDummy_249
+	(10879 -23 -3117) (-0 0 0) (2.528809 2.528809 2.528809)
+	model 58
+}
+
+object 59 {  // zorrofantDummy_251
+	(11208 -4 -4029) (-0 0 0) (2.528809 2.528809 2.528809)
+	model 59
+}
+
+object 60 {  // zorrofantDummy_252
+	(14120 10 -4578) (-0 0 0) (2.528809 2.528809 2.528809)
+	model 60
+}
+
+object 61 {  // zorrofantDummy_254
+	(16944 29 -5249) (-0 0 0) (2.528809 2.528809 2.528809)
+	model 61
+}
+
+object 62 {  // zorrofantDummy_255
+	(24541 221 -9643) (-0 0 0) (2.888092 2.888092 2.888092)
+	model 62
+}
+
+object 63 {  // zorrofantDummy_256
+	(24539 20 -9661) (-0 0 0) (3.157555 3.157555 3.157555)
+	model 63
+}
+
+object 64 {  // zorrofantDummy_257
+	(24543 -208 -9654) (-0 0 0) (2.528809 2.528809 2.528809)
+	model 64
+}
+
+object 65 {  // zorrofantDummy_260
+	(23761 159 -9859) (-0 0 0) (2.528809 2.528809 2.528809)
+	model 65
+}
+
+object 66 {  // zorrofantDummy_261
+	(24061 -147 -10112) (-0 0 0) (2.528809 2.528809 2.528809)
+	model 66
+}
+
+object 67 {  // zorrofantDummy_262
+	(24198 25 -10036) (-0 0 0) (2.528809 2.528809 2.528809)
+	model 67
+}
+
+object 68 {  // zorrofantDummy_263
+	(23005 -420 -9628) (-0 0 0) (2.528809 2.528809 2.528809)
+	model 68
+}
+
+object 69 {  // pathPieceA_mdl_268
+	(24160 0.000001 -8591) (-0 0 0) (0.75 0.75 0.75)
+	model 69
+}
+
+object 70 {  // zorrofantDummy_273
+	(-674 14 617) (-0 0 0) (2.278663 2.278663 2.278663)
+	model 70
+}
+
+object 71 {  // zorrofantDummy_274
+	(8570 14 -1331) (-0 0 0) (1 1 1)
+	model 71
+}
+
+object 72 {  // zorrofantDummy_277
+	(9442 14.000001 -1355) (-0 0 0) (1 1 1)
+	model 72
+}
+
+object 73 {  // zorrofantDummy_278
+	(12259 14.000001 -4249) (-0 0 0) (1 1 1)
+	model 73
+}
+
+object 74 {  // zorrofantDummy_279
+	(13246 14.000001 -4251) (-0 0 0) (1 1 1)
+	model 74
+}
+
+object 75 {  // zorrofantDummy_282
+	(22833.5 122 -8964.75) (-0 0 0) (2.562961 2.562961 2.562961)
+	model 75
+}
+
+object 76 {  // zorrofantDummy_283
+	(22834 122 -8867) (-0 0 0) (2.562961 2.562961 2.562961)
+	model 76
+}
+
+object 77 {  // zorrofantDummy_284
+	(22623 122 -8941) (-0 0 0) (2.562961 2.562961 2.562961)
+	model 77
+}
+
+object 78 {  // pathPieceI_mdl_152
+	(22213.8125 0 -9244.924805) (-0 -0 0.261799) (0.75 0.75 0.75)
+	model 78
+}
+
+object 79 {  // zorrofantDummy_289
+	(23051.5 -42 -9042.75) (-0 0 0) (2.562961 2.562961 2.562961)
+	model 79
+}
+
+object 80 {  // zorrofantDummy_290
+	(22872.5 -42 -8964.75) (-0 0 0) (2.562961 2.562961 2.562961)
+	model 80
+}
+
+object 81 {  // zorrofantDummy_291
+	(23027 -42 -8840) (-0 0 0) (2.562961 2.562961 2.562961)
+	model 81
+}
+
+object 82 {  // zorrofantDummy_295
+	(22685 -42 -8965) (-0 0 0) (2.562961 2.562961 2.562961)
+	model 82
+}
+
+object 83 {  // pathPieceI_mdl_300
+	(16787 0.000001 -6289) (-0 -0 0.261799) (0.75 0.75 0.75)
+	model 83
+}
+
+object 84 {  // cloud0_tga_300
+	(-837 907 413) (1.570796 0 0) (2 2 2)
+	model 84
+}
+
+object 85 {  // cloud0_tga_308
+	(73 1254 94) (1.570796 0 0) (2.263377 2.263377 2.263377)
+	model 85
+}
+
+object 86 {  // cloud0_tga_310
+	(1045 1009 764) (1.570796 0 0) (2.263377 2.263377 2.263377)
+	model 86
+}
+
+object 87 {  // cloud0_tga_311
+	(8006.333008 923 -488.666626) (1.570796 0 0) (2 2 2)
+	model 87
+}
+
+object 88 {  // cloud0_tga_312
+	(8916.333008 1270 -807.666626) (1.570796 0 0) (2.263377 2.263377 2.263377)
+	model 88
+}
+
+object 89 {  // cloud0_tga_313
+	(9888.333008 1025 -137.666626) (1.570796 0 0) (2.263377 2.263377 2.263377)
+	model 89
+}
+
+object 90 {  // cloud0_tga_314
+	(12891 1222.333374 -1768.999878) (-1.570796 0 0) (2 2 2)
+	model 90
+}
+
+object 91 {  // cloud0_tga_315
+	(11981 875.333252 -2088) (-1.570796 0 0) (2.263377 2.263377 2.263377)
+	model 91
+}
+
+object 92 {  // cloud0_tga_316
+	(11009 1120.33313 -1418.000122) (-1.570796 0 0) (2.263377 2.263377 2.263377)
+	model 92
+}
+
+object 93 {  // cloud0_tga_320
+	(11609.333008 922.666687 -3612.666504) (1.570796 0 0) (2 2 2)
+	model 93
+}
+
+object 94 {  // cloud0_tga_321
+	(12519.333008 1269.666748 -3931.666504) (1.570796 0 0) (2.263377 2.263377 2.263377)
+	model 94
+}
+
+object 95 {  // cloud0_tga_322
+	(13491.333008 1024.66687 -3261.666504) (1.570796 0 0) (2.263377 2.263377 2.263377)
+	model 95
+}
+
+object 96 {  // cloud0_tga_332
+	(24450.332031 923 -7254.666992) (1.570796 0 0) (2 2 2)
+	model 96
+}
+
+object 97 {  // cloud0_tga_333
+	(25360.332031 1270 -7573.666992) (1.570796 0 0) (2.263377 2.263377 2.263377)
+	model 97
+}
+
+object 98 {  // cloud0_tga_334
+	(26332.332031 1025 -6903.666992) (1.570796 0 0) (2.263377 2.263377 2.263377)
+	model 98
+}
+
+object 99 {  // cloud0_tga_335
+	(22880 1222.333374 -7198) (-1.570796 0 0) (2 2 2)
+	model 99
+}
+
+object 100 {  // cloud0_tga_336
+	(21970 875.333252 -7517) (-1.570796 0 0) (2.263377 2.263377 2.263377)
+	model 100
+}
+
+object 101 {  // cloud0_tga_337
+	(20998 1120.33313 -6847) (-1.570796 0 0) (2.263377 2.263377 2.263377)
+	model 101
+}
+
+object 102 {  // cloud0_tga_341
+	(19243.333984 923 -5776.666504) (1.570796 0 0) (2 2 2)
+	model 102
+}
+
+object 103 {  // cloud0_tga_342
+	(20153.333984 1270 -6095.666504) (1.570796 0 0) (2.263377 2.263377 2.263377)
+	model 103
+}
+
+object 104 {  // cloud0_tga_343
+	(21125.333984 1025 -5425.666504) (1.570796 0 0) (2.263377 2.263377 2.263377)
+	model 104
+}
+
+object 105 {  // cloud0_tga_300
+	(8267.333008 619.333313 -2337.666748) (1.570796 0 0) (2 2 2)
+	model 105
+}
+
+object 106 {  // cloud0_tga_308
+	(9177.333008 966.333313 -2656.666748) (1.570796 0 0) (2.263377 2.263377 2.263377)
+	model 106
+}
+
+object 107 {  // cloud0_tga_310
+	(10149.333008 721.333313 -1986.666626) (1.570796 0 0) (2.263377 2.263377 2.263377)
+	model 107
+}
+
+object 108 {  // pos_001
+	(0 -1124 9) (1.570796 0 0) (1 1 1)
+	start 108
+}
+
+object 109 {  // zorrofantDummy_326
+	(10296 15 -2172) (-0 0 0) (2.313904 2.313904 2.313904)
+	model 109
+}
+
+object 110 {  // zorrofantDummy_327
+	(17208 -7 -5439.5) (-0 0 0) (2.308572 2.308572 2.308572)
+	model 110
+}
+
+object 111 {  // pathPieceA_mdl_328
+	(17092 0.000001 -6208.5) (-0 0 0) (0.75 0.75 0.75)
+	model 111
+}
+
+object 112 {  // zorrofantDummy_329
+	(23512 -42 -9246) (-0 0 0) (2.562961 2.562961 2.562961)
+	model 112
+}
+
+object 113 {  // pathPieceI_mdl_330
+	(9044 16 -1545) (-0 0 0) (0.75 0.75 0.75)
+	model 113
+}
+
+object 114 {  // pathPieceI_mdl_331
+	(12756 -21 -4471) (-0 0 0) (0.75 0.75 0.75)
+	model 114
+}
+
+object 115 {  // zorrofantDummy_333
+	(23039 114 -8807) (-0 0 0) (2.562961 2.562961 2.562961)
+	model 115
+}
+
+object 116 {  // pathPieceI_mdl_334
+	(17 0.000001 14) (-0 -0 0.261799) (0.75 0.75 0.75)
+	model 116
+}
+
+object 117 {  // zorrofantDummy_335
+	(1541 -75 -342) (-0 0 0) (2.278663 2.278663 2.278663)
+	model 117
+}
+
+object 118 {  // zorrofantDummy_336
+	(1474 1 -228) (-0 0 0) (1.677634 1.677634 1.677634)
+	model 118
+}
+
+object 119 {  // zorrofantDummy_338
+	(10296 14.000001 -2150) (-0 0 0) (1 1 1)
+	model 119
+}
+
+object 120 {  // zorrofantDummy_339
+	(10842 14.000001 -3020) (-0 0 0) (1 1 1)
+	model 120
+}
+
+object 121 {  // zorrofantDummy_340
+	(11290 14.000001 -3945) (-0 0 0) (1 1 1)
+	model 121
+}
+
+object 122 {  // zorrofantDummy_341
+	(17524 14.000001 -6005) (-0 0 0) (1 1 1)
+	model 122
+}
+
+object 123 {  // zorrofantDummy_342
+	(18048 14.000001 -6314) (-0 0 0) (1 1 1)
+	model 123
+}
+
+object 124 {  // zorrofantDummy_343
+	(18554 14.000001 -6590) (-0 0 0) (1 1 1)
+	model 124
+}
+
+object 125 {  // zorrofantDummy_344
+	(19140 14.000001 -7171) (-0 0 0) (1 1 1)
+	model 125
+}
+
+object 126 {  // zorrofantDummy_345
+	(20266 14.000001 -7812) (-0 0 0) (1 1 1)
+	model 126
+}
+
+object 127 {  // spikes_mdl_345
+	(24067 13 -10015) (-0 0 0) (1 1 1)
+	model 127
+}
+
+object 128 {  // spikes_mdl_349
+	(23813 13 -9922) (-0 -0 0.523599) (1 1 1)
+	model 128
+}
+
+object 129 {  // spikes_mdl_351
+	(24541 5 -9185) (-0 0 -1.570796) (1 1 1)
+	model 129
+}
+
+object 130 {  // spikes_mdl_354
+	(24602 2 -8973) (-0 0 -0.785398) (1 1 1)
+	model 130
+}
+
+object 131 {  // spikes_mdl_356
+	(24298 13 -9889) (-0 0 -0.785398) (1 1 1)
+	model 131
+}
+
+object 132 {  // spikes_mdl_359
+	(23604 13 -9775) (-0 -0 0.523599) (1 1 1)
+	model 132
+}
+
+object 133 {  // spikes_mdl_362
+	(9318 -94 -1900) (-0 -0 0.261799) (1 1 1)
+	model 133
+}
+
+object 134 {  // spikes_mdl_364
+	(9055 -94 -1839) (-0 -0 0.261799) (1 1 1)
+	model 134
+}
+
+object 135 {  // spikes_mdl_365
+	(25342 1 -8826) (-0 0 0) (0.776176 0.776176 0.776176)
+	model 135
+}
+
+object 136 {  // spikes_mdl_368
+	(26149 26 -8238) (-2.356194 0 0) (1.740645 1.740645 1.740645)
+	model 136
+}
+
+object 137 {  // pathPieceA_mdl_372
+	(26381 327 -8243) (0.785398 0 0) (0.8 0.8 0.8)
+	model 137
+}
+
+object 138 {  // pathPieceA_mdl_374
+	(25832 693 -8227.208984) (-0 0 0) (0.8 0.8 0.8)
+	model 138
+}
+
+object 139 {  // spikes_mdl_378
+	(26199 55 -8684) (0.785398 0 0) (1.495026 1.495026 1.495026)
+	model 139
+}
+
+object 140 {  // zorrofantDummy_385
+	(25803 -176 -8911) (1.570796 0 0) (1.340917 1.340917 1.340917)
+	model 140
+}
+
+object 141 {  // pathPieceI_mdl_393
+	(25898 0 -9231) (-0 0 0) (0.75 0.75 0.75)
+	model 141
+}
+
+object 142 {  // pathPieceA_mdl_394
+	(27209 0 -8243) (-0 0 0) (0.8 0.8 0.8)
+	model 142
+}
+
+object 143 {  // pathPieceA_mdl_396
+	(22326 0 -9478) (-0 0 0) (0.664153 0.664153 0.664153)
+	model 143
+}
+
+object 144 {  // tree3_mdl_398
+	(25462 162 -8489) (-0 0 0) (0.886364 0.886364 0.886364)
+	model 144
+}
+
+object 145 {  // tree3_mdl_401
+	(26402 -377 -8534) (1.047198 0 0) (0.886364 0.886364 0.886364)
+	model 145
+}
+
+object 146 {  // tree3_mdl_404
+	(13338 182 -4086) (-0 0 0) (0.886364 0.886364 0.886364)
+	model 146
+}
+
+object 147 {  // tree3_mdl_405
+	(12070 307 -4084) (-1.570796 0 0) (0.886364 0.886364 0.886364)
+	model 147
+}
+
+object 148 {  // tree3_mdl_408
+	(5290 -387 -500) (-1.570796 0 0) (0.886364 0.886364 0.886364)
+	model 148
+}
+
+object 149 {  // tree3_mdl_409
+	(281 -442 -146) (-1.570796 0 0) (0.886364 0.886364 0.886364)
+	model 149
+}
+
+object 150 {  // tree3_mdl_410
+	(-41 404 543) (2.617994 0 0) (0.886364 0.886364 0.886364)
+	model 150
+}
+
+object 151 {  // Fence-1_mdl_411
+	(24901 293 -8644) (-1.570796 0 0) (0.501323 0.501323 0.501323)
+	model 151
+}
+
+object 152 {  // Fence-1_mdl_415
+	(18680 295 -6552) (-1.570796 0 0) (0.501323 0.501323 0.501323)
+	model 152
+}
+
+object 153 {  // Fence-1_mdl_416
+	(18142 295 -6318) (-1.570796 0 0) (0.501323 0.501323 0.501323)
+	model 153
+}
+
+object 154 {  // Fence-1_mdl_417
+	(17576 295 -6001) (-1.570796 0 0) (0.501323 0.501323 0.501323)
+	model 154
+}
+
+object 155 {  // Fence-1_mdl_418
+	(10839 295 -3062) (-1.570796 0 0) (0.501323 0.501323 0.501323)
+	model 155
+}
+
+object 156 {  // Fence-1_mdl_419
+	(10278 295 -2167) (-1.570796 0 0) (0.501323 0.501323 0.501323)
+	model 156
+}
+
+object 157 {  // Fence-1_mdl_420
+	(9777 295 -1358) (-1.570796 0 0) (0.501323 0.501323 0.501323)
+	model 157
+}
+
+object 158 {  // Fence-1_mdl_421
+	(506 -445 -290) (-1.570796 0 0) (0.501323 0.501323 0.501323)
+	model 158
+}
+
+object 159 {  // Fence-1_mdl_422
+	(-400 -325 7) (-1.570796 0 0) (0.501323 0.501323 0.501323)
+	model 159
+}
+
+object 160 {  // cloud0_tga_423
+	(21478.333984 923 -7905.666504) (1.570796 0 0) (2 2 2)
+	model 160
+}
+
+object 161 {  // cloud0_tga_424
+	(22388.333984 1270 -8224.666016) (1.570796 0 0) (2.263377 2.263377 2.263377)
+	model 161
+}
+
+object 162 {  // cloud0_tga_425
+	(23360.333984 1025 -7554.666504) (1.570796 0 0) (2.263377 2.263377 2.263377)
+	model 162
+}
+
+object 163 {  // spikes_mdl_427
+	(17122 2 -5387) (-0 0 0) (0.776176 0.776176 0.776176)
+	model 163
+}
+
+object 164 {  // spikes_mdl_428
+	(9970 2 -1402) (-0 0 0) (0.776176 0.776176 0.776176)
+	model 164
+}
+
+object 165 {  // spikes_mdl_429
+	(5131 -2 -727) (-0 0 0) (0.776176 0.776176 0.776176)
+	model 165
+}
+
+object 166 {  // spikes_mdl_430
+	(1687 -2 -336) (-0 0 0) (0.776176 0.776176 0.776176)
+	model 166
+}
+
+object 167 {  // spikes_mdl_431
+	(8787 -94 -1773) (-0 -0 0.261799) (1 1 1)
+	model 167
+}
+
+object 168 {  // a4Cube_mdl_431
+	(1496 0 -5) (-0 0 0) (1 1 1)
+	model 168
+}
+
+object 169 {  // a4Cube_mdl_435
+	(1315 0 -34) (-0 0 0) (1 1 1)
+	model 169
+}
+
+object 170 {  // a4Cube_mdl_436
+	(1695 0 -23) (-0 0 0) (1 1 1)
+	model 170
+}
+
+object 171 {  // a4Cube_mdl_437
+	(1873 0 -89) (-0 0 0) (1 1 1)
+	model 171
+}
+
+object 172 {  // a4Cube_mdl_438
+	(2012 0 -225) (-0 0 0) (1 1 1)
+	model 172
+}
+
+object 173 {  // a4Cube_mdl_439
+	(3523 0 -399) (-0 0 0) (1 1 1)
+	model 173
+}
+
+object 174 {  // a4Cube_mdl_440
+	(3731 0 -311) (-0 0 0) (1 1 1)
+	model 174
+}
+
+object 175 {  // a4Cube_mdl_441
+	(3938 0 -390) (-0 0 0) (1 1 1)
+	model 175
+}
+
+object 176 {  // a4Cube_mdl_442
+	(5278 0 -658) (-0 0 0) (1 1 1)
+	model 176
+}
+
+object 177 {  // a4Cube_mdl_443
+	(4967 0 -642) (-0 0 0) (1 1 1)
+	model 177
+}
+
+object 178 {  // a4Cube_mdl_444
+	(8571 0 -1266) (-0 0 0) (1 1 1)
+	model 178
+}
+
+object 179 {  // a4Cube_mdl_445
+	(8743 0 -1354) (-0 0 0) (1 1 1)
+	model 179
+}
+
+object 180 {  // a4Cube_mdl_446
+	(8920 0 -1420) (-0 0 0) (1 1 1)
+	model 180
+}
+
+object 181 {  // a4Cube_mdl_447
+	(9120 0 -1413) (-0 0 0) (1 1 1)
+	model 181
+}
+
+object 182 {  // a4Cube_mdl_448
+	(9297 0 -1353) (-0 0 0) (1 1 1)
+	model 182
+}
+
+object 183 {  // a4Cube_mdl_449
+	(9467 0 -1260) (-0 0 0) (1 1 1)
+	model 183
+}
+
+object 184 {  // a4Cube_mdl_450
+	(9634 0 -1262) (-0 0 0) (1 1 1)
+	model 184
+}
+
+object 185 {  // a4Cube_mdl_451
+	(8420 0 -1263) (-0 0 0) (1 1 1)
+	model 185
+}
+
+object 186 {  // a4Cube_mdl_452
+	(10306 0 -1979) (-0 0 0) (1 1 1)
+	model 186
+}
+
+object 187 {  // a4Cube_mdl_453
+	(10887 0 -2888) (-0 0 0) (1 1 1)
+	model 187
+}
+
+object 188 {  // a4Cube_mdl_454
+	(11218 0 -3797) (-0 0 0) (1 1 1)
+	model 188
+}
+
+object 189 {  // a4Cube_mdl_455
+	(12192 0 -4229) (-0 0 0) (1 1 1)
+	model 189
+}
+
+object 190 {  // a4Cube_mdl_456
+	(12337 0 -4229) (-0 0 0) (1 1 1)
+	model 190
+}
+
+object 191 {  // a4Cube_mdl_457
+	(12648 0 -4367) (-0 0 0) (1 1 1)
+	model 191
+}
+
+object 192 {  // a4Cube_mdl_459
+	(12824 0 -4367) (-0 0 0) (1 1 1)
+	model 192
+}
+
+object 193 {  // a4Cube_mdl_460
+	(14366 0 -4519) (-0 0 0) (1 1 1)
+	model 193
+}
+
+object 194 {  // a4Cube_mdl_461
+	(14587 0 -4587) (-0 0 0) (1 1 1)
+	model 194
+}
+
+object 195 {  // a4Cube_mdl_462
+	(14844 0 -4628) (-0 0 0) (1 1 1)
+	model 195
+}
+
+object 196 {  // a4Cube_mdl_463
+	(15101 0 -4642) (-0 0 0) (1 1 1)
+	model 196
+}
+
+object 197 {  // a4Cube_mdl_487
+	(24054 0 -9812) (-0 0 0) (1 1 1)
+	model 197
+}
+
+object 198 {  // a4Cube_mdl_488
+	(24191 0 -9705) (-0 0 0) (1 1 1)
+	model 198
+}
+
+object 199 {  // a4Cube_mdl_489
+	(23869 0 -9727) (-0 0 0) (1 1 1)
+	model 199
+}
+
+object 200 {  // a4Cube_mdl_490
+	(23699 0 -9597) (-0 0 0) (1 1 1)
+	model 200
+}
+
+object 201 {  // a4Cube_mdl_491
+	(24342 0 -9550) (-0 0 0) (1 1 1)
+	model 201
+}
+
+object 202 {  // a4Cube_mdl_492
+	(23751 0 -8210) (-0 0 0) (1 1 1)
+	model 202
+}
+
+object 203 {  // a4Cube_mdl_493
+	(24574 0 -8232) (-0 0 0) (1 1 1)
+	model 203
+}
+
+object 204 {  // a4Cube_mdl_494
+	(23063 0 -8347) (-0 0 0) (1 1 1)
+	model 204
+}
+
+object 205 {  // a4Cube_mdl_495
+	(23063 0 -8347) (-0 0 0) (1 1 1)
+	model 205
+}
+
+object 206 {  // a4Cube_mdl_496
+	(22544 0 -8621) (-0 0 0) (1 1 1)
+	model 206
+}
+
+object 207 {  // a4Cube_mdl_497
+	(23241 0 -8420) (-0 0 0) (1 1 1)
+	model 207
+}
+
+object 208 {  // a4Cube_mdl_498
+	(23565 0 -8981) (-0 0 0) (1 1 1)
+	model 208
+}
+
+object 209 {  // a4Cube_mdl_499
+	(23565 0 -8981) (-0 0 0) (1 1 1)
+	model 209
+}
+
+object 210 {  // a4Cube_mdl_500
+	(25336 0 -8752) (-0 0 0) (1 1 1)
+	model 210
+}
+
+object 211 {  // a4Cube_mdl_501
+	(25336 0 -8664) (-0 0 0) (1 1 1)
+	model 211
+}
+
+object 212 {  // a4Cube_mdl_502
+	(23404 0 -8460) (-0 0 0) (1 1 1)
+	model 212
+}
+
+object 213 {  // a4Cube_mdl_503
+	(23404 0 -8460) (-0 0 0) (1 1 1)
+	model 213
+}
+
+object 214 {  // a4Cube_mdl_504
+	(24182 0 -8353) (-0 0 0) (1 1 1)
+	model 214
+}
+
+object 215 {  // a4Cube_mdl_505
+	(24182 0 -8353) (-0 0 0) (1 1 1)
+	model 215
+}
+
+object 216 {  // a4Cube_mdl_506
+	(18853 0 -6585) (-0 0 0) (1 1 1)
+	model 216
+}
+
+object 217 {  // a4Cube_mdl_508
+	(17597 0 -5880) (-0 0 0) (1 1 1)
+	model 217
+}
+
+object 218 {  // a4Cube_mdl_511
+	(18204 0 -6166) (-0 0 0) (1 1 1)
+	model 218
+}
+
+object 219 {  // a4Cube_mdl_512
+	(17213 0 -5218) (-0 0 0) (1 1 1)
+	model 219
+}
+
+object 220 {  // a4Cube_mdl_514
+	(17522 0 -5375) (-0 0 0) (1 1 1)
+	model 220
+}
+
+object 221 {  // a4Cube_mdl_516
+	(17574 0 -5645) (-0 0 0) (1 1 1)
+	model 221
+}
+
+object 222 {  // a4Cube_mdl_518
+	(17813 0 -5968) (-0 0 0) (1 1 1)
+	model 222
+}
+
+object 223 {  // a4Cube_mdl_520
+	(18016 0 -6068) (-0 0 0) (1 1 1)
+	model 223
+}
+
+object 224 {  // a4Cube_mdl_522
+	(18428 0 -6279) (-0 0 0) (1 1 1)
+	model 224
+}
+
+object 225 {  // a4Cube_mdl_524
+	(18642 0 -6450) (-0 0 0) (1 1 1)
+	model 225
+}
+
+object 226 {  // a4Cube_mdl_526
+	(19128 0 -6780) (-0 0 0) (1 1 1)
+	model 226
+}
+
+object 227 {  // a4Cube_mdl_527
+	(19128 0 -6780) (-0 0 0) (1 1 1)
+	model 227
+}
+
+object 228 {  // a4Cube_mdl_528
+	(12739 0 -4253) (-0 0 0) (1 1 1)
+	model 228
+}
+
+object 229 {  // a4Cube_mdl_529
+	(12265 0 -4154) (-0 0 0) (1 1 1)
+	model 229
+}
+
+object 230 {  // a4Cube_mdl_530
+	(5139 0 -645) (-0 0 0) (1 1 1)
+	model 230
+}
+
+object 231 {  // a4Cube_mdl_531
+	(267 0 296) (-0 0 0) (1 1 1)
+	model 231
+}
+
+object 232 {  // a4Cube_mdl_532
+	(603 0 48) (-0 0 0) (1 1 1)
+	model 232
+}
+
+object 233 {  // a4Cube_mdl_533
+	(776 0 -2) (-0 0 0) (1 1 1)
+	model 233
+}
+
+object 234 {  // a4Cube_mdl_534
+	(982 0 -31) (-0 0 0) (1 1 1)
+	model 234
+}
+
+object 235 {  // spikes_mdl_537
+	(2700 -2 -516) (-0 0 0) (0.776176 0.776176 0.776176)
+	model 235
+}
+
+object 236 {  // spikes_mdl_540
+	(6270 -2 -949) (-0 0 0) (0.776176 0.776176 0.776176)
+	model 236
+}
+
+object 237 {  // spikes_mdl_542
+	(6091 -2 -850) (-0 0 0) (0.776176 0.776176 0.776176)
+	model 237
+}
+
+object 238 {  // spikes_mdl_543
+	(10089 -2 -2189) (-0 0 0) (0.776176 0.776176 0.776176)
+	model 238
+}
+
+object 239 {  // spikes_mdl_545
+	(10660 -2 -3085) (-0 0 0) (0.776176 0.776176 0.776176)
+	model 239
+}
+
+object 240 {  // spikes_mdl_547
+	(11341 -2 -4164) (-0 0 0) (0.776176 0.776176 0.776176)
+	model 240
+}
+
+object 241 {  // spikes_mdl_550
+	(14297 -2 -4646) (-0 0 0) (0.776176 0.776176 0.776176)
+	model 241
+}
+
+object 242 {  // spikes_mdl_551
+	(15079 -2 -4787) (-0 0 0) (0.776176 0.776176 0.776176)
+	model 242
+}
+
+object 243 {  // spikes_mdl_552
+	(19042 -2 -7205) (-0 0 0) (0.776176 0.776176 0.776176)
+	model 243
+}
+
+object 244 {  // spikes_mdl_553
+	(20698 -2 -8184) (-0 0 0) (0.776176 0.776176 0.776176)
+	model 244
+}
+
+object 245 {  // spikes_mdl_557
+	(22694 -2 -8911) (-0 0 0) (0.776176 0.776176 0.776176)
+	model 245
+}
+
+object 246 {  // spikes_mdl_558
+	(23548 -2 -9226) (-0 0 0) (0.776176 0.776176 0.776176)
+	model 246
+}
+
+object 247 {  // spikes_mdl_559
+	(23370 -2 -9192) (-0 0 0) (0.776176 0.776176 0.776176)
+	model 247
+}
+
+object 248 {  // spikes_mdl_560
+	(24668 -2 -8781) (-0 0 0) (0.776176 0.776176 0.776176)
+	model 248
+}
+
+object 249 {  // lotter_dummy_560
+	(12745 0 -4374) (-0 0 0) (1 1 1)
+	model 249
+}
+
+object 250 {  // a4Cube_mdl_566
+	(13123 0 -4326) (-0 0 0) (1 1 1)
+	model 250
+}
+
+object 251 {  // spikes_mdl_568
+	(16277 -2 -5162) (-0 0 0) (0.776176 0.776176 0.776176)
+	model 251
+}
+
+object 252 {  // a4Cube_mdl_569
+	(20347 0 -7783) (-0 0 0) (1 1 1)
+	model 252
+}
+
+object 253 {  // a4Cube_mdl_570
+	(20504 0 -7883) (-0 0 0) (1 1 1)
+	model 253
+}
+
+object 254 {  // a4Cube_mdl_571
+	(20648 0 -7983) (-0 0 0) (1 1 1)
+	model 254
+}
+
+object 255 {  // a4Cube_mdl_572
+	(20767 0 -8090) (-0 0 0) (1 1 1)
+	model 255
+}
+
+object 256 {  // a4Cube_mdl_573
+	(20917 0 -8178) (-0 0 0) (1 1 1)
+	model 256
+}
+
+object 257 {  // a4Cube_mdl_574
+	(21061 0 -8253) (-0 0 0) (1 1 1)
+	model 257
+}
+
+object 258 {  // a4Cube_mdl_575
+	(22200 0 -8737) (-0 0 0) (1 1 1)
+	model 258
+}
+
+object 259 {  // a4Cube_mdl_576
+	(22357 0 -8712) (-0 0 0) (1 1 1)
+	model 259
+}
+
+object 260 {  // a4Cube_mdl_577
+	(22714 0 -8518) (-0 0 0) (1 1 1)
+	model 260
+}
+
+object 261 {  // a4Cube_mdl_578
+	(22902 0 -8399) (-0 0 0) (1 1 1)
+	model 261
+}
+
+object 262 {  // a4Cube_mdl_579
+	(25336 0 -8564) (-0 0 0) (1 1 1)
+	model 262
+}
+
+object 263 {  // cloud0_tga_580
+	(27889 -846 -8588) (1.570796 0 0) (2 2 2)
+	model 263
+}
+
+object 264 {  // cloud0_tga_581
+	(29275 -1344 -8088) (1.570796 0 0) (2 2 2)
+	model 264
+}
+
+object 265 {  // cloud0_tga_582
+	(16931 602 -5280) (1.570796 0 0) (2.263377 2.263377 2.263377)
+	model 265
+}
+
+object 266 {  // cloud0_tga_583
+	(4804 578 -116) (1.570796 0 0) (2.263377 2.263377 2.263377)
+	model 266
+}
+
+object 267 {  // cloud0_tga_584
+	(8162 -921 -1179) (1.570796 0 0) (2.263377 2.263377 2.263377)
+	model 267
+}
+
+object 268 {  // cloud0_tga_587
+	(11529 -1053 -2486) (1.570796 0 0) (2.263377 2.263377 2.263377)
+	model 268
+}
+
+object 269 {  // cloud0_tga_588
+	(-895 -1037 392) (1.570796 0 0) (2.263377 2.263377 2.263377)
+	model 269
+}
+
+object 270 {  // cloud0_tga_589
+	(-33 -960 -843) (1.570796 0 0) (2.263377 2.263377 2.263377)
+	model 270
+}
+
+object 271 {  // cloud0_tga_590
+	(11078 -1053 -1133) (1.570796 0 0) (2.263377 2.263377 2.263377)
+	model 271
 }
 

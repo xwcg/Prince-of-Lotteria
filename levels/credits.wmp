@@ -1,0 +1,3038 @@
+// WMP2
+// WMPIO V 1.30
+// Created 26.06.2013
+
+version 710
+
+blocks 0
+entities 166
+objects 166
+
+wed {
+	palette {
+		00 00 00  0f 0f 0f  1f 1f 1f  2f 2f 2f  3f 3f 3f  4b 4b 4b  5b 5b 5b  6b 6b 6b  7b 7b 7b  8b 8b 8b  9b 9b 9b  ab ab ab  bb bb bb  cb cb cb  db db db  eb eb eb  
+		0f 0b 07  17 0f 0b  1f 17 0b  27 1b 0f  2f 23 13  37 2b 17  3f 2f 17  4b 37 1b  53 3b 1b  5b 43 1f  63 4b 1f  6b 53 1f  73 57 1f  7b 5f 23  83 67 23  8f 6f 23  
+		0b 0b 0f  13 13 1b  1b 1b 27  27 27 33  2f 2f 3f  37 37 4b  3f 3f 57  47 47 67  4f 4f 73  5b 5b 7f  63 63 8b  6b 6b 97  73 73 a3  7b 7b af  83 83 bb  8b 8b cb  
+		00 00 00  07 07 00  0b 0b 00  13 13 00  1b 1b 00  23 23 00  2b 2b 07  2f 2f 07  37 37 07  3f 3f 07  47 47 07  4b 4b 0b  53 53 0b  5b 5b 0b  63 63 0b  6b 6b 0f  
+		07 00 00  0f 00 00  17 00 00  1f 00 00  27 00 00  2f 00 00  37 00 00  3f 00 00  47 00 00  4f 00 00  57 00 00  5f 00 00  67 00 00  6f 00 00  77 00 00  7f 00 00  
+		13 13 00  1b 1b 00  23 23 00  2f 2b 00  37 2f 00  43 37 00  4b 3b 07  57 43 07  5f 47 07  6b 4b 0b  77 53 0f  83 57 13  8b 5b 13  97 5f 1b  a3 63 1f  af 67 23  
+		23 13 07  2f 17 0b  3b 1f 0f  4b 23 13  57 2b 17  63 2f 1f  73 37 23  7f 3b 2b  8f 43 33  9f 4f 33  af 63 2f  bf 77 2f  cf 8f 2b  df ab 27  ef cb 1f  ff f3 1b  
+		0b 07 00  1b 13 00  2b 23 0f  37 2b 13  47 33 1b  53 37 23  63 3f 2b  6f 47 33  7f 53 3f  8b 5f 47  9b 6b 53  a7 7b 5f  b7 87 6b  c3 93 7b  d3 a3 8b  e3 b3 97  
+		ab 8b a3  9f 7f 97  93 73 87  8b 67 7b  7f 5b 6f  77 53 63  6b 4b 57  5f 3f 4b  57 37 43  4b 2f 37  43 27 2f  37 1f 23  2b 17 1b  23 13 13  17 0b 0b  0f 07 07  
+		bb 73 9f  af 6b 8f  a3 5f 83  97 57 77  8b 4f 6b  7f 4b 5f  73 43 53  6b 3b 4b  5f 33 3f  53 2b 37  47 23 2b  3b 1f 23  2f 17 1b  23 13 13  17 0b 0b  0f 07 07  
+		db c3 bb  cb b3 a7  bf a3 9b  af 97 8b  a3 87 7b  97 7b 6f  87 6f 5f  7b 63 53  6b 57 47  5f 4b 3b  53 3f 33  43 33 27  37 2b 1f  27 1f 17  1b 13 0f  0f 0b 07  
+		6f 83 7b  67 7b 6f  5f 73 67  57 6b 5f  4f 63 57  47 5b 4f  3f 53 47  37 4b 3f  2f 43 37  2b 3b 2f  23 33 27  1f 2b 1f  17 23 17  0f 1b 13  0b 13 0b  07 0b 07  
+		ff f3 1b  ef df 17  db cb 13  cb b7 0f  bb a7 0f  ab 97 0b  9b 83 07  8b 73 07  7b 63 07  6b 53 00  5b 47 00  4b 37 00  3b 2b 00  2b 1f 00  1b 0f 00  0b 07 00  
+		00 00 ff  0b 0b ef  13 13 df  1b 1b cf  23 23 bf  2b 2b af  2f 2f 9f  2f 2f 8f  2f 2f 7f  2f 2f 6f  2f 2f 5f  2b 2b 4f  23 23 3f  1b 1b 2f  13 13 1f  0b 0b 0f  
+		2b 00 00  3b 00 00  4b 07 00  5f 07 00  6f 0f 00  7f 17 07  93 1f 07  a3 27 0b  b7 33 0f  c3 4b 1b  cf 63 2b  db 7f 3b  e3 97 4f  e7 ab 5f  ef bf 77  f7 d3 8b  
+		a7 7b 3b  b7 9b 37  c7 c3 37  e7 e3 57  7f bf ff  ab e7 ff  d7 ff ff  67 00 00  8b 00 00  b3 00 00  d7 00 00  ff 00 00  ff f3 93  ff f7 c7  ff ff ff  9f 5b 53  
+	}
+}
+
+level 0 {   // Root
+	<credits.$$w>
+	<palette.pcx>
+	30
+	45
+	30
+	<..\main.c>
+	48.235294 68.235291 63.529411
+	19.607843 39.215687 100.000000
+	100.000000 19.607843 19.607843
+	-0.000000 -0.000000 -0.000000
+	100.000000 100.000000 100.000000
+	25.098040 25.098040 25.098040
+}
+
+model 1 {   // credits_hmp_000
+	1 1 1
+	<credits.hmp>
+	credits_hmp_000
+	acCreditsTerrain
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 2 {   // acknex_mdl_003
+	1 1 1
+	<acknex.mdl>
+	acknex_mdl_003
+	acCreditsSign
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 3 {   // cloud0_tga_034
+	4.87201 4.87201 4.87201
+	<cloud2.tga>
+	cloud0_tga_034
+	lvlLfCloud
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 4 {   // cloud0_tga_037
+	4.609129 4.609129 4.609129
+	<cloud1.tga>
+	cloud0_tga_037
+	lvlLfCloud
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 5 {   // cloud0_tga_038
+	4.083366 4.083366 4.083366
+	<cloud2.tga>
+	cloud0_tga_038
+	lvlLfCloud
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 6 {   // cloud0_tga_042
+	3.254488 3.254488 3.254488
+	<cloud1.tga>
+	cloud0_tga_042
+	lvlLfCloud
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 7 {   // cloud0_tga_043
+	2.897086 2.897086 2.897086
+	<cloud2.tga>
+	cloud0_tga_043
+	lvlLfCloud
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 8 {   // cloud0_tga_049
+	3.15345 3.15345 3.15345
+	<cloud1.tga>
+	cloud0_tga_049
+	lvlLfCloud
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 9 {   // cloud0_tga_050
+	2.627687 2.627687 2.627687
+	<cloud2.tga>
+	cloud0_tga_050
+	lvlLfCloud
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 10 {   // cloud0_tga_051
+	4.609129 4.609129 4.609129
+	<cloud1.tga>
+	cloud0_tga_051
+	lvlLfCloud
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 11 {   // cloud0_tga_056
+	4.609129 4.609129 4.609129
+	<cloud1.tga>
+	cloud0_tga_056
+	lvlLfCloud
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 12 {   // cloud0_tga_057
+	4.87201 4.87201 4.87201
+	<cloud2.tga>
+	cloud0_tga_057
+	lvlLfCloud
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 13 {   // cloud0_tga_058
+	1.704555 1.704555 1.704555
+	<cloud2.tga>
+	cloud0_tga_058
+	lvlLfCloud
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 14 {   // cloud0_tga_059
+	3.254488 3.254488 3.254488
+	<cloud1.tga>
+	cloud0_tga_059
+	lvlLfCloud
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 15 {   // cloud0_tga_060
+	2.991606 2.991606 2.991606
+	<cloud2.tga>
+	cloud0_tga_060
+	lvlLfCloud
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 16 {   // cloud0_tga_061
+	3.15345 3.15345 3.15345
+	<cloud1.tga>
+	cloud0_tga_061
+	lvlLfCloud
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 17 {   // cloud0_tga_062
+	2.627687 2.627687 2.627687
+	<cloud2.tga>
+	cloud0_tga_062
+	lvlLfCloud
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 18 {   // cloud0_tga_063
+	4.609129 4.609129 4.609129
+	<cloud1.tga>
+	cloud0_tga_063
+	lvlLfCloud
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 19 {   // cloud0_tga_088
+	2.991606 2.991606 2.991606
+	<cloud2.tga>
+	cloud0_tga_088
+	lvlLfCloud
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 20 {   // cloud0_tga_089
+	4.609129 4.609129 4.609129
+	<cloud1.tga>
+	cloud0_tga_089
+	lvlLfCloud
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 21 {   // cloud0_tga_090
+	3.15345 3.15345 3.15345
+	<cloud1.tga>
+	cloud0_tga_090
+	lvlLfCloud
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 22 {   // cloud0_tga_091
+	2.627687 2.627687 2.627687
+	<cloud2.tga>
+	cloud0_tga_091
+	lvlLfCloud
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 23 {   // cloud0_tga_092
+	3.254488 3.254488 3.254488
+	<cloud1.tga>
+	cloud0_tga_092
+	lvlLfCloud
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 24 {   // cloud0_tga_093
+	1.704555 1.704555 1.704555
+	<cloud2.tga>
+	cloud0_tga_093
+	lvlLfCloud
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 25 {   // cloud0_tga_094
+	4.87201 4.87201 4.87201
+	<cloud2.tga>
+	cloud0_tga_094
+	lvlLfCloud
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 26 {   // cloud0_tga_095
+	4.609129 4.609129 4.609129
+	<cloud1.tga>
+	cloud0_tga_095
+	lvlLfCloud
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 27 {   // cloud0_tga_096
+	4.609129 4.609129 4.609129
+	<cloud1.tga>
+	cloud0_tga_096
+	lvlLfCloud
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 28 {   // cloud0_tga_097
+	2.991606 2.991606 2.991606
+	<cloud2.tga>
+	cloud0_tga_097
+	lvlLfCloud
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 29 {   // cloud0_tga_098
+	2.627687 2.627687 2.627687
+	<cloud2.tga>
+	cloud0_tga_098
+	lvlLfCloud
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 30 {   // cloud0_tga_099
+	4.609129 4.609129 4.609129
+	<cloud1.tga>
+	cloud0_tga_099
+	lvlLfCloud
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 31 {   // cloud0_tga_100
+	2.991606 2.991606 2.991606
+	<cloud2.tga>
+	cloud0_tga_100
+	lvlLfCloud
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 32 {   // cloud0_tga_101
+	4.609129 4.609129 4.609129
+	<cloud1.tga>
+	cloud0_tga_101
+	lvlLfCloud
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 33 {   // cloud0_tga_102
+	3.15345 3.15345 3.15345
+	<cloud1.tga>
+	cloud0_tga_102
+	lvlLfCloud
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 34 {   // cloud0_tga_103
+	2.627687 2.627687 2.627687
+	<cloud2.tga>
+	cloud0_tga_103
+	lvlLfCloud
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 35 {   // cloud0_tga_104
+	3.254488 3.254488 3.254488
+	<cloud1.tga>
+	cloud0_tga_104
+	lvlLfCloud
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 36 {   // cloud0_tga_105
+	1.704555 1.704555 1.704555
+	<cloud2.tga>
+	cloud0_tga_105
+	lvlLfCloud
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 37 {   // cloud0_tga_106
+	4.87201 4.87201 4.87201
+	<cloud2.tga>
+	cloud0_tga_106
+	lvlLfCloud
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 38 {   // cloud0_tga_107
+	4.609129 4.609129 4.609129
+	<cloud1.tga>
+	cloud0_tga_107
+	lvlLfCloud
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 39 {   // cloud0_tga_108
+	4.609129 4.609129 4.609129
+	<cloud1.tga>
+	cloud0_tga_108
+	lvlLfCloud
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 40 {   // cloud0_tga_109
+	2.991606 2.991606 2.991606
+	<cloud2.tga>
+	cloud0_tga_109
+	lvlLfCloud
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 41 {   // cloud0_tga_110
+	2.627687 2.627687 2.627687
+	<cloud2.tga>
+	cloud0_tga_110
+	lvlLfCloud
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 42 {   // cloud0_tga_111
+	4.609129 4.609129 4.609129
+	<cloud1.tga>
+	cloud0_tga_111
+	lvlLfCloud
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 43 {   // cloud0_tga_112
+	1.704555 1.704555 1.704555
+	<cloud2.tga>
+	cloud0_tga_112
+	lvlLfCloud
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 44 {   // cloud0_tga_113
+	4.87201 4.87201 4.87201
+	<cloud2.tga>
+	cloud0_tga_113
+	lvlLfCloud
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 45 {   // cloud0_tga_114
+	4.609129 4.609129 4.609129
+	<cloud1.tga>
+	cloud0_tga_114
+	lvlLfCloud
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 46 {   // cloud0_tga_133
+	4.609129 4.609129 4.609129
+	<cloud1.tga>
+	cloud0_tga_133
+	lvlLfCloud
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 47 {   // cloud0_tga_134
+	2.991606 2.991606 2.991606
+	<cloud2.tga>
+	cloud0_tga_134
+	lvlLfCloud
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 48 {   // cloud0_tga_135
+	2.627687 2.627687 2.627687
+	<cloud2.tga>
+	cloud0_tga_135
+	lvlLfCloud
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 49 {   // cloud0_tga_136
+	2.991606 2.991606 2.991606
+	<cloud2.tga>
+	cloud0_tga_136
+	lvlLfCloud
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 50 {   // cloud0_tga_137
+	4.609129 4.609129 4.609129
+	<cloud1.tga>
+	cloud0_tga_137
+	lvlLfCloud
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 51 {   // cloud0_tga_138
+	3.15345 3.15345 3.15345
+	<cloud1.tga>
+	cloud0_tga_138
+	lvlLfCloud
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 52 {   // cloud0_tga_139
+	2.627687 2.627687 2.627687
+	<cloud2.tga>
+	cloud0_tga_139
+	lvlLfCloud
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 53 {   // cloud0_tga_140
+	3.254488 3.254488 3.254488
+	<cloud1.tga>
+	cloud0_tga_140
+	lvlLfCloud
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 54 {   // cloud0_tga_141
+	1.704555 1.704555 1.704555
+	<cloud2.tga>
+	cloud0_tga_141
+	lvlLfCloud
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 55 {   // cloud0_tga_142
+	4.87201 4.87201 4.87201
+	<cloud2.tga>
+	cloud0_tga_142
+	lvlLfCloud
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 56 {   // cloud0_tga_143
+	4.609129 4.609129 4.609129
+	<cloud1.tga>
+	cloud0_tga_143
+	lvlLfCloud
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 57 {   // cloud0_tga_144
+	4.609129 4.609129 4.609129
+	<cloud1.tga>
+	cloud0_tga_144
+	lvlLfCloud
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 58 {   // cloud0_tga_145
+	2.991606 2.991606 2.991606
+	<cloud2.tga>
+	cloud0_tga_145
+	lvlLfCloud
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 59 {   // cloud0_tga_146
+	2.627687 2.627687 2.627687
+	<cloud2.tga>
+	cloud0_tga_146
+	lvlLfCloud
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 60 {   // cloud0_tga_147
+	4.609129 4.609129 4.609129
+	<cloud1.tga>
+	cloud0_tga_147
+	lvlLfCloud
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 61 {   // cloud0_tga_148
+	2.991606 2.991606 2.991606
+	<cloud2.tga>
+	cloud0_tga_148
+	lvlLfCloud
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 62 {   // cloud0_tga_149
+	4.609129 4.609129 4.609129
+	<cloud1.tga>
+	cloud0_tga_149
+	lvlLfCloud
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 63 {   // cloud0_tga_150
+	3.15345 3.15345 3.15345
+	<cloud1.tga>
+	cloud0_tga_150
+	lvlLfCloud
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 64 {   // cloud0_tga_151
+	2.627687 2.627687 2.627687
+	<cloud2.tga>
+	cloud0_tga_151
+	lvlLfCloud
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 65 {   // cloud0_tga_152
+	3.254488 3.254488 3.254488
+	<cloud1.tga>
+	cloud0_tga_152
+	lvlLfCloud
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 66 {   // cloud0_tga_153
+	1.704555 1.704555 1.704555
+	<cloud2.tga>
+	cloud0_tga_153
+	lvlLfCloud
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 67 {   // cloud0_tga_154
+	4.87201 4.87201 4.87201
+	<cloud2.tga>
+	cloud0_tga_154
+	lvlLfCloud
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 68 {   // cloud0_tga_155
+	4.609129 4.609129 4.609129
+	<cloud1.tga>
+	cloud0_tga_155
+	lvlLfCloud
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 69 {   // cloud0_tga_156
+	2.627687 2.627687 2.627687
+	<cloud2.tga>
+	cloud0_tga_156
+	lvlLfCloud
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 70 {   // cloud0_tga_157
+	4.87201 4.87201 4.87201
+	<cloud2.tga>
+	cloud0_tga_157
+	lvlLfCloud
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 71 {   // cloud0_tga_158
+	4.609129 4.609129 4.609129
+	<cloud1.tga>
+	cloud0_tga_158
+	lvlLfCloud
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 72 {   // cloud0_tga_159
+	4.609129 4.609129 4.609129
+	<cloud1.tga>
+	cloud0_tga_159
+	lvlLfCloud
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 73 {   // cloud0_tga_160
+	2.991606 2.991606 2.991606
+	<cloud2.tga>
+	cloud0_tga_160
+	lvlLfCloud
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 74 {   // cloud0_tga_161
+	2.627687 2.627687 2.627687
+	<cloud2.tga>
+	cloud0_tga_161
+	lvlLfCloud
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 75 {   // cloud0_tga_162
+	2.991606 2.991606 2.991606
+	<cloud2.tga>
+	cloud0_tga_162
+	lvlLfCloud
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 76 {   // cloud0_tga_163
+	4.609129 4.609129 4.609129
+	<cloud1.tga>
+	cloud0_tga_163
+	lvlLfCloud
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 77 {   // cloud0_tga_164
+	3.15345 3.15345 3.15345
+	<cloud1.tga>
+	cloud0_tga_164
+	lvlLfCloud
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 78 {   // cloud0_tga_165
+	2.627687 2.627687 2.627687
+	<cloud2.tga>
+	cloud0_tga_165
+	lvlLfCloud
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 79 {   // cloud0_tga_166
+	3.254488 3.254488 3.254488
+	<cloud1.tga>
+	cloud0_tga_166
+	lvlLfCloud
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 80 {   // cloud0_tga_167
+	1.704555 1.704555 1.704555
+	<cloud2.tga>
+	cloud0_tga_167
+	lvlLfCloud
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 81 {   // cloud0_tga_168
+	4.87201 4.87201 4.87201
+	<cloud2.tga>
+	cloud0_tga_168
+	lvlLfCloud
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 82 {   // cloud0_tga_169
+	4.609129 4.609129 4.609129
+	<cloud1.tga>
+	cloud0_tga_169
+	lvlLfCloud
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 83 {   // cloud0_tga_170
+	4.609129 4.609129 4.609129
+	<cloud1.tga>
+	cloud0_tga_170
+	lvlLfCloud
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 84 {   // cloud0_tga_171
+	2.991606 2.991606 2.991606
+	<cloud2.tga>
+	cloud0_tga_171
+	lvlLfCloud
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 85 {   // cloud0_tga_172
+	2.627687 2.627687 2.627687
+	<cloud2.tga>
+	cloud0_tga_172
+	lvlLfCloud
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 86 {   // cloud0_tga_173
+	4.609129 4.609129 4.609129
+	<cloud1.tga>
+	cloud0_tga_173
+	lvlLfCloud
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 87 {   // cloud0_tga_174
+	2.991606 2.991606 2.991606
+	<cloud2.tga>
+	cloud0_tga_174
+	lvlLfCloud
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 88 {   // cloud0_tga_175
+	4.609129 4.609129 4.609129
+	<cloud1.tga>
+	cloud0_tga_175
+	lvlLfCloud
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 89 {   // cloud0_tga_176
+	3.15345 3.15345 3.15345
+	<cloud1.tga>
+	cloud0_tga_176
+	lvlLfCloud
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 90 {   // cloud0_tga_177
+	2.627687 2.627687 2.627687
+	<cloud2.tga>
+	cloud0_tga_177
+	lvlLfCloud
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 91 {   // cloud0_tga_178
+	3.254488 3.254488 3.254488
+	<cloud1.tga>
+	cloud0_tga_178
+	lvlLfCloud
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 92 {   // cloud0_tga_179
+	1.704555 1.704555 1.704555
+	<cloud2.tga>
+	cloud0_tga_179
+	lvlLfCloud
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 93 {   // cloud0_tga_180
+	4.87201 4.87201 4.87201
+	<cloud2.tga>
+	cloud0_tga_180
+	lvlLfCloud
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 94 {   // cloud0_tga_181
+	4.609129 4.609129 4.609129
+	<cloud1.tga>
+	cloud0_tga_181
+	lvlLfCloud
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 95 {   // cloud0_tga_182
+	2.627687 2.627687 2.627687
+	<cloud2.tga>
+	cloud0_tga_182
+	lvlLfCloud
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 96 {   // cloud0_tga_183
+	4.87201 4.87201 4.87201
+	<cloud2.tga>
+	cloud0_tga_183
+	lvlLfCloud
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 97 {   // cloud0_tga_184
+	4.609129 4.609129 4.609129
+	<cloud1.tga>
+	cloud0_tga_184
+	lvlLfCloud
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 98 {   // cloud0_tga_099
+	4.609129 4.609129 4.609129
+	<cloud1.tga>
+	cloud0_tga_099
+	lvlLfCloud
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 99 {   // cloud0_tga_100
+	3.15345 3.15345 3.15345
+	<cloud1.tga>
+	cloud0_tga_100
+	lvlLfCloud
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 100 {   // cloud0_tga_101
+	2.627687 2.627687 2.627687
+	<cloud2.tga>
+	cloud0_tga_101
+	lvlLfCloud
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 101 {   // cloud0_tga_102
+	4.609129 4.609129 4.609129
+	<cloud1.tga>
+	cloud0_tga_102
+	lvlLfCloud
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 102 {   // cloud0_tga_103
+	2.991606 2.991606 2.991606
+	<cloud2.tga>
+	cloud0_tga_103
+	lvlLfCloud
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 103 {   // cloud0_tga_104
+	2.627687 2.627687 2.627687
+	<cloud2.tga>
+	cloud0_tga_104
+	lvlLfCloud
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 104 {   // cloud0_tga_105
+	2.991606 2.991606 2.991606
+	<cloud2.tga>
+	cloud0_tga_105
+	lvlLfCloud
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 105 {   // cloud0_tga_106
+	4.609129 4.609129 4.609129
+	<cloud1.tga>
+	cloud0_tga_106
+	lvlLfCloud
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 106 {   // cloud0_tga_107
+	3.15345 3.15345 3.15345
+	<cloud1.tga>
+	cloud0_tga_107
+	lvlLfCloud
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 107 {   // cloud0_tga_108
+	2.627687 2.627687 2.627687
+	<cloud2.tga>
+	cloud0_tga_108
+	lvlLfCloud
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 108 {   // cloud0_tga_109
+	3.254488 3.254488 3.254488
+	<cloud1.tga>
+	cloud0_tga_109
+	lvlLfCloud
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 109 {   // cloud0_tga_110
+	1.704555 1.704555 1.704555
+	<cloud2.tga>
+	cloud0_tga_110
+	lvlLfCloud
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 110 {   // cloud0_tga_111
+	4.87201 4.87201 4.87201
+	<cloud2.tga>
+	cloud0_tga_111
+	lvlLfCloud
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 111 {   // cloud0_tga_112
+	4.609129 4.609129 4.609129
+	<cloud1.tga>
+	cloud0_tga_112
+	lvlLfCloud
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 112 {   // cloud0_tga_113
+	2.991606 2.991606 2.991606
+	<cloud2.tga>
+	cloud0_tga_113
+	lvlLfCloud
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 113 {   // cloud0_tga_114
+	4.609129 4.609129 4.609129
+	<cloud1.tga>
+	cloud0_tga_114
+	lvlLfCloud
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 114 {   // cloud0_tga_115
+	3.15345 3.15345 3.15345
+	<cloud1.tga>
+	cloud0_tga_115
+	lvlLfCloud
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 115 {   // cloud0_tga_116
+	2.627687 2.627687 2.627687
+	<cloud2.tga>
+	cloud0_tga_116
+	lvlLfCloud
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 116 {   // cloud0_tga_117
+	3.254488 3.254488 3.254488
+	<cloud1.tga>
+	cloud0_tga_117
+	lvlLfCloud
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 117 {   // cloud0_tga_118
+	4.609129 4.609129 4.609129
+	<cloud1.tga>
+	cloud0_tga_118
+	lvlLfCloud
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 118 {   // cloud0_tga_119
+	2.991606 2.991606 2.991606
+	<cloud2.tga>
+	cloud0_tga_119
+	lvlLfCloud
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 119 {   // cloud0_tga_120
+	2.627687 2.627687 2.627687
+	<cloud2.tga>
+	cloud0_tga_120
+	lvlLfCloud
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 120 {   // cloud0_tga_121
+	2.991606 2.991606 2.991606
+	<cloud2.tga>
+	cloud0_tga_121
+	lvlLfCloud
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 121 {   // cloud0_tga_122
+	4.609129 4.609129 4.609129
+	<cloud1.tga>
+	cloud0_tga_122
+	lvlLfCloud
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 122 {   // cloud0_tga_123
+	3.15345 3.15345 3.15345
+	<cloud1.tga>
+	cloud0_tga_123
+	lvlLfCloud
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 123 {   // cloud0_tga_124
+	2.627687 2.627687 2.627687
+	<cloud2.tga>
+	cloud0_tga_124
+	lvlLfCloud
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 124 {   // cloud0_tga_125
+	3.254488 3.254488 3.254488
+	<cloud1.tga>
+	cloud0_tga_125
+	lvlLfCloud
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 125 {   // cloud0_tga_126
+	1.704555 1.704555 1.704555
+	<cloud2.tga>
+	cloud0_tga_126
+	lvlLfCloud
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 126 {   // cloud0_tga_127
+	4.87201 4.87201 4.87201
+	<cloud2.tga>
+	cloud0_tga_127
+	lvlLfCloud
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 127 {   // cloud0_tga_128
+	4.609129 4.609129 4.609129
+	<cloud1.tga>
+	cloud0_tga_128
+	lvlLfCloud
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 128 {   // cloud0_tga_129
+	2.991606 2.991606 2.991606
+	<cloud2.tga>
+	cloud0_tga_129
+	lvlLfCloud
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 129 {   // cloud0_tga_130
+	4.609129 4.609129 4.609129
+	<cloud1.tga>
+	cloud0_tga_130
+	lvlLfCloud
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 130 {   // cloud0_tga_131
+	3.15345 3.15345 3.15345
+	<cloud1.tga>
+	cloud0_tga_131
+	lvlLfCloud
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 131 {   // cloud0_tga_132
+	3.254488 3.254488 3.254488
+	<cloud1.tga>
+	cloud0_tga_132
+	lvlLfCloud
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 132 {   // cloud0_tga_133
+	4.609129 4.609129 4.609129
+	<cloud1.tga>
+	cloud0_tga_133
+	lvlLfCloud
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 133 {   // cloud0_tga_134
+	3.15345 3.15345 3.15345
+	<cloud1.tga>
+	cloud0_tga_134
+	lvlLfCloud
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 134 {   // cloud0_tga_135
+	2.627687 2.627687 2.627687
+	<cloud2.tga>
+	cloud0_tga_135
+	lvlLfCloud
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 135 {   // cloud0_tga_136
+	4.609129 4.609129 4.609129
+	<cloud1.tga>
+	cloud0_tga_136
+	lvlLfCloud
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 136 {   // cloud0_tga_137
+	2.991606 2.991606 2.991606
+	<cloud2.tga>
+	cloud0_tga_137
+	lvlLfCloud
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 137 {   // cloud0_tga_138
+	2.627687 2.627687 2.627687
+	<cloud2.tga>
+	cloud0_tga_138
+	lvlLfCloud
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 138 {   // cloud0_tga_139
+	2.991606 2.991606 2.991606
+	<cloud2.tga>
+	cloud0_tga_139
+	lvlLfCloud
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 139 {   // cloud0_tga_140
+	4.609129 4.609129 4.609129
+	<cloud1.tga>
+	cloud0_tga_140
+	lvlLfCloud
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 140 {   // cloud0_tga_141
+	3.15345 3.15345 3.15345
+	<cloud1.tga>
+	cloud0_tga_141
+	lvlLfCloud
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 141 {   // cloud0_tga_142
+	2.627687 2.627687 2.627687
+	<cloud2.tga>
+	cloud0_tga_142
+	lvlLfCloud
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 142 {   // cloud0_tga_143
+	3.254488 3.254488 3.254488
+	<cloud1.tga>
+	cloud0_tga_143
+	lvlLfCloud
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 143 {   // cloud0_tga_144
+	1.704555 1.704555 1.704555
+	<cloud2.tga>
+	cloud0_tga_144
+	lvlLfCloud
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 144 {   // cloud0_tga_145
+	4.87201 4.87201 4.87201
+	<cloud2.tga>
+	cloud0_tga_145
+	lvlLfCloud
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 145 {   // cloud0_tga_146
+	4.609129 4.609129 4.609129
+	<cloud1.tga>
+	cloud0_tga_146
+	lvlLfCloud
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 146 {   // cloud0_tga_147
+	2.991606 2.991606 2.991606
+	<cloud2.tga>
+	cloud0_tga_147
+	lvlLfCloud
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 147 {   // cloud0_tga_148
+	4.609129 4.609129 4.609129
+	<cloud1.tga>
+	cloud0_tga_148
+	lvlLfCloud
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 148 {   // cloud0_tga_149
+	3.15345 3.15345 3.15345
+	<cloud1.tga>
+	cloud0_tga_149
+	lvlLfCloud
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 149 {   // cloud0_tga_150
+	2.627687 2.627687 2.627687
+	<cloud2.tga>
+	cloud0_tga_150
+	lvlLfCloud
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 150 {   // cloud0_tga_151
+	3.254488 3.254488 3.254488
+	<cloud1.tga>
+	cloud0_tga_151
+	lvlLfCloud
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 151 {   // cloud0_tga_152
+	4.609129 4.609129 4.609129
+	<cloud1.tga>
+	cloud0_tga_152
+	lvlLfCloud
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 152 {   // cloud0_tga_153
+	2.991606 2.991606 2.991606
+	<cloud2.tga>
+	cloud0_tga_153
+	lvlLfCloud
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 153 {   // cloud0_tga_154
+	2.627687 2.627687 2.627687
+	<cloud2.tga>
+	cloud0_tga_154
+	lvlLfCloud
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 154 {   // cloud0_tga_155
+	2.991606 2.991606 2.991606
+	<cloud2.tga>
+	cloud0_tga_155
+	lvlLfCloud
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 155 {   // cloud0_tga_156
+	4.609129 4.609129 4.609129
+	<cloud1.tga>
+	cloud0_tga_156
+	lvlLfCloud
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 156 {   // cloud0_tga_157
+	3.15345 3.15345 3.15345
+	<cloud1.tga>
+	cloud0_tga_157
+	lvlLfCloud
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 157 {   // cloud0_tga_158
+	2.627687 2.627687 2.627687
+	<cloud2.tga>
+	cloud0_tga_158
+	lvlLfCloud
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 158 {   // cloud0_tga_159
+	3.254488 3.254488 3.254488
+	<cloud1.tga>
+	cloud0_tga_159
+	lvlLfCloud
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 159 {   // cloud0_tga_160
+	1.704555 1.704555 1.704555
+	<cloud2.tga>
+	cloud0_tga_160
+	lvlLfCloud
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 160 {   // cloud0_tga_161
+	4.87201 4.87201 4.87201
+	<cloud2.tga>
+	cloud0_tga_161
+	lvlLfCloud
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 161 {   // cloud0_tga_162
+	4.609129 4.609129 4.609129
+	<cloud1.tga>
+	cloud0_tga_162
+	lvlLfCloud
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 162 {   // cloud0_tga_163
+	2.991606 2.991606 2.991606
+	<cloud2.tga>
+	cloud0_tga_163
+	lvlLfCloud
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 163 {   // cloud0_tga_164
+	4.609129 4.609129 4.609129
+	<cloud1.tga>
+	cloud0_tga_164
+	lvlLfCloud
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 164 {   // cloud0_tga_165
+	3.15345 3.15345 3.15345
+	<cloud1.tga>
+	cloud0_tga_165
+	lvlLfCloud
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 165 {   // cloud0_tga_166
+	3.254488 3.254488 3.254488
+	<cloud1.tga>
+	cloud0_tga_166
+	lvlLfCloud
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+object 0 {  // Root
+	(0 0 0) (0 0 0) (1 1 1)
+	object 1, 2, 3, 4, 5, 6, 7, 8, 9, 10
+	object 11, 12, 13, 14, 15, 16, 17, 18, 19, 20
+	object 21, 22, 23, 24, 25, 26, 27, 28, 29, 30
+	object 31, 32, 33, 34, 35, 36, 37, 38, 39, 40
+	object 41, 42, 43, 44, 45, 46, 47, 48, 49, 50
+	object 51, 52, 53, 54, 55, 56, 57, 58, 59, 60
+	object 61, 62, 63, 64, 65, 66, 67, 68, 69, 70
+	object 71, 72, 73, 74, 75, 76, 77, 78, 79, 80
+	object 81, 82, 83, 84, 85, 86, 87, 88, 89, 90
+	object 91, 92, 93, 94, 95, 96, 97, 98, 99, 100
+	object 101, 102, 103, 104, 105, 106, 107, 108, 109, 110
+	object 111, 112, 113, 114, 115, 116, 117, 118, 119, 120
+	object 121, 122, 123, 124, 125, 126, 127, 128, 129, 130
+	object 131, 132, 133, 134, 135, 136, 137, 138, 139, 140
+	object 141, 142, 143, 144, 145, 146, 147, 148, 149, 150
+	object 151, 152, 153, 154, 155, 156, 157, 158, 159, 160
+	object 161, 162, 163, 164, 165
+	level 0
+}
+
+object 1 {  // credits_hmp_000
+	(58 110 -64) (-0 0 0) (1 1 1)
+	model 1
+}
+
+object 2 {  // acknex_mdl_003
+	(-1244.001587 8958 329) (1.570796 0 0) (1 1 1)
+	model 2
+}
+
+object 3 {  // cloud0_tga_034
+	(776 12001 2268.856934) (1.570796 0 0) (4.87201 4.87201 4.87201)
+	model 3
+}
+
+object 4 {  // cloud0_tga_037
+	(4992 10703 1918) (1.570796 0 0) (4.609129 4.609129 4.609129)
+	model 4
+}
+
+object 5 {  // cloud0_tga_038
+	(-2426 10431.713867 618.303467) (1.570796 0 0) (4.083366 4.083366 4.083366)
+	model 5
+}
+
+object 6 {  // cloud0_tga_042
+	(-848 6627 1145) (1.570796 0 0) (3.254488 3.254488 3.254488)
+	model 6
+}
+
+object 7 {  // cloud0_tga_043
+	(4835 6996 1004) (1.570796 0 0) (2.897086 2.897086 2.897086)
+	model 7
+}
+
+object 8 {  // cloud0_tga_049
+	(-2991 6180 1106) (1.570796 0 0) (3.15345 3.15345 3.15345)
+	model 8
+}
+
+object 9 {  // cloud0_tga_050
+	(7045 5490 976) (1.570796 0 0) (2.627687 2.627687 2.627687)
+	model 9
+}
+
+object 10 {  // cloud0_tga_051
+	(2494 4173 1446.599976) (1.570796 0 0) (4.609129 4.609129 4.609129)
+	model 10
+}
+
+object 11 {  // cloud0_tga_056
+	(16571.75 7820.75 1918) (1.570796 0 0) (4.609129 4.609129 4.609129)
+	model 11
+}
+
+object 12 {  // cloud0_tga_057
+	(12355.75 9118.75 2269) (1.570796 0 0) (4.87201 4.87201 4.87201)
+	model 12
+}
+
+object 13 {  // cloud0_tga_058
+	(9153.75 7549.75 618) (1.570796 0 0) (1.704555 1.704555 1.704555)
+	model 13
+}
+
+object 14 {  // cloud0_tga_059
+	(10731.75 3744.75 1145) (1.570796 0 0) (3.254488 3.254488 3.254488)
+	model 14
+}
+
+object 15 {  // cloud0_tga_060
+	(16414.75 4113.75 1385) (1.570796 0 0) (2.991606 2.991606 2.991606)
+	model 15
+}
+
+object 16 {  // cloud0_tga_061
+	(8617.75 3297.75 1034) (1.570796 0 0) (3.15345 3.15345 3.15345)
+	model 16
+}
+
+object 17 {  // cloud0_tga_062
+	(18624.75 2607.75 976) (1.570796 0 0) (2.627687 2.627687 2.627687)
+	model 17
+}
+
+object 18 {  // cloud0_tga_063
+	(14073.75 1290.75 1447) (1.570796 0 0) (4.609129 4.609129 4.609129)
+	model 18
+}
+
+object 19 {  // cloud0_tga_088
+	(23928.75 -542.25 1020.375) (1.570796 0 0) (2.991606 2.991606 2.991606)
+	model 19
+}
+
+object 20 {  // cloud0_tga_089
+	(21587.75 -3365.25 1493.375) (1.570796 0 0) (4.609129 4.609129 4.609129)
+	model 20
+}
+
+object 21 {  // cloud0_tga_090
+	(16131.75 -1358.25 1286) (1.570796 0 0) (3.15345 3.15345 3.15345)
+	model 21
+}
+
+object 22 {  // cloud0_tga_091
+	(26138.75 -2048.25 1022.375) (1.570796 0 0) (2.627687 2.627687 2.627687)
+	model 22
+}
+
+object 23 {  // cloud0_tga_092
+	(18245.75 -911.25 1191.375) (1.570796 0 0) (3.254488 3.254488 3.254488)
+	model 23
+}
+
+object 24 {  // cloud0_tga_093
+	(16667.75 2893.75 664.375) (1.570796 0 0) (1.704555 1.704555 1.704555)
+	model 24
+}
+
+object 25 {  // cloud0_tga_094
+	(19869.75 4462.75 2315.375) (1.570796 0 0) (4.87201 4.87201 4.87201)
+	model 25
+}
+
+object 26 {  // cloud0_tga_095
+	(24085.75 3164.75 1964.375) (1.570796 0 0) (4.609129 4.609129 4.609129)
+	model 26
+}
+
+object 27 {  // cloud0_tga_096
+	(21595 16790 2396.333496) (1.570796 0 0) (4.609129 4.609129 4.609129)
+	model 27
+}
+
+object 28 {  // cloud0_tga_097
+	(21438 13083 1452.333374) (1.570796 0 0) (2.991606 2.991606 2.991606)
+	model 28
+}
+
+object 29 {  // cloud0_tga_098
+	(23648 11577 1454.333374) (1.570796 0 0) (2.627687 2.627687 2.627687)
+	model 29
+}
+
+object 30 {  // cloud0_tga_099
+	(19097 10260 1925.333374) (1.570796 0 0) (4.609129 4.609129 4.609129)
+	model 30
+}
+
+object 31 {  // cloud0_tga_100
+	(28952 8427 1498.333374) (1.570796 0 0) (2.991606 2.991606 2.991606)
+	model 31
+}
+
+object 32 {  // cloud0_tga_101
+	(26611 5604 1971.333374) (1.570796 0 0) (4.609129 4.609129 4.609129)
+	model 32
+}
+
+object 33 {  // cloud0_tga_102
+	(21155 7611 1558.333374) (1.570796 0 0) (3.15345 3.15345 3.15345)
+	model 33
+}
+
+object 34 {  // cloud0_tga_103
+	(31162 6921 1500.333374) (1.570796 0 0) (2.627687 2.627687 2.627687)
+	model 34
+}
+
+object 35 {  // cloud0_tga_104
+	(23269 8058 1669.333374) (1.570796 0 0) (3.254488 3.254488 3.254488)
+	model 35
+}
+
+object 36 {  // cloud0_tga_105
+	(21691 11863 1142.333374) (1.570796 0 0) (1.704555 1.704555 1.704555)
+	model 36
+}
+
+object 37 {  // cloud0_tga_106
+	(24893 13432 2793.333496) (1.570796 0 0) (4.87201 4.87201 4.87201)
+	model 37
+}
+
+object 38 {  // cloud0_tga_107
+	(29109 12134 2442.333496) (1.570796 0 0) (4.609129 4.609129 4.609129)
+	model 38
+}
+
+object 39 {  // cloud0_tga_108
+	(13881.714844 21752.857422 2396) (1.570796 0 0) (4.609129 4.609129 4.609129)
+	model 39
+}
+
+object 40 {  // cloud0_tga_109
+	(13724.714844 18045.857422 1452) (1.570796 0 0) (2.991606 2.991606 2.991606)
+	model 40
+}
+
+object 41 {  // cloud0_tga_110
+	(15934.714844 16539.857422 1454) (1.570796 0 0) (2.627687 2.627687 2.627687)
+	model 41
+}
+
+object 42 {  // cloud0_tga_111
+	(11383.714844 15222.857422 1925) (1.570796 0 0) (4.609129 4.609129 4.609129)
+	model 42
+}
+
+object 43 {  // cloud0_tga_112
+	(13977.714844 16825.857422 1142) (1.570796 0 0) (1.704555 1.704555 1.704555)
+	model 43
+}
+
+object 44 {  // cloud0_tga_113
+	(17179.714844 18394.857422 2793) (1.570796 0 0) (4.87201 4.87201 4.87201)
+	model 44
+}
+
+object 45 {  // cloud0_tga_114
+	(21395.714844 17096.857422 2442) (1.570796 0 0) (4.609129 4.609129 4.609129)
+	model 45
+}
+
+object 46 {  // cloud0_tga_133
+	(13869.808594 -3131.884766 1705.076904) (1.570796 0 0) (4.609129 4.609129 4.609129)
+	model 46
+}
+
+object 47 {  // cloud0_tga_134
+	(13712.808594 -6838.884766 1093) (1.570796 0 0) (2.991606 2.991606 2.991606)
+	model 47
+}
+
+object 48 {  // cloud0_tga_135
+	(15922.808594 -8344.884766 1016) (1.570796 0 0) (2.627687 2.627687 2.627687)
+	model 48
+}
+
+object 49 {  // cloud0_tga_136
+	(21226.808594 -11494.884766 807.076904) (1.570796 0 0) (2.991606 2.991606 2.991606)
+	model 49
+}
+
+object 50 {  // cloud0_tga_137
+	(18885.808594 -14317.884766 1280.076904) (1.570796 0 0) (4.609129 4.609129 4.609129)
+	model 50
+}
+
+object 51 {  // cloud0_tga_138
+	(13429.808594 -12310.884766 867.076904) (1.570796 0 0) (3.15345 3.15345 3.15345)
+	model 51
+}
+
+object 52 {  // cloud0_tga_139
+	(23436.808594 -13000.884766 809.076904) (1.570796 0 0) (2.627687 2.627687 2.627687)
+	model 52
+}
+
+object 53 {  // cloud0_tga_140
+	(15543.808594 -11863.884766 978.076904) (1.570796 0 0) (3.254488 3.254488 3.254488)
+	model 53
+}
+
+object 54 {  // cloud0_tga_141
+	(13965.808594 -8058.884766 846) (1.570796 0 0) (1.704555 1.704555 1.704555)
+	model 54
+}
+
+object 55 {  // cloud0_tga_142
+	(17167.808594 -6489.884766 2102.076904) (1.570796 0 0) (4.87201 4.87201 4.87201)
+	model 55
+}
+
+object 56 {  // cloud0_tga_143
+	(21383.808594 -7787.884766 1751.076904) (1.570796 0 0) (4.609129 4.609129 4.609129)
+	model 56
+}
+
+object 57 {  // cloud0_tga_144
+	(18892.808594 5837.115234 2183.076904) (1.570796 0 0) (4.609129 4.609129 4.609129)
+	model 57
+}
+
+object 58 {  // cloud0_tga_145
+	(18735.808594 2130.115234 1239.076904) (1.570796 0 0) (2.991606 2.991606 2.991606)
+	model 58
+}
+
+object 59 {  // cloud0_tga_146
+	(20945.808594 624.115234 1241.076904) (1.570796 0 0) (2.627687 2.627687 2.627687)
+	model 59
+}
+
+object 60 {  // cloud0_tga_147
+	(16394.808594 -692.884766 1712.076904) (1.570796 0 0) (4.609129 4.609129 4.609129)
+	model 60
+}
+
+object 61 {  // cloud0_tga_148
+	(26249.808594 -2525.884766 1285.076904) (1.570796 0 0) (2.991606 2.991606 2.991606)
+	model 61
+}
+
+object 62 {  // cloud0_tga_149
+	(23908.808594 -5348.884766 1758.076904) (1.570796 0 0) (4.609129 4.609129 4.609129)
+	model 62
+}
+
+object 63 {  // cloud0_tga_150
+	(18452.808594 -3341.884766 1345.076904) (1.570796 0 0) (3.15345 3.15345 3.15345)
+	model 63
+}
+
+object 64 {  // cloud0_tga_151
+	(28459.808594 -4031.884766 1287.076904) (1.570796 0 0) (2.627687 2.627687 2.627687)
+	model 64
+}
+
+object 65 {  // cloud0_tga_152
+	(20566.808594 -2894.884766 1456.076904) (1.570796 0 0) (3.254488 3.254488 3.254488)
+	model 65
+}
+
+object 66 {  // cloud0_tga_153
+	(18988.808594 910.115234 929.076904) (1.570796 0 0) (1.704555 1.704555 1.704555)
+	model 66
+}
+
+object 67 {  // cloud0_tga_154
+	(22190.808594 2479.115234 2580.076904) (1.570796 0 0) (4.87201 4.87201 4.87201)
+	model 67
+}
+
+object 68 {  // cloud0_tga_155
+	(26406.808594 1181.115234 2229.076904) (1.570796 0 0) (4.609129 4.609129 4.609129)
+	model 68
+}
+
+object 69 {  // cloud0_tga_156
+	(13232.808594 5587.115234 1241.076904) (1.570796 0 0) (2.627687 2.627687 2.627687)
+	model 69
+}
+
+object 70 {  // cloud0_tga_157
+	(14477.808594 7442.115234 2580.076904) (1.570796 0 0) (4.87201 4.87201 4.87201)
+	model 70
+}
+
+object 71 {  // cloud0_tga_158
+	(18693.808594 6144.115234 2229.076904) (1.570796 0 0) (4.609129 4.609129 4.609129)
+	model 71
+}
+
+object 72 {  // cloud0_tga_159
+	(31860.808594 -3132 1705) (1.570796 0 0) (4.609129 4.609129 4.609129)
+	model 72
+}
+
+object 73 {  // cloud0_tga_160
+	(31703.808594 -6839 1124) (1.570796 0 0) (2.991606 2.991606 2.991606)
+	model 73
+}
+
+object 74 {  // cloud0_tga_161
+	(33913.808594 -8345 968) (1.570796 0 0) (2.627687 2.627687 2.627687)
+	model 74
+}
+
+object 75 {  // cloud0_tga_162
+	(39217.808594 -11495 807) (1.570796 0 0) (2.991606 2.991606 2.991606)
+	model 75
+}
+
+object 76 {  // cloud0_tga_163
+	(36876.808594 -14318 1280) (1.570796 0 0) (4.609129 4.609129 4.609129)
+	model 76
+}
+
+object 77 {  // cloud0_tga_164
+	(31420.808594 -12311 867) (1.570796 0 0) (3.15345 3.15345 3.15345)
+	model 77
+}
+
+object 78 {  // cloud0_tga_165
+	(41427.808594 -13001 809) (1.570796 0 0) (2.627687 2.627687 2.627687)
+	model 78
+}
+
+object 79 {  // cloud0_tga_166
+	(33534.808594 -11864 978) (1.570796 0 0) (3.254488 3.254488 3.254488)
+	model 79
+}
+
+object 80 {  // cloud0_tga_167
+	(31956.808594 -8059 672) (1.570796 0 0) (1.704555 1.704555 1.704555)
+	model 80
+}
+
+object 81 {  // cloud0_tga_168
+	(35158.808594 -6490 2102) (1.570796 0 0) (4.87201 4.87201 4.87201)
+	model 81
+}
+
+object 82 {  // cloud0_tga_169
+	(39374.808594 -7788 1751) (1.570796 0 0) (4.609129 4.609129 4.609129)
+	model 82
+}
+
+object 83 {  // cloud0_tga_170
+	(36883.808594 5837 2183) (1.570796 0 0) (4.609129 4.609129 4.609129)
+	model 83
+}
+
+object 84 {  // cloud0_tga_171
+	(36726.808594 2130 1239) (1.570796 0 0) (2.991606 2.991606 2.991606)
+	model 84
+}
+
+object 85 {  // cloud0_tga_172
+	(38936.808594 624 1241) (1.570796 0 0) (2.627687 2.627687 2.627687)
+	model 85
+}
+
+object 86 {  // cloud0_tga_173
+	(34385.808594 -693 1712) (1.570796 0 0) (4.609129 4.609129 4.609129)
+	model 86
+}
+
+object 87 {  // cloud0_tga_174
+	(44240.808594 -2526 1285) (1.570796 0 0) (2.991606 2.991606 2.991606)
+	model 87
+}
+
+object 88 {  // cloud0_tga_175
+	(41899.808594 -5349 1758) (1.570796 0 0) (4.609129 4.609129 4.609129)
+	model 88
+}
+
+object 89 {  // cloud0_tga_176
+	(36443.808594 -3342 1345) (1.570796 0 0) (3.15345 3.15345 3.15345)
+	model 89
+}
+
+object 90 {  // cloud0_tga_177
+	(46450.808594 -4032 1287) (1.570796 0 0) (2.627687 2.627687 2.627687)
+	model 90
+}
+
+object 91 {  // cloud0_tga_178
+	(38557.808594 -2895 1456) (1.570796 0 0) (3.254488 3.254488 3.254488)
+	model 91
+}
+
+object 92 {  // cloud0_tga_179
+	(36979.808594 910 929) (1.570796 0 0) (1.704555 1.704555 1.704555)
+	model 92
+}
+
+object 93 {  // cloud0_tga_180
+	(40181.808594 2479 2580) (1.570796 0 0) (4.87201 4.87201 4.87201)
+	model 93
+}
+
+object 94 {  // cloud0_tga_181
+	(44397.808594 1181 2229) (1.570796 0 0) (4.609129 4.609129 4.609129)
+	model 94
+}
+
+object 95 {  // cloud0_tga_182
+	(31223.808594 5587 1241) (1.570796 0 0) (2.627687 2.627687 2.627687)
+	model 95
+}
+
+object 96 {  // cloud0_tga_183
+	(32468.808594 7442 2580) (1.570796 0 0) (4.87201 4.87201 4.87201)
+	model 96
+}
+
+object 97 {  // cloud0_tga_184
+	(36684.808594 6144 2229) (1.570796 0 0) (4.609129 4.609129 4.609129)
+	model 97
+}
+
+object 98 {  // cloud0_tga_099
+	(-13414.351563 22365.441406 1493) (1.570796 0 0) (4.609129 4.609129 4.609129)
+	model 98
+}
+
+object 99 {  // cloud0_tga_100
+	(-18870.351563 24372.441406 1286) (1.570796 0 0) (3.15345 3.15345 3.15345)
+	model 99
+}
+
+object 100 {  // cloud0_tga_101
+	(-8863.351563 23682.441406 1022) (1.570796 0 0) (2.627687 2.627687 2.627687)
+	model 100
+}
+
+object 101 {  // cloud0_tga_102
+	(-21132.351563 22598.441406 1705) (1.570796 0 0) (4.609129 4.609129 4.609129)
+	model 101
+}
+
+object 102 {  // cloud0_tga_103
+	(-21289.351563 18891.441406 1093) (1.570796 0 0) (2.991606 2.991606 2.991606)
+	model 102
+}
+
+object 103 {  // cloud0_tga_104
+	(-19079.351563 17385.441406 1016) (1.570796 0 0) (2.627687 2.627687 2.627687)
+	model 103
+}
+
+object 104 {  // cloud0_tga_105
+	(-13775.351563 14235.441406 807) (1.570796 0 0) (2.991606 2.991606 2.991606)
+	model 104
+}
+
+object 105 {  // cloud0_tga_106
+	(-16116.351563 11412.441406 1280) (1.570796 0 0) (4.609129 4.609129 4.609129)
+	model 105
+}
+
+object 106 {  // cloud0_tga_107
+	(-21572.351563 13419.441406 867) (1.570796 0 0) (3.15345 3.15345 3.15345)
+	model 106
+}
+
+object 107 {  // cloud0_tga_108
+	(-11565.351563 12729.441406 809) (1.570796 0 0) (2.627687 2.627687 2.627687)
+	model 107
+}
+
+object 108 {  // cloud0_tga_109
+	(-19458.351563 13866.441406 978) (1.570796 0 0) (3.254488 3.254488 3.254488)
+	model 108
+}
+
+object 109 {  // cloud0_tga_110
+	(-21036.351563 17671.441406 846) (1.570796 0 0) (1.704555 1.704555 1.704555)
+	model 109
+}
+
+object 110 {  // cloud0_tga_111
+	(-17834.351563 19240.441406 2102) (1.570796 0 0) (4.87201 4.87201 4.87201)
+	model 110
+}
+
+object 111 {  // cloud0_tga_112
+	(-13618.351563 17942.441406 1751) (1.570796 0 0) (4.609129 4.609129 4.609129)
+	model 111
+}
+
+object 112 {  // cloud0_tga_113
+	(-8752.351563 23204.441406 1285) (1.570796 0 0) (2.991606 2.991606 2.991606)
+	model 112
+}
+
+object 113 {  // cloud0_tga_114
+	(-11093.351563 20381.441406 1758) (1.570796 0 0) (4.609129 4.609129 4.609129)
+	model 113
+}
+
+object 114 {  // cloud0_tga_115
+	(-16549.351563 22388.441406 1345) (1.570796 0 0) (3.15345 3.15345 3.15345)
+	model 114
+}
+
+object 115 {  // cloud0_tga_116
+	(-6542.351563 21698.441406 1287) (1.570796 0 0) (2.627687 2.627687 2.627687)
+	model 115
+}
+
+object 116 {  // cloud0_tga_117
+	(-14435.351563 22835.441406 1456) (1.570796 0 0) (3.254488 3.254488 3.254488)
+	model 116
+}
+
+object 117 {  // cloud0_tga_118
+	(-3141.351563 22598.441406 1705) (1.570796 0 0) (4.609129 4.609129 4.609129)
+	model 117
+}
+
+object 118 {  // cloud0_tga_119
+	(-3298.351563 18891.441406 1124) (1.570796 0 0) (2.991606 2.991606 2.991606)
+	model 118
+}
+
+object 119 {  // cloud0_tga_120
+	(-1088.351563 17385.441406 968) (1.570796 0 0) (2.627687 2.627687 2.627687)
+	model 119
+}
+
+object 120 {  // cloud0_tga_121
+	(4215.648438 14235.441406 807) (1.570796 0 0) (2.991606 2.991606 2.991606)
+	model 120
+}
+
+object 121 {  // cloud0_tga_122
+	(1874.648438 11412.441406 1280) (1.570796 0 0) (4.609129 4.609129 4.609129)
+	model 121
+}
+
+object 122 {  // cloud0_tga_123
+	(-3581.351563 13419.441406 867) (1.570796 0 0) (3.15345 3.15345 3.15345)
+	model 122
+}
+
+object 123 {  // cloud0_tga_124
+	(6425.648438 12729.441406 809) (1.570796 0 0) (2.627687 2.627687 2.627687)
+	model 123
+}
+
+object 124 {  // cloud0_tga_125
+	(-1467.351563 13866.441406 978) (1.570796 0 0) (3.254488 3.254488 3.254488)
+	model 124
+}
+
+object 125 {  // cloud0_tga_126
+	(-3045.351563 17671.441406 672) (1.570796 0 0) (1.704555 1.704555 1.704555)
+	model 125
+}
+
+object 126 {  // cloud0_tga_127
+	(156.648438 19240.441406 2102) (1.570796 0 0) (4.87201 4.87201 4.87201)
+	model 126
+}
+
+object 127 {  // cloud0_tga_128
+	(4372.648438 17942.441406 1751) (1.570796 0 0) (4.609129 4.609129 4.609129)
+	model 127
+}
+
+object 128 {  // cloud0_tga_129
+	(9238.648438 23204.441406 1285) (1.570796 0 0) (2.991606 2.991606 2.991606)
+	model 128
+}
+
+object 129 {  // cloud0_tga_130
+	(6897.648438 20381.441406 1758) (1.570796 0 0) (4.609129 4.609129 4.609129)
+	model 129
+}
+
+object 130 {  // cloud0_tga_131
+	(1441.648438 22388.441406 1345) (1.570796 0 0) (3.15345 3.15345 3.15345)
+	model 130
+}
+
+object 131 {  // cloud0_tga_132
+	(3555.648438 22835.441406 1456) (1.570796 0 0) (3.254488 3.254488 3.254488)
+	model 131
+}
+
+object 132 {  // cloud0_tga_133
+	(-11226.353516 -32.558594 1493) (1.570796 0 0) (4.609129 4.609129 4.609129)
+	model 132
+}
+
+object 133 {  // cloud0_tga_134
+	(-16682.353516 1974.441406 1286) (1.570796 0 0) (3.15345 3.15345 3.15345)
+	model 133
+}
+
+object 134 {  // cloud0_tga_135
+	(-6675.353027 1284.441406 1022) (1.570796 0 0) (2.627687 2.627687 2.627687)
+	model 134
+}
+
+object 135 {  // cloud0_tga_136
+	(-18944.353516 200.441406 1705) (1.570796 0 0) (4.609129 4.609129 4.609129)
+	model 135
+}
+
+object 136 {  // cloud0_tga_137
+	(-19101.353516 -3506.558594 1093) (1.570796 0 0) (2.991606 2.991606 2.991606)
+	model 136
+}
+
+object 137 {  // cloud0_tga_138
+	(-16891.353516 -5012.558594 1016) (1.570796 0 0) (2.627687 2.627687 2.627687)
+	model 137
+}
+
+object 138 {  // cloud0_tga_139
+	(-11587.353516 -8162.558594 807) (1.570796 0 0) (2.991606 2.991606 2.991606)
+	model 138
+}
+
+object 139 {  // cloud0_tga_140
+	(-13928.353516 -10985.558594 1280) (1.570796 0 0) (4.609129 4.609129 4.609129)
+	model 139
+}
+
+object 140 {  // cloud0_tga_141
+	(-19384.353516 -8978.558594 867) (1.570796 0 0) (3.15345 3.15345 3.15345)
+	model 140
+}
+
+object 141 {  // cloud0_tga_142
+	(-9377.353516 -9668.558594 809) (1.570796 0 0) (2.627687 2.627687 2.627687)
+	model 141
+}
+
+object 142 {  // cloud0_tga_143
+	(-17270.353516 -8531.558594 978) (1.570796 0 0) (3.254488 3.254488 3.254488)
+	model 142
+}
+
+object 143 {  // cloud0_tga_144
+	(-18848.353516 -4726.558594 846) (1.570796 0 0) (1.704555 1.704555 1.704555)
+	model 143
+}
+
+object 144 {  // cloud0_tga_145
+	(-15646.353516 -3157.558594 2102) (1.570796 0 0) (4.87201 4.87201 4.87201)
+	model 144
+}
+
+object 145 {  // cloud0_tga_146
+	(-11430.353516 -4455.558594 1751) (1.570796 0 0) (4.609129 4.609129 4.609129)
+	model 145
+}
+
+object 146 {  // cloud0_tga_147
+	(-6564.353027 806.441406 1285) (1.570796 0 0) (2.991606 2.991606 2.991606)
+	model 146
+}
+
+object 147 {  // cloud0_tga_148
+	(-8905.353516 -2016.558594 1758) (1.570796 0 0) (4.609129 4.609129 4.609129)
+	model 147
+}
+
+object 148 {  // cloud0_tga_149
+	(-14361.353516 -9.558594 1345) (1.570796 0 0) (3.15345 3.15345 3.15345)
+	model 148
+}
+
+object 149 {  // cloud0_tga_150
+	(-4354.353027 -699.558594 1287) (1.570796 0 0) (2.627687 2.627687 2.627687)
+	model 149
+}
+
+object 150 {  // cloud0_tga_151
+	(-12247.353516 437.441406 1456) (1.570796 0 0) (3.254488 3.254488 3.254488)
+	model 150
+}
+
+object 151 {  // cloud0_tga_152
+	(-953.353027 200.441406 1705) (1.570796 0 0) (4.609129 4.609129 4.609129)
+	model 151
+}
+
+object 152 {  // cloud0_tga_153
+	(-1110.353027 -3506.558594 1124) (1.570796 0 0) (2.991606 2.991606 2.991606)
+	model 152
+}
+
+object 153 {  // cloud0_tga_154
+	(1099.646973 -5012.558594 968) (1.570796 0 0) (2.627687 2.627687 2.627687)
+	model 153
+}
+
+object 154 {  // cloud0_tga_155
+	(6403.646973 -8162.558594 807) (1.570796 0 0) (2.991606 2.991606 2.991606)
+	model 154
+}
+
+object 155 {  // cloud0_tga_156
+	(4062.646973 -10985.558594 1280) (1.570796 0 0) (4.609129 4.609129 4.609129)
+	model 155
+}
+
+object 156 {  // cloud0_tga_157
+	(-1393.353027 -8978.558594 867) (1.570796 0 0) (3.15345 3.15345 3.15345)
+	model 156
+}
+
+object 157 {  // cloud0_tga_158
+	(8613.646484 -9668.558594 809) (1.570796 0 0) (2.627687 2.627687 2.627687)
+	model 157
+}
+
+object 158 {  // cloud0_tga_159
+	(720.646973 -8531.558594 978) (1.570796 0 0) (3.254488 3.254488 3.254488)
+	model 158
+}
+
+object 159 {  // cloud0_tga_160
+	(-857.353027 -4726.558594 672) (1.570796 0 0) (1.704555 1.704555 1.704555)
+	model 159
+}
+
+object 160 {  // cloud0_tga_161
+	(2344.646973 -3157.558594 2102) (1.570796 0 0) (4.87201 4.87201 4.87201)
+	model 160
+}
+
+object 161 {  // cloud0_tga_162
+	(6560.646973 -4455.558594 1751) (1.570796 0 0) (4.609129 4.609129 4.609129)
+	model 161
+}
+
+object 162 {  // cloud0_tga_163
+	(11426.646484 806.441406 1285) (1.570796 0 0) (2.991606 2.991606 2.991606)
+	model 162
+}
+
+object 163 {  // cloud0_tga_164
+	(9085.646484 -2016.558594 1758) (1.570796 0 0) (4.609129 4.609129 4.609129)
+	model 163
+}
+
+object 164 {  // cloud0_tga_165
+	(3629.646973 -9.558594 1345) (1.570796 0 0) (3.15345 3.15345 3.15345)
+	model 164
+}
+
+object 165 {  // cloud0_tga_166
+	(5743.646973 437.441406 1456) (1.570796 0 0) (3.254488 3.254488 3.254488)
+	model 165
+}
+

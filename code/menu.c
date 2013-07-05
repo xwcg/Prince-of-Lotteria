@@ -45,6 +45,7 @@ void menu_open ()
 	
 	wait(3); // Fixed or crash :)
 	
+	media_stop(0);
 	var menuLoop = snd_loop(menuBackgroundMusic, 100, 0);
 	
 	var time = 0;
@@ -68,9 +69,11 @@ void menu_open ()
 			tick = 0;
 		}
 		
+		int startOffset = 100;
+		
 		for (i = 0; i < menuLen; i++)
 		{
-			menuTexts[i].pos_x = cycle(32 * i - 16 * total_ticks, -0.5 * screen_size.x, 1.5 * screen_size.x);
+			menuTexts[i].pos_x = cycle(32 * i - 16 * (total_ticks - startOffset), -0.5 * screen_size.x, 1.5 * screen_size.x);
 			menuTexts[i].pos_y = 0.5 * screen_size.y + 32 * sinv(8 * total_ticks + 8 * i);
 		}
 		
@@ -124,17 +127,24 @@ void menu_open ()
 	
 	snd_stop(menuLoop);
 	
-	if (tickdown)
+	/*
+	
+	var t = 16;
+	
+	TEXT *txt = { string = "Let's go!"; font = "Courier#64"; flags = CENTER_X | CENTER_Y; layer = 2;}
+	
+	COLOR col;
+	vec_set(&col, vector(random(255), random(255), 255));
+	
+	while (t > 0)
 	{
-		TEXT *txt = { string = "Let's go!"; font = "Courier#64"; flags = CENTER_X | CENTER_Y; layer = 2;}
-		
 		txt.pos_x = 0.5 * screen_size.x;
 		txt.pos_y = 0.5 * screen_size.y;
 		
-		for (i = 0; i < 4; i++)
-		{
+		//for (i = 0; i < 4; i++)
+		//{
 			if (total_frames % 2)
-				draw_quad(NULL, NULL, NULL, screen_size.x, NULL, vector(random(255), random(255), 255), 100, 0);
+				draw_quad(NULL, NULL, NULL, screen_size.x, NULL, &col, 100, 0);
 			else
 			{
 				if (total_frames % 30)
@@ -145,12 +155,17 @@ void menu_open ()
 				draw_obj(txt);
 			}
 			
-			wait(1);
-		}
+			//wait(1);
+		//}
 		
-		menu_close();
-		game_start();
+		t -= time_step;
+		wait(1);
 	}
+	
+	*/
+	
+	menu_close();
+	game_start();
 }
 
 void menu_close ()

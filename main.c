@@ -1,5 +1,6 @@
 #include <acknex.h>
 #include <default.c>
+#include <ackphysx.h>
 
 #define PRAGMA_PATH "code"
 #define PRAGMA_PATH "music"
@@ -22,9 +23,12 @@
 #include "credits.h"
 #include "trigger.h"
 #include "geist.c"
+#include "lvlLottifant.h"
 
 void main ()
 {
+	physX_open();
+	
 	fps_max = 60;
 	video_mode = 10;
 	mouse_pointer = 0;
@@ -42,7 +46,8 @@ void main ()
 	menu_open();
 	// <<intro>>
 	//game_start(); // level 1
-	// <<level2>>
+	//lvlLfInit(); // level 2 - Lottifant
+	// << boss level >>
 	// <<musical>>
 	//creditsInit();
 }
