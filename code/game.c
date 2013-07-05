@@ -59,7 +59,8 @@ void game_start()
 }
 
 void game_restart(void) {
-	level_load(level_name);
+	//level_load(level_name);
+	level_load_ext(level_name);
 }
 
 void on_level_event(var _percent) {
@@ -96,6 +97,7 @@ void level_load_ext(STRING* _lvl) {
 		set(panLoad, LIGHT | SHOW);
 		set(panLoadBar, LIGHT | SHOW);
 		
+		wait(1);
 		level_load(_lvl);
 	}
 }
