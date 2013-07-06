@@ -11,6 +11,18 @@
 #include "zorroMesh.h"
 #include "camera.h"
 
+void setPlayerCamera (var dist, var raiseZ, var arc)
+{
+	g_playerCamDist = dist;
+	g_playerRaiseZ = raiseZ;	
+	g_playerCamArc = arc;
+}
+
+void setPlayerWalkGlide (BOOL bUse)
+{
+	g_playerUseWalkGlide = bUse;
+}
+
 void snd_player_jump ()
 {
 	switch ((int)(random(5)))
@@ -73,26 +85,41 @@ void pBlood(PARTICLE *p) {
 // Player code
 // -----------------------------------------------------------------------------------
 
-void animate_player(var _speed) {
-	if (!me.PL_IS_JUMPING || key_space) {
-		if (_speed != 0)	{
-			if (me.PL_IS_JUMPING == 0 && !key_space) {
-				my.PL_ANIMATION_PERCENTAGE += 10 * time_step;
-				ent_animate(me,"walk ",my.PL_ANIMATION_PERCENTAGE,ANM_CYCLE);
-			}
-		} else { 
-			my.PL_ANIMATION_PERCENTAGE += 3 * time_step;
-			ent_animate(me,"idle ",my.PL_ANIMATION_PERCENTAGE,ANM_CYCLE);
+void animate_player (var s)
+{
+	if (player == NULL)
+		return;
+		
+	if (player->PL_IS_JUMPING == 1)
+	{
+		player->PL_ANIMATION_PERCENTAGE += 3 * time_step;
+		ent_animate(player, "jump", player->PL_ANIMATION_PERCENTAGE, ANM_CYCLE);	
+	}
+	else
+	{
+		if (s != 0)
+		{
+			player->PL_ANIMATION_PERCENTAGE += 10 * time_step;
+			ent_animate(player, "walk", player->PL_ANIMATION_PERCENTAGE, ANM_CYCLE);
 		}
-	} else {
-		my.PL_ANIMATION_PERCENTAGE += 3 * time_step;
-		ent_animate(me,"jump ",my.PL_ANIMATION_PERCENTAGE,ANM_CYCLE);
+		else
+		{ 
+			player->PL_ANIMATION_PERCENTAGE += 3 * time_step;
+			ent_animate(player, "idle", player->PL_ANIMATION_PERCENTAGE, ANM_CYCLE);
+		}	
 	}
 	
-	if (me.PL_IS_ATTACKING) {
-		my.PL_ATTACKING_PERCENTAGE +=10*time_step;
-		ent_animate(me, "attack ", my.PL_ATTACKING_PERCENTAGE, ANM_ADD);
+	if (player->PL_IS_ATTACKING)
+	{
+		player->PL_ATTACKING_PERCENTAGE += 10 * time_step;
+		ent_animate(player, "attack", player->PL_ATTACKING_PERCENTAGE, ANM_ADD);
 	}
+}
+
+void setPlayerDead ()
+{
+	if (player != NULL)
+		player->PL_HEALTH = 0;
 }
 
 void actPlayer ()
@@ -110,12 +137,12 @@ void actPlayer ()
 	my->PL_A4_COUNT = 0;
 	my->trigger_range = 100;
 	
-	c_setminmax(my);
+	c_updatehull(my, 0);
 	
 	wait(1);
 	
-	vec_set(my->min_x, vector(-40, -40, -55)); 
-	vec_set(my->max_x, vector(40, 40, 60));
+	vec_set(my->min_x, vector(-20, -40, -50)); 
+	vec_set(my->max_x, vector(20, 40, 55));
 	
 	zorroMeshOptions(me, false, false, false);
 	
@@ -124,8 +151,6 @@ void actPlayer ()
 
 void move_player ()
 {
-	int nTraceDown = 0;
-	int nTraceUp = 0;
 	var vFallSpeed = 0;
 	int nSndRandom = 0;
 	
@@ -146,24 +171,29 @@ void move_player ()
 		vecPlayerMoveSpeed.x = g_playerWalkSpeed * key_force.x * time_step;
 		
 		// jump
-		if ((key_force.y > 0) && (player.PL_IS_JUMPING == 0))
+		
+		// user released jump key
+		if (player->PL_JUMPKEYSTILLPRESSED && !key_cuu)
+			player->PL_JUMPKEYSTILLPRESSED = false;
+		
+		if (key_cuu && player->PL_IS_JUMPING == 0 && !player->PL_JUMPKEYSTILLPRESSED)
 		{
-			player.PL_IS_JUMPING = 1;
+			player->PL_IS_JUMPING = 1;
 			my.PL_ANIMATION_PERCENTAGE = 0;
-
+			player->PL_JUMP_TIME = PL_MAX_JUMP_TIME;
+			
 			snd_player_jump();
 		}
 		
-		// If player is jumping...
-		if (player.PL_IS_JUMPING)
+		if (player->PL_IS_JUMPING != 0)
 		{
 			#ifdef PL_DEBUG
 				draw_text("player is jumping", 10, 60, COLOR_BLUE);
 			#endif
 			
-			if (player.PL_JUMP_TIME > -1)
+			if (player->PL_JUMP_TIME > -1)
 			{
-				player.PL_JUMP_TIME -= 0.2 * time_step;
+				player->PL_JUMP_TIME -= 0.2 * time_step;
 				vecPlayerMoveSpeed.z = player.PL_JUMP_HEIGHT * player.PL_JUMP_TIME * time_step;
 			}
 		}
@@ -231,31 +261,23 @@ void move_player ()
 		gui_update_a4();
 		
 		// Jumping below a ceiling
-		nTraceUp = c_trace(player.x, vector(player.x,player.y,player.z+5000), IGNORE_ME | IGNORE_PASSABLE | USE_BOX );
+		var nTraceUp = c_trace(player.x, vector(player.x,player.y,player.z+5000), IGNORE_ME | IGNORE_PASSABLE | USE_BOX );
 
-		#ifdef PL_DEBUG
-			draw_text("Jetpack:", 10, 10, COLOR_RED);
-			draw_text("Jetpack cooldown:", 10, 40, COLOR_RED);
-			draw_text(str_for_float(NULL, fPlayerJetpack), 180, 10, COLOR_RED);
-			draw_text(str_for_float(NULL, fPlayerJetpackCooldown), 180, 40, COLOR_RED);
-		#endif
-		
 		// If player jumps against the ceiling...
-		if (nTraceUp < 10) {
-			
-			// And doesn't use the jetpack...
-			if (!key_space || fPlayerJetpack <= 0) {
-				
-				// Let him fall
+		if (nTraceUp > 0 && nTraceUp < 10)
+		{
+			// no jetpack: let him fall
+			if (!key_space || fPlayerJetpack <= 0)
+			{
 				player.PL_JUMP_TIME = -0.1;
 				vecPlayerMoveSpeed.z = player.PL_JUMP_HEIGHT * player.PL_JUMP_TIME * time_step;
-			} else {
-				vecPlayerMoveSpeed.z = -0.1 * time_step; // error 0
 			}
+			else
+				vecPlayerMoveSpeed.z = -0.1 * time_step;
 		}
 		
 		// Can fall down?
-		nTraceDown = c_trace(player.x, vector(player.x,player.y,player.z-5000), IGNORE_ME | IGNORE_PASSABLE | USE_BOX);
+		var nTraceDown = c_trace(player.x, vector(player.x,player.y,player.z-5000), IGNORE_ME | IGNORE_PASSABLE | USE_BOX);
 		
 		// When on platform, move the payer with it
 		if (you != NULL && nTraceDown < 10) {
@@ -285,10 +307,13 @@ void move_player ()
 			// on ground
 			if (nTraceDown <= 10)
 			{
-				if (!key_cuu)
+				if (player->PL_IS_JUMPING == 1 && player->PL_JUMP_TIME < 0)
 				{
-					player.PL_IS_JUMPING = 0;
-					player.PL_JUMP_TIME = PL_MAX_JUMP_TIME;
+					if (key_cuu)
+						player->PL_JUMPKEYSTILLPRESSED = true;
+					
+					player->PL_IS_JUMPING = 0;
+					player->PL_JUMP_TIME = PL_MAX_JUMP_TIME;
 					vFallSpeed = 0;
 					
 					if (!key_space)
@@ -297,19 +322,20 @@ void move_player ()
 			}	
 		}
 		
-		// On slope? Increase movement speed
 		#ifdef PL_DEBUG
-			draw_text("Normal: ", 10, 400, COLOR_RED);
-			draw_text(str_for_num(NULL, normal.z), 200, 400, COLOR_RED);
+			draw_text(str_printf(NULL, "jetpack: %.3f", (double)fPlayerJetpack), 10, 10, COLOR_RED);
+			draw_text(str_printf(NULL, "jetpack cooldown: %.3f", (double)fPlayerJetpackCooldown), 10, 40, COLOR_RED);
+			draw_text(str_printf(NULL, "nTraceUp: %.3f", (double)nTraceUp), 10, 70, COLOR_RED);
+			draw_text(str_printf(NULL, "nTraceDown: %.3f", (double)nTraceDown), 10, 100, COLOR_RED);
+			draw_text(str_printf(NULL, "normal.z: %.3f", (double)normal.z), 10, 400, COLOR_RED);
 		#endif
 		
-		// Correct movement for slopes
-		if (normal.z < 1 && normal.z > 0.7) {
+		// correct movement for slopes
+		if (normal.z < 1 && normal.z > 0.7)
 			vecPlayerMoveSpeed.x *= 2.5 - normal.z;
-		}		
 		
 		// Fallen in spikes?
-		nTraceDown = c_trace(player.x, vector(player.x,player.y,player.z-10), IGNORE_ME | USE_BOX);
+		var nTraceDownShort = c_trace(player.x, vector(player.x,player.y,player.z-10), IGNORE_ME | USE_BOX);
 		if (HIT_TARGET) {
 			if (hit.entity != NULL) {
 				if (is(hit.entity, is_trap)) {
@@ -346,7 +372,7 @@ void move_player ()
 		}
 		
 		// Jumped in spikes?
-		nTraceUp = c_trace(player.x, vector(player.x,player.y,player.z+10), IGNORE_ME | USE_BOX);
+		var nTraceUpShort = c_trace(player.x, vector(player.x,player.y,player.z+10), IGNORE_ME | USE_BOX);
 		if (HIT_TARGET) {
 			if (hit.entity != NULL) {
 				if (is(hit.entity, is_trap)) {
@@ -435,15 +461,19 @@ void move_player ()
 		
 		move_friction = 0;
 		
-		//vec_scale(&vecPlayerMoveSpeed, time_step);
-		c_move(me, nullvector, &vecPlayerMoveSpeed, IGNORE_PASSABLE | IGNORE_PASSENTS | GLIDE | ACTIVATE_TRIGGER);
+		long moveFlags = IGNORE_PASSABLE | IGNORE_PASSENTS | ACTIVATE_TRIGGER;
+		
+		if (g_playerUseWalkGlide || (!g_playerUseWalkGlide && vecPlayerMoveSpeed.x != 0))
+			moveFlags |= GLIDE;
+		
+		c_move(my, nullvector, &vecPlayerMoveSpeed, moveFlags);
 		
 		my.y = my.PL_PLAYER_POS_Y;
 		
 		animate_player(vecPlayerMoveSpeed.x * time_step);
 		
 		// update camera
-		cameraMove(my, 1200, 80);
+		cameraMove(my, g_playerCamDist, g_playerRaiseZ, g_playerCamArc);
 		
 		wait(1);
 	}

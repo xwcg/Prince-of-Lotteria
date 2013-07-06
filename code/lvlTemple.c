@@ -57,7 +57,10 @@ void lvlTempleStart ()
 	gui_show();
 	
 	fog_color = 0;
-	camera.arc = g_lvlTempleCamArc;
+	
+	// set camera + walk glide
+	setPlayerCamera(g_lvlTempleCamDist, g_lvlTempleCamRaiseZ, g_lvlTempleCamArc);
+	setPlayerWalkGlide(true);
 	
 	level_load_ext(LVL_TEMPLE_WMB);
 }

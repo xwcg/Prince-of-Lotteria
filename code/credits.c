@@ -90,7 +90,6 @@ void creditsStart ()
 	level_load_ext("credits.wmb");
 
 	creditsFog();
-	credits_populate();
 	creditsText();
 	
 	camera.arc = 65;
@@ -98,6 +97,8 @@ void creditsStart ()
 	wait(1);
 	
 	set(camera, SHOW);
+	
+	credits_populate();
 	
 	while (!creditsFinished)
 	{

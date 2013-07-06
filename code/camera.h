@@ -15,8 +15,8 @@ var g_cameraZoomFac = 0.2;
 var g_cameraDeaddist = 5;
 var g_cameraLookaheadX = 250;
 var g_cameraLookaheadZ = 125;
-var g_cameraPosBlendFac = 0.05;
-var g_cameraAngBlendFac = 0.03;
+var g_cameraPosBlendFac = 0.04;
+var g_cameraAngBlendFac = 0.02;
 var g_cameraAngLimit = 7.5;
 
 #include "camera.c"
