@@ -45,33 +45,33 @@
 
 	int nPlayerLifes = 3;
 
-	BMAP* bmapBlood = "..\\images\\blood.tga";
+	BMAP* bmapBlood = "blood.tga";
 	
 // sounds
 
-	SOUND* sndAttack01            = "..\\sounds\\attack01.wav";
-	SOUND* sndAttack02            = "..\\sounds\\attack02.wav";
-	SOUND* sndAttack03            = "..\\sounds\\attack03.wav";
-	SOUND* sndAttack04            = "..\\sounds\\attack04.wav";
-	SOUND* sndAttack05            = "..\\sounds\\attack05.wav";
-	SOUND* sndDie                 = "..\\sounds\\die.wav";
-	SOUND* sndFootsteps01         = "..\\sounds\\footstep01.wav";
-	SOUND* sndFootsteps02         = "..\\sounds\\footstep02.wav";
-	SOUND* sndFootsteps03         = "..\\sounds\\footstep03.wav";
-	SOUND* sndFootsteps04         = "..\\sounds\\footstep04.wav";
-	SOUND* sndJetpackLoop         = "..\\sounds\\jetpackloop.wav";
-	SOUND* sndJetpack01           = "..\\sounds\\jetpack01.wav";
-	SOUND* sndJetpack02           = "..\\sounds\\jetpack02.wav";
-	SOUND* sndJetpack03           = "..\\sounds\\jetpack03.wav";
-	SOUND* sndJetpack04           = "..\\sounds\\jetpack04.wav";
-	SOUND* sndJetpack05           = "..\\sounds\\infinity.wav";
-	SOUND* sndJump01              = "..\\sounds\\jump01.wav";
-	SOUND* sndJump02              = "..\\sounds\\jump02.wav";
-	SOUND* sndJump03              = "..\\sounds\\jump03.wav";
-	SOUND* sndJump04              = "..\\sounds\\jump04.wav";
-	SOUND* sndJump05              = "..\\sounds\\jump05.wav";
-	SOUND* sndLife01              = "..\\sounds\\life01.wav";
-	SOUND* sndLife02              = "..\\sounds\\life02.wav";
+	SOUND* sndAttack01 = "attack01.wav";
+	SOUND* sndAttack02 = "attack02.wav";
+	SOUND* sndAttack03 = "attack03.wav";
+	SOUND* sndAttack04 = "attack04.wav";
+	SOUND* sndAttack05 = "attack05.wav";
+	SOUND* sndDie = "die.wav";
+	SOUND* sndFootsteps01 = "footstep01.wav";
+	SOUND* sndFootsteps02 = "footstep02.wav";
+	SOUND* sndFootsteps03 = "footstep03.wav";
+	SOUND* sndFootsteps04 = "footstep04.wav";
+	SOUND* sndJetpackLoop = "jetpackloop.wav";
+	SOUND* sndJetpack01 = "jetpack01.wav";
+	SOUND* sndJetpack02 = "jetpack02.wav";
+	SOUND* sndJetpack03 = "jetpack03.wav";
+	SOUND* sndJetpack04 = "jetpack04.wav";
+	SOUND* sndJetpack05 = "infinity.wav";
+	SOUND* sndJump01 = "jump01.wav";
+	SOUND* sndJump02 = "jump02.wav";
+	SOUND* sndJump03 = "jump03.wav";
+	SOUND* sndJump04 = "jump04.wav";
+	SOUND* sndJump05 = "jump05.wav";
+	SOUND* sndLife01 = "life01.wav";
+	SOUND* sndLife02 = "life02.wav";
 
 	SOUND* snd_narrator_death_spikes = "death_by_spikes.wav";
 	SOUND* snd_narrator_death_drown  = "death_by_drowning.wav";
