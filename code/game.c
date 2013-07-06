@@ -51,6 +51,10 @@ void game_start()
 			lvlBossInit();
 		#endif
 		
+		#ifdef SKIP_TO_LAVASTAGE
+			lvlLavastageInit();
+		#endif
+		
 		#ifdef SKIP_TO_CREDITS
 			creditsInit();
 		#endif

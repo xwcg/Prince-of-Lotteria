@@ -5,8 +5,8 @@
 version 710
 
 blocks 0
-entities 4
-objects 4
+entities 7
+objects 7
 
 wed {
 	palette {
@@ -27,29 +27,33 @@ wed {
 		2b 00 00  3b 00 00  4b 07 00  5f 07 00  6f 0f 00  7f 17 07  93 1f 07  a3 27 0b  b7 33 0f  c3 4b 1b  cf 63 2b  db 7f 3b  e3 97 4f  e7 ab 5f  ef bf 77  f7 d3 8b  
 		a7 7b 3b  b7 9b 37  c7 c3 37  e7 e3 57  7f bf ff  ab e7 ff  d7 ff ff  67 00 00  8b 00 00  b3 00 00  d7 00 00  ff 00 00  ff f3 93  ff f7 c7  ff ff ff  9f 5b 53  
 	}
+
+	folder {
+		<meshtex> 1
+	}
 }
 
 level 0 {   // Root
 	<lavastage.$$w>
 	<palette.pcx>
 	30
-	0
-	60
+	90
+	50
 	<..\main.c>
-	100.000000 100.000000 100.000000
+	35.686275 38.039215 58.431374
 	19.607843 39.215687 100.000000
 	100.000000 19.607843 19.607843
 	-0.000000 -0.000000 -0.000000
-	58.823528 58.823528 58.823528
-	19.607843 19.607843 19.607843
+	39.215687 57.254902 74.901962
+	36.862743 10.980392 -0.000000
 }
 
-model 1 {   // lavahills_mdl_001
-	1 1 1
-	<lavahills.mdl>
-	lavahills_mdl_001
-	ndef
-	0 0 0 0 0 0 0 0
+model 1 {   // zorroLotti_mdl_003
+	1.5 1.5 1.5
+	<zorroLotti.mdl>
+	zorroLotti_mdl_003
+	actPlayer
+	0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 	0000
 	0
 	50
@@ -57,26 +61,56 @@ model 1 {   // lavahills_mdl_001
 	ndef
 }
 
-model 2 {   // lavaplane_mdl_002
-	1 1 1
+model 2 {   // lavapolyfloor_015
+	1.89412 1.89412 1.89412
+	<lavapolyfloor.mdl>
+	lavapolyfloor_015
+	ndef
+	0 0 0 0 0 0 0 0
+	00000100000000000000000100000000
+	0
+	50
+	ndef
+	ndef
+}
+
+start 3 {   // pos_000
+	pos_000
+}
+
+model 4 {   // lavaplane_mdl_006
+	2.089 2.089 2.089
 	<lavaplane.mdl>
-	lavaplane_mdl_002
-	ndef
-	0 0 0 0 0 0 0 0
-	0000
+	lavaplane_mdl_006
+	acLsPlane
+	0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+	0000001000000000
 	0
 	50
 	ndef
 	ndef
 }
 
-model 3 {   // lavastage_mdl_003
-	1 1 1
-	<lavastage.mdl>
-	lavastage_mdl_003
+model 5 {   // lavaplane_mdl_009
+	2.089351 2.089351 2.089351
+	<lavahills.mdl>
+	lavaplane_mdl_009
 	ndef
 	0 0 0 0 0 0 0 0
-	0000
+	0000001000000000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 6 {   // lavaplane_mdl_010
+	2.089351 2.089351 2.089351
+	<lavastage.mdl>
+	lavaplane_mdl_010
+	ndef
+	0 0 0 0 0 0 0 0
+	0000001000000000
 	0
 	50
 	ndef
@@ -85,22 +119,37 @@ model 3 {   // lavastage_mdl_003
 
 object 0 {  // Root
 	(0 0 0) (0 0 0) (1 1 1)
-	object 1, 2, 3
+	object 1, 2, 3, 4, 5, 6
 	level 0
 }
 
-object 1 {  // lavahills_mdl_001
-	(0 2731 206) (-0 0 0) (1 1 1)
+object 1 {  // zorroLotti_mdl_003
+	(0 0 236) (-0 0 0) (1.5 1.5 1.5)
 	model 1
 }
 
-object 2 {  // lavaplane_mdl_002
-	(0 2726 -121) (-0 0 0) (1 1 1)
+object 2 {  // lavapolyfloor_015
+	(8 -6 158) (-0 0 0) (1.89412 1.89412 1.89412)
 	model 2
 }
 
-object 3 {  // lavastage_mdl_003
-	(16 109 -230) (-0 0 0) (1 1 1)
-	model 3
+object 3 {  // pos_000
+	(2 -96 290) (1.570796 0 0) (1 1 1)
+	start 3
+}
+
+object 4 {  // lavaplane_mdl_006
+	(0 5660 0) (-0 0 0) (2.089 2.089 2.089)
+	model 4
+}
+
+object 5 {  // lavaplane_mdl_009
+	(0 5660 672) (-0 0 0) (2.089351 2.089351 2.089351)
+	model 5
+}
+
+object 6 {  // lavaplane_mdl_010
+	(32 184 -224) (-0 0 0) (2.089351 2.089351 2.089351)
+	model 6
 }
 

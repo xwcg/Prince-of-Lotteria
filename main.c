@@ -16,6 +16,7 @@
 	//#define SKIP_TO
 	//#define SKIP_TO_LOTTIFANTLEVEL
 	//#define SKIP_TO_BOSSLEVEL
+	//#define SKIP_TO_LAVASTAGE
 	//#define SKIP_TO_CREDITS
 
 	//#define SKIP_CREDITS
@@ -43,6 +44,7 @@
 #include "lvlTemple.h"
 #include "lvlLottifant.h"
 #include "lvlBoss.h"
+#include "lvlLavastage.h"
 
 void main ()
 {
