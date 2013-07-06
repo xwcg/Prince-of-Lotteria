@@ -36,16 +36,18 @@
 // globals
 
 	var g_lvlLfGravity = 10;
-	var g_lvlLfRideForce = 410;
-	var g_lvlLfJumpForce = 33;
+	var g_lvlLfRideForce = 400;
+	var g_lvlLfJumpForce = 38;
 	var g_lvlLfSpeedMax = 30;
-	var g_lvlLfDownForce = 600;
+	var g_lvlLfDownForce = 480;
 
 	var g_fhLvlLottifantSong = 0;
 	
 	var g_lvlLottifantCamArc = 85;
-	var g_lvlLottifantCamDist = 1200;
-
+	var g_lvlLottifantCamDist = 1350;
+	
+	var g_lvlLfBallSpeedMax = 170;
+	var g_lvlLfBallDownForce = 100;
 	
 	ENTITY* g_entLvlLfBall = NULL;
 	VECTOR g_vecEntLvlBallLast;
