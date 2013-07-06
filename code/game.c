@@ -58,9 +58,9 @@ void game_start()
 	#endif
 }
 
-void game_restart(void) {
-	//level_load(level_name);
-	level_load_ext(level_name);
+void game_restart ()
+{
+	level_load(level_name);
 }
 
 void on_level_event(var _percent) {

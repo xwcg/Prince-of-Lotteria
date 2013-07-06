@@ -87,7 +87,7 @@ void creditsStart ()
 	skychange(0.1);
 	
 	detail_size = 64;	
-	level_load("credits.wmb");
+	level_load_ext("credits.wmb");
 
 	creditsFog();
 	credits_populate();
