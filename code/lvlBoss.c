@@ -2,6 +2,7 @@
 #define lvlBoss_c
 
 #include "lvlBoss.h"
+#include "lvlLavastage.h"
 
 void lvlBossInit ()
 {
@@ -31,26 +32,34 @@ void lvlBossStart ()
 	g_fhLvlBossSong = snd_loop(g_musicBoss, 100, 0);
 	
 	fog_color = 0;
-	camera.arc = g_lvlBossCamArc;
+
+	// set camera + walk glide
+	setPlayerCamera(g_lvlBossCamDist, g_lvlBossCamRaiseZ, g_lvlBossCamArc);
+	setPlayerWalkGlide(true);
 	
 	level_load_ext(LVL_BOSS_WMB);
 }
 
-void lvlBossExit ()
+void lvlBossExit (BOOL bNextLevel)
 {
-	wait(1);
-	
 	sky_active = 0;
-
+	
+	snd_stop(g_fhLvlBossSong);
+	g_fhLvlBossSong = 0;
+	
 	player = NULL;
 	
 	lvlBossReset();
 	
-	wait(1);
+	gui_hide();
 	
-	achievement("lottifant");
-	
-	creditsInit();
+	if (bNextLevel)
+	{
+		achievement("tower");
+		lvlLavastageInit();
+	}
+	else
+		menu_open();
 }
 
 action lvlBossTriggerExit ()
@@ -64,8 +73,8 @@ action lvlBossTriggerExit ()
 		wait(1);
 	}
 	
-	proc_mode = PROC_GLOBAL;
-	lvlBossExit();
+	//proc_mode = PROC_GLOBAL;
+	lvlBossExit(true);
 }
 
 #endif /* lvlBoss_c */

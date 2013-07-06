@@ -8,6 +8,11 @@
 	void activate_jetpack();
 	
 	void snd_player_jump ();
+	
+	void setPlayerDead();
+	
+	void setPlayerCamera (var dist, var raiseZ, var arc);
+	void setPlayerWalkGlide (BOOL bUse);
 
 // defines
 
@@ -27,6 +32,7 @@
 	#define PL_PLAYER_POS_Y          skill7
 	#define PL_HEALTH                skill8
 	#define PL_A4_COUNT              skill10
+	#define PL_JUMPKEYSTILLPRESSED   skill90
 	#define PL_ATTACKED_ONCE         FLAG8
 	
 // globals
@@ -46,6 +52,14 @@
 	int nPlayerLifes = 3;
 
 	BMAP* bmapBlood = "blood.tga";
+	
+	// to be set via setPlayerCamera
+	var g_playerCamDist = 1200;
+	var g_playerCamArc = 80;
+	var g_playerRaiseZ = 0;
+	
+	// to be set via setPlayerWalkGlide
+	BOOL g_playerUseWalkGlide = true;
 	
 // sounds
 

@@ -27,7 +27,9 @@
 
 	var g_fhLvlTempleIntro = 0;
 	var g_fhLvlTempleSong = 0;
-	
+
+	var g_lvlTempleCamDist = 1200;	
+	var g_lvlTempleCamRaiseZ = 16;
 	var g_lvlTempleCamArc = 80;
 
 #include "lvlTemple.c"
