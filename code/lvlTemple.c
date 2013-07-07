@@ -16,7 +16,6 @@ void lvlTempleReset ()
 	g_fhLvlTempleSong = 0;
 	
 	level_load(NULL);
-	freeze_mode = 0;
 	sky_active = 0;
 }
 

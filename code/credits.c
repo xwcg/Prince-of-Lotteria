@@ -52,8 +52,6 @@ void creditsReset ()
 	on_space = NULL;
 	
 	level_load(NULL);
-	
-	freeze_mode = 0;
 }
 
 void creditsExit ()
@@ -66,7 +64,9 @@ void creditsFog ()
 {
 	camera.fog_start = 128;
 	camera.fog_end = 4000;
+	
 	fog_color = 1;
+	vec_set(&d3d_fogcolor1.blue, vector(162, 174, 123));
 	
 	VECTOR fogColor;
 	vec_set(&fogColor, vector(d3d_fogcolor1.blue, d3d_fogcolor1.green, d3d_fogcolor1.red));

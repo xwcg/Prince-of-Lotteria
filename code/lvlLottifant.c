@@ -35,7 +35,6 @@ void lvlLfReset ()
 		
 	pX_setgravity(vector(0,0,-g_lvlLfGravity));
 	
-	freeze_mode = 0;
 	sky_active = 0;
 }
 
