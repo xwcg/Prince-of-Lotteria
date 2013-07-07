@@ -60,8 +60,6 @@ void main ()
 	
 	preload_mode = 2+4;
 	
-	freeze_mode = 1;
-	
 	random_seed(0);
 	
 	menu_open();

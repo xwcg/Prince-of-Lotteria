@@ -5,8 +5,8 @@
 version 710
 
 blocks 0
-entities 13
-objects 13
+entities 3
+objects 3
 
 wed {
 	palette {
@@ -27,32 +27,28 @@ wed {
 		2b 00 00  3b 00 00  4b 07 00  5f 07 00  6f 0f 00  7f 17 07  93 1f 07  a3 27 0b  b7 33 0f  c3 4b 1b  cf 63 2b  db 7f 3b  e3 97 4f  e7 ab 5f  ef bf 77  f7 d3 8b  
 		a7 7b 3b  b7 9b 37  c7 c3 37  e7 e3 57  7f bf ff  ab e7 ff  d7 ff ff  67 00 00  8b 00 00  b3 00 00  d7 00 00  ff 00 00  ff f3 93  ff f7 c7  ff ff ff  9f 5b 53  
 	}
-
-	folder {
-		<meshtex> 1
-	}
 }
 
 level 0 {   // Root
-	<lavastage.$$w>
+	<menu.$$w>
 	<palette.pcx>
 	30
-	90
-	50
+	0
+	60
 	<..\main.c>
-	35.686275 38.039215 58.431374
+	100.000000 100.000000 100.000000
 	19.607843 39.215687 100.000000
 	100.000000 19.607843 19.607843
 	-0.000000 -0.000000 -0.000000
-	39.215687 57.254902 74.901962
-	36.862743 10.980392 -0.000000
+	58.823528 58.823528 58.823528
+	19.607843 19.607843 19.607843
 }
 
-model 1 {   // zorroLotti_mdl_003
-	1.5 1.5 1.5
-	<zorroLotti.mdl>
-	zorroLotti_mdl_003
-	actPlayer
+model 1 {   // invertsphere_000
+	1 1 1
+	<invertsphere.mdl>
+	invertsphere_000
+	acMenuSphere
 	0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 	0000
 	0
@@ -61,204 +57,23 @@ model 1 {   // zorroLotti_mdl_003
 	ndef
 }
 
-model 2 {   // lavapolyfloor_015
-	1.89412 1.89412 1.89412
-	<lavapolyfloor.mdl>
-	lavapolyfloor_015
-	ndef
-	0 0 0 0 0 0 0 0
-	00000100000000000000000100000000
-	0
-	50
-	ndef
-	ndef
-}
-
-start 3 {   // pos_000
+start 2 {   // pos_000
 	pos_000
-}
-
-model 4 {   // lavaplane_mdl_006
-	2.089 2.089 2.089
-	<lavaplane.mdl>
-	lavaplane_mdl_006
-	acLsPlane
-	0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-	0000001000000000
-	0
-	50
-	ndef
-	ndef
-}
-
-model 5 {   // lavaplane_mdl_009
-	2.089351 2.089351 2.089351
-	<lavahills.mdl>
-	lavaplane_mdl_009
-	ndef
-	0 0 0 0 0 0 0 0
-	0000001000000000
-	0
-	50
-	ndef
-	ndef
-}
-
-model 6 {   // lavaplane_mdl_010
-	2.089351 2.089351 2.089351
-	<lavastage.mdl>
-	lavaplane_mdl_010
-	ndef
-	0 0 0 0 0 0 0 0
-	0000001000000000
-	0
-	50
-	ndef
-	ndef
-}
-
-model 7 {   // lavaemitgrid_024
-	1.90014 1.90014 1.90014
-	<lavaemitgrid.mdl>
-	lavaemitgrid_024
-	acLavaEmitGrid
-	0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-	0000
-	0
-	50
-	ndef
-	ndef
-}
-
-model 8 {   // lavafireA_mdl_030
-	2.834 2.834 2.834
-	<lavafire.mdl>
-	lavafireA_mdl_030
-	acLavaFire
-	0 0 0 0 0 0 0 0
-	0000
-	0
-	50
-	ndef
-	ndef
-}
-
-model 9 {   // torch_mdl_030
-	1 1 1
-	<torch2.mdl>
-	torch_mdl_030
-	actTorch
-	0 0 0 0 0 0 0 0
-	0000
-	0
-	50
-	ndef
-	ndef
-}
-
-model 10 {   // torch_mdl_032
-	1 1 1
-	<torch2.mdl>
-	torch_mdl_032
-	actTorch
-	0 0 0 0 0 0 0 0
-	0000
-	0
-	50
-	ndef
-	ndef
-}
-
-model 11 {   // torch_mdl_033
-	1 1 1
-	<torch2.mdl>
-	torch_mdl_033
-	actTorch
-	0 0 0 0 0 0 0 0
-	0000
-	0
-	50
-	ndef
-	ndef
-}
-
-model 12 {   // torch_mdl_034
-	1 1 1
-	<torch2.mdl>
-	torch_mdl_034
-	actTorch
-	0 0 0 0 0 0 0 0
-	0000
-	0
-	50
-	ndef
-	ndef
 }
 
 object 0 {  // Root
 	(0 0 0) (0 0 0) (1 1 1)
-	object 1, 2, 3, 4, 5, 6, 7, 8, 9, 10
-	object 11, 12
+	object 1, 2
 	level 0
 }
 
-object 1 {  // zorroLotti_mdl_003
-	(0 0 236) (-0 0 0) (1.5 1.5 1.5)
+object 1 {  // invertsphere_000
+	(0 0 0) (-0 0 0) (1 1 1)
 	model 1
 }
 
-object 2 {  // lavapolyfloor_015
-	(8 -6 158) (-0 0 0) (1.89412 1.89412 1.89412)
-	model 2
-}
-
-object 3 {  // pos_000
-	(2 -96 290) (1.570796 0 0) (1 1 1)
-	start 3
-}
-
-object 4 {  // lavaplane_mdl_006
-	(0 5660 0) (-0 0 0) (2.089 2.089 2.089)
-	model 4
-}
-
-object 5 {  // lavaplane_mdl_009
-	(0 5660 672) (-0 0 0) (2.089351 2.089351 2.089351)
-	model 5
-}
-
-object 6 {  // lavaplane_mdl_010
-	(32 184 -224) (-0 0 0) (2.089351 2.089351 2.089351)
-	model 6
-}
-
-object 7 {  // lavaemitgrid_024
-	(120 -12 104) (-0 0 0) (1.90014 1.90014 1.90014)
-	model 7
-}
-
-object 8 {  // lavafireA_mdl_030
-	(-4 -136 0) (-0 0 0) (2.834 2.834 2.834)
-	model 8
-}
-
-object 9 {  // torch_mdl_030
-	(1232 76 240) (-0 0 0) (1 1 1)
-	model 9
-}
-
-object 10 {  // torch_mdl_032
-	(1232 -88 240) (-0 0 0) (1 1 1)
-	model 10
-}
-
-object 11 {  // torch_mdl_033
-	(-1228 76 240) (-3.141592 0 0) (1 1 1)
-	model 11
-}
-
-object 12 {  // torch_mdl_034
-	(-1228 -88 240) (-3.141592 0 0) (1 1 1)
-	model 12
+object 2 {  // pos_000
+	(0 0 0) (-0 0 0) (1 1 1)
+	start 2
 }
 

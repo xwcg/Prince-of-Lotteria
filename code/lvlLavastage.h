@@ -1,6 +1,8 @@
 #ifndef lvlLavastage_h
 #define lvlLavastage_h
 
+#include "bmap.h"
+
 // prototypes
 
 	void lvlLavastageInit ();
@@ -11,12 +13,23 @@
 	void assertMtlLavaPlane (ENTITY* e);
 	void initFxLavaPlane (ENTITY* e, float tile, VECTOR* uv, float turbAmplitude, float turbSpeed, float turbModulation);
 	void mtlLavaPlaneEv ();
+	
+	void effLavaFire (VECTOR* pos);
+	void effLavaFire_p (PARTICLE* p);
+	void effLavaFire_ev (PARTICLE* p);
+	
+	void effLavaAsh (VECTOR* pos);
+	void effLavaAsh_p (PARTICLE* p);
+	void effLavaAsh_ev (PARTICLE* p);	
 
 // defines
 
 	#define LVL_LAVASTAGE_WMB "lavastage.wmb"
 	
-// shaders
+// shaders and effects
+
+	BmapBank* g_bbankLavaAsh = NULL; // pLavaAsh%d.dds
+	BmapBank* g_bbankLavaFire = NULL; // lavafire%d.tga
 
 	MATERIAL* mtlLavaPlane =
 	{
