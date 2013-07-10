@@ -40,6 +40,7 @@
 #include "credits.h"
 #include "trigger.h"
 #include "geist.c"
+#include "postprocessing.h"
 
 #include "lvlTemple.h"
 #include "lvlLottifant.h"
@@ -54,13 +55,15 @@ void main ()
 	video_mode = 10;
 	mouse_pointer = 0;
 	
-	d3d_antialias = 9;
+	d3d_antialias = 0;
 	mip_shaded = 2;
 	mip_flat = 2;
 	
 	preload_mode = 2+4;
 	
 	random_seed(0);
+	
+	initPostprocessing();
 	
 	menu_open();
 }

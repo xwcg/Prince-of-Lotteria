@@ -13,7 +13,13 @@ action acMenuSphere ()
 
 void menu_open ()
 {
+	// fix
+	g_bLvlTempleRunning = false;
+	g_bLvlLavastageRunning = false;
+	
 	level_load("menu.wmb");
+	
+	setPpSwirl(0.4, 0.8, 0.5, 0.5, 0);
 	
 	menuTitle.flags |= SHOW;
 	menuInfo.flags |= SHOW;

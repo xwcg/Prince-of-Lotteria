@@ -133,7 +133,6 @@ void PoL_enemy_detectturningpoints()
 	vector(my.x+PoL_enemy_checkaheadfactor*sign(my.PoL_enemy_akdir)*(my.max_x-my.min_x),my.y,my.z+my.min_z*1.5*PoL_enemy_checkaheadfactor),IGNORE_ME|USE_BOX|IGNORE_PASSABLE);
 	if(!trace_hit&&res==0)
 	{
-		//error("hier");
 		my.PoL_attacktriggered=-PoL_enemy_attackcooldown;
 		my.PoL_enemy_intcalcdir*=-1;
 		return;

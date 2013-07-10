@@ -45,6 +45,11 @@
 	var g_lvlLavastageCamRaiseZ = 128;
 	var g_lvlLavastageCamArc = 70;	
 	
+	BOOL g_lvlLavastageKeepSwirl = false;
+	var g_lvlLavastageSwirlRadius = 1;
+	var g_lvlLavastageSwirlAngle = 4;
+	var g_lvlLavastageSwirlBlend = 1;	
+	
 	
 // sounds
 
