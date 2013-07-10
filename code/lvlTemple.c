@@ -15,6 +15,8 @@ void lvlTempleReset ()
 	snd_stop(g_fhLvlTempleSong);
 	g_fhLvlTempleSong = 0;
 	
+	resetPpSwirl ();
+	
 	level_load(NULL);
 	sky_active = 0;
 }

@@ -1,11 +1,11 @@
 // WMP2
 // WMPIO V 1.30
-// Created 03.07.2013
+// Created 09.07.2013
 
 version 710
 
-blocks 56
-entities 222
+blocks 55
+entities 223
 objects 278
 
 wed {
@@ -683,17 +683,17 @@ block 33 {
 block 34 {
 	vertices 8
 	faces 6
-	1216 -128 -127.999985   1216 128 -128   1216 -128 128
-	1216 128 128   -1216 -128 -128   -1216 128 -128.000015
-	-1216 -128 128   -1216 128 128
-	4  1 0 2 3 : #default ( 1 0 0 0 ) ( 0 -1 0 0 ) 0 0 0 1 1 : 00010000000000000000000000000000 0 50 ndef
-	4  0 1 5 4 : #default ( 0 1 0 0 ) ( 0 0 -1 0 ) 0 0 0 1 1 : 00010000000000000000000000000000 0 50 ndef
-	4  2 0 4 6 : #default ( 1 0 0 0 ) ( 0 0 -1 0 ) 0 0 0 1 1 : 00010000000000000000000000000000 0 50 ndef
-	4  3 2 6 7 : #default ( 0 1 0 0 ) ( 0 0 -1 0 ) 0 0 0 1 1 : 00010000000000000000000000000000 0 50 ndef
-	4  1 3 7 5 : #default ( 1 0 0 0 ) ( 0 0 -1 0 ) 0 0 0 1 1 : 00010000000000000000000000000000 0 50 ndef
-	4  4 5 7 6 : #default ( 1 0 0 0 ) ( 0 -1 0 0 ) 0 0 0 1 1 : 00010000000000000000000000000000 0 50 ndef
+	128 -128 128   128 128 128   -128 -128 128
+	-128 128 128   128 -128 -128   128 128 -128
+	-128 -128 -128   -128 128 -128
+	4  1 0 2 3 : 03___Default ( 1 0 0 0 ) ( 0 -1 0 0 ) 0 0 0 1 1 : 0000 0 50 ndef
+	4  0 1 5 4 : 03___Default ( 0 1 0 0 ) ( 0 0 -1 0 ) 0 0 0 1 1 : 0000 0 50 ndef
+	4  2 0 4 6 : 03___Default ( 1 0 0 0 ) ( 0 0 -1 0 ) 0 0 0 1 1 : 0000 0 50 ndef
+	4  3 2 6 7 : 03___Default ( 0 1 0 0 ) ( 0 0 -1 0 ) 0 0 0 1 1 : 0000 0 50 ndef
+	4  1 3 7 5 : 03___Default ( 1 0 0 0 ) ( 0 0 -1 0 ) 0 0 0 1 1 : 0000 0 50 ndef
+	4  4 5 7 6 : 20___Default ( 1 0 0 0 ) ( 0 -1 0 0 ) 0 0 0 1 1 : 0000 0 50 ndef
 	{
-		00000000000000010000000000000000
+		0000
 		ndef
 		34
 	}
@@ -759,25 +759,6 @@ block 37 {
 block 38 {
 	vertices 8
 	faces 6
-	128 -128 128   128 128 128   -128 -128 128
-	-128 128 128   128 -128 -128   128 128 -128
-	-128 -128 -128   -128 128 -128
-	4  1 0 2 3 : 03___Default ( 1 0 0 0 ) ( 0 -1 0 0 ) 0 0 0 1 1 : 0000 0 50 ndef
-	4  0 1 5 4 : 03___Default ( 0 1 0 0 ) ( 0 0 -1 0 ) 0 0 0 1 1 : 0000 0 50 ndef
-	4  2 0 4 6 : 03___Default ( 1 0 0 0 ) ( 0 0 -1 0 ) 0 0 0 1 1 : 0000 0 50 ndef
-	4  3 2 6 7 : 03___Default ( 0 1 0 0 ) ( 0 0 -1 0 ) 0 0 0 1 1 : 0000 0 50 ndef
-	4  1 3 7 5 : 03___Default ( 1 0 0 0 ) ( 0 0 -1 0 ) 0 0 0 1 1 : 0000 0 50 ndef
-	4  4 5 7 6 : 20___Default ( 1 0 0 0 ) ( 0 -1 0 0 ) 0 0 0 1 1 : 0000 0 50 ndef
-	{
-		0000
-		ndef
-		38
-	}
-}
-
-block 39 {
-	vertices 8
-	faces 6
 	128.000015 -128 447.999908   128.000015 128 447.999908   -128 -128 703.999878
 	-128 128 703.999878   127.999992 -128 -448   127.999992 128 -448
 	-128 -128 -704   -128 128 -704
@@ -790,11 +771,11 @@ block 39 {
 	{
 		00000000000000010000000000000000
 		ndef
-		39
+		38
 	}
 }
 
-block 40 {
+block 39 {
 	vertices 8
 	faces 6
 	424 -32 208   424 32 208   -424 -32 208
@@ -809,6 +790,25 @@ block 40 {
 	{
 		0000
 		ndef
+		39
+	}
+}
+
+block 40 {
+	vertices 8
+	faces 6
+	320 -32 176   320 32 176   -320 -32 176
+	-320 32 176   320 -32 -176   320 32 -176
+	-320 -32 -176   -320 32 -176
+	4  1 0 2 3 : 01___Default ( 1 0 0 0 ) ( 0 -1 0 0 ) 0 0 0 1 1 : 0000 0 50 ndef
+	4  0 1 5 4 : 01___Default ( 0 1 0 0 ) ( 0 0 -1 0 ) 0 0 0 1 1 : 0000 0 50 ndef
+	4  2 0 4 6 : 01___Default ( 1 0 0 0 ) ( 0 0 -1 0 ) 0 0 0 1 1 : 0000 0 50 ndef
+	4  3 2 6 7 : 01___Default ( 0 1 0 0 ) ( 0 0 -1 0 ) 0 0 0 1 1 : 0000 0 50 ndef
+	4  1 3 7 5 : 01___Default ( 1 0 0 0 ) ( 0 0 -1 0 ) 0 0 0 1 1 : 0000 0 50 ndef
+	4  4 5 7 6 : 01___Default ( 1 0 0 0 ) ( 0 -1 0 0 ) 0 0 0 1 1 : 0000 0 50 ndef
+	{
+		0000
+		ndef
 		40
 	}
 }
@@ -816,9 +816,9 @@ block 40 {
 block 41 {
 	vertices 8
 	faces 6
-	320 -32 176   320 32 176   -320 -32 176
-	-320 32 176   320 -32 -176   320 32 -176
-	-320 -32 -176   -320 32 -176
+	576 -32 192   576 32 192   -576 -32 192
+	-576 32 192   576 -32 -192   576 32 -192
+	-576 -32 -192   -576 32 -192
 	4  1 0 2 3 : 01___Default ( 1 0 0 0 ) ( 0 -1 0 0 ) 0 0 0 1 1 : 0000 0 50 ndef
 	4  0 1 5 4 : 01___Default ( 0 1 0 0 ) ( 0 0 -1 0 ) 0 0 0 1 1 : 0000 0 50 ndef
 	4  2 0 4 6 : 01___Default ( 1 0 0 0 ) ( 0 0 -1 0 ) 0 0 0 1 1 : 0000 0 50 ndef
@@ -835,25 +835,6 @@ block 41 {
 block 42 {
 	vertices 8
 	faces 6
-	576 -32 192   576 32 192   -576 -32 192
-	-576 32 192   576 -32 -192   576 32 -192
-	-576 -32 -192   -576 32 -192
-	4  1 0 2 3 : 01___Default ( 1 0 0 0 ) ( 0 -1 0 0 ) 0 0 0 1 1 : 0000 0 50 ndef
-	4  0 1 5 4 : 01___Default ( 0 1 0 0 ) ( 0 0 -1 0 ) 0 0 0 1 1 : 0000 0 50 ndef
-	4  2 0 4 6 : 01___Default ( 1 0 0 0 ) ( 0 0 -1 0 ) 0 0 0 1 1 : 0000 0 50 ndef
-	4  3 2 6 7 : 01___Default ( 0 1 0 0 ) ( 0 0 -1 0 ) 0 0 0 1 1 : 0000 0 50 ndef
-	4  1 3 7 5 : 01___Default ( 1 0 0 0 ) ( 0 0 -1 0 ) 0 0 0 1 1 : 0000 0 50 ndef
-	4  4 5 7 6 : 01___Default ( 1 0 0 0 ) ( 0 -1 0 0 ) 0 0 0 1 1 : 0000 0 50 ndef
-	{
-		0000
-		ndef
-		42
-	}
-}
-
-block 43 {
-	vertices 8
-	faces 6
 	1152 -32 768   1152 32 768   -1152 -32 768
 	-1152 32 768   1152 -32 -768   1152 32 -768
 	-1152 -32 -768   -1152 32 -768
@@ -866,11 +847,11 @@ block 43 {
 	{
 		0000
 		ndef
-		43
+		42
 	}
 }
 
-block 44 {
+block 43 {
 	vertices 8
 	faces 6
 	1408 -32 704   1408 32 703.999878   -1408 -32 704.000061
@@ -885,6 +866,25 @@ block 44 {
 	{
 		0000
 		ndef
+		43
+	}
+}
+
+block 44 {
+	vertices 8
+	faces 6
+	1376.000122 -32 832.000061   1375.999878 32 831.999939   -1056 -32 832.000122
+	-1056 32 832   736 -32 -832   736 32 -832
+	-1056 -32 -832   -1056 32 -832
+	4  1 0 2 3 : 03___Default ( 1 0 0 0 ) ( 0 -1 0 0 ) 0 0 0 1 1 : 0000 0 50 ndef
+	4  0 1 5 4 : 03___Default ( 0 1 0 0 ) ( 0 0 -1 0 ) 0 0 0 1 1 : 0000 0 50 ndef
+	4  2 0 4 6 : 04___Default ( 1 0 0 0 ) ( 0 0 -1 0 ) 0 0 0 1 1 : 0000 0 50 ndef
+	4  3 2 6 7 : 03___Default ( 0 1 0 0 ) ( 0 0 -1 0 ) 0 0 0 1 1 : 0000 0 50 ndef
+	4  1 3 7 5 : 03___Default ( 1 0 0 0 ) ( 0 0 -1 0 ) 0 0 0 1 1 : 0000 0 50 ndef
+	4  4 5 7 6 : 03___Default ( 1 0 0 0 ) ( 0 -1 0 0 ) 0 0 0 1 1 : 0000 0 50 ndef
+	{
+		0000
+		ndef
 		44
 	}
 }
@@ -892,10 +892,10 @@ block 44 {
 block 45 {
 	vertices 8
 	faces 6
-	1376.000122 -32 832.000061   1375.999878 32 831.999939   -1056 -32 832.000122
-	-1056 32 832   736 -32 -832   736 32 -832
-	-1056 -32 -832   -1056 32 -832
-	4  1 0 2 3 : 03___Default ( 1 0 0 0 ) ( 0 -1 0 0 ) 0 0 0 1 1 : 0000 0 50 ndef
+	1216 -32 832.000122   1216 32 831.999878   -1216 -32 832.000122
+	-1216 32 831.999878   1216 -32 -832   1216 32 -832
+	-1216 -32 -832   -1216 32 -832
+	4  1 0 2 3 : 02___Default ( 1 0 0 0 ) ( 0 -1 0 0 ) 0 0 0 1 1 : 0000 0 50 ndef
 	4  0 1 5 4 : 03___Default ( 0 1 0 0 ) ( 0 0 -1 0 ) 0 0 0 1 1 : 0000 0 50 ndef
 	4  2 0 4 6 : 04___Default ( 1 0 0 0 ) ( 0 0 -1 0 ) 0 0 0 1 1 : 0000 0 50 ndef
 	4  3 2 6 7 : 03___Default ( 0 1 0 0 ) ( 0 0 -1 0 ) 0 0 0 1 1 : 0000 0 50 ndef
@@ -911,25 +911,6 @@ block 45 {
 block 46 {
 	vertices 8
 	faces 6
-	1216 -32 832.000122   1216 32 831.999878   -1216 -32 832.000122
-	-1216 32 831.999878   1216 -32 -832   1216 32 -832
-	-1216 -32 -832   -1216 32 -832
-	4  1 0 2 3 : 02___Default ( 1 0 0 0 ) ( 0 -1 0 0 ) 0 0 0 1 1 : 0000 0 50 ndef
-	4  0 1 5 4 : 03___Default ( 0 1 0 0 ) ( 0 0 -1 0 ) 0 0 0 1 1 : 0000 0 50 ndef
-	4  2 0 4 6 : 04___Default ( 1 0 0 0 ) ( 0 0 -1 0 ) 0 0 0 1 1 : 0000 0 50 ndef
-	4  3 2 6 7 : 03___Default ( 0 1 0 0 ) ( 0 0 -1 0 ) 0 0 0 1 1 : 0000 0 50 ndef
-	4  1 3 7 5 : 03___Default ( 1 0 0 0 ) ( 0 0 -1 0 ) 0 0 0 1 1 : 0000 0 50 ndef
-	4  4 5 7 6 : 03___Default ( 1 0 0 0 ) ( 0 -1 0 0 ) 0 0 0 1 1 : 0000 0 50 ndef
-	{
-		0000
-		ndef
-		46
-	}
-}
-
-block 47 {
-	vertices 8
-	faces 6
 	424 -32 16   424 32 16   -424 -32 16
 	-424 32 16   424 -32 -16   424 32 -16
 	-424 -32 -16   -424 32 -16
@@ -942,11 +923,11 @@ block 47 {
 	{
 		0000
 		ndef
-		47
+		46
 	}
 }
 
-block 48 {
+block 47 {
 	vertices 8
 	faces 6
 	104 -128 15.999992   104 128 15.999992   -104 -128 16
@@ -961,11 +942,11 @@ block 48 {
 	{
 		0000
 		ndef
-		48
+		47
 	}
 }
 
-block 49 {
+block 48 {
 	vertices 8
 	faces 6
 	320 -32 640   320 32 640   -320 -32 640
@@ -980,11 +961,11 @@ block 49 {
 	{
 		0000
 		ndef
-		49
+		48
 	}
 }
 
-block 50 {
+block 49 {
 	vertices 8
 	faces 6
 	39.999996 -128 192   40.000004 128 192   -40.000004 -128 192
@@ -999,11 +980,11 @@ block 50 {
 	{
 		0000
 		ndef
-		50
+		49
 	}
 }
 
-block 51 {
+block 50 {
 	vertices 8
 	faces 6
 	39.999996 -128 48   40.000004 128 48   -40.000004 -128 48
@@ -1018,11 +999,11 @@ block 51 {
 	{
 		0000
 		ndef
-		51
+		50
 	}
 }
 
-block 52 {
+block 51 {
 	vertices 8
 	faces 6
 	128 -128 64   128 128 64   -128 -128 64
@@ -1037,11 +1018,11 @@ block 52 {
 	{
 		00000000000000010000000000000000
 		ndef
-		52
+		51
 	}
 }
 
-block 53 {
+block 52 {
 	vertices 8
 	faces 6
 	1152 -32 64   1152 32 64   -1152 -32 64
@@ -1056,11 +1037,11 @@ block 53 {
 	{
 		0000
 		ndef
-		53
+		52
 	}
 }
 
-block 54 {
+block 53 {
 	vertices 8
 	faces 6
 	128 -128 704   128 128 704   -128 -128 704
@@ -1075,11 +1056,11 @@ block 54 {
 	{
 		00000000000000010000000000000000
 		ndef
-		54
+		53
 	}
 }
 
-block 55 {
+block 54 {
 	vertices 8
 	faces 6
 	768 -128 256   768 128 256   -768 -128 256
@@ -1094,7 +1075,7 @@ block 55 {
 	{
 		0000
 		ndef
-		55
+		54
 	}
 }
 
@@ -1998,20 +1979,7 @@ model 75 {   // bat_mdl_128
 	ndef
 }
 
-model 76 {   // lottifant_mdl_128
-	4.305115 4.305115 4.305115
-	<lottifant.mdl>
-	lottifant_mdl_128
-	lvlBossTriggerExit
-	0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-	0000
-	0
-	50
-	ndef
-	ndef
-}
-
-model 77 {   // a4Cube_mdl_133
+model 76 {   // a4Cube_mdl_133
 	1 1 1
 	<a4Cube.mdl>
 	a4Cube_mdl_133
@@ -2024,7 +1992,7 @@ model 77 {   // a4Cube_mdl_133
 	ndef
 }
 
-model 78 {   // a4Cube_mdl_134
+model 77 {   // a4Cube_mdl_134
 	1 1 1
 	<a4Cube.mdl>
 	a4Cube_mdl_134
@@ -2037,7 +2005,7 @@ model 78 {   // a4Cube_mdl_134
 	ndef
 }
 
-model 79 {   // a4Cube_mdl_135
+model 78 {   // a4Cube_mdl_135
 	1 1 1
 	<a4Cube.mdl>
 	a4Cube_mdl_135
@@ -2050,7 +2018,7 @@ model 79 {   // a4Cube_mdl_135
 	ndef
 }
 
-model 80 {   // a4Cube_mdl_136
+model 79 {   // a4Cube_mdl_136
 	1 1 1
 	<a4Cube.mdl>
 	a4Cube_mdl_136
@@ -2063,7 +2031,7 @@ model 80 {   // a4Cube_mdl_136
 	ndef
 }
 
-model 81 {   // a4Cube_mdl_137
+model 80 {   // a4Cube_mdl_137
 	1 1 1
 	<a4Cube.mdl>
 	a4Cube_mdl_137
@@ -2076,7 +2044,7 @@ model 81 {   // a4Cube_mdl_137
 	ndef
 }
 
-model 82 {   // a4Cube_mdl_138
+model 81 {   // a4Cube_mdl_138
 	1 1 1
 	<a4Cube.mdl>
 	a4Cube_mdl_138
@@ -2089,7 +2057,7 @@ model 82 {   // a4Cube_mdl_138
 	ndef
 }
 
-model 83 {   // a4Cube_mdl_139
+model 82 {   // a4Cube_mdl_139
 	1 1 1
 	<a4Cube.mdl>
 	a4Cube_mdl_139
@@ -2102,7 +2070,7 @@ model 83 {   // a4Cube_mdl_139
 	ndef
 }
 
-model 84 {   // a4Cube_mdl_140
+model 83 {   // a4Cube_mdl_140
 	1 1 1
 	<a4Cube.mdl>
 	a4Cube_mdl_140
@@ -2115,7 +2083,7 @@ model 84 {   // a4Cube_mdl_140
 	ndef
 }
 
-model 85 {   // a4Cube_mdl_141
+model 84 {   // a4Cube_mdl_141
 	1 1 1
 	<a4Cube.mdl>
 	a4Cube_mdl_141
@@ -2128,7 +2096,7 @@ model 85 {   // a4Cube_mdl_141
 	ndef
 }
 
-model 86 {   // a4Cube_mdl_142
+model 85 {   // a4Cube_mdl_142
 	1 1 1
 	<a4Cube.mdl>
 	a4Cube_mdl_142
@@ -2141,7 +2109,7 @@ model 86 {   // a4Cube_mdl_142
 	ndef
 }
 
-model 87 {   // a4Cube_mdl_143
+model 86 {   // a4Cube_mdl_143
 	1 1 1
 	<a4Cube.mdl>
 	a4Cube_mdl_143
@@ -2154,7 +2122,7 @@ model 87 {   // a4Cube_mdl_143
 	ndef
 }
 
-model 88 {   // a4Cube_mdl_144
+model 87 {   // a4Cube_mdl_144
 	1 1 1
 	<a4Cube.mdl>
 	a4Cube_mdl_144
@@ -2167,7 +2135,7 @@ model 88 {   // a4Cube_mdl_144
 	ndef
 }
 
-model 89 {   // a4Cube_mdl_145
+model 88 {   // a4Cube_mdl_145
 	1 1 1
 	<a4Cube.mdl>
 	a4Cube_mdl_145
@@ -2180,7 +2148,7 @@ model 89 {   // a4Cube_mdl_145
 	ndef
 }
 
-model 90 {   // a4Cube_mdl_146
+model 89 {   // a4Cube_mdl_146
 	1 1 1
 	<a4Cube.mdl>
 	a4Cube_mdl_146
@@ -2193,7 +2161,7 @@ model 90 {   // a4Cube_mdl_146
 	ndef
 }
 
-model 91 {   // lotter_dummy_146
+model 90 {   // lotter_dummy_146
 	1 1 1
 	<lotter_dummy.mdl>
 	lotter_dummy_146
@@ -2206,11 +2174,11 @@ model 91 {   // lotter_dummy_146
 	ndef
 }
 
-model 92 {   // bottle_mdl_147
+model 91 {   // bottle_mdl_147
 	8 8 8
 	<bottle.mdl>
 	bottle_mdl_147
-	bottle_action
+	acBossBottle
 	0 0 0 0 0 0 0 0
 	0000
 	0
@@ -2219,20 +2187,7 @@ model 92 {   // bottle_mdl_147
 	ndef
 }
 
-model 93 {   // a4Cube_mdl_150
-	1 1 1
-	<a4Cube.mdl>
-	a4Cube_mdl_150
-	trigger_visible
-	3 0 0 0 0 0 0 0
-	0000001100000000
-	0
-	50
-	ndef
-	ndef
-}
-
-model 94 {   // bat_mdl_157
+model 92 {   // bat_mdl_157
 	0.149 0.149 0.149
 	<bat.mdl>
 	bat_mdl_157
@@ -2245,7 +2200,7 @@ model 94 {   // bat_mdl_157
 	ndef
 }
 
-model 95 {   // bat_mdl_158
+model 93 {   // bat_mdl_158
 	0.149 0.149 0.149
 	<bat.mdl>
 	bat_mdl_158
@@ -2258,7 +2213,7 @@ model 95 {   // bat_mdl_158
 	ndef
 }
 
-model 96 {   // bat_mdl_159
+model 94 {   // bat_mdl_159
 	0.149 0.149 0.149
 	<bat.mdl>
 	bat_mdl_159
@@ -2271,7 +2226,7 @@ model 96 {   // bat_mdl_159
 	ndef
 }
 
-model 97 {   // bat_mdl_162
+model 95 {   // bat_mdl_162
 	0.149 0.149 0.149
 	<bat.mdl>
 	bat_mdl_162
@@ -2284,7 +2239,7 @@ model 97 {   // bat_mdl_162
 	ndef
 }
 
-model 98 {   // bat_mdl_163
+model 96 {   // bat_mdl_163
 	0.149 0.149 0.149
 	<bat.mdl>
 	bat_mdl_163
@@ -2297,7 +2252,7 @@ model 98 {   // bat_mdl_163
 	ndef
 }
 
-model 99 {   // bat_mdl_164
+model 97 {   // bat_mdl_164
 	0.149 0.149 0.149
 	<bat.mdl>
 	bat_mdl_164
@@ -2310,7 +2265,7 @@ model 99 {   // bat_mdl_164
 	ndef
 }
 
-model 100 {   // bat_mdl_165
+model 98 {   // bat_mdl_165
 	0.149 0.149 0.149
 	<bat.mdl>
 	bat_mdl_165
@@ -2323,7 +2278,7 @@ model 100 {   // bat_mdl_165
 	ndef
 }
 
-model 101 {   // bat_mdl_166
+model 99 {   // bat_mdl_166
 	0.149 0.149 0.149
 	<bat.mdl>
 	bat_mdl_166
@@ -2336,7 +2291,7 @@ model 101 {   // bat_mdl_166
 	ndef
 }
 
-model 102 {   // bat_mdl_167
+model 100 {   // bat_mdl_167
 	0.149 0.149 0.149
 	<bat.mdl>
 	bat_mdl_167
@@ -2349,7 +2304,7 @@ model 102 {   // bat_mdl_167
 	ndef
 }
 
-model 103 {   // bat_mdl_168
+model 101 {   // bat_mdl_168
 	0.149 0.149 0.149
 	<bat.mdl>
 	bat_mdl_168
@@ -2362,7 +2317,7 @@ model 103 {   // bat_mdl_168
 	ndef
 }
 
-model 104 {   // bat_mdl_169
+model 102 {   // bat_mdl_169
 	0.149 0.149 0.149
 	<bat.mdl>
 	bat_mdl_169
@@ -2375,7 +2330,7 @@ model 104 {   // bat_mdl_169
 	ndef
 }
 
-model 105 {   // bat_mdl_170
+model 103 {   // bat_mdl_170
 	0.149 0.149 0.149
 	<bat.mdl>
 	bat_mdl_170
@@ -2388,7 +2343,7 @@ model 105 {   // bat_mdl_170
 	ndef
 }
 
-model 106 {   // bat_mdl_171
+model 104 {   // bat_mdl_171
 	0.149 0.149 0.149
 	<bat.mdl>
 	bat_mdl_171
@@ -2401,7 +2356,7 @@ model 106 {   // bat_mdl_171
 	ndef
 }
 
-model 107 {   // bat_mdl_172
+model 105 {   // bat_mdl_172
 	0.149 0.149 0.149
 	<bat.mdl>
 	bat_mdl_172
@@ -2414,7 +2369,7 @@ model 107 {   // bat_mdl_172
 	ndef
 }
 
-model 108 {   // bat_mdl_173
+model 106 {   // bat_mdl_173
 	0.149 0.149 0.149
 	<bat.mdl>
 	bat_mdl_173
@@ -2427,7 +2382,7 @@ model 108 {   // bat_mdl_173
 	ndef
 }
 
-model 109 {   // bat_mdl_174
+model 107 {   // bat_mdl_174
 	0.149 0.149 0.149
 	<bat.mdl>
 	bat_mdl_174
@@ -2440,7 +2395,7 @@ model 109 {   // bat_mdl_174
 	ndef
 }
 
-model 110 {   // bat_mdl_175
+model 108 {   // bat_mdl_175
 	0.149 0.149 0.149
 	<bat.mdl>
 	bat_mdl_175
@@ -2453,7 +2408,7 @@ model 110 {   // bat_mdl_175
 	ndef
 }
 
-model 111 {   // bat_mdl_176
+model 109 {   // bat_mdl_176
 	0.149 0.149 0.149
 	<bat.mdl>
 	bat_mdl_176
@@ -2466,7 +2421,7 @@ model 111 {   // bat_mdl_176
 	ndef
 }
 
-model 112 {   // bat_mdl_177
+model 110 {   // bat_mdl_177
 	0.149 0.149 0.149
 	<bat.mdl>
 	bat_mdl_177
@@ -2479,7 +2434,7 @@ model 112 {   // bat_mdl_177
 	ndef
 }
 
-model 113 {   // bat_mdl_178
+model 111 {   // bat_mdl_178
 	0.149 0.149 0.149
 	<bat.mdl>
 	bat_mdl_178
@@ -2492,7 +2447,7 @@ model 113 {   // bat_mdl_178
 	ndef
 }
 
-model 114 {   // bat_mdl_179
+model 112 {   // bat_mdl_179
 	0.149 0.149 0.149
 	<bat.mdl>
 	bat_mdl_179
@@ -2505,7 +2460,7 @@ model 114 {   // bat_mdl_179
 	ndef
 }
 
-model 115 {   // bat_mdl_180
+model 113 {   // bat_mdl_180
 	0.149 0.149 0.149
 	<bat.mdl>
 	bat_mdl_180
@@ -2518,7 +2473,7 @@ model 115 {   // bat_mdl_180
 	ndef
 }
 
-model 116 {   // bat_mdl_181
+model 114 {   // bat_mdl_181
 	0.149 0.149 0.149
 	<bat.mdl>
 	bat_mdl_181
@@ -2531,7 +2486,7 @@ model 116 {   // bat_mdl_181
 	ndef
 }
 
-model 117 {   // bat_mdl_185
+model 115 {   // bat_mdl_185
 	0.149 0.149 0.149
 	<bat.mdl>
 	bat_mdl_185
@@ -2544,7 +2499,7 @@ model 117 {   // bat_mdl_185
 	ndef
 }
 
-model 118 {   // bat_mdl_186
+model 116 {   // bat_mdl_186
 	0.149 0.149 0.149
 	<bat.mdl>
 	bat_mdl_186
@@ -2557,7 +2512,7 @@ model 118 {   // bat_mdl_186
 	ndef
 }
 
-model 119 {   // bat_mdl_187
+model 117 {   // bat_mdl_187
 	0.149 0.149 0.149
 	<bat.mdl>
 	bat_mdl_187
@@ -2570,7 +2525,7 @@ model 119 {   // bat_mdl_187
 	ndef
 }
 
-model 120 {   // bat_mdl_188
+model 118 {   // bat_mdl_188
 	0.149 0.149 0.149
 	<bat.mdl>
 	bat_mdl_188
@@ -2583,7 +2538,7 @@ model 120 {   // bat_mdl_188
 	ndef
 }
 
-model 121 {   // bat_mdl_189
+model 119 {   // bat_mdl_189
 	0.149 0.149 0.149
 	<bat.mdl>
 	bat_mdl_189
@@ -2596,7 +2551,7 @@ model 121 {   // bat_mdl_189
 	ndef
 }
 
-model 122 {   // bat_mdl_190
+model 120 {   // bat_mdl_190
 	0.149 0.149 0.149
 	<bat.mdl>
 	bat_mdl_190
@@ -2609,7 +2564,7 @@ model 122 {   // bat_mdl_190
 	ndef
 }
 
-model 123 {   // bat_mdl_191
+model 121 {   // bat_mdl_191
 	0.149 0.149 0.149
 	<bat.mdl>
 	bat_mdl_191
@@ -2622,7 +2577,7 @@ model 123 {   // bat_mdl_191
 	ndef
 }
 
-model 124 {   // bat_mdl_192
+model 122 {   // bat_mdl_192
 	0.149 0.149 0.149
 	<bat.mdl>
 	bat_mdl_192
@@ -2635,7 +2590,7 @@ model 124 {   // bat_mdl_192
 	ndef
 }
 
-model 125 {   // bat_mdl_193
+model 123 {   // bat_mdl_193
 	0.149 0.149 0.149
 	<bat.mdl>
 	bat_mdl_193
@@ -2648,7 +2603,7 @@ model 125 {   // bat_mdl_193
 	ndef
 }
 
-model 126 {   // bat_mdl_194
+model 124 {   // bat_mdl_194
 	0.149 0.149 0.149
 	<bat.mdl>
 	bat_mdl_194
@@ -2661,7 +2616,7 @@ model 126 {   // bat_mdl_194
 	ndef
 }
 
-model 127 {   // bat_mdl_195
+model 125 {   // bat_mdl_195
 	0.149 0.149 0.149
 	<bat.mdl>
 	bat_mdl_195
@@ -2674,7 +2629,7 @@ model 127 {   // bat_mdl_195
 	ndef
 }
 
-model 128 {   // bat_mdl_196
+model 126 {   // bat_mdl_196
 	0.149 0.149 0.149
 	<bat.mdl>
 	bat_mdl_196
@@ -2687,7 +2642,7 @@ model 128 {   // bat_mdl_196
 	ndef
 }
 
-model 129 {   // bat_mdl_197
+model 127 {   // bat_mdl_197
 	0.149 0.149 0.149
 	<bat.mdl>
 	bat_mdl_197
@@ -2700,7 +2655,7 @@ model 129 {   // bat_mdl_197
 	ndef
 }
 
-model 130 {   // bat_mdl_198
+model 128 {   // bat_mdl_198
 	0.149 0.149 0.149
 	<bat.mdl>
 	bat_mdl_198
@@ -2713,7 +2668,7 @@ model 130 {   // bat_mdl_198
 	ndef
 }
 
-model 131 {   // bat_mdl_199
+model 129 {   // bat_mdl_199
 	0.149 0.149 0.149
 	<bat.mdl>
 	bat_mdl_199
@@ -2726,7 +2681,7 @@ model 131 {   // bat_mdl_199
 	ndef
 }
 
-model 132 {   // bat_mdl_200
+model 130 {   // bat_mdl_200
 	0.149 0.149 0.149
 	<bat.mdl>
 	bat_mdl_200
@@ -2739,7 +2694,7 @@ model 132 {   // bat_mdl_200
 	ndef
 }
 
-model 133 {   // bat_mdl_201
+model 131 {   // bat_mdl_201
 	0.149 0.149 0.149
 	<bat.mdl>
 	bat_mdl_201
@@ -2752,7 +2707,7 @@ model 133 {   // bat_mdl_201
 	ndef
 }
 
-model 134 {   // bat_mdl_202
+model 132 {   // bat_mdl_202
 	0.149 0.149 0.149
 	<bat.mdl>
 	bat_mdl_202
@@ -2765,7 +2720,7 @@ model 134 {   // bat_mdl_202
 	ndef
 }
 
-model 135 {   // bat_mdl_203
+model 133 {   // bat_mdl_203
 	0.149 0.149 0.149
 	<bat.mdl>
 	bat_mdl_203
@@ -2778,7 +2733,7 @@ model 135 {   // bat_mdl_203
 	ndef
 }
 
-model 136 {   // bat_mdl_204
+model 134 {   // bat_mdl_204
 	0.149 0.149 0.149
 	<bat.mdl>
 	bat_mdl_204
@@ -2791,7 +2746,7 @@ model 136 {   // bat_mdl_204
 	ndef
 }
 
-model 137 {   // bat_mdl_205
+model 135 {   // bat_mdl_205
 	0.149 0.149 0.149
 	<bat.mdl>
 	bat_mdl_205
@@ -2804,7 +2759,7 @@ model 137 {   // bat_mdl_205
 	ndef
 }
 
-model 138 {   // bat_mdl_206
+model 136 {   // bat_mdl_206
 	0.149 0.149 0.149
 	<bat.mdl>
 	bat_mdl_206
@@ -2817,7 +2772,7 @@ model 138 {   // bat_mdl_206
 	ndef
 }
 
-model 139 {   // bat_mdl_207
+model 137 {   // bat_mdl_207
 	0.149 0.149 0.149
 	<bat.mdl>
 	bat_mdl_207
@@ -2830,7 +2785,7 @@ model 139 {   // bat_mdl_207
 	ndef
 }
 
-model 140 {   // bat_mdl_208
+model 138 {   // bat_mdl_208
 	0.149 0.149 0.149
 	<bat.mdl>
 	bat_mdl_208
@@ -2843,7 +2798,7 @@ model 140 {   // bat_mdl_208
 	ndef
 }
 
-model 141 {   // bat_mdl_209
+model 139 {   // bat_mdl_209
 	0.149 0.149 0.149
 	<bat.mdl>
 	bat_mdl_209
@@ -2856,7 +2811,7 @@ model 141 {   // bat_mdl_209
 	ndef
 }
 
-model 142 {   // bat_mdl_210
+model 140 {   // bat_mdl_210
 	0.149 0.149 0.149
 	<bat.mdl>
 	bat_mdl_210
@@ -2869,7 +2824,7 @@ model 142 {   // bat_mdl_210
 	ndef
 }
 
-model 143 {   // bat_mdl_211
+model 141 {   // bat_mdl_211
 	0.149 0.149 0.149
 	<bat.mdl>
 	bat_mdl_211
@@ -2882,7 +2837,7 @@ model 143 {   // bat_mdl_211
 	ndef
 }
 
-model 144 {   // bat_mdl_212
+model 142 {   // bat_mdl_212
 	0.149 0.149 0.149
 	<bat.mdl>
 	bat_mdl_212
@@ -2895,7 +2850,7 @@ model 144 {   // bat_mdl_212
 	ndef
 }
 
-model 145 {   // bat_mdl_213
+model 143 {   // bat_mdl_213
 	0.149 0.149 0.149
 	<bat.mdl>
 	bat_mdl_213
@@ -2908,7 +2863,7 @@ model 145 {   // bat_mdl_213
 	ndef
 }
 
-model 146 {   // bat_mdl_214
+model 144 {   // bat_mdl_214
 	0.149 0.149 0.149
 	<bat.mdl>
 	bat_mdl_214
@@ -2921,7 +2876,7 @@ model 146 {   // bat_mdl_214
 	ndef
 }
 
-model 147 {   // bat_mdl_215
+model 145 {   // bat_mdl_215
 	0.149 0.149 0.149
 	<bat.mdl>
 	bat_mdl_215
@@ -2934,7 +2889,7 @@ model 147 {   // bat_mdl_215
 	ndef
 }
 
-model 148 {   // bat_mdl_216
+model 146 {   // bat_mdl_216
 	0.149 0.149 0.149
 	<bat.mdl>
 	bat_mdl_216
@@ -2947,7 +2902,7 @@ model 148 {   // bat_mdl_216
 	ndef
 }
 
-model 149 {   // bat_mdl_217
+model 147 {   // bat_mdl_217
 	0.149 0.149 0.149
 	<bat.mdl>
 	bat_mdl_217
@@ -2960,7 +2915,7 @@ model 149 {   // bat_mdl_217
 	ndef
 }
 
-model 150 {   // bat_mdl_218
+model 148 {   // bat_mdl_218
 	0.149 0.149 0.149
 	<bat.mdl>
 	bat_mdl_218
@@ -2973,7 +2928,7 @@ model 150 {   // bat_mdl_218
 	ndef
 }
 
-model 151 {   // bat_mdl_219
+model 149 {   // bat_mdl_219
 	0.149 0.149 0.149
 	<bat.mdl>
 	bat_mdl_219
@@ -2986,7 +2941,7 @@ model 151 {   // bat_mdl_219
 	ndef
 }
 
-model 152 {   // bat_mdl_220
+model 150 {   // bat_mdl_220
 	0.149 0.149 0.149
 	<bat.mdl>
 	bat_mdl_220
@@ -2999,7 +2954,7 @@ model 152 {   // bat_mdl_220
 	ndef
 }
 
-model 153 {   // bat_mdl_221
+model 151 {   // bat_mdl_221
 	0.149 0.149 0.149
 	<bat.mdl>
 	bat_mdl_221
@@ -3012,7 +2967,7 @@ model 153 {   // bat_mdl_221
 	ndef
 }
 
-model 154 {   // bat_mdl_222
+model 152 {   // bat_mdl_222
 	0.149 0.149 0.149
 	<bat.mdl>
 	bat_mdl_222
@@ -3025,7 +2980,7 @@ model 154 {   // bat_mdl_222
 	ndef
 }
 
-model 155 {   // bat_mdl_223
+model 153 {   // bat_mdl_223
 	0.149 0.149 0.149
 	<bat.mdl>
 	bat_mdl_223
@@ -3038,7 +2993,7 @@ model 155 {   // bat_mdl_223
 	ndef
 }
 
-model 156 {   // bat_mdl_224
+model 154 {   // bat_mdl_224
 	0.149 0.149 0.149
 	<bat.mdl>
 	bat_mdl_224
@@ -3051,7 +3006,7 @@ model 156 {   // bat_mdl_224
 	ndef
 }
 
-model 157 {   // bat_mdl_225
+model 155 {   // bat_mdl_225
 	0.149 0.149 0.149
 	<bat.mdl>
 	bat_mdl_225
@@ -3064,7 +3019,7 @@ model 157 {   // bat_mdl_225
 	ndef
 }
 
-model 158 {   // bat_mdl_226
+model 156 {   // bat_mdl_226
 	0.149 0.149 0.149
 	<bat.mdl>
 	bat_mdl_226
@@ -3077,7 +3032,7 @@ model 158 {   // bat_mdl_226
 	ndef
 }
 
-model 159 {   // bat_mdl_227
+model 157 {   // bat_mdl_227
 	0.149 0.149 0.149
 	<bat.mdl>
 	bat_mdl_227
@@ -3090,7 +3045,7 @@ model 159 {   // bat_mdl_227
 	ndef
 }
 
-model 160 {   // bat_mdl_228
+model 158 {   // bat_mdl_228
 	0.149 0.149 0.149
 	<bat.mdl>
 	bat_mdl_228
@@ -3103,7 +3058,7 @@ model 160 {   // bat_mdl_228
 	ndef
 }
 
-model 161 {   // bat_mdl_229
+model 159 {   // bat_mdl_229
 	0.149 0.149 0.149
 	<bat.mdl>
 	bat_mdl_229
@@ -3116,7 +3071,7 @@ model 161 {   // bat_mdl_229
 	ndef
 }
 
-model 162 {   // bat_mdl_230
+model 160 {   // bat_mdl_230
 	0.149 0.149 0.149
 	<bat.mdl>
 	bat_mdl_230
@@ -3129,7 +3084,7 @@ model 162 {   // bat_mdl_230
 	ndef
 }
 
-model 163 {   // bat_mdl_231
+model 161 {   // bat_mdl_231
 	0.149 0.149 0.149
 	<bat.mdl>
 	bat_mdl_231
@@ -3142,7 +3097,7 @@ model 163 {   // bat_mdl_231
 	ndef
 }
 
-model 164 {   // bat_mdl_232
+model 162 {   // bat_mdl_232
 	0.149 0.149 0.149
 	<bat.mdl>
 	bat_mdl_232
@@ -3155,7 +3110,7 @@ model 164 {   // bat_mdl_232
 	ndef
 }
 
-model 165 {   // bat_mdl_233
+model 163 {   // bat_mdl_233
 	0.149 0.149 0.149
 	<bat.mdl>
 	bat_mdl_233
@@ -3168,7 +3123,7 @@ model 165 {   // bat_mdl_233
 	ndef
 }
 
-model 166 {   // bat_mdl_234
+model 164 {   // bat_mdl_234
 	0.149 0.149 0.149
 	<bat.mdl>
 	bat_mdl_234
@@ -3181,7 +3136,7 @@ model 166 {   // bat_mdl_234
 	ndef
 }
 
-model 167 {   // bat_mdl_235
+model 165 {   // bat_mdl_235
 	0.149 0.149 0.149
 	<bat.mdl>
 	bat_mdl_235
@@ -3194,7 +3149,7 @@ model 167 {   // bat_mdl_235
 	ndef
 }
 
-model 168 {   // bat_mdl_236
+model 166 {   // bat_mdl_236
 	0.149 0.149 0.149
 	<bat.mdl>
 	bat_mdl_236
@@ -3207,7 +3162,7 @@ model 168 {   // bat_mdl_236
 	ndef
 }
 
-model 169 {   // bat_mdl_237
+model 167 {   // bat_mdl_237
 	0.149 0.149 0.149
 	<bat.mdl>
 	bat_mdl_237
@@ -3220,7 +3175,7 @@ model 169 {   // bat_mdl_237
 	ndef
 }
 
-model 170 {   // bat_mdl_238
+model 168 {   // bat_mdl_238
 	0.149 0.149 0.149
 	<bat.mdl>
 	bat_mdl_238
@@ -3233,7 +3188,7 @@ model 170 {   // bat_mdl_238
 	ndef
 }
 
-model 171 {   // bat_mdl_239
+model 169 {   // bat_mdl_239
 	0.149 0.149 0.149
 	<bat.mdl>
 	bat_mdl_239
@@ -3246,7 +3201,7 @@ model 171 {   // bat_mdl_239
 	ndef
 }
 
-model 172 {   // bat_mdl_240
+model 170 {   // bat_mdl_240
 	0.149 0.149 0.149
 	<bat.mdl>
 	bat_mdl_240
@@ -3259,7 +3214,7 @@ model 172 {   // bat_mdl_240
 	ndef
 }
 
-model 173 {   // bat_mdl_241
+model 171 {   // bat_mdl_241
 	0.149 0.149 0.149
 	<bat.mdl>
 	bat_mdl_241
@@ -3272,7 +3227,7 @@ model 173 {   // bat_mdl_241
 	ndef
 }
 
-model 174 {   // bat_mdl_242
+model 172 {   // bat_mdl_242
 	0.149 0.149 0.149
 	<bat.mdl>
 	bat_mdl_242
@@ -3285,7 +3240,7 @@ model 174 {   // bat_mdl_242
 	ndef
 }
 
-model 175 {   // bat_mdl_243
+model 173 {   // bat_mdl_243
 	0.149 0.149 0.149
 	<bat.mdl>
 	bat_mdl_243
@@ -3298,7 +3253,7 @@ model 175 {   // bat_mdl_243
 	ndef
 }
 
-model 176 {   // bat_mdl_244
+model 174 {   // bat_mdl_244
 	0.149 0.149 0.149
 	<bat.mdl>
 	bat_mdl_244
@@ -3311,7 +3266,7 @@ model 176 {   // bat_mdl_244
 	ndef
 }
 
-model 177 {   // bat_mdl_245
+model 175 {   // bat_mdl_245
 	0.149 0.149 0.149
 	<bat.mdl>
 	bat_mdl_245
@@ -3324,7 +3279,7 @@ model 177 {   // bat_mdl_245
 	ndef
 }
 
-model 178 {   // bat_mdl_246
+model 176 {   // bat_mdl_246
 	0.149 0.149 0.149
 	<bat.mdl>
 	bat_mdl_246
@@ -3337,7 +3292,7 @@ model 178 {   // bat_mdl_246
 	ndef
 }
 
-model 179 {   // bat_mdl_247
+model 177 {   // bat_mdl_247
 	0.149 0.149 0.149
 	<bat.mdl>
 	bat_mdl_247
@@ -3350,7 +3305,7 @@ model 179 {   // bat_mdl_247
 	ndef
 }
 
-model 180 {   // bat_mdl_248
+model 178 {   // bat_mdl_248
 	0.149 0.149 0.149
 	<bat.mdl>
 	bat_mdl_248
@@ -3363,7 +3318,7 @@ model 180 {   // bat_mdl_248
 	ndef
 }
 
-model 181 {   // bat_mdl_249
+model 179 {   // bat_mdl_249
 	0.149 0.149 0.149
 	<bat.mdl>
 	bat_mdl_249
@@ -3376,7 +3331,7 @@ model 181 {   // bat_mdl_249
 	ndef
 }
 
-model 182 {   // bat_mdl_250
+model 180 {   // bat_mdl_250
 	0.149 0.149 0.149
 	<bat.mdl>
 	bat_mdl_250
@@ -3389,7 +3344,7 @@ model 182 {   // bat_mdl_250
 	ndef
 }
 
-model 183 {   // bat_mdl_251
+model 181 {   // bat_mdl_251
 	0.149 0.149 0.149
 	<bat.mdl>
 	bat_mdl_251
@@ -3402,7 +3357,7 @@ model 183 {   // bat_mdl_251
 	ndef
 }
 
-model 184 {   // bat_mdl_252
+model 182 {   // bat_mdl_252
 	0.149 0.149 0.149
 	<bat.mdl>
 	bat_mdl_252
@@ -3415,7 +3370,7 @@ model 184 {   // bat_mdl_252
 	ndef
 }
 
-model 185 {   // bat_mdl_253
+model 183 {   // bat_mdl_253
 	0.149 0.149 0.149
 	<bat.mdl>
 	bat_mdl_253
@@ -3428,7 +3383,7 @@ model 185 {   // bat_mdl_253
 	ndef
 }
 
-model 186 {   // bat_mdl_254
+model 184 {   // bat_mdl_254
 	0.149 0.149 0.149
 	<bat.mdl>
 	bat_mdl_254
@@ -3441,7 +3396,7 @@ model 186 {   // bat_mdl_254
 	ndef
 }
 
-model 187 {   // bat_mdl_255
+model 185 {   // bat_mdl_255
 	0.149 0.149 0.149
 	<bat.mdl>
 	bat_mdl_255
@@ -3454,7 +3409,7 @@ model 187 {   // bat_mdl_255
 	ndef
 }
 
-model 188 {   // bat_mdl_256
+model 186 {   // bat_mdl_256
 	0.149 0.149 0.149
 	<bat.mdl>
 	bat_mdl_256
@@ -3467,7 +3422,7 @@ model 188 {   // bat_mdl_256
 	ndef
 }
 
-model 189 {   // bat_mdl_257
+model 187 {   // bat_mdl_257
 	0.149 0.149 0.149
 	<bat.mdl>
 	bat_mdl_257
@@ -3480,7 +3435,7 @@ model 189 {   // bat_mdl_257
 	ndef
 }
 
-model 190 {   // bat_mdl_258
+model 188 {   // bat_mdl_258
 	0.149 0.149 0.149
 	<bat.mdl>
 	bat_mdl_258
@@ -3493,7 +3448,7 @@ model 190 {   // bat_mdl_258
 	ndef
 }
 
-model 191 {   // bat_mdl_259
+model 189 {   // bat_mdl_259
 	0.149 0.149 0.149
 	<bat.mdl>
 	bat_mdl_259
@@ -3506,7 +3461,7 @@ model 191 {   // bat_mdl_259
 	ndef
 }
 
-model 192 {   // bat_mdl_260
+model 190 {   // bat_mdl_260
 	0.149 0.149 0.149
 	<bat.mdl>
 	bat_mdl_260
@@ -3519,7 +3474,7 @@ model 192 {   // bat_mdl_260
 	ndef
 }
 
-model 193 {   // bat_mdl_261
+model 191 {   // bat_mdl_261
 	0.149 0.149 0.149
 	<bat.mdl>
 	bat_mdl_261
@@ -3532,7 +3487,7 @@ model 193 {   // bat_mdl_261
 	ndef
 }
 
-model 194 {   // bat_mdl_262
+model 192 {   // bat_mdl_262
 	0.149 0.149 0.149
 	<bat.mdl>
 	bat_mdl_262
@@ -3545,7 +3500,7 @@ model 194 {   // bat_mdl_262
 	ndef
 }
 
-model 195 {   // bat_mdl_263
+model 193 {   // bat_mdl_263
 	0.149 0.149 0.149
 	<bat.mdl>
 	bat_mdl_263
@@ -3558,7 +3513,7 @@ model 195 {   // bat_mdl_263
 	ndef
 }
 
-model 196 {   // bat_mdl_264
+model 194 {   // bat_mdl_264
 	0.149 0.149 0.149
 	<bat.mdl>
 	bat_mdl_264
@@ -3571,7 +3526,7 @@ model 196 {   // bat_mdl_264
 	ndef
 }
 
-model 197 {   // bat_mdl_265
+model 195 {   // bat_mdl_265
 	0.149 0.149 0.149
 	<bat.mdl>
 	bat_mdl_265
@@ -3584,7 +3539,7 @@ model 197 {   // bat_mdl_265
 	ndef
 }
 
-model 198 {   // bat_mdl_266
+model 196 {   // bat_mdl_266
 	0.149 0.149 0.149
 	<bat.mdl>
 	bat_mdl_266
@@ -3597,7 +3552,7 @@ model 198 {   // bat_mdl_266
 	ndef
 }
 
-model 199 {   // bat_mdl_267
+model 197 {   // bat_mdl_267
 	0.149 0.149 0.149
 	<bat.mdl>
 	bat_mdl_267
@@ -3610,7 +3565,7 @@ model 199 {   // bat_mdl_267
 	ndef
 }
 
-model 200 {   // bat_mdl_268
+model 198 {   // bat_mdl_268
 	0.149 0.149 0.149
 	<bat.mdl>
 	bat_mdl_268
@@ -3623,7 +3578,7 @@ model 200 {   // bat_mdl_268
 	ndef
 }
 
-model 201 {   // bat_mdl_269
+model 199 {   // bat_mdl_269
 	0.149 0.149 0.149
 	<bat.mdl>
 	bat_mdl_269
@@ -3636,7 +3591,7 @@ model 201 {   // bat_mdl_269
 	ndef
 }
 
-model 202 {   // bat_mdl_270
+model 200 {   // bat_mdl_270
 	0.149 0.149 0.149
 	<bat.mdl>
 	bat_mdl_270
@@ -3649,7 +3604,7 @@ model 202 {   // bat_mdl_270
 	ndef
 }
 
-model 203 {   // bat_mdl_271
+model 201 {   // bat_mdl_271
 	0.149 0.149 0.149
 	<bat.mdl>
 	bat_mdl_271
@@ -3662,7 +3617,7 @@ model 203 {   // bat_mdl_271
 	ndef
 }
 
-model 204 {   // bat_mdl_272
+model 202 {   // bat_mdl_272
 	0.149 0.149 0.149
 	<bat.mdl>
 	bat_mdl_272
@@ -3675,7 +3630,7 @@ model 204 {   // bat_mdl_272
 	ndef
 }
 
-model 205 {   // bat_mdl_273
+model 203 {   // bat_mdl_273
 	0.149 0.149 0.149
 	<bat.mdl>
 	bat_mdl_273
@@ -3688,7 +3643,7 @@ model 205 {   // bat_mdl_273
 	ndef
 }
 
-model 206 {   // bat_mdl_274
+model 204 {   // bat_mdl_274
 	0.149 0.149 0.149
 	<bat.mdl>
 	bat_mdl_274
@@ -3701,7 +3656,7 @@ model 206 {   // bat_mdl_274
 	ndef
 }
 
-model 207 {   // bat_mdl_275
+model 205 {   // bat_mdl_275
 	0.149 0.149 0.149
 	<bat.mdl>
 	bat_mdl_275
@@ -3714,7 +3669,7 @@ model 207 {   // bat_mdl_275
 	ndef
 }
 
-model 208 {   // bat_mdl_276
+model 206 {   // bat_mdl_276
 	0.149 0.149 0.149
 	<bat.mdl>
 	bat_mdl_276
@@ -3727,7 +3682,7 @@ model 208 {   // bat_mdl_276
 	ndef
 }
 
-model 209 {   // bat_mdl_277
+model 207 {   // bat_mdl_277
 	0.149 0.149 0.149
 	<bat.mdl>
 	bat_mdl_277
@@ -3740,7 +3695,7 @@ model 209 {   // bat_mdl_277
 	ndef
 }
 
-model 210 {   // bat_mdl_278
+model 208 {   // bat_mdl_278
 	0.149 0.149 0.149
 	<bat.mdl>
 	bat_mdl_278
@@ -3753,7 +3708,7 @@ model 210 {   // bat_mdl_278
 	ndef
 }
 
-model 211 {   // bat_mdl_279
+model 209 {   // bat_mdl_279
 	0.149 0.149 0.149
 	<bat.mdl>
 	bat_mdl_279
@@ -3766,7 +3721,7 @@ model 211 {   // bat_mdl_279
 	ndef
 }
 
-model 212 {   // bat_mdl_280
+model 210 {   // bat_mdl_280
 	0.149 0.149 0.149
 	<bat.mdl>
 	bat_mdl_280
@@ -3779,7 +3734,7 @@ model 212 {   // bat_mdl_280
 	ndef
 }
 
-model 213 {   // bat_mdl_281
+model 211 {   // bat_mdl_281
 	0.149 0.149 0.149
 	<bat.mdl>
 	bat_mdl_281
@@ -3792,7 +3747,7 @@ model 213 {   // bat_mdl_281
 	ndef
 }
 
-model 214 {   // bat_mdl_282
+model 212 {   // bat_mdl_282
 	0.149 0.149 0.149
 	<bat.mdl>
 	bat_mdl_282
@@ -3805,7 +3760,7 @@ model 214 {   // bat_mdl_282
 	ndef
 }
 
-model 215 {   // bat_mdl_283
+model 213 {   // bat_mdl_283
 	0.149 0.149 0.149
 	<bat.mdl>
 	bat_mdl_283
@@ -3818,7 +3773,7 @@ model 215 {   // bat_mdl_283
 	ndef
 }
 
-model 216 {   // bat_mdl_284
+model 214 {   // bat_mdl_284
 	0.149 0.149 0.149
 	<bat.mdl>
 	bat_mdl_284
@@ -3831,7 +3786,7 @@ model 216 {   // bat_mdl_284
 	ndef
 }
 
-model 217 {   // stein1_mdl_286
+model 215 {   // stein1_mdl_286
 	1.562235 1.562235 1.562235
 	<stein1.mdl>
 	stein1_mdl_286
@@ -3844,7 +3799,7 @@ model 217 {   // stein1_mdl_286
 	ndef
 }
 
-model 218 {   // stein1_mdl_287
+model 216 {   // stein1_mdl_287
 	1.562235 1.562235 1.562235
 	<stein1.mdl>
 	stein1_mdl_287
@@ -3857,7 +3812,7 @@ model 218 {   // stein1_mdl_287
 	ndef
 }
 
-model 219 {   // stein1_mdl_288
+model 217 {   // stein1_mdl_288
 	1.562235 1.562235 1.562235
 	<stein1.mdl>
 	stein1_mdl_288
@@ -3870,7 +3825,7 @@ model 219 {   // stein1_mdl_288
 	ndef
 }
 
-model 220 {   // stein1_mdl_289
+model 218 {   // stein1_mdl_289
 	1.562235 1.562235 1.562235
 	<stein1.mdl>
 	stein1_mdl_289
@@ -3883,11 +3838,50 @@ model 220 {   // stein1_mdl_289
 	ndef
 }
 
-model 221 {   // stein1_mdl_291
+model 219 {   // stein1_mdl_291
 	1.562235 1.562235 1.562235
 	<stein1.mdl>
 	stein1_mdl_291
 	falling_stone
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 220 {   // bosslevel_trigg_292
+	1 1 1
+	<bosslevel_trigger.mdl>
+	bosslevel_trigg_292
+	acBossSpeech
+	0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+	00000100000000000000000000000000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 221 {   // trail_mdl_292
+	5.441567 5.441567 5.441567
+	<trail.mdl>
+	trail_mdl_292
+	acBossTrail
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
+model 222 {   // warghost_mdl_298
+	4.868931 4.868931 4.868931
+	<warghost.mdl>
+	warghost_mdl_298
+	acBossWarghost
 	0 0 0 0 0 0 0 0
 	0000
 	0
@@ -4305,1012 +4299,1012 @@ object 75 {
 }
 
 object 76 {
-	(-1216 -128 9728) (0 0 0) (1 1 1)
+	(-1408 -128 5376) (0 0 0) (1 1 1)
 	block 34
 }
 
 object 77 {
-	(-1408 -128 5376) (0 0 0) (1 1 1)
+	(-1792 -128 6272) (0 0 0) (1 1 1)
 	block 35
 }
 
 object 78 {
-	(-1792 -128 6272) (0 0 0) (1 1 1)
+	(-800 -128 6832) (0 0 0) (1 1 1)
 	block 36
 }
 
 object 79 {
-	(-800 -128 6832) (0 0 0) (1 1 1)
+	(-1536 -128 7520) (0 0 0) (1 1 1)
 	block 37
 }
 
 object 80 {
-	(-1536 -128 7520) (0 0 0) (1 1 1)
+	(-2048 -128 7232) (0 0 0) (1 1 1)
 	block 38
 }
 
 object 81 {
-	(-2048 -128 7232) (0 0 0) (1 1 1)
+	(-1880 32 176) (0 0 0) (1 1 1)
 	block 39
 }
 
 object 82 {
-	(-1880 32 176) (0 0 0) (1 1 1)
+	(-1984 32 592) (0 0 0) (1 1 1)
 	block 40
 }
 
 object 83 {
-	(-1984 32 592) (0 0 0) (1 1 1)
+	(-1728 32 2240) (0 0 0) (1 1 1)
 	block 41
 }
 
 object 84 {
-	(-1728 32 2240) (0 0 0) (1 1 1)
+	(-2304 32 3328) (0 0 0) (1 1 1)
 	block 42
 }
 
 object 85 {
-	(-2304 32 3328) (0 0 0) (1 1 1)
+	(-2048 32 4800) (0 0 0) (1 1 1)
 	block 43
 }
 
 object 86 {
-	(-2048 32 4800) (0 0 0) (1 1 1)
+	(-1376 32 6336) (0 0 0) (1 1 1)
 	block 44
 }
 
 object 87 {
-	(-1376 32 6336) (0 0 0) (1 1 1)
+	(-1216 32 8000) (0 0 0) (1 1 1)
 	block 45
 }
 
 object 88 {
-	(-1216 32 8000) (0 0 0) (1 1 1)
+	(-1880 32 400) (0 0 0) (1 1 1)
 	block 46
 }
 
 object 89 {
-	(-1880 32 400) (0 0 0) (1 1 1)
+	(-2200 -128 400) (0 0 0) (1 1 1)
 	block 47
 }
 
 object 90 {
-	(-2200 -128 400) (0 0 0) (1 1 1)
-	block 48
-}
-
-object 91 {
 	(-1596 -192 296) (-0 0 0) (1 1 1)
 	light 42
 }
 
-object 92 {
+object 91 {
 	(-2172 -80 1224) (-0 0 0) (1 1 1)
 	light 43
 }
 
-object 93 {
+object 92 {
 	(-2160 -88 2476) (-0 0 0) (1 1 1)
 	light 44
 }
 
-object 94 {
+object 93 {
 	(-2528 -88 3744) (-0 0 0) (1 1 1)
 	light 45
 }
 
-object 95 {
+object 94 {
 	(-2800 -96 4880) (-0 0 0) (1 1 1)
 	light 46
 }
 
-object 96 {
+object 95 {
 	(-1120 -96 4912) (-0 0 0) (1 1 1)
 	light 47
 }
 
-object 97 {
+object 96 {
 	(-2000 -100 5808) (-0 0 0) (1 1 1)
 	light 48
 }
 
-object 98 {
+object 97 {
 	(-944 -100 6308) (-0 0 0) (1 1 1)
 	light 49
 }
 
-object 99 {
+object 98 {
 	(-1728 -100 7104) (-0 0 0) (1 1 1)
 	light 50
 }
 
-object 100 {
+object 99 {
 	(-448 -96 8000) (-0 0 0) (1 1 1)
 	light 51
 }
 
-object 101 {
+object 100 {
 	(-1984 32 1408) (0 0 0) (1 1 1)
+	block 48
+}
+
+object 101 {  // tt
+	(-2264 -128 2240) (0 0 0) (1 1 1)
 	block 49
 }
 
 object 102 {  // tt
-	(-2264 -128 2240) (0 0 0) (1 1 1)
+	(-2264 -128 2480) (0 0 0) (1 1 1)
 	block 50
 }
 
-object 103 {  // tt
-	(-2264 -128 2480) (0 0 0) (1 1 1)
+object 103 {
+	(-1280 -128 2368) (0 0 0) (1 1 1)
 	block 51
 }
 
 object 104 {
-	(-1280 -128 2368) (0 0 0) (1 1 1)
+	(-2304 32 2496) (0 0 0) (1 1 1)
 	block 52
 }
 
 object 105 {
-	(-2304 32 2496) (0 0 0) (1 1 1)
+	(-3328 -128 4800) (0 0 0) (1 1 1)
 	block 53
 }
 
 object 106 {
-	(-3328 -128 4800) (0 0 0) (1 1 1)
+	(-1408 -128 4352) (0 0 0) (1 1 1)
 	block 54
 }
 
-object 107 {
-	(-1408 -128 4352) (0 0 0) (1 1 1)
-	block 55
-}
-
-object 108 {  // torch_mdl_068
+object 107 {  // torch_mdl_068
 	(-1512 -192 192) (3.141592 0 0.261799) (1 1 1)
 	model 52
 }
 
-object 109 {  // torch_mdl_072
+object 108 {  // torch_mdl_072
 	(-2172 0 1084) (-1.570796 0 0) (1 1 1)
 	model 53
 }
 
-object 110 {  // torch_mdl_080
+object 109 {  // torch_mdl_080
 	(-2160 0 2324) (-1.570796 0 0) (1 1 1)
 	model 54
 }
 
-object 111 {  // torch_mdl_081
+object 110 {  // torch_mdl_081
 	(-2528 0 3600) (-1.570796 0 0) (1 1 1)
 	model 55
 }
 
-object 112 {  // torch_mdl_082
+object 111 {  // torch_mdl_082
 	(-2804 0 4716) (-1.570796 0 0) (1 1 1)
 	model 56
 }
 
-object 113 {  // torch_mdl_083
+object 112 {  // torch_mdl_083
 	(-1120 0 4772) (-1.570796 0 0) (1 1 1)
 	model 57
 }
 
-object 114 {  // torch_mdl_084
+object 113 {  // torch_mdl_084
 	(-1996 0 5668) (-1.570796 0 0) (1 1 1)
 	model 58
 }
 
-object 115 {  // torch_mdl_085
+object 114 {  // torch_mdl_085
 	(-948 0 6152) (-1.570796 0 0) (1 1 1)
 	model 59
 }
 
-object 116 {  // torch_mdl_086
+object 115 {  // torch_mdl_086
 	(-1728 0 6960) (-1.570796 0 0) (1 1 1)
 	model 60
 }
 
-object 117 {  // torch_mdl_087
+object 116 {  // torch_mdl_087
 	(-444 0 7844) (-1.570796 0 0) (1 1 1)
 	model 61
 }
 
-object 118 {  // carpet1_mdl_087
+object 117 {  // carpet1_mdl_087
 	(-1812 -136 4) (-0 0 0) (11.554569 11.554569 11.554569)
 	model 62
 }
 
-object 119 {  // carpet2_mdl_090
+object 118 {  // carpet2_mdl_090
 	(-1972 -4 244) (-1.570796 -0 1.570796) (8.821559 8.821559 8.821559)
 	model 63
 }
 
-object 120 {  // carpet3_mdl_094
+object 119 {  // carpet3_mdl_094
 	(-1832 -124 4612) (-0 0 0) (11.861186 11.861186 11.861186)
 	model 64
 }
 
-object 121 {  // skelett_mdl_101
+object 120 {  // skelett_mdl_101
 	(-1604 -248 2316) (-1.832596 0 0) (1.836096 1.836096 1.836096)
 	model 65
 }
 
-object 122 {  // barrel1_mdl_106
+object 121 {  // barrel1_mdl_106
 	(-1532 -40 0) (-0 0 0) (1 1 1)
 	model 66
 }
 
-object 123 {  // barrel1_mdl_108
+object 122 {  // barrel1_mdl_108
 	(-1604 -48 0) (-2.879793 0 0) (1 1 1)
 	model 67
 }
 
-object 124 {  // barrel1_mdl_109
+object 123 {  // barrel1_mdl_109
 	(-1572 -36 68) (1.308997 0 0) (1 1 1)
 	model 68
 }
 
-object 125 {  // columnB_mdl_111
+object 124 {  // columnB_mdl_111
 	(-1124 -80 4732) (0.523599 -0 0.523599) (1.302603 1.302603 1.302603)
 	model 69
 }
 
-object 126 {  // kronleuchter_116
+object 125 {  // kronleuchter_116
 	(-2816 -84 5240) (0.261799 0 0) (2 2 2)
 	model 70
 }
 
-object 127 {  // curtainUpper_120
+object 126 {  // curtainUpper_120
 	(-1836 -212 4512) (-0 0 0) (1 1 1)
 	model 71
 }
 
-object 128 {  // stein1_mdl_122
+object 127 {  // stein1_mdl_122
 	(-2128 -128 5120) (-0 0 0) (1.562235 1.562235 1.562235)
 	model 72
 }
 
-object 129 {  // stein1_mdl_125
+object 128 {  // stein1_mdl_125
 	(-2096 -128 3152) (-0 -0 1.570796) (1.562235 1.562235 1.562235)
 	model 73
 }
 
-object 130 {  // lionhead_mdl_126
+object 129 {  // lionhead_mdl_126
 	(-1840 -38 4804) (-1.570796 0 0) (1 1 1)
 	model 74
 }
 
-object 131 {  // bat_mdl_128
+object 130 {  // bat_mdl_128
 	(-1560 -96 376) (-1.570796 0 0) (0.149 0.149 0.149)
 	model 75
 }
 
-object 132 {  // lottifant_mdl_128
-	(-1652 -172 8944) (-1.570796 0 0) (4.305115 4.305115 4.305115)
+object 131 {  // a4Cube_mdl_133
+	(-672 -80 8976) (-0 0 0) (1 1 1)
 	model 76
 }
 
-object 133 {  // a4Cube_mdl_133
-	(-672 -80 8976) (-0 0 0) (1 1 1)
+object 132 {  // a4Cube_mdl_134
+	(-508 -72 8972) (-0 0 0) (1 1 1)
 	model 77
 }
 
-object 134 {  // a4Cube_mdl_134
-	(-508 -72 8972) (-0 0 0) (1 1 1)
+object 133 {  // a4Cube_mdl_135
+	(-380 -72 8968) (-0 0 0) (1 1 1)
 	model 78
 }
 
-object 135 {  // a4Cube_mdl_135
-	(-380 -72 8968) (-0 0 0) (1 1 1)
+object 134 {  // a4Cube_mdl_136
+	(-1568 -72 4696) (-0 0 0) (1 1 1)
 	model 79
 }
 
-object 136 {  // a4Cube_mdl_136
-	(-1568 -72 4696) (-0 0 0) (1 1 1)
+object 135 {  // a4Cube_mdl_137
+	(-1464 -72 4696) (-0 0 0) (1 1 1)
 	model 80
 }
 
-object 137 {  // a4Cube_mdl_137
-	(-1464 -72 4696) (-0 0 0) (1 1 1)
+object 136 {  // a4Cube_mdl_138
+	(-1336 -72 4692) (-0 0 0) (1 1 1)
 	model 81
 }
 
-object 138 {  // a4Cube_mdl_138
-	(-1336 -72 4692) (-0 0 0) (1 1 1)
+object 137 {  // a4Cube_mdl_139
+	(-2564 -72 4812) (-0 0 0) (1 1 1)
 	model 82
 }
 
-object 139 {  // a4Cube_mdl_139
-	(-2564 -72 4812) (-0 0 0) (1 1 1)
+object 138 {  // a4Cube_mdl_140
+	(-2748 -72 4084) (-0 0 0) (1 1 1)
 	model 83
 }
 
-object 140 {  // a4Cube_mdl_140
-	(-2748 -72 4084) (-0 0 0) (1 1 1)
+object 139 {  // a4Cube_mdl_141
+	(-2528 -72 3588) (-0 0 0) (1 1 1)
 	model 84
 }
 
-object 141 {  // a4Cube_mdl_141
-	(-2528 -72 3588) (-0 0 0) (1 1 1)
+object 140 {  // a4Cube_mdl_142
+	(-2280 -72 3340) (-0 0 0) (1 1 1)
 	model 85
 }
 
-object 142 {  // a4Cube_mdl_142
-	(-2280 -72 3340) (-0 0 0) (1 1 1)
+object 141 {  // a4Cube_mdl_143
+	(-2036 -72 2976) (-0 0 0) (1 1 1)
 	model 86
 }
 
-object 143 {  // a4Cube_mdl_143
-	(-2036 -72 2976) (-0 0 0) (1 1 1)
+object 142 {  // a4Cube_mdl_144
+	(-2024 -72 840) (-0 0 0) (1 1 1)
 	model 87
 }
 
-object 144 {  // a4Cube_mdl_144
-	(-2024 -72 840) (-0 0 0) (1 1 1)
+object 143 {  // a4Cube_mdl_145
+	(-2020 -64 688) (-0 0 0) (1 1 1)
 	model 88
 }
 
-object 145 {  // a4Cube_mdl_145
-	(-2020 -64 688) (-0 0 0) (1 1 1)
+object 144 {  // a4Cube_mdl_146
+	(-2016 -64 556) (-0 0 0) (1 1 1)
 	model 89
 }
 
-object 146 {  // a4Cube_mdl_146
-	(-2016 -64 556) (-0 0 0) (1 1 1)
+object 145 {  // lotter_dummy_146
+	(-1152 -100 5072) (-0 0 0) (1 1 1)
 	model 90
 }
 
-object 147 {  // lotter_dummy_146
-	(-1152 -100 5072) (-0 0 0) (1 1 1)
+object 146 {  // bottle_mdl_147
+	(-1192 40 8898) (1.570796 0 0) (8 8 8)
 	model 91
 }
 
-object 148 {  // bottle_mdl_147
-	(-1192 40 8898) (1.570796 0 0) (8 8 8)
+object 147 {  // bat_mdl_157
+	(-1588 -192 376) (-1.570796 0 0) (0.149 0.149 0.149)
 	model 92
 }
 
-object 149 {  // a4Cube_mdl_150
-	(-1504 -176 9392) (-0 0 0) (1 1 1)
+object 148 {  // bat_mdl_158
+	(-1560 -248 376) (-1.570796 0 0) (0.149 0.149 0.149)
 	model 93
 }
 
-object 150 {  // bat_mdl_157
-	(-1588 -192 376) (-1.570796 0 0) (0.149 0.149 0.149)
+object 149 {  // bat_mdl_159
+	(-1940 -228 1404) (-1.570796 0 0) (0.149 0.149 0.149)
 	model 94
 }
 
-object 151 {  // bat_mdl_158
-	(-1560 -248 376) (-1.570796 0 0) (0.149 0.149 0.149)
+object 150 {  // bat_mdl_162
+	(-1952 -240 2520) (-1.570796 0 0) (0.149 0.149 0.149)
 	model 95
 }
 
-object 152 {  // bat_mdl_159
-	(-1940 -228 1404) (-1.570796 0 0) (0.149 0.149 0.149)
+object 151 {  // bat_mdl_163
+	(-2012 -76 2520) (-1.570796 0 0) (0.149 0.149 0.149)
 	model 96
 }
 
-object 153 {  // bat_mdl_162
-	(-1952 -240 2520) (-1.570796 0 0) (0.149 0.149 0.149)
+object 152 {  // bat_mdl_164
+	(-2084 -168 2520) (-1.570796 0 0) (0.149 0.149 0.149)
 	model 97
 }
 
-object 154 {  // bat_mdl_163
-	(-2012 -76 2520) (-1.570796 0 0) (0.149 0.149 0.149)
+object 153 {  // bat_mdl_165
+	(-2148 -204 2520) (-1.570796 0 0) (0.149 0.149 0.149)
 	model 98
 }
 
-object 155 {  // bat_mdl_164
-	(-2084 -168 2520) (-1.570796 0 0) (0.149 0.149 0.149)
+object 154 {  // bat_mdl_166
+	(-2096 -252 2520) (-1.570796 0 0) (0.149 0.149 0.149)
 	model 99
 }
 
-object 156 {  // bat_mdl_165
-	(-2148 -204 2520) (-1.570796 0 0) (0.149 0.149 0.149)
+object 155 {  // bat_mdl_167
+	(-1881.600098 -204 3324) (-1.570796 0 0) (0.149 0.149 0.149)
 	model 100
 }
 
-object 157 {  // bat_mdl_166
-	(-2096 -252 2520) (-1.570796 0 0) (0.149 0.149 0.149)
+object 156 {  // bat_mdl_168
+	(-1829.600098 -252 3324) (-1.570796 0 0) (0.149 0.149 0.149)
 	model 101
 }
 
-object 158 {  // bat_mdl_167
-	(-1881.600098 -204 3324) (-1.570796 0 0) (0.149 0.149 0.149)
+object 157 {  // bat_mdl_169
+	(-1817.600098 -168 3324) (-1.570796 0 0) (0.149 0.149 0.149)
 	model 102
 }
 
-object 159 {  // bat_mdl_168
-	(-1829.600098 -252 3324) (-1.570796 0 0) (0.149 0.149 0.149)
+object 158 {  // bat_mdl_170
+	(-1745.600098 -76 3324) (-1.570796 0 0) (0.149 0.149 0.149)
 	model 103
 }
 
-object 160 {  // bat_mdl_169
-	(-1817.600098 -168 3324) (-1.570796 0 0) (0.149 0.149 0.149)
+object 159 {  // bat_mdl_171
+	(-1685.600098 -240 3324) (-1.570796 0 0) (0.149 0.149 0.149)
 	model 104
 }
 
-object 161 {  // bat_mdl_170
-	(-1745.600098 -76 3324) (-1.570796 0 0) (0.149 0.149 0.149)
+object 160 {  // bat_mdl_172
+	(-2389.600098 -180 4088) (-1.570796 0 0) (0.149 0.149 0.149)
 	model 105
 }
 
-object 162 {  // bat_mdl_171
-	(-1685.600098 -240 3324) (-1.570796 0 0) (0.149 0.149 0.149)
+object 161 {  // bat_mdl_173
+	(-2337.600098 -228 4088) (-1.570796 0 0) (0.149 0.149 0.149)
 	model 106
 }
 
-object 163 {  // bat_mdl_172
-	(-2389.600098 -180 4088) (-1.570796 0 0) (0.149 0.149 0.149)
+object 162 {  // bat_mdl_174
+	(-2325.600098 -144 4088) (-1.570796 0 0) (0.149 0.149 0.149)
 	model 107
 }
 
-object 164 {  // bat_mdl_173
-	(-2337.600098 -228 4088) (-1.570796 0 0) (0.149 0.149 0.149)
+object 163 {  // bat_mdl_175
+	(-2253.600098 -52 4088) (-1.570796 0 0) (0.149 0.149 0.149)
 	model 108
 }
 
-object 165 {  // bat_mdl_174
-	(-2325.600098 -144 4088) (-1.570796 0 0) (0.149 0.149 0.149)
+object 164 {  // bat_mdl_176
+	(-2193.600098 -216 4088) (-1.570796 0 0) (0.149 0.149 0.149)
 	model 109
 }
 
-object 166 {  // bat_mdl_175
-	(-2253.600098 -52 4088) (-1.570796 0 0) (0.149 0.149 0.149)
+object 165 {  // bat_mdl_177
+	(-2893.600098 -180 5244) (-1.570796 0 0) (0.149 0.149 0.149)
 	model 110
 }
 
-object 167 {  // bat_mdl_176
-	(-2193.600098 -216 4088) (-1.570796 0 0) (0.149 0.149 0.149)
+object 166 {  // bat_mdl_178
+	(-2841.600098 -228 5244) (-1.570796 0 0) (0.149 0.149 0.149)
 	model 111
 }
 
-object 168 {  // bat_mdl_177
-	(-2893.600098 -180 5244) (-1.570796 0 0) (0.149 0.149 0.149)
+object 167 {  // bat_mdl_179
+	(-2829.600098 -144 5244) (-1.570796 0 0) (0.149 0.149 0.149)
 	model 112
 }
 
-object 169 {  // bat_mdl_178
-	(-2841.600098 -228 5244) (-1.570796 0 0) (0.149 0.149 0.149)
+object 168 {  // bat_mdl_180
+	(-2757.600098 -52 5244) (-1.570796 0 0) (0.149 0.149 0.149)
 	model 113
 }
 
-object 170 {  // bat_mdl_179
-	(-2829.600098 -144 5244) (-1.570796 0 0) (0.149 0.149 0.149)
+object 169 {  // bat_mdl_181
+	(-2697.600098 -216 5244) (-1.570796 0 0) (0.149 0.149 0.149)
 	model 114
 }
 
-object 171 {  // bat_mdl_180
-	(-2757.600098 -52 5244) (-1.570796 0 0) (0.149 0.149 0.149)
+object 170 {  // bat_mdl_185
+	(-2200 -144 5124) (-1.570796 0 0) (0.149 0.149 0.149)
 	model 115
 }
 
-object 172 {  // bat_mdl_181
-	(-2697.600098 -216 5244) (-1.570796 0 0) (0.149 0.149 0.149)
+object 171 {  // bat_mdl_186
+	(-1068 -96 4820) (-1.570796 0 0) (0.149 0.149 0.149)
 	model 116
 }
 
-object 173 {  // bat_mdl_185
-	(-2200 -144 5124) (-1.570796 0 0) (0.149 0.149 0.149)
+object 172 {  // bat_mdl_187
+	(-1048 -80 4812) (-1.570796 0 0) (0.149 0.149 0.149)
 	model 117
 }
 
-object 174 {  // bat_mdl_186
-	(-1068 -96 4820) (-1.570796 0 0) (0.149 0.149 0.149)
+object 173 {  // bat_mdl_188
+	(-1820 -40 4752) (-1.570796 0 0) (0.149 0.149 0.149)
 	model 118
 }
 
-object 175 {  // bat_mdl_187
-	(-1048 -80 4812) (-1.570796 0 0) (0.149 0.149 0.149)
+object 174 {  // bat_mdl_189
+	(-1996 -16 5576) (-1.570796 0 0) (0.149 0.149 0.149)
 	model 119
 }
 
-object 176 {  // bat_mdl_188
-	(-1820 -40 4752) (-1.570796 0 0) (0.149 0.149 0.149)
+object 175 {  // bat_mdl_190
+	(-1940 -76 6768) (-1.570796 0 0) (0.149 0.149 0.149)
 	model 120
 }
 
-object 177 {  // bat_mdl_189
-	(-1996 -16 5576) (-1.570796 0 0) (0.149 0.149 0.149)
+object 176 {  // bat_mdl_191
+	(-1992 -36 6704) (-1.570796 0 0) (0.149 0.149 0.149)
 	model 121
 }
 
-object 178 {  // bat_mdl_190
-	(-1940 -76 6768) (-1.570796 0 0) (0.149 0.149 0.149)
+object 177 {  // bat_mdl_192
+	(-1972 -144 6740) (-1.570796 0 0) (0.149 0.149 0.149)
 	model 122
 }
 
-object 179 {  // bat_mdl_191
-	(-1992 -36 6704) (-1.570796 0 0) (0.149 0.149 0.149)
+object 178 {  // bat_mdl_193
+	(-2036 -60 6668) (-1.570796 0 0) (0.149 0.149 0.149)
 	model 123
 }
 
-object 180 {  // bat_mdl_192
-	(-1972 -144 6740) (-1.570796 0 0) (0.149 0.149 0.149)
+object 179 {  // bat_mdl_194
+	(-2004 -188 6700) (-1.570796 0 0) (0.149 0.149 0.149)
 	model 124
 }
 
-object 181 {  // bat_mdl_193
-	(-2036 -60 6668) (-1.570796 0 0) (0.149 0.149 0.149)
+object 180 {  // bat_mdl_195
+	(-1728 -4 6864) (-1.570796 0 0) (0.149 0.149 0.149)
 	model 125
 }
 
-object 182 {  // bat_mdl_194
-	(-2004 -188 6700) (-1.570796 0 0) (0.149 0.149 0.149)
+object 181 {  // bat_mdl_196
+	(-448 -48 7920) (-1.570796 0 0) (0.149 0.149 0.149)
 	model 126
 }
 
-object 183 {  // bat_mdl_195
-	(-1728 -4 6864) (-1.570796 0 0) (0.149 0.149 0.149)
+object 182 {  // bat_mdl_197
+	(-896 -252 8576) (-1.570796 0 0) (0.149 0.149 0.149)
 	model 127
 }
 
-object 184 {  // bat_mdl_196
-	(-448 -48 7920) (-1.570796 0 0) (0.149 0.149 0.149)
+object 183 {  // bat_mdl_198
+	(-928 -252 8576) (-1.570796 0 0) (0.149 0.149 0.149)
 	model 128
 }
 
-object 185 {  // bat_mdl_197
-	(-896 -252 8576) (-1.570796 0 0) (0.149 0.149 0.149)
+object 184 {  // bat_mdl_199
+	(-992 -252 8576) (-1.570796 0 0) (0.149 0.149 0.149)
 	model 129
 }
 
-object 186 {  // bat_mdl_198
-	(-928 -252 8576) (-1.570796 0 0) (0.149 0.149 0.149)
+object 185 {  // bat_mdl_200
+	(-960 -252 8576) (-1.570796 0 0) (0.149 0.149 0.149)
 	model 130
 }
 
-object 187 {  // bat_mdl_199
-	(-992 -252 8576) (-1.570796 0 0) (0.149 0.149 0.149)
+object 186 {  // bat_mdl_201
+	(-1056 -252 8576) (-1.570796 0 0) (0.149 0.149 0.149)
 	model 131
 }
 
-object 188 {  // bat_mdl_200
-	(-960 -252 8576) (-1.570796 0 0) (0.149 0.149 0.149)
+object 187 {  // bat_mdl_202
+	(-1024 -252 8576) (-1.570796 0 0) (0.149 0.149 0.149)
 	model 132
 }
 
-object 189 {  // bat_mdl_201
-	(-1056 -252 8576) (-1.570796 0 0) (0.149 0.149 0.149)
+object 188 {  // bat_mdl_203
+	(-1120 -252 8576) (-1.570796 0 0) (0.149 0.149 0.149)
 	model 133
 }
 
-object 190 {  // bat_mdl_202
-	(-1024 -252 8576) (-1.570796 0 0) (0.149 0.149 0.149)
+object 189 {  // bat_mdl_204
+	(-1088 -252 8576) (-1.570796 0 0) (0.149 0.149 0.149)
 	model 134
 }
 
-object 191 {  // bat_mdl_203
-	(-1120 -252 8576) (-1.570796 0 0) (0.149 0.149 0.149)
+object 190 {  // bat_mdl_205
+	(-1152 -252 8576) (-1.570796 0 0) (0.149 0.149 0.149)
 	model 135
 }
 
-object 192 {  // bat_mdl_204
-	(-1088 -252 8576) (-1.570796 0 0) (0.149 0.149 0.149)
+object 191 {  // bat_mdl_206
+	(-1184 -252 8576) (-1.570796 0 0) (0.149 0.149 0.149)
 	model 136
 }
 
-object 193 {  // bat_mdl_205
-	(-1152 -252 8576) (-1.570796 0 0) (0.149 0.149 0.149)
+object 192 {  // bat_mdl_207
+	(-1216 -252 8576) (-1.570796 0 0) (0.149 0.149 0.149)
 	model 137
 }
 
-object 194 {  // bat_mdl_206
-	(-1184 -252 8576) (-1.570796 0 0) (0.149 0.149 0.149)
+object 193 {  // bat_mdl_208
+	(-1248 -252 8576) (-1.570796 0 0) (0.149 0.149 0.149)
 	model 138
 }
 
-object 195 {  // bat_mdl_207
-	(-1216 -252 8576) (-1.570796 0 0) (0.149 0.149 0.149)
+object 194 {  // bat_mdl_209
+	(-1280 -252 8576) (-1.570796 0 0) (0.149 0.149 0.149)
 	model 139
 }
 
-object 196 {  // bat_mdl_208
-	(-1248 -252 8576) (-1.570796 0 0) (0.149 0.149 0.149)
+object 195 {  // bat_mdl_210
+	(-1312 -252 8576) (-1.570796 0 0) (0.149 0.149 0.149)
 	model 140
 }
 
-object 197 {  // bat_mdl_209
-	(-1280 -252 8576) (-1.570796 0 0) (0.149 0.149 0.149)
+object 196 {  // bat_mdl_211
+	(-1344 -252 8576) (-1.570796 0 0) (0.149 0.149 0.149)
 	model 141
 }
 
-object 198 {  // bat_mdl_210
-	(-1312 -252 8576) (-1.570796 0 0) (0.149 0.149 0.149)
+object 197 {  // bat_mdl_212
+	(-1376 -252 8576) (-1.570796 0 0) (0.149 0.149 0.149)
 	model 142
 }
 
-object 199 {  // bat_mdl_211
-	(-1344 -252 8576) (-1.570796 0 0) (0.149 0.149 0.149)
+object 198 {  // bat_mdl_213
+	(-1408 -252 8576) (-1.570796 0 0) (0.149 0.149 0.149)
 	model 143
 }
 
-object 200 {  // bat_mdl_212
-	(-1376 -252 8576) (-1.570796 0 0) (0.149 0.149 0.149)
+object 199 {  // bat_mdl_214
+	(-1440 -252 8576) (-1.570796 0 0) (0.149 0.149 0.149)
 	model 144
 }
 
-object 201 {  // bat_mdl_213
-	(-1408 -252 8576) (-1.570796 0 0) (0.149 0.149 0.149)
+object 200 {  // bat_mdl_215
+	(-1472 -252 8576) (-1.570796 0 0) (0.149 0.149 0.149)
 	model 145
 }
 
-object 202 {  // bat_mdl_214
-	(-1440 -252 8576) (-1.570796 0 0) (0.149 0.149 0.149)
+object 201 {  // bat_mdl_216
+	(-1504 -252 8576) (-1.570796 0 0) (0.149 0.149 0.149)
 	model 146
 }
 
-object 203 {  // bat_mdl_215
-	(-1472 -252 8576) (-1.570796 0 0) (0.149 0.149 0.149)
+object 202 {  // bat_mdl_217
+	(-1536 -252 8576) (-1.570796 0 0) (0.149 0.149 0.149)
 	model 147
 }
 
-object 204 {  // bat_mdl_216
-	(-1504 -252 8576) (-1.570796 0 0) (0.149 0.149 0.149)
+object 203 {  // bat_mdl_218
+	(-1568 -252 8576) (-1.570796 0 0) (0.149 0.149 0.149)
 	model 148
 }
 
-object 205 {  // bat_mdl_217
-	(-1536 -252 8576) (-1.570796 0 0) (0.149 0.149 0.149)
+object 204 {  // bat_mdl_219
+	(-1600 -252 8576) (-1.570796 0 0) (0.149 0.149 0.149)
 	model 149
 }
 
-object 206 {  // bat_mdl_218
-	(-1568 -252 8576) (-1.570796 0 0) (0.149 0.149 0.149)
+object 205 {  // bat_mdl_220
+	(-1632 -252 8576) (-1.570796 0 0) (0.149 0.149 0.149)
 	model 150
 }
 
-object 207 {  // bat_mdl_219
-	(-1600 -252 8576) (-1.570796 0 0) (0.149 0.149 0.149)
+object 206 {  // bat_mdl_221
+	(-1664 -252 8576) (-1.570796 0 0) (0.149 0.149 0.149)
 	model 151
 }
 
-object 208 {  // bat_mdl_220
-	(-1632 -252 8576) (-1.570796 0 0) (0.149 0.149 0.149)
+object 207 {  // bat_mdl_222
+	(-1696 -252 8576) (-1.570796 0 0) (0.149 0.149 0.149)
 	model 152
 }
 
-object 209 {  // bat_mdl_221
-	(-1664 -252 8576) (-1.570796 0 0) (0.149 0.149 0.149)
+object 208 {  // bat_mdl_223
+	(-1728 -252 8576) (-1.570796 0 0) (0.149 0.149 0.149)
 	model 153
 }
 
-object 210 {  // bat_mdl_222
-	(-1696 -252 8576) (-1.570796 0 0) (0.149 0.149 0.149)
+object 209 {  // bat_mdl_224
+	(-1760 -252 8576) (-1.570796 0 0) (0.149 0.149 0.149)
 	model 154
 }
 
-object 211 {  // bat_mdl_223
-	(-1728 -252 8576) (-1.570796 0 0) (0.149 0.149 0.149)
+object 210 {  // bat_mdl_225
+	(-1792 -252 8576) (-1.570796 0 0) (0.149 0.149 0.149)
 	model 155
 }
 
-object 212 {  // bat_mdl_224
-	(-1760 -252 8576) (-1.570796 0 0) (0.149 0.149 0.149)
+object 211 {  // bat_mdl_226
+	(-1824 -252 8576) (-1.570796 0 0) (0.149 0.149 0.149)
 	model 156
 }
 
-object 213 {  // bat_mdl_225
-	(-1792 -252 8576) (-1.570796 0 0) (0.149 0.149 0.149)
+object 212 {  // bat_mdl_227
+	(-1856 -252 8576) (-1.570796 0 0) (0.149 0.149 0.149)
 	model 157
 }
 
-object 214 {  // bat_mdl_226
-	(-1824 -252 8576) (-1.570796 0 0) (0.149 0.149 0.149)
+object 213 {  // bat_mdl_228
+	(-1888 -252 8576) (-1.570796 0 0) (0.149 0.149 0.149)
 	model 158
 }
 
-object 215 {  // bat_mdl_227
-	(-1856 -252 8576) (-1.570796 0 0) (0.149 0.149 0.149)
+object 214 {  // bat_mdl_229
+	(-1920 -252 8576) (-1.570796 0 0) (0.149 0.149 0.149)
 	model 159
 }
 
-object 216 {  // bat_mdl_228
-	(-1888 -252 8576) (-1.570796 0 0) (0.149 0.149 0.149)
+object 215 {  // bat_mdl_230
+	(-1952 -252 8576) (-1.570796 0 0) (0.149 0.149 0.149)
 	model 160
 }
 
-object 217 {  // bat_mdl_229
-	(-1920 -252 8576) (-1.570796 0 0) (0.149 0.149 0.149)
+object 216 {  // bat_mdl_231
+	(-1984 -252 8576) (-1.570796 0 0) (0.149 0.149 0.149)
 	model 161
 }
 
-object 218 {  // bat_mdl_230
-	(-1952 -252 8576) (-1.570796 0 0) (0.149 0.149 0.149)
+object 217 {  // bat_mdl_232
+	(-2016 -252 8576) (-1.570796 0 0) (0.149 0.149 0.149)
 	model 162
 }
 
-object 219 {  // bat_mdl_231
-	(-1984 -252 8576) (-1.570796 0 0) (0.149 0.149 0.149)
+object 218 {  // bat_mdl_233
+	(-2048 -252 8576) (-1.570796 0 0) (0.149 0.149 0.149)
 	model 163
 }
 
-object 220 {  // bat_mdl_232
-	(-2016 -252 8576) (-1.570796 0 0) (0.149 0.149 0.149)
+object 219 {  // bat_mdl_234
+	(-2080 -252 8576) (-1.570796 0 0) (0.149 0.149 0.149)
 	model 164
 }
 
-object 221 {  // bat_mdl_233
-	(-2048 -252 8576) (-1.570796 0 0) (0.149 0.149 0.149)
+object 220 {  // bat_mdl_235
+	(-2112 -252 8576) (-1.570796 0 0) (0.149 0.149 0.149)
 	model 165
 }
 
-object 222 {  // bat_mdl_234
-	(-2080 -252 8576) (-1.570796 0 0) (0.149 0.149 0.149)
+object 221 {  // bat_mdl_236
+	(-2144 -252 8576) (-1.570796 0 0) (0.149 0.149 0.149)
 	model 166
 }
 
-object 223 {  // bat_mdl_235
-	(-2112 -252 8576) (-1.570796 0 0) (0.149 0.149 0.149)
+object 222 {  // bat_mdl_237
+	(-536 -252 8576) (-1.570796 0 0) (0.149 0.149 0.149)
 	model 167
 }
 
-object 224 {  // bat_mdl_236
-	(-2144 -252 8576) (-1.570796 0 0) (0.149 0.149 0.149)
+object 223 {  // bat_mdl_238
+	(-568 -252 8576) (-1.570796 0 0) (0.149 0.149 0.149)
 	model 168
 }
 
-object 225 {  // bat_mdl_237
-	(-536 -252 8576) (-1.570796 0 0) (0.149 0.149 0.149)
+object 224 {  // bat_mdl_239
+	(-600 -252 8576) (-1.570796 0 0) (0.149 0.149 0.149)
 	model 169
 }
 
-object 226 {  // bat_mdl_238
-	(-568 -252 8576) (-1.570796 0 0) (0.149 0.149 0.149)
+object 225 {  // bat_mdl_240
+	(-632 -252 8576) (-1.570796 0 0) (0.149 0.149 0.149)
 	model 170
 }
 
-object 227 {  // bat_mdl_239
-	(-600 -252 8576) (-1.570796 0 0) (0.149 0.149 0.149)
+object 226 {  // bat_mdl_241
+	(-664 -252 8576) (-1.570796 0 0) (0.149 0.149 0.149)
 	model 171
 }
 
-object 228 {  // bat_mdl_240
-	(-632 -252 8576) (-1.570796 0 0) (0.149 0.149 0.149)
+object 227 {  // bat_mdl_242
+	(-696 -252 8576) (-1.570796 0 0) (0.149 0.149 0.149)
 	model 172
 }
 
-object 229 {  // bat_mdl_241
-	(-664 -252 8576) (-1.570796 0 0) (0.149 0.149 0.149)
+object 228 {  // bat_mdl_243
+	(-728 -252 8576) (-1.570796 0 0) (0.149 0.149 0.149)
 	model 173
 }
 
-object 230 {  // bat_mdl_242
-	(-696 -252 8576) (-1.570796 0 0) (0.149 0.149 0.149)
+object 229 {  // bat_mdl_244
+	(-760 -252 8576) (-1.570796 0 0) (0.149 0.149 0.149)
 	model 174
 }
 
-object 231 {  // bat_mdl_243
-	(-728 -252 8576) (-1.570796 0 0) (0.149 0.149 0.149)
+object 230 {  // bat_mdl_245
+	(-272 -252 8576) (-1.570796 0 0) (0.149 0.149 0.149)
 	model 175
 }
 
-object 232 {  // bat_mdl_244
-	(-760 -252 8576) (-1.570796 0 0) (0.149 0.149 0.149)
+object 231 {  // bat_mdl_246
+	(-304 -252 8576) (-1.570796 0 0) (0.149 0.149 0.149)
 	model 176
 }
 
-object 233 {  // bat_mdl_245
-	(-272 -252 8576) (-1.570796 0 0) (0.149 0.149 0.149)
+object 232 {  // bat_mdl_247
+	(-336 -252 8576) (-1.570796 0 0) (0.149 0.149 0.149)
 	model 177
 }
 
-object 234 {  // bat_mdl_246
-	(-304 -252 8576) (-1.570796 0 0) (0.149 0.149 0.149)
+object 233 {  // bat_mdl_248
+	(-368 -252 8576) (-1.570796 0 0) (0.149 0.149 0.149)
 	model 178
 }
 
-object 235 {  // bat_mdl_247
-	(-336 -252 8576) (-1.570796 0 0) (0.149 0.149 0.149)
+object 234 {  // bat_mdl_249
+	(-400 -252 8576) (-1.570796 0 0) (0.149 0.149 0.149)
 	model 179
 }
 
-object 236 {  // bat_mdl_248
-	(-368 -252 8576) (-1.570796 0 0) (0.149 0.149 0.149)
+object 235 {  // bat_mdl_250
+	(-432 -252 8576) (-1.570796 0 0) (0.149 0.149 0.149)
 	model 180
 }
 
-object 237 {  // bat_mdl_249
-	(-400 -252 8576) (-1.570796 0 0) (0.149 0.149 0.149)
+object 236 {  // bat_mdl_251
+	(-464 -252 8576) (-1.570796 0 0) (0.149 0.149 0.149)
 	model 181
 }
 
-object 238 {  // bat_mdl_250
-	(-432 -252 8576) (-1.570796 0 0) (0.149 0.149 0.149)
+object 237 {  // bat_mdl_252
+	(-496 -252 8576) (-1.570796 0 0) (0.149 0.149 0.149)
 	model 182
 }
 
-object 239 {  // bat_mdl_251
-	(-464 -252 8576) (-1.570796 0 0) (0.149 0.149 0.149)
+object 238 {  // bat_mdl_253
+	(-1424 -248 7392) (-1.570796 0 0) (0.149 0.149 0.149)
 	model 183
 }
 
-object 240 {  // bat_mdl_252
-	(-496 -252 8576) (-1.570796 0 0) (0.149 0.149 0.149)
+object 239 {  // bat_mdl_254
+	(-1456 -248 7392) (-1.570796 0 0) (0.149 0.149 0.149)
 	model 184
 }
 
-object 241 {  // bat_mdl_253
-	(-1424 -248 7392) (-1.570796 0 0) (0.149 0.149 0.149)
+object 240 {  // bat_mdl_255
+	(-1488 -248 7392) (-1.570796 0 0) (0.149 0.149 0.149)
 	model 185
 }
 
-object 242 {  // bat_mdl_254
-	(-1456 -248 7392) (-1.570796 0 0) (0.149 0.149 0.149)
+object 241 {  // bat_mdl_256
+	(-1520 -248 7392) (-1.570796 0 0) (0.149 0.149 0.149)
 	model 186
 }
 
-object 243 {  // bat_mdl_255
-	(-1488 -248 7392) (-1.570796 0 0) (0.149 0.149 0.149)
+object 242 {  // bat_mdl_257
+	(-1552 -248 7392) (-1.570796 0 0) (0.149 0.149 0.149)
 	model 187
 }
 
-object 244 {  // bat_mdl_256
-	(-1520 -248 7392) (-1.570796 0 0) (0.149 0.149 0.149)
+object 243 {  // bat_mdl_258
+	(-1584 -248 7392) (-1.570796 0 0) (0.149 0.149 0.149)
 	model 188
 }
 
-object 245 {  // bat_mdl_257
-	(-1552 -248 7392) (-1.570796 0 0) (0.149 0.149 0.149)
+object 244 {  // bat_mdl_259
+	(-1616 -248 7392) (-1.570796 0 0) (0.149 0.149 0.149)
 	model 189
 }
 
-object 246 {  // bat_mdl_258
-	(-1584 -248 7392) (-1.570796 0 0) (0.149 0.149 0.149)
+object 245 {  // bat_mdl_260
+	(-1648 -248 7392) (-1.570796 0 0) (0.149 0.149 0.149)
 	model 190
 }
 
-object 247 {  // bat_mdl_259
-	(-1616 -248 7392) (-1.570796 0 0) (0.149 0.149 0.149)
+object 246 {  // bat_mdl_261
+	(-688 -248 6704) (-1.570796 0 0) (0.149 0.149 0.149)
 	model 191
 }
 
-object 248 {  // bat_mdl_260
-	(-1648 -248 7392) (-1.570796 0 0) (0.149 0.149 0.149)
+object 247 {  // bat_mdl_262
+	(-720 -248 6704) (-1.570796 0 0) (0.149 0.149 0.149)
 	model 192
 }
 
-object 249 {  // bat_mdl_261
-	(-688 -248 6704) (-1.570796 0 0) (0.149 0.149 0.149)
+object 248 {  // bat_mdl_263
+	(-752 -248 6704) (-1.570796 0 0) (0.149 0.149 0.149)
 	model 193
 }
 
-object 250 {  // bat_mdl_262
-	(-720 -248 6704) (-1.570796 0 0) (0.149 0.149 0.149)
+object 249 {  // bat_mdl_264
+	(-784 -248 6704) (-1.570796 0 0) (0.149 0.149 0.149)
 	model 194
 }
 
-object 251 {  // bat_mdl_263
-	(-752 -248 6704) (-1.570796 0 0) (0.149 0.149 0.149)
+object 250 {  // bat_mdl_265
+	(-816 -248 6704) (-1.570796 0 0) (0.149 0.149 0.149)
 	model 195
 }
 
-object 252 {  // bat_mdl_264
-	(-784 -248 6704) (-1.570796 0 0) (0.149 0.149 0.149)
+object 251 {  // bat_mdl_266
+	(-848 -248 6704) (-1.570796 0 0) (0.149 0.149 0.149)
 	model 196
 }
 
-object 253 {  // bat_mdl_265
-	(-816 -248 6704) (-1.570796 0 0) (0.149 0.149 0.149)
+object 252 {  // bat_mdl_267
+	(-880 -248 6704) (-1.570796 0 0) (0.149 0.149 0.149)
 	model 197
 }
 
-object 254 {  // bat_mdl_266
-	(-848 -248 6704) (-1.570796 0 0) (0.149 0.149 0.149)
+object 253 {  // bat_mdl_268
+	(-912 -248 6704) (-1.570796 0 0) (0.149 0.149 0.149)
 	model 198
 }
 
-object 255 {  // bat_mdl_267
-	(-880 -248 6704) (-1.570796 0 0) (0.149 0.149 0.149)
+object 254 {  // bat_mdl_269
+	(-1680 -248 6144) (-1.570796 0 0) (0.149 0.149 0.149)
 	model 199
 }
 
-object 256 {  // bat_mdl_268
-	(-912 -248 6704) (-1.570796 0 0) (0.149 0.149 0.149)
+object 255 {  // bat_mdl_270
+	(-1712 -248 6144) (-1.570796 0 0) (0.149 0.149 0.149)
 	model 200
 }
 
-object 257 {  // bat_mdl_269
-	(-1680 -248 6144) (-1.570796 0 0) (0.149 0.149 0.149)
+object 256 {  // bat_mdl_271
+	(-1744 -248 6144) (-1.570796 0 0) (0.149 0.149 0.149)
 	model 201
 }
 
-object 258 {  // bat_mdl_270
-	(-1712 -248 6144) (-1.570796 0 0) (0.149 0.149 0.149)
+object 257 {  // bat_mdl_272
+	(-1776 -248 6144) (-1.570796 0 0) (0.149 0.149 0.149)
 	model 202
 }
 
-object 259 {  // bat_mdl_271
-	(-1744 -248 6144) (-1.570796 0 0) (0.149 0.149 0.149)
+object 258 {  // bat_mdl_273
+	(-1808 -248 6144) (-1.570796 0 0) (0.149 0.149 0.149)
 	model 203
 }
 
-object 260 {  // bat_mdl_272
-	(-1776 -248 6144) (-1.570796 0 0) (0.149 0.149 0.149)
+object 259 {  // bat_mdl_274
+	(-1840 -248 6144) (-1.570796 0 0) (0.149 0.149 0.149)
 	model 204
 }
 
-object 261 {  // bat_mdl_273
-	(-1808 -248 6144) (-1.570796 0 0) (0.149 0.149 0.149)
+object 260 {  // bat_mdl_275
+	(-1872 -248 6144) (-1.570796 0 0) (0.149 0.149 0.149)
 	model 205
 }
 
-object 262 {  // bat_mdl_274
-	(-1840 -248 6144) (-1.570796 0 0) (0.149 0.149 0.149)
+object 261 {  // bat_mdl_276
+	(-1904 -248 6144) (-1.570796 0 0) (0.149 0.149 0.149)
 	model 206
 }
 
-object 263 {  // bat_mdl_275
-	(-1872 -248 6144) (-1.570796 0 0) (0.149 0.149 0.149)
+object 262 {  // bat_mdl_277
+	(-1296 -248 5248) (-1.570796 0 0) (0.149 0.149 0.149)
 	model 207
 }
 
-object 264 {  // bat_mdl_276
-	(-1904 -248 6144) (-1.570796 0 0) (0.149 0.149 0.149)
+object 263 {  // bat_mdl_278
+	(-1328 -248 5248) (-1.570796 0 0) (0.149 0.149 0.149)
 	model 208
 }
 
-object 265 {  // bat_mdl_277
-	(-1296 -248 5248) (-1.570796 0 0) (0.149 0.149 0.149)
+object 264 {  // bat_mdl_279
+	(-1360 -248 5248) (-1.570796 0 0) (0.149 0.149 0.149)
 	model 209
 }
 
-object 266 {  // bat_mdl_278
-	(-1328 -248 5248) (-1.570796 0 0) (0.149 0.149 0.149)
+object 265 {  // bat_mdl_280
+	(-1392 -248 5248) (-1.570796 0 0) (0.149 0.149 0.149)
 	model 210
 }
 
-object 267 {  // bat_mdl_279
-	(-1360 -248 5248) (-1.570796 0 0) (0.149 0.149 0.149)
+object 266 {  // bat_mdl_281
+	(-1424 -248 5248) (-1.570796 0 0) (0.149 0.149 0.149)
 	model 211
 }
 
-object 268 {  // bat_mdl_280
-	(-1392 -248 5248) (-1.570796 0 0) (0.149 0.149 0.149)
+object 267 {  // bat_mdl_282
+	(-1456 -248 5248) (-1.570796 0 0) (0.149 0.149 0.149)
 	model 212
 }
 
-object 269 {  // bat_mdl_281
-	(-1424 -248 5248) (-1.570796 0 0) (0.149 0.149 0.149)
+object 268 {  // bat_mdl_283
+	(-1488 -248 5248) (-1.570796 0 0) (0.149 0.149 0.149)
 	model 213
 }
 
-object 270 {  // bat_mdl_282
-	(-1456 -248 5248) (-1.570796 0 0) (0.149 0.149 0.149)
+object 269 {  // bat_mdl_284
+	(-1520 -248 5248) (-1.570796 0 0) (0.149 0.149 0.149)
 	model 214
 }
 
-object 271 {  // bat_mdl_283
-	(-1488 -248 5248) (-1.570796 0 0) (0.149 0.149 0.149)
+object 270 {  // stein1_mdl_286
+	(-1152 -128 5200) (-0 -0 1.570796) (1.562235 1.562235 1.562235)
 	model 215
 }
 
-object 272 {  // bat_mdl_284
-	(-1520 -248 5248) (-1.570796 0 0) (0.149 0.149 0.149)
+object 271 {  // stein1_mdl_287
+	(-1952 -128 5120) (-0 -0 1.570796) (1.562235 1.562235 1.562235)
 	model 216
 }
 
-object 273 {  // stein1_mdl_286
-	(-1152 -128 5200) (-0 -0 1.570796) (1.562235 1.562235 1.562235)
+object 272 {  // stein1_mdl_288
+	(-1776 -128 5120) (-0 -0 1.570796) (1.562235 1.562235 1.562235)
 	model 217
 }
 
-object 274 {  // stein1_mdl_287
-	(-1952 -128 5120) (-0 -0 1.570796) (1.562235 1.562235 1.562235)
+object 273 {  // stein1_mdl_289
+	(-1616 -128 5120) (-0 -0 1.570796) (1.562235 1.562235 1.562235)
 	model 218
 }
 
-object 275 {  // stein1_mdl_288
-	(-1776 -128 5120) (-0 -0 1.570796) (1.562235 1.562235 1.562235)
+object 274 {  // stein1_mdl_291
+	(-1712 -128 2912) (-0 -0 1.570796) (1.562235 1.562235 1.562235)
 	model 219
 }
 
-object 276 {  // stein1_mdl_289
-	(-1616 -128 5120) (-0 -0 1.570796) (1.562235 1.562235 1.562235)
+object 275 {  // bosslevel_trigg_292
+	(-1216 0 8864) (-0 0 0) (1 1 1)
 	model 220
 }
 
-object 277 {  // stein1_mdl_291
-	(-1712 -128 2912) (-0 -0 1.570796) (1.562235 1.562235 1.562235)
+object 276 {  // trail_mdl_292
+	(-1192 40 8884) (2.094395 -0 -0) (5.441567 5.441567 5.441567)
 	model 221
+}
+
+object 277 {  // warghost_mdl_298
+	(-1352 -60 9068) (-0.785398 -0 -0) (4.868931 4.868931 4.868931)
+	model 222
 }
 

@@ -2,6 +2,7 @@
 #define lvlLavastage_c
 
 #include "lvlLavastage.h"
+#include "postprocessing.h"
 
 void lvlLavastage_c_startup ()
 {
@@ -23,6 +24,17 @@ void lvlLavastageReset ()
 	
 	g_bLvlLavastageRunning = false;
 	
+	godmode = 0;
+	
+	if (!g_lvlLavastageKeepSwirl)
+	{
+		g_lvlLavastageSwirlRadius = 1;
+		g_lvlLavastageSwirlAngle = 4;
+		g_lvlLavastageSwirlBlend = 1;		
+	}
+	else
+		g_lvlLavastageKeepSwirl = false;
+	
 	level_load(NULL);
 	sky_active = 0;
 }
@@ -31,6 +43,8 @@ void lvlLavastageFog ()
 {
 	camera.fog_start = 0;
 	camera.fog_end = 17500;
+	
+	setPpSwirl(0, 0, 0.5, 0.5, 0);
 	
 	fog_color = 1;
 	vec_set(&d3d_fogcolor1.blue, vector(149, 97, 91));
@@ -41,6 +55,42 @@ void lvlLavastageFog ()
 	while (g_bLvlLavastageRunning)
 	{
 		vec_lerp(d3d_fogcolor1.blue, &fogColor, &sky_color, 0.5);
+		wait(1);
+	}
+}
+
+void lvlLavastageSwirlOut ()
+{
+	var blendTarget = 0.1;
+	
+	while (g_lvlLavastageSwirlAngle > 0.01 && g_bLvlLavastageRunning)
+	{
+		accelerate(&g_lvlLavastageSwirlRadius, 0, 0.05);
+		g_lvlLavastageSwirlRadius = maxv(0.4, g_lvlLavastageSwirlRadius);
+		
+		accelerate(&g_lvlLavastageSwirlAngle, 0, 0.1);
+		g_lvlLavastageSwirlAngle = maxv(0, g_lvlLavastageSwirlAngle);
+		
+		accelerate(&g_lvlLavastageSwirlBlend, 0, 0.05);
+		g_lvlLavastageSwirlBlend = maxv(blendTarget, g_lvlLavastageSwirlBlend);
+		
+		setPpSwirl(g_lvlLavastageSwirlRadius, g_lvlLavastageSwirlAngle, 0.5, 0.5, g_lvlLavastageSwirlBlend);
+		
+		wait(1);
+	}
+	
+	double t = 0;
+	double a = g_lvlLavastageSwirlAngle;
+	
+	g_lvlLavastageSwirlRadius = 0.75;
+	
+	while (g_bLvlLavastageRunning)
+	{	
+		a = (double)(-sin(t / 16) * 0.05);
+		setPpSwirl(g_lvlLavastageSwirlRadius, a, 0.5, 0.5, g_lvlLavastageSwirlBlend);
+		
+		t += time_step * 0.75;
+		
 		wait(1);
 	}
 }
@@ -65,7 +115,9 @@ void lvlLavastageStart ()
 	setPlayerCamera(g_lvlLavastageCamDist, g_lvlLavastageCamRaiseZ, g_lvlLavastageCamArc);
 	setPlayerWalkGlide(false);
 	
-	level_load_ext(LVL_LAVASTAGE_WMB);
+	level_load(LVL_LAVASTAGE_WMB);
+	
+	lvlLavastageSwirlOut();
 	
 	// debug
 	{

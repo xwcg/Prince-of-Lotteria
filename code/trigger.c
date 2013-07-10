@@ -2,6 +2,7 @@
 #define _TRIGGER_C_
 
 #include "trigger.h"
+#include "narrator.h"
 
 action trigger_visible ()
 {
