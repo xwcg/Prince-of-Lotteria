@@ -33,6 +33,8 @@ void creditsReset ()
 	creditsFinished = 0;
 	currentRow = 0;
 	
+	resetPpSwirl();
+	
 	camera->clip_far = 30000;
 	
 	vec_set(&g_vecCreditsCamShake, nullvector);
@@ -99,6 +101,9 @@ void creditsStart ()
 	set(camera, SHOW);
 	
 	credits_populate();
+	
+	while (key_a && key_c && key_k)
+		wait(1);
 	
 	while (!creditsFinished)
 	{

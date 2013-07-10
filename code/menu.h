@@ -10,7 +10,7 @@
 
 	var g_menuFxSpeed = 0.2;
 
-SOUND *menuBackgroundMusic = "lotteria_menu_mono.wav";
+SOUND *menuBackgroundMusic = "menu.ogg";
 
 FONT *menuFont = "Courier#64";
 BMAP *menuBackgroundImage = NULL;

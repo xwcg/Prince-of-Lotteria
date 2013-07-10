@@ -1,5 +1,6 @@
 float4 vecViewPort;
 float4 vecTime;
+
 float g_menuFxSpeed_var;
 
 float4 PS (in float2 vpos : VPOS) : COLOR0

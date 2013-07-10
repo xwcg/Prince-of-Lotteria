@@ -23,6 +23,28 @@ void setPlayerWalkGlide (BOOL bUse)
 	g_playerUseWalkGlide = bUse;
 }
 
+void setPlayerControls (BOOL bHasControls)
+{
+	g_playerHasControls = bHasControls;
+}
+
+void setPlayerPan (var a)
+{
+	proc_mode = PROC_LATE;
+	
+	if (player != NULL)
+		player->pan = a;
+}
+
+void setPlayerPan (ENTITY* e)
+{
+	VECTOR diff, ang;
+	vec_diff(&diff, e->x, player->x);
+	vec_to_angle(&ang, diff);
+	
+	setPlayerPan(ang.x);
+}
+
 void snd_player_jump ()
 {
 	switch ((int)(random(5)))
@@ -122,10 +144,12 @@ void setPlayerDead ()
 		player->PL_HEALTH = 0;
 }
 
-void actPlayer ()
+action actPlayer ()
 {
 	move_friction = 0.3;
 	ent_preload(my);
+	
+	setPlayerControls(true);
 	
 	player = my;
 	
@@ -136,6 +160,7 @@ void actPlayer ()
 	my->PL_HEALTH = 3;
 	my->PL_A4_COUNT = 0;
 	my->trigger_range = 100;
+	//my->push = 100;
 	
 	c_updatehull(my, 0);
 	
@@ -155,20 +180,25 @@ void move_player ()
 	int nSndRandom = 0;
 	
 	VECTOR vecPlayerMoveSpeed;
-	vec_set(vecPlayerMoveSpeed, nullvector);
+	vec_set(&vecPlayerMoveSpeed, nullvector);
 	
 	while (1)
 	{
 		player.PL_JUMP_HEIGHT = PL_MAX_JUMP_HEIGHT;
 		
-		if (key_force.x > 0)
-			my.pan = 0;
+		if (g_playerHasControls)
+		{
+			if (key_force.x > 0)
+				my.pan = 0;
+				
+			if (key_force.x < 0)
+				my.pan = -180;
 			
-		if (key_force.x < 0)
-			my.pan = -180;
-		
-		// walk
-		vecPlayerMoveSpeed.x = g_playerWalkSpeed * key_force.x * time_step;
+			// walk
+			vecPlayerMoveSpeed.x = g_playerWalkSpeed * key_force.x * time_step;
+		}
+		else
+			vecPlayerMoveSpeed.x = 0;
 		
 		// jump
 		
@@ -176,7 +206,7 @@ void move_player ()
 		if (player->PL_JUMPKEYSTILLPRESSED && !key_cuu)
 			player->PL_JUMPKEYSTILLPRESSED = false;
 		
-		if (key_cuu && player->PL_IS_JUMPING == 0 && !player->PL_JUMPKEYSTILLPRESSED)
+		if (g_playerHasControls && key_cuu && player->PL_IS_JUMPING == 0 && !player->PL_JUMPKEYSTILLPRESSED)
 		{
 			player->PL_IS_JUMPING = 1;
 			my.PL_ANIMATION_PERCENTAGE = 0;
@@ -201,7 +231,7 @@ void move_player ()
 		// jetpack
 		if (flying_man)
 		{
-			if (key_space)
+			if (key_space && g_playerHasControls)
 			{
 				if (fPlayerJetpack > 0)
 				{
@@ -261,7 +291,7 @@ void move_player ()
 		gui_update_a4();
 		
 		// Jumping below a ceiling
-		var nTraceUp = c_trace(player.x, vector(player.x,player.y,player.z+5000), IGNORE_ME | IGNORE_PASSABLE | USE_BOX );
+		var nTraceUp = c_trace(player.x, vector(player.x,player.y,player.z+5000), IGNORE_ME | IGNORE_PASSABLE | USE_BOX | IGNORE_PUSH);
 
 		// If player jumps against the ceiling...
 		if (nTraceUp > 0 && nTraceUp < 10)
@@ -277,7 +307,7 @@ void move_player ()
 		}
 		
 		// Can fall down?
-		var nTraceDown = c_trace(player.x, vector(player.x,player.y,player.z-5000), IGNORE_ME | IGNORE_PASSABLE | USE_BOX);
+		var nTraceDown = c_trace(player.x, vector(player.x,player.y,player.z-5000), IGNORE_ME | IGNORE_PASSABLE | USE_BOX | IGNORE_PUSH);
 		
 		// When on platform, move the payer with it
 		if (you != NULL && nTraceDown < 10) {
@@ -309,7 +339,7 @@ void move_player ()
 			{
 				if (player->PL_IS_JUMPING == 1 && player->PL_JUMP_TIME < 0)
 				{
-					if (key_cuu)
+					if (key_cuu && g_playerHasControls)
 						player->PL_JUMPKEYSTILLPRESSED = true;
 					
 					player->PL_IS_JUMPING = 0;
@@ -332,10 +362,10 @@ void move_player ()
 		
 		// correct movement for slopes
 		if (normal.z < 1 && normal.z > 0.7)
-			vecPlayerMoveSpeed.x *= 2.5 - normal.z;
+			vecPlayerMoveSpeed.x *= (2.5 - normal.z);
 		
 		// Fallen in spikes?
-		var nTraceDownShort = c_trace(player.x, vector(player.x,player.y,player.z-10), IGNORE_ME | USE_BOX);
+		var nTraceDownShort = c_trace(player.x, vector(player.x,player.y,player.z-10), IGNORE_ME | USE_BOX | IGNORE_PUSH);
 		if (HIT_TARGET) {
 			if (hit.entity != NULL) {
 				if (is(hit.entity, is_trap)) {
@@ -372,7 +402,7 @@ void move_player ()
 		}
 		
 		// Jumped in spikes?
-		var nTraceUpShort = c_trace(player.x, vector(player.x,player.y,player.z+10), IGNORE_ME | USE_BOX);
+		var nTraceUpShort = c_trace(player.x, vector(player.x,player.y,player.z+10), IGNORE_ME | USE_BOX | IGNORE_PUSH);
 		if (HIT_TARGET) {
 			if (hit.entity != NULL) {
 				if (is(hit.entity, is_trap)) {
@@ -410,7 +440,8 @@ void move_player ()
 	
 		
 		// Attack
-		if (key_ctrl && me.PL_IS_ATTACKING == 0) {
+		if (key_ctrl && me.PL_IS_ATTACKING == 0 && g_playerHasControls)
+		{
 			me.PL_IS_ATTACKING = 1;
 			my.PL_ATTACKING_PERCENTAGE = 0;
 			nSndRandom = integer(random(5));
@@ -461,7 +492,7 @@ void move_player ()
 		
 		move_friction = 0;
 		
-		long moveFlags = IGNORE_PASSABLE | IGNORE_PASSENTS | ACTIVATE_TRIGGER;
+		long moveFlags = IGNORE_PASSABLE | IGNORE_PASSENTS | ACTIVATE_TRIGGER | IGNORE_PUSH;
 		
 		if (g_playerUseWalkGlide || (!g_playerUseWalkGlide && vecPlayerMoveSpeed.x != 0))
 			moveFlags |= GLIDE;
@@ -510,6 +541,7 @@ void move_player ()
 			level_load(NULL);
 			
 			menu_open();
+			
 			gui_hide();
 			
 			return;
@@ -520,7 +552,7 @@ void move_player ()
 void activate_jetpack ()
 {
 	flying_man = 1;
-	zorroMeshOptions(player, TRUE, FALSE, TRUE);
+	zorroMeshOptions(player, true, false, true);
 }
 
 #endif /* _PLAYER_C_ */

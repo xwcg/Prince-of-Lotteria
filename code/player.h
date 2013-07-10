@@ -3,7 +3,6 @@
 
 // prototypes
 
-	action actPlayer();
 	void move_player ();
 	void activate_jetpack();
 	
@@ -12,7 +11,11 @@
 	void setPlayerDead();
 	
 	void setPlayerCamera (var dist, var raiseZ, var arc);
+	
 	void setPlayerWalkGlide (BOOL bUse);
+	void setPlayerControls (BOOL bHasControls);
+	void setPlayerPan (var a);
+	void setPlayerPan (ENTITY* e);
 
 // defines
 
@@ -58,8 +61,8 @@
 	var g_playerCamArc = 80;
 	var g_playerRaiseZ = 0;
 	
-	// to be set via setPlayerWalkGlide
 	BOOL g_playerUseWalkGlide = true;
+	BOOL g_playerHasControls = true;
 	
 // sounds
 
