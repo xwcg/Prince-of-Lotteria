@@ -3,6 +3,7 @@
 
 #include "lvlLavastage.h"
 #include "postprocessing.h"
+#include "endboss.h"
 
 void lvlLavastage_c_startup ()
 {
@@ -118,6 +119,8 @@ void lvlLavastageStart ()
 	level_load(LVL_LAVASTAGE_WMB);
 	
 	lvlLavastageSwirlOut();
+	
+	ebStart();
 	
 	// debug
 	{
