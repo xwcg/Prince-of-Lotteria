@@ -4,6 +4,15 @@
 #include "endboss.h"
 #include "lvlBoss.h"
 
+void ebReset ()
+{
+	int i, j;
+	
+	for (i = 0; i < HAND_HANDS; i++)
+		for (j = 0; j < HAND_FINGERS; j++)
+			(g_handChop[i])[j] = false;
+}
+
 void ebStart ()
 {
 	ent_create(NULL, nullvector, ebStartSpeech);
@@ -51,8 +60,8 @@ void ebHandsBgFly ()
 	snd_play(g_sndSparkle, 100, 0);
 
 	ENTITY* hands [2];
-	hands[0] = ent_create("warhand.mdl", vector(-handRadius, 1000, 400), ebHandFlyL);
-	hands[1] = ent_create("warhand.mdl", vector(handRadius, 1000, 400), ebHandFlyR);
+	hands[0] = ent_create("warhand.mdl", vector(-handRadius, 500, 400), ebHandFlyL);
+	hands[1] = ent_create("warhand.mdl", vector(handRadius, 500, 400), ebHandFlyR);
 	
 	var t = (5 + random(5)) * 16;
 	
@@ -82,7 +91,11 @@ void ebHandsBgFly ()
 	
 	wait(-(0.5+random(1)));
 	
-	ent_create("warhand.mdl", nullvector, ebHandWatch);
+	VECTOR v;
+	vec_set(&v, player->x);
+	v.z += 400;
+	
+	ent_create("warhand.mdl", &v, ebHandWatch);
 	ptr_remove(my);
 }
 
@@ -117,7 +130,7 @@ void ebHandsBgFly ()
 			var moveLerp = 0.2;
 			var moveAnim = 2;
 			
-			vec_scale(my->scale_x, 1.5);
+			vec_scale(my->scale_x, g_handScale);
 			
 			while (my->skill1 == 0)
 			{
@@ -149,7 +162,7 @@ void ebHandsBgFly ()
 			while (my->skill2 > 0)
 			{
 				my->skill2 -= time_step;
-				my->z += 20 * time_step;
+				my->z += 10 * time_step;
 				my->y -= 20 * time_step;
 				my->roll += 5 * time_step;
 				wait(1);
@@ -172,20 +185,118 @@ void ebHandWatch ()
 	
 	my->material = g_mtlHandR;
 	
-	var moveAnim = 2;
+	var moveAnim = 10;
 	
-	while (1)
+	var t = (5 + random(3)) * 16;
+	
+	vec_scale(my->scale_x, g_handScale);
+	
+	var ground, height;
+	var heightSub = 32;
+	
+	while (t > 0)
 	{
+		VECTOR vecBoneGround, vecTraceStart, vecTraceEnd;
+		vec_for_bone(&vecBoneGround, my, "ground");
+		
+		vec_set(&vecTraceStart, my->x);
+		vecTraceStart.y = vecBoneGround.y;
+		
+		vec_set(&vecTraceEnd, &vecTraceStart);
+		vecTraceEnd.z -= 2000;
+		
+		height = player->z + 250;
+		
+		you = player;
+		if (c_trace(&vecTraceStart, &vecTraceEnd, IGNORE_ME | IGNORE_YOU | USE_POLYGON) > 0)
+		{
+			ground = hit.z;
+			height = ground + (my->z - vecBoneGround.z);
+		}
+		
 		VECTOR v;
 		vec_set(&v, player->x);
-		v.z += 250;
+		v.z = height;
 		
 		vec_lerp(my->x, my->x, &v, 0.25 * time_step);
 		
-		ent_animate(my, "idleH", (total_ticks * moveAnim) % 100, ANM_CYCLE);	
+		ent_animate(my, "idleH", 50 + sin(total_ticks * moveAnim) * 50, ANM_CYCLE);
+		
+		t -= time_step;
 		
 		wait(1);
 	}
+	
+	t = 0;
+	
+	while (t < 100)
+	{
+		VECTOR vecBoneGround;
+		vec_for_bone(&vecBoneGround, my, "ground");
+		height = ground + (my->z - vecBoneGround.z) - heightSub;
+		
+		VECTOR v;
+		vec_set(&v, my->x);
+		v.z = height;
+		
+		vec_lerp(my->x, my->x, &v, 0.25 * time_step);
+		
+		t = clamp(t + 5 * time_step, 0, 100);
+		ent_animate(my, "drop", t, 0);		
+		wait(1);
+	}
+	
+	t = (3+random(2)) * 16;
+	
+	reset(my, PASSABLE);
+	set(my, POLYGON);
+	
+	c_updatehull(my, 0);
+	
+	while (t > 0)
+	{
+		ent_animate(my, "down", (total_ticks * 4), ANM_CYCLE);
+		t -= time_step;
+		wait(1);
+	}
+	
+	set(my, PASSABLE);
+	reset(my, POLYGON);
+	
+	while (t < 100)
+	{
+		VECTOR vecBoneGround;
+		vec_for_bone(&vecBoneGround, my, "ground");
+		height = ground + (my->z - vecBoneGround.z) - heightSub;
+		
+		VECTOR v;
+		vec_set(&v, my->x);
+		v.z = height;
+		
+		vec_lerp(my->x, my->x, &v, 0.25 * time_step);
+		
+		t = clamp(t + 2 * time_step, 0, 100);
+		ent_animate(my, "up", t, 0);		
+		wait(1);
+	}
+	
+	t = 1.5 * 16;
+	
+	while (t > 0)
+	{
+		t -= time_step;
+		my->z += 10 * time_step;
+		my->y -= 20 * time_step;
+		my->roll += 5 * time_step;
+		wait(1);
+	}
+
+	set(my, INVISIBLE);
+	ebDoSparkle(my, 2000);
+	snd_play(g_sndSparkle, 100, 0);
+
+	wait(1);
+	ptr_remove(my);	
 }
 
 #endif /* endboss_c */
