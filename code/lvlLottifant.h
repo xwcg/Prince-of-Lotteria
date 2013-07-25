@@ -10,6 +10,8 @@
 	void lvlLfStart ();
 	void lvlLfExit (BOOL bNextLevel);
 	
+	void on_exit_lotti ();
+	
 // defines
 
 	#define LVL_LOTTIFANT_PX_GROUP_ALL 1

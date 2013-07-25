@@ -16,6 +16,8 @@ void lvlBossExit ();
 // effects
 
 	BMAP* g_bmapSparkle = "sparkle.tga";
+	
+	void bossSparkle_p (PARTICLE* p);
 
 // sounds
 

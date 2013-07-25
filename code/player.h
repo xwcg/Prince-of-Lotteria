@@ -40,6 +40,8 @@
 	
 // globals
 
+	BOOL g_playerDontScanFlag2 = false;
+
 	var g_playerWalkSpeed = 35;
 
 	float fPlayerJetpack = PL_JETPACK_MAX_FUEL;
