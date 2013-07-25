@@ -1,12 +1,12 @@
 // WMP2
 // WMPIO V 1.30
-// Created 21.07.2013
+// Created 25.07.2013
 
 version 710
 
 blocks 0
-entities 13
-objects 13
+entities 14
+objects 14
 
 wed {
 	palette {
@@ -195,10 +195,23 @@ model 12 {   // torch_mdl_034
 	ndef
 }
 
+model 13 {   // warhand_mdl_034
+	1 1 1
+	<warhand.mdl>
+	warhand_mdl_034
+	ebStartSpeech
+	0 0 0 0 0 0 0 0
+	0000
+	0
+	50
+	ndef
+	ndef
+}
+
 object 0 {  // Root
 	(0 0 0) (0 0 0) (1 1 1)
 	object 1, 2, 3, 4, 5, 6, 7, 8, 9, 10
-	object 11, 12
+	object 11, 12, 13
 	level 0
 }
 
@@ -260,5 +273,10 @@ object 11 {  // torch_mdl_033
 object 12 {  // torch_mdl_034
 	(-1228 -88 240) (-3.141592 0 0) (1 1 1)
 	model 12
+}
+
+object 13 {  // warhand_mdl_034
+	(0 0 1024) (-0 0 0) (1 1 1)
+	model 13
 }
 

@@ -12,6 +12,12 @@ void ebHandFly ();
 
 void ebHandWatch ();
 
+void ebHandWatchSelect ();
+
+BOOL g_ebSpeech = true;
+
+ENTITY* g_ebHand = NULL;
+
 MATERIAL* g_mtlHandR =
 {
 	effect = "handR.fx";
@@ -27,9 +33,8 @@ var g_handScale = 1.5;
 SOUND* g_sndWarghostBattleSpeechStart = "warghostBattleSpeechStart.ogg";
 SOUND* g_sndWarghostBattleNoChance = "warghostBattleNoChance.ogg";
 
-TEXT* g_handBoneNames = {
-	string ("Z_2","M_2","R_2","K_2");
-}
+TEXT* g_handBoneFarNames = { string ("Z_1","M_1","R_1","K_1"); }
+TEXT* g_handBoneNearNames = { string ("Z_2","M_2","R_2","K_2"); }
 
 void ebReset ();
 

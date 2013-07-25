@@ -11,11 +11,8 @@ void ebReset ()
 	for (i = 0; i < HAND_HANDS; i++)
 		for (j = 0; j < HAND_FINGERS; j++)
 			(g_handChop[i])[j] = false;
-}
-
-void ebStart ()
-{
-	ent_create(NULL, nullvector, ebStartSpeech);
+			
+	g_ebSpeech = true;
 }
 
 void ebDoSparkle (ENTITY* e, int modulo)
@@ -34,20 +31,26 @@ void ebDoSparkle (ENTITY* e, int modulo)
 	}
 }
 
-void ebStartSpeech ()
+action ebStartSpeech ()
 {
-	var t = 3 * 16;
+	set(my, INVISIBLE | PASSABLE);
 	
+	// wait
+	var t = 3 * 16;
 	while (t > 0)
 	{
 		t -= time_step;
 		wait(1);
 	}
-
-	var h = snd_play(g_sndWarghostBattleSpeechStart, 100, 0);
 	
-	while (snd_playing(h))
-		wait(1);
+	if (g_ebSpeech)
+	{
+		g_ebSpeech = false;
+		var h = snd_play(g_sndWarghostBattleSpeechStart, 100, 0);
+		
+		while (snd_playing(h))
+			wait(1);
+	}
 		
 	ent_create(NULL, nullvector, ebHandsBgFly);
 	ptr_remove(my);
@@ -95,7 +98,7 @@ void ebHandsBgFly ()
 	vec_set(&v, player->x);
 	v.z += 400;
 	
-	ent_create("warhand.mdl", &v, ebHandWatch);
+	ent_create("warhand.mdl", &v, ebHandWatchSelect);
 	ptr_remove(my);
 }
 
@@ -174,6 +177,103 @@ void ebHandsBgFly ()
 			wait(1);
 			ptr_remove(my);
 		}
+		
+function bounce_event () 
+{
+	switch (event_type)
+	{
+		case EVENT_ENTITY: 
+			beep();
+			error(you->type);
+			return;
+	}
+} 
+		
+void ebHandJoint ()
+{
+	set(my, INVISIBLE);
+	
+	vec_scale(my->scale_x, 5);
+	c_updatehull(my, 0);
+	
+	VECTOR v0, v1, v, diff;
+	
+	while (1)
+	{
+		int myid = (int)my->skill1;
+		
+		if (myid % 2 == 0)
+			set(my, FLAG2);
+		
+		if (g_ebHand != NULL)
+		{
+			if (g_ebHand->skill1 != 1)
+				break;
+			
+			char* j0 = _chr((g_handBoneFarNames->pstring)[myid]);
+			char* j1 = _chr((g_handBoneNearNames->pstring)[myid]);		
+			
+			if (j0 != NULL && j1 != NULL)
+			{
+				vec_for_bone(&v0, g_ebHand, j0);
+				vec_for_bone(&v1, g_ebHand, j1);
+				vec_lerp(&v, &v0, &v1, 0.5);
+				v.y = player->y;
+				v.z -= 32;
+				
+				if (g_ebHand->skill20 != 0)
+				{
+					vec_to_ent(&v, g_ebHand);
+					v.x *= -1;
+					vec_for_ent(&v, g_ebHand);
+				}
+				
+				vec_diff(&diff, &v, my->x);
+				
+				if (vec_length(&diff) > 5)
+				{
+					var distmove = c_move(my, NULL, &diff, IGNORE_PASSABLE | IGNORE_SPRITES | IGNORE_FLAG2);
+					
+					if (g_ebHand->skill2 != 0 && distmove <= 0 && (absv(my->x - player->x) < my->max_x * 2))
+						player->PL_HEALTH = 0;
+				}
+			}
+		}
+		
+		wait(1);
+	}
+	
+	ptr_remove(my);
+}
+		
+void ebCreateHandJoints (ENTITY* entHand)
+{
+	if (entHand == NULL)
+		return;
+		
+	int i;
+	for (i = 0; i < HAND_FINGERS; i++)
+	{
+		char* j0 = _chr((g_handBoneFarNames->pstring)[i]);
+		char* j1 = _chr((g_handBoneNearNames->pstring)[i]);
+		
+		VECTOR v0, v1, v;
+		vec_for_bone(&v0, entHand, j0);
+		vec_for_bone(&v1, entHand, j1);
+		vec_lerp(&v, &v0, &v1, 0.5);
+		
+		if (entHand->skill20 != 0)
+		{
+			vec_to_ent(&v, entHand);
+			v.x *= -1;
+			vec_for_ent(&v, entHand);
+		}
+		
+		ENTITY* e = ent_create(SPHERE_MDL, &v, ebHandJoint);
+		e->skill1 = i;
+		e->skill2 = entHand;
+	}
+}
 
 void ebHandWatch ()
 {
@@ -182,8 +282,6 @@ void ebHandWatch ()
 	
 	set(my, PASSABLE);
 	my->ambient = 75;
-	
-	my->material = g_mtlHandR;
 	
 	var moveAnim = 10;
 	
@@ -194,6 +292,7 @@ void ebHandWatch ()
 	var ground, height;
 	var heightSub = 32;
 	
+	// move with player
 	while (t > 0)
 	{
 		VECTOR vecBoneGround, vecTraceStart, vecTraceEnd;
@@ -227,8 +326,17 @@ void ebHandWatch ()
 		wait(1);
 	}
 	
-	t = 0;
+	// drop
 	
+	my->skill1 = 1; // joints = on
+	my->skill2 = 1; // joints death = on
+	
+	g_ebHand = my;
+	
+	g_playerDontScanFlag2 = true;
+	ebCreateHandJoints(g_ebHand);
+	
+	t = 0;
 	while (t < 100)
 	{
 		VECTOR vecBoneGround;
@@ -246,6 +354,8 @@ void ebHandWatch ()
 		wait(1);
 	}
 	
+	my->skill2 = 0; // joints death = off
+	
 	t = (3+random(2)) * 16;
 	
 	reset(my, PASSABLE);
@@ -253,6 +363,7 @@ void ebHandWatch ()
 	
 	c_updatehull(my, 0);
 	
+	// wait	
 	while (t > 0)
 	{
 		ent_animate(my, "down", (total_ticks * 4), ANM_CYCLE);
@@ -263,6 +374,9 @@ void ebHandWatch ()
 	set(my, PASSABLE);
 	reset(my, POLYGON);
 	
+	my->skill1 = 0;
+	
+	// up
 	while (t < 100)
 	{
 		VECTOR vecBoneGround;
@@ -280,8 +394,11 @@ void ebHandWatch ()
 		wait(1);
 	}
 	
+	g_playerDontScanFlag2 = false;
+	
 	t = 1.5 * 16;
 	
+	// go away
 	while (t > 0)
 	{
 		t -= time_step;
@@ -296,7 +413,30 @@ void ebHandWatch ()
 	snd_play(g_sndSparkle, 100, 0);
 
 	wait(1);
-	ptr_remove(my);	
+	
+	ent_create(NULL, nullvector, ebHandsBgFly);
+	ptr_remove(my);
+}
+
+void ebHandWatchL ()
+{
+	my->material = g_mtlHandL;
+	my->skill20 = 1;
+	ebHandWatch();
+}
+
+void ebHandWatchR ()
+{
+	my->material = g_mtlHandR;
+	ebHandWatch();
+}
+
+void ebHandWatchSelect ()
+{
+	if (random(100) < 50)
+		ebHandWatchL();
+	else
+		ebHandWatchR();
 }
 
 #endif /* endboss_c */

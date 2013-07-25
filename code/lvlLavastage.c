@@ -131,8 +131,6 @@ void lvlLavastageStart ()
 	
 	lvlLavastageSwirlOut();
 	
-	ebStart();
-	
 	// debug
 	{
 		while (key_a || key_c || key_k)
