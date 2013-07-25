@@ -16,11 +16,14 @@ void on_exit_lotti ()
 }
 
 void lvlLfReset ()
-{	
-	if (on_exit_restore == NULL)
-		on_exit_restore = on_exit;	
-		
-	on_exit = on_exit_lotti;
+{
+	// physx hack
+	{
+		if (on_exit_restore == NULL)
+			on_exit_restore = on_exit;	
+			
+		on_exit = on_exit_lotti;
+	}
 	
 	snd_stop(g_fhLvlLottifantSong);
 	g_fhLvlLottifantSong = 0;

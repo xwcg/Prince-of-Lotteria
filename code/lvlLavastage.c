@@ -2,7 +2,9 @@
 #define lvlLavastage_c
 
 #include "lvlLavastage.h"
+#include "lvlLottifant.h"
 #include "postprocessing.h"
+#include "endboss.h"
 
 void lvlLavastage_c_startup ()
 {
@@ -18,6 +20,14 @@ void lvlLavastageInit ()
 
 void lvlLavastageReset ()
 {
+	// physx hack
+	{
+		if (on_exit_restore == NULL)
+			on_exit_restore = on_exit;	
+			
+		on_exit = on_exit_lotti;
+	}
+
 	snd_stop(g_fhLvlLavastageSong);
 	g_fhLvlLavastageSong = 0;
 	flying_man = 0;
@@ -25,6 +35,8 @@ void lvlLavastageReset ()
 	g_bLvlLavastageRunning = false;
 	
 	godmode = 0;
+	
+	ebReset();
 	
 	if (!g_lvlLavastageKeepSwirl)
 	{
@@ -140,6 +152,8 @@ void lvlLavastageExit (BOOL bNextLevel)
 {
 	sky_active = 0;
 	g_bLvlLavastageRunning = false;
+	
+	on_exit = on_exit_restore;
 	
 	snd_stop(g_fhLvlLavastageSong);
 	g_fhLvlLavastageSong = 0;
