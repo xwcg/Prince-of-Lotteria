@@ -4,6 +4,63 @@
 #include "endboss.h"
 #include "lvlBoss.h"
 
+int numChoppedEnt (ENTITY* entHand)
+{
+	BOOL* arr = NULL;
+	
+	if (entHand->skill20 == 1) // left
+		arr = g_handChopL;
+	else // right
+		arr = g_handChopR;
+		
+	int num = 0;
+	
+	int i;
+	for (i = 0; i < 4; i++)
+		if (arr[i] == true)
+			num++;
+			
+	return num;
+}
+
+int numChoppedSide (int side)
+{
+	BOOL* arr = NULL;
+	
+	if (side == 1) // left
+		arr = g_handChopL;
+	else // right
+		arr = g_handChopR;
+		
+	int num = 0;
+	
+	int i;
+	for (i = 0; i < 4; i++)
+		if (arr[i] == true)
+			num++;
+			
+	return num;
+}
+
+void updateHandChopped (ENTITY* entHand)
+{
+	BOOL* arr = NULL;
+	
+	if (entHand->skill20 == 1) // left
+		arr = g_handChopL;
+	else // right
+		arr = g_handChopR;
+	
+	int i;
+	for (i = 0; i < 4; i++)
+	{
+		if (arr[i] != true)
+			entHand->vmask &= ~(1 << (4-i+1));
+		else
+			entHand->vmask |= 1 << (4-i+1);
+	}
+}
+
 void ebReset ()
 {
 	int i, j;
@@ -13,6 +70,9 @@ void ebReset ()
 			(g_handChop[i])[j] = false;
 			
 	g_ebSpeech = true;
+	
+	g_handDropping = false;
+	g_fingerChopped = false;
 }
 
 void ebDoSparkle (ENTITY* e, int modulo)
@@ -105,6 +165,7 @@ void ebHandsBgFly ()
 	void ebHandFlyL ()
 	{
 		my->material = g_mtlHandL;
+		my->skill20 = 1;
 		ebHandFly();
 	}
 
@@ -116,6 +177,8 @@ void ebHandsBgFly ()
 	
 		void ebHandFly ()
 		{
+			updateHandChopped(my);
+			
 			set(my, PASSABLE);
 			my->ambient = 75;
 			
@@ -178,25 +241,66 @@ void ebHandsBgFly ()
 			ptr_remove(my);
 		}
 		
-function bounce_event () 
+void flyawaychoppedhand ()
 {
-	switch (event_type)
+	var t = 5 * 16;
+	
+	while (t > 0)
 	{
-		case EVENT_ENTITY: 
-			beep();
-			error(you->type);
-			return;
+		my->y -= 35 * time_step;
+		my->roll += time_step;
+		my->z += 3 * time_step;
+		
+		t -= time_step;
+		
+		wait(1);
 	}
-} 
+	
+	ptr_remove(my);
+}
+		
+void doChopped (ENTITY* entHand, int lr, int fingerId)
+{
+	ENTITY* entzzz = ent_create(entHand->type, entHand->x, flyawaychoppedhand);
+	
+	entzzz->skill20 = lr;
+	
+	vec_set(entzzz->scale_x, entHand->scale_x);
+	
+	entzzz->frame = entHand->frame;
+	entzzz->next_frame = entHand->next_frame;
+	
+	if (lr == 1)
+		entzzz->material = g_mtlHandL;
+	else
+		entzzz->material = g_mtlHandR;
+		
+	entzzz->skill1 = fingerId;
+	
+	BOOL* arr = NULL;
+	
+	if (lr == 1) // left
+		arr = g_handChopL;
+	else // right
+		arr = g_handChopR;
+		
+	int i;
+	for (i = 0; i <= 5; i++)
+		entzzz->vmask |= 1 << i;
+	
+	entzzz->vmask &= ~(1 << (4-fingerId+1));
+}
 		
 void ebHandJoint ()
 {
 	set(my, INVISIBLE);
 	
-	vec_scale(my->scale_x, 5);
+	vec_scale(my->scale_x, 2);
 	c_updatehull(my, 0);
 	
 	VECTOR v0, v1, v, diff;
+	
+	BOOL isChopped = false;
 	
 	while (1)
 	{
@@ -230,12 +334,40 @@ void ebHandJoint ()
 				
 				vec_diff(&diff, &v, my->x);
 				
-				if (vec_length(&diff) > 5)
+				var distplayer = absv(my->x - player->x);
+				
+				if (g_handDropping && vec_length(&diff) > 2)
 				{
 					var distmove = c_move(my, NULL, &diff, IGNORE_PASSABLE | IGNORE_SPRITES | IGNORE_FLAG2);
 					
-					if (g_ebHand->skill2 != 0 && distmove <= 0 && (absv(my->x - player->x) < my->max_x * 2))
+					if (g_ebHand->skill2 != 0 && distmove <= 0 && (distplayer < my->max_x * 1.25))
 						player->PL_HEALTH = 0;
+				}
+				else
+				{
+					if (!g_handDropping && !g_fingerChopped)
+					{
+						if (distplayer < my->max_x * 2)
+						{
+							if (g_playerIsAttacking)
+							{
+								set(my, PASSABLE);
+							
+								if (g_ebHand->skill20 == 1) // left
+									g_handChopL[my->skill1] = true;
+								else // right
+									g_handChopR[my->skill1] = true;
+									
+								isChopped = true;
+								g_fingerChopped = true;
+								
+								doChopped(g_ebHand, g_ebHand->skill20, my->skill1);
+								updateHandChopped(g_ebHand);
+									
+								break;
+							}
+						}
+					}
 				}
 			}
 		}
@@ -251,32 +383,44 @@ void ebCreateHandJoints (ENTITY* entHand)
 	if (entHand == NULL)
 		return;
 		
+	BOOL* arr = NULL;
+	
+	if (entHand->skill20 == 1) // left
+		arr = g_handChopL;
+	else // right
+		arr = g_handChopR;
+		
 	int i;
 	for (i = 0; i < HAND_FINGERS; i++)
 	{
-		char* j0 = _chr((g_handBoneFarNames->pstring)[i]);
-		char* j1 = _chr((g_handBoneNearNames->pstring)[i]);
-		
-		VECTOR v0, v1, v;
-		vec_for_bone(&v0, entHand, j0);
-		vec_for_bone(&v1, entHand, j1);
-		vec_lerp(&v, &v0, &v1, 0.5);
-		
-		if (entHand->skill20 != 0)
+		if (arr[i] == false)
 		{
-			vec_to_ent(&v, entHand);
-			v.x *= -1;
-			vec_for_ent(&v, entHand);
+			char* j0 = _chr((g_handBoneFarNames->pstring)[i]);
+			char* j1 = _chr((g_handBoneNearNames->pstring)[i]);
+			
+			VECTOR v0, v1, v;
+			vec_for_bone(&v0, entHand, j0);
+			vec_for_bone(&v1, entHand, j1);
+			vec_lerp(&v, &v0, &v1, 0.5);
+			
+			if (entHand->skill20 != 0)
+			{
+				vec_to_ent(&v, entHand);
+				v.x *= -1;
+				vec_for_ent(&v, entHand);
+			}
+			
+			ENTITY* e = ent_create("handjoint.mdl", &v, ebHandJoint);
+			e->skill1 = i;
+			e->skill2 = entHand;
 		}
-		
-		ENTITY* e = ent_create(SPHERE_MDL, &v, ebHandJoint);
-		e->skill1 = i;
-		e->skill2 = entHand;
 	}
 }
 
 void ebHandWatch ()
 {
+	updateHandChopped(my);
+	
 	ebDoSparkle(my, 2000);
 	snd_play(g_sndSparkle, 100, 0);
 	
@@ -292,7 +436,10 @@ void ebHandWatch ()
 	var ground, height;
 	var heightSub = 32;
 	
+	g_ebHand = my;
+	
 	// move with player
+	set(player, FLAG2);
 	while (t > 0)
 	{
 		VECTOR vecBoneGround, vecTraceStart, vecTraceEnd;
@@ -306,8 +453,7 @@ void ebHandWatch ()
 		
 		height = player->z + 250;
 		
-		you = player;
-		if (c_trace(&vecTraceStart, &vecTraceEnd, IGNORE_ME | IGNORE_YOU | USE_POLYGON) > 0)
+		if (c_trace(&vecTraceStart, &vecTraceEnd, IGNORE_ME | USE_POLYGON | IGNORE_FLAG2 ) > 0)
 		{
 			ground = hit.z;
 			height = ground + (my->z - vecBoneGround.z);
@@ -326,75 +472,80 @@ void ebHandWatch ()
 		wait(1);
 	}
 	
+	reset(player, FLAG2);
+	
 	// drop
 	
-	my->skill1 = 1; // joints = on
-	my->skill2 = 1; // joints death = on
+	g_handDropping = true;
 	
-	g_ebHand = my;
+	g_ebHand->skill1 = 1; // joints = on
+	g_ebHand->skill2 = 1; // joints death = on
 	
 	g_playerDontScanFlag2 = true;
+	g_playerNoYou = true;
+	
 	ebCreateHandJoints(g_ebHand);
+	
+	set(player, ZNEAR);
 	
 	t = 0;
 	while (t < 100)
 	{
 		VECTOR vecBoneGround;
-		vec_for_bone(&vecBoneGround, my, "ground");
-		height = ground + (my->z - vecBoneGround.z) - heightSub;
+		vec_for_bone(&vecBoneGround, g_ebHand, "ground");
+		height = ground + (g_ebHand->z - vecBoneGround.z) - heightSub;
 		
 		VECTOR v;
-		vec_set(&v, my->x);
+		vec_set(&v, g_ebHand->x);
 		v.z = height;
 		
-		vec_lerp(my->x, my->x, &v, 0.25 * time_step);
+		vec_lerp(g_ebHand->x, g_ebHand->x, &v, 0.25 * time_step);
 		
 		t = clamp(t + 5 * time_step, 0, 100);
-		ent_animate(my, "drop", t, 0);		
+		ent_animate(g_ebHand, "drop", t, 0);		
 		wait(1);
 	}
 	
-	my->skill2 = 0; // joints death = off
+	g_handDropping = false;
+	
+	g_ebHand->skill2 = 0; // joints death = off
 	
 	t = (3+random(2)) * 16;
 	
-	reset(my, PASSABLE);
-	set(my, POLYGON);
-	
-	c_updatehull(my, 0);
+	g_fingerChopped = false;
 	
 	// wait	
-	while (t > 0)
+	while (t > 0 && !g_fingerChopped)
 	{
-		ent_animate(my, "down", (total_ticks * 4), ANM_CYCLE);
+		ent_animate(g_ebHand, "down", (total_ticks * 4), ANM_CYCLE);
 		t -= time_step;
 		wait(1);
 	}
 	
-	set(my, PASSABLE);
-	reset(my, POLYGON);
+	reset(player, ZNEAR);
 	
-	my->skill1 = 0;
+	g_ebHand->skill1 = 0;
 	
 	// up
 	while (t < 100)
 	{
 		VECTOR vecBoneGround;
-		vec_for_bone(&vecBoneGround, my, "ground");
-		height = ground + (my->z - vecBoneGround.z) - heightSub;
+		vec_for_bone(&vecBoneGround, g_ebHand, "ground");
+		height = ground + (g_ebHand->z - vecBoneGround.z) - heightSub;
 		
 		VECTOR v;
-		vec_set(&v, my->x);
+		vec_set(&v, g_ebHand->x);
 		v.z = height;
 		
-		vec_lerp(my->x, my->x, &v, 0.25 * time_step);
+		vec_lerp(g_ebHand->x, g_ebHand->x, &v, 0.25 * time_step);
 		
 		t = clamp(t + 2 * time_step, 0, 100);
-		ent_animate(my, "up", t, 0);		
+		ent_animate(g_ebHand, "up", t, 0);		
 		wait(1);
 	}
 	
 	g_playerDontScanFlag2 = false;
+	g_playerNoYou = false;
 	
 	t = 1.5 * 16;
 	
@@ -402,20 +553,20 @@ void ebHandWatch ()
 	while (t > 0)
 	{
 		t -= time_step;
-		my->z += 10 * time_step;
-		my->y -= 20 * time_step;
-		my->roll += 5 * time_step;
+		g_ebHand->z += 10 * time_step;
+		g_ebHand->y -= 20 * time_step;
+		g_ebHand->roll += 5 * time_step;
 		wait(1);
 	}
 
-	set(my, INVISIBLE);
-	ebDoSparkle(my, 2000);
+	set(g_ebHand, INVISIBLE);
+	ebDoSparkle(g_ebHand, 2000);
 	snd_play(g_sndSparkle, 100, 0);
 
 	wait(1);
 	
 	ent_create(NULL, nullvector, ebHandsBgFly);
-	ptr_remove(my);
+	ptr_remove(g_ebHand);
 }
 
 void ebHandWatchL ()
@@ -433,10 +584,25 @@ void ebHandWatchR ()
 
 void ebHandWatchSelect ()
 {
-	if (random(100) < 50)
+	// prefer hand with more fingers
+
+	int lnum = numChoppedSide(1);
+	int rnum = numChoppedSide(0);
+	
+	if (lnum < rnum)
 		ebHandWatchL();
 	else
-		ebHandWatchR();
+	{
+		if (lnum > rnum)
+			ebHandWatchR();
+		else
+		{
+			if (random(100) < 50)
+				ebHandWatchL();
+			else
+				ebHandWatchR();
+		}
+	}
 }
 
 #endif /* endboss_c */
