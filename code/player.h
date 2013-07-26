@@ -41,6 +41,9 @@
 // globals
 
 	BOOL g_playerDontScanFlag2 = false;
+	BOOL g_playerNoYou = false;
+	
+	BOOL g_playerIsAttacking = false;
 
 	var g_playerWalkSpeed = 35;
 

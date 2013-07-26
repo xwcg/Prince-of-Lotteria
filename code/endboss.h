@@ -28,13 +28,17 @@ MATERIAL* g_mtlHandL =
 	effect = "handL.fx";
 }
 
+BOOL g_handDropping = false;
+
 var g_handScale = 1.5;
 
 SOUND* g_sndWarghostBattleSpeechStart = "warghostBattleSpeechStart.ogg";
 SOUND* g_sndWarghostBattleNoChance = "warghostBattleNoChance.ogg";
 
-TEXT* g_handBoneFarNames = { string ("Z_1","M_1","R_1","K_1"); }
-TEXT* g_handBoneNearNames = { string ("Z_2","M_2","R_2","K_2"); }
+BOOL g_fingerChopped = false;
+
+TEXT* g_handBoneFarNames = { string ("K_1","R_1","M_1","Z_1"); }
+TEXT* g_handBoneNearNames = { string ("K_2","R_2","M_2","Z_2"); }
 
 void ebReset ();
 

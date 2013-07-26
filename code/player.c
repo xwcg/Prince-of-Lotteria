@@ -149,8 +149,8 @@ action actPlayer ()
 	move_friction = 0.3;
 	ent_preload(my);
 	
-	// scanning flag2 is default
 	g_playerDontScanFlag2 = false;
+	g_playerNoYou = false;
 	
 	setPlayerControls(true);
 	
@@ -462,17 +462,22 @@ void move_player ()
 			if (my.PL_ATTACKING_PERCENTAGE >= 30 && !is(me, PL_ATTACKED_ONCE)) {
 				// Check if enemy is hit	
 				
+				g_playerIsAttacking = true;
+				
 				var mode = IGNORE_ME | SCAN_ENTS;
 				if (!g_playerDontScanFlag2)
 					mode |= SCAN_FLAG2;
 				
 				c_scan(my.x,my.pan,vector(120,0,200), mode);
 				
-				if (you != NULL) {
-					if (is(you, PoL_is_enemy)) {
-						you.PoL_enemy_health -=1;
-						set(my, PL_ATTACKED_ONCE);
-						effect(pBlood,maxv(1,10*time_frame),vector(you.x, you.y-10, you.z),vector(0,0,-3));
+				if (!g_playerNoYou)
+				{
+					if (you != NULL) {
+						if (is(you, PoL_is_enemy)) {
+							you.PoL_enemy_health -=1;
+							set(my, PL_ATTACKED_ONCE);
+							effect(pBlood,maxv(1,10*time_frame),vector(you.x, you.y-10, you.z),vector(0,0,-3));
+						}
 					}
 				}
 			}
@@ -482,6 +487,10 @@ void move_player ()
 				my.PL_ATTACKING_PERCENTAGE = 0;
 				reset(me, PL_ATTACKED_ONCE);
 			}
+		}
+		else
+		{
+			g_playerIsAttacking = false;
 		}
 		
 		// Is being attacked?
