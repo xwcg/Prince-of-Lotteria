@@ -13,6 +13,12 @@ void lvlBossExit ();
 	MATERIAL* g_mtlBossTrail = {effect = "trail.fx";}
 	MATERIAL* g_mtlBossGhost = {effect = "warghost.fx";}
 	
+// hdr
+
+	#define LVL_BOSS_HDR_THRESHOLD 30
+	#define LVL_BOSS_HDR_STRENGTH 30
+	#define LVL_BOSS_HDR_EXPOSURE 80
+	
 // effects
 
 	BMAP* g_bmapSparkle = "sparkle.tga";

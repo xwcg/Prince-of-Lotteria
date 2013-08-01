@@ -51,11 +51,33 @@ BOOL* g_handChop[2];
 BOOL g_handChopL [4];
 BOOL g_handChopR [4];
 
+void effEbBlood (VECTOR* pos, VECTOR* vecVel, var pSpeed, BOOL bInverse);
+void effEbBlood_p (PARTICLE* p);
+void effEbBlood_ev (PARTICLE* p);
+
+SOUND* g_sndFingerChop = "fingerChop.ogg";
+
+SOUND* g_sndHandFlyBoth = "handFlyBoth.ogg";
+
+SOUND* g_sndHandFly = "handFly.ogg";
+SOUND* g_sndHandBliss = "handBliss.ogg";
+
+SOUND* g_sndHandDrop = "handDrop.ogg";
+SOUND* g_sndHandUp = "handUp.ogg";
+
+// sprites
+
+	BmapBank* g_bbEbBlood = NULL;
+
 void endboss_h_startup ()
 {
 	g_handChop[HAND_CHOP_L] = &g_handChopL;
 	g_handChop[HAND_CHOP_R] = &g_handChopR;
+	
+	g_bbEbBlood = newBmapBank(5, "bloodSht%d.TGA");
 }
+
+
 
 #include "endboss.c"
 

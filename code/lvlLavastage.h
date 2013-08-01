@@ -26,6 +26,12 @@
 
 	#define LVL_LAVASTAGE_WMB "lavastage.wmb"
 	
+// hdr
+
+	#define LVL_LAVASTAGE_HDR_THRESHOLD 30
+	#define LVL_LAVASTAGE_HDR_STRENGTH 75
+	#define LVL_LAVASTAGE_HDR_EXPOSURE 0
+	
 // shaders and effects
 
 	BmapBank* g_bbankLavaAsh = NULL; // pLavaAsh%d.dds

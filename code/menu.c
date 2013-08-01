@@ -29,6 +29,8 @@ void menu_open ()
 	menuLen = strlen(str);
 	menuTexts = sys_malloc(menuLen * sizeof(TEXT*));
 	
+	setHdr(LVL_MENU_HDR_STRENGTH, LVL_MENU_HDR_THRESHOLD, LVL_MENU_HDR_EXPOSURE);
+	
 	int i;
 	for (i = 0; i < menuLen; i++)
 	{

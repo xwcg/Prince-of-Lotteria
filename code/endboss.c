@@ -42,22 +42,79 @@ int numChoppedSide (int side)
 	return num;
 }
 
+VECTOR* handFingerPos (ENTITY* entHand, BOOL bLeftHand, int fingerId, VECTOR* vecFingerPos, VECTOR* vecFingerDir)
+{
+	VECTOR vecFinger0, vecFinger1;
+	
+	char* j0 = _chr((g_handBoneFarNames->pstring)[fingerId]);
+	char* j1 = _chr((g_handBoneNearNames->pstring)[fingerId]);		
+	
+	vec_for_bone(&vecFinger0, entHand, j0);
+	vec_for_bone(&vecFinger1, entHand, j1);
+	
+	if (bLeftHand)
+	{
+		vec_to_ent(&vecFinger0, entHand);
+		vecFinger0.x *= -1;
+		vec_for_ent(&vecFinger0, entHand);	
+		
+		vec_to_ent(&vecFinger1, entHand);
+		vecFinger1.x *= -1;
+		vec_for_ent(&vecFinger1, entHand);
+	}	
+	
+	vec_lerp(vecFingerPos, &vecFinger0, &vecFinger1, 0.5);
+	vec_diff(vecFingerDir, &vecFinger1, &vecFinger0);
+	
+	return vecFingerPos;
+}
+
+void doHandChopBlood (ENTITY* entHand)
+{
+	BOOL* arr = NULL;
+	
+	BOOL bLeftHand = (entHand->skill20 == 1);
+	
+	if (bLeftHand) // left
+		arr = g_handChopL;
+	else // right
+		arr = g_handChopR;
+
+	int fingerId;
+	VECTOR fingerPos, fingerDir;
+	
+	for (fingerId = 0; fingerId < 4; fingerId++)
+	{
+		if (arr[fingerId] == true)
+		{
+			handFingerPos(entHand, bLeftHand, fingerId, &fingerPos, &fingerDir);
+			effEbBlood(&fingerPos, &fingerDir, 25, false);
+		}			
+	}
+}
+
 void updateHandChopped (ENTITY* entHand)
 {
 	BOOL* arr = NULL;
 	
-	if (entHand->skill20 == 1) // left
+	BOOL bLeftHand = (entHand->skill20 == 1);
+	
+	if (bLeftHand) // left
 		arr = g_handChopL;
 	else // right
 		arr = g_handChopR;
 	
-	int i;
-	for (i = 0; i < 4; i++)
+	int fingerId;
+	for (fingerId = 0; fingerId < 4; fingerId++)
 	{
-		if (arr[i] != true)
-			entHand->vmask &= ~(1 << (4-i+1));
+		if (arr[fingerId] != true)
+		{
+			entHand->vmask &= ~(1 << (4 - fingerId + 1));
+		}
 		else
-			entHand->vmask |= 1 << (4-i+1);
+		{
+			entHand->vmask |= 1 << (4 - fingerId + 1);
+		}
 	}
 }
 
@@ -127,6 +184,8 @@ void ebHandsBgFly ()
 	hands[1] = ent_create("warhand.mdl", vector(handRadius, 500, 400), ebHandFlyR);
 	
 	var t = (5 + random(5)) * 16;
+	
+	snd_play(g_sndHandFlyBoth, 100, 0);
 	
 	while (t > 0)
 	{
@@ -222,6 +281,8 @@ void ebHandsBgFly ()
 				ent_animate(my, "idleH", (total_ticks * moveAnim) % 100, ANM_CYCLE);
 				my->roll += (-90 - my->roll) * 0.05 * clamp(time_step, 0.001, 1);
 				
+				doHandChopBlood(my);
+				
 				wait(1);
 			}
 			
@@ -231,6 +292,9 @@ void ebHandsBgFly ()
 				my->z += 10 * time_step;
 				my->y -= 20 * time_step;
 				my->roll += 5 * time_step;
+				
+				doHandChopBlood(my);
+				
 				wait(1);
 			}
 			
@@ -289,6 +353,8 @@ void doChopped (ENTITY* entHand, int lr, int fingerId)
 		entzzz->vmask |= 1 << i;
 	
 	entzzz->vmask &= ~(1 << (4-fingerId+1));
+	
+	snd_play(g_sndFingerChop, 100, 0);
 }
 		
 void ebHandJoint ()
@@ -304,6 +370,8 @@ void ebHandJoint ()
 	
 	while (1)
 	{
+		updateHandChopped(g_ebHand);
+		
 		int myid = (int)my->skill1;
 		
 		if (myid % 2 == 0)
@@ -313,59 +381,48 @@ void ebHandJoint ()
 		{
 			if (g_ebHand->skill1 != 1)
 				break;
+				
+			BOOL bLeftHand = (g_ebHand->skill20 != 0);
+			int fingerId = myid;
+			VECTOR vecFingerPos, vecFingerDir;
 			
-			char* j0 = _chr((g_handBoneFarNames->pstring)[myid]);
-			char* j1 = _chr((g_handBoneNearNames->pstring)[myid]);		
+			handFingerPos(g_ebHand, bLeftHand, fingerId, &vecFingerPos, &vecFingerDir);
 			
-			if (j0 != NULL && j1 != NULL)
+			vecFingerPos.y = player->y;
+			vecFingerPos.z -= 32;
+			
+			vec_diff(&diff, &vecFingerPos, my->x);
+			
+			var distplayer = absv(my->x - player->x);
+			
+			if (g_handDropping && vec_length(&diff) > 2)
 			{
-				vec_for_bone(&v0, g_ebHand, j0);
-				vec_for_bone(&v1, g_ebHand, j1);
-				vec_lerp(&v, &v0, &v1, 0.5);
-				v.y = player->y;
-				v.z -= 32;
+				var distmove = c_move(my, NULL, &diff, IGNORE_PASSABLE | IGNORE_SPRITES | IGNORE_FLAG2);
 				
-				if (g_ebHand->skill20 != 0)
+				if (g_ebHand->skill2 != 0 && distmove <= 0 && (distplayer < my->max_x * 1.25))
+					player->PL_HEALTH = 0;
+			}
+			else
+			{
+				if (!g_handDropping && !g_fingerChopped)
 				{
-					vec_to_ent(&v, g_ebHand);
-					v.x *= -1;
-					vec_for_ent(&v, g_ebHand);
-				}
-				
-				vec_diff(&diff, &v, my->x);
-				
-				var distplayer = absv(my->x - player->x);
-				
-				if (g_handDropping && vec_length(&diff) > 2)
-				{
-					var distmove = c_move(my, NULL, &diff, IGNORE_PASSABLE | IGNORE_SPRITES | IGNORE_FLAG2);
-					
-					if (g_ebHand->skill2 != 0 && distmove <= 0 && (distplayer < my->max_x * 1.25))
-						player->PL_HEALTH = 0;
-				}
-				else
-				{
-					if (!g_handDropping && !g_fingerChopped)
+					if (distplayer < my->max_x * 2)
 					{
-						if (distplayer < my->max_x * 2)
+						if (g_playerIsAttacking)
 						{
-							if (g_playerIsAttacking)
-							{
-								set(my, PASSABLE);
-							
-								if (g_ebHand->skill20 == 1) // left
-									g_handChopL[my->skill1] = true;
-								else // right
-									g_handChopR[my->skill1] = true;
-									
-								isChopped = true;
-								g_fingerChopped = true;
+							set(my, PASSABLE);
+						
+							if (bLeftHand) // left
+								g_handChopL[my->skill1] = true;
+							else // right
+								g_handChopR[my->skill1] = true;
 								
-								doChopped(g_ebHand, g_ebHand->skill20, my->skill1);
-								updateHandChopped(g_ebHand);
-									
-								break;
-							}
+							isChopped = true;
+							g_fingerChopped = true;
+							
+							doChopped(g_ebHand, g_ebHand->skill20, my->skill1);
+								
+							break;
 						}
 					}
 				}
@@ -438,6 +495,8 @@ void ebHandWatch ()
 	
 	g_ebHand = my;
 	
+	snd_play(g_sndHandFly, 100, 0);
+	
 	// move with player
 	set(player, FLAG2);
 	while (t > 0)
@@ -469,6 +528,8 @@ void ebHandWatch ()
 		
 		t -= time_step;
 		
+		doHandChopBlood(my);
+		
 		wait(1);
 	}
 	
@@ -489,6 +550,8 @@ void ebHandWatch ()
 	set(player, ZNEAR);
 	
 	t = 0;
+	
+	BOOL bSndHandDrop = true;
 	while (t < 100)
 	{
 		VECTOR vecBoneGround;
@@ -502,7 +565,16 @@ void ebHandWatch ()
 		vec_lerp(g_ebHand->x, g_ebHand->x, &v, 0.25 * time_step);
 		
 		t = clamp(t + 5 * time_step, 0, 100);
-		ent_animate(g_ebHand, "drop", t, 0);		
+		ent_animate(g_ebHand, "drop", t, 0);
+
+		doHandChopBlood(my);
+		
+		if (t > 90 && bSndHandDrop)
+		{
+			bSndHandDrop = false;
+			snd_play(g_sndHandDrop, 100, 0);
+		}
+		
 		wait(1);
 	}
 	
@@ -519,8 +591,13 @@ void ebHandWatch ()
 	{
 		ent_animate(g_ebHand, "down", (total_ticks * 4), ANM_CYCLE);
 		t -= time_step;
+		
+		doHandChopBlood(my);
+		
 		wait(1);
 	}
+	
+	snd_play(g_sndHandUp, 100, 0);
 	
 	reset(player, ZNEAR);
 	
@@ -541,6 +618,9 @@ void ebHandWatch ()
 		
 		t = clamp(t + 2 * time_step, 0, 100);
 		ent_animate(g_ebHand, "up", t, 0);		
+		
+		doHandChopBlood(my);
+		
 		wait(1);
 	}
 	
@@ -549,6 +629,8 @@ void ebHandWatch ()
 	
 	t = 1.5 * 16;
 	
+	snd_play(g_sndHandBliss, 100, 0);
+	
 	// go away
 	while (t > 0)
 	{
@@ -556,6 +638,9 @@ void ebHandWatch ()
 		g_ebHand->z += 10 * time_step;
 		g_ebHand->y -= 20 * time_step;
 		g_ebHand->roll += 5 * time_step;
+		
+		doHandChopBlood(my);
+		
 		wait(1);
 	}
 
@@ -604,5 +689,37 @@ void ebHandWatchSelect ()
 		}
 	}
 }
+
+void effEbBlood (VECTOR* pos, VECTOR* vecVel, var pSpeed, BOOL bInverse)
+{
+	vec_normalize(vecVel, pSpeed);
+	
+	if (bInverse)
+		vec_scale(vecVel, -1);
+	
+	effect(effEbBlood_p, 1, pos, vecVel);
+}
+
+	void effEbBlood_p (PARTICLE* p)
+	{
+		p->bmap = getRandomBmapBankBmap(g_bbEbBlood);
+		
+		p->flags |= (TRANSLUCENT | MOVE);
+		
+		p->gravity = 2;
+		
+		p->alpha = 100;
+		p->size = 64 + random(128);
+		
+		p->event = effEbBlood_ev;
+	}
+	
+		void effEbBlood_ev (PARTICLE* p)
+		{
+			p->alpha = clamp(p->alpha - 5 * time_step, 0, 100);
+			
+			if (p->alpha <= 0)
+				p->lifespan = 0;
+		}	
 
 #endif /* endboss_c */
