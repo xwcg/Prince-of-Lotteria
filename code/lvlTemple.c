@@ -50,6 +50,7 @@ void lvlTempleStart ()
 		wait(1);
 		
 	skychange();
+	setHdr(LVL_TEMPLE_HDR_STRENGTH, LVL_TEMPLE_HDR_THRESHOLD, LVL_TEMPLE_HDR_EXPOSURE);
 	
 	g_bLvlTempleRunning = true;
 	

@@ -34,6 +34,8 @@ void lvlBossStart ()
 		wait(1);
 		
 	skychange();
+	setHdr(LVL_BOSS_HDR_STRENGTH, LVL_BOSS_HDR_THRESHOLD, LVL_BOSS_HDR_EXPOSURE);
+	
 	gui_show();
 		
 	// start music

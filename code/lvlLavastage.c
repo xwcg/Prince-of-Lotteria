@@ -113,6 +113,7 @@ void lvlLavastageStart ()
 		wait(1);
 		
 	skychange();
+	setHdr(LVL_LAVASTAGE_HDR_STRENGTH, LVL_LAVASTAGE_HDR_THRESHOLD, LVL_LAVASTAGE_HDR_EXPOSURE);
 	
 	g_bLvlLavastageRunning = true;
 	

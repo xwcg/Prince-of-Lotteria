@@ -24,6 +24,12 @@
 	
 	BOOL g_lvlLfDeregister = false;
 	
+// hdr
+
+	#define LVL_LOTTIFANT_HDR_THRESHOLD 55
+	#define LVL_LOTTIFANT_HDR_STRENGTH 5
+	#define LVL_LOTTIFANT_HDR_EXPOSURE 0	
+	
 // sounds
 
 	// music

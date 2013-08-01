@@ -13,6 +13,12 @@
 
 	#define LVL_TEMPLE_WMB "level01_v7.wmb"
 	
+// hdr
+
+	#define LVL_TEMPLE_HDR_THRESHOLD 15
+	#define LVL_TEMPLE_HDR_STRENGTH 40
+	#define LVL_TEMPLE_HDR_EXPOSURE 0
+	
 // sounds
 
 	// music
