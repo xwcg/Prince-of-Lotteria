@@ -2,12 +2,22 @@
 #define postprocessing_c
 
 #include "postprocessing.h"
+#include <mtlView.c>
 
 void initPostprocessing ()
 {
 	resetPpSwirl();
 	
-	camera->stage = pp_viewSwirl;
+	camera->stage = pp_viewLuma;
+	pp_viewLuma->stage = pp_viewFxaa;
+	pp_viewFxaa->stage = pp_viewSwirl;
+	pp_set(pp_viewSwirl, mtl_hdr);
+	
+	while (1)
+	{
+		updateHdr();
+		wait(1);
+	}
 }
 
 // swirl
@@ -46,4 +56,20 @@ void setPpSwirlBlend (float fBlend)
 	g_mtlSwirl->ppSwirlBlend = floatv(fBlend);
 }
 
+// HDR
+
+void setHdr (float fStrength, float fThreshold, float fExposure)
+{
+	hdrStrength = fStrength;
+	hdrThreshold = fThreshold;
+	hdrExposure = fExposure;
+}
+
+void updateHdr ()
+{
+	mtl_hdr.skill1 = floatv(hdrStrength);
+	mtl_hdr.skill2 = floatv(hdrThreshold);
+	mtl_hdr.skill3 = floatv(hdrExposure);
+}
+	
 #endif /* postprocessing_c */

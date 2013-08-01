@@ -35,6 +35,12 @@
 	SOUND* creditsExplo = "explo.wav";
 	SOUND* g_sndJetpackCredits = "jetpackCredits.ogg";
 	
+// hdr
+
+	#define LVL_CREDITS_HDR_THRESHOLD 50
+	#define LVL_CREDITS_HDR_STRENGTH 25
+	#define LVL_CREDITS_HDR_EXPOSURE 25
+	
 // globals
 	
 	var g_fhCreditsSong = 0;

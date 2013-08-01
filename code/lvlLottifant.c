@@ -47,6 +47,8 @@ void lvlLfStart ()
 		wait(1);
 		
 	skychange();
+	setHdr(LVL_LOTTIFANT_HDR_STRENGTH, LVL_LOTTIFANT_HDR_THRESHOLD, LVL_LOTTIFANT_HDR_EXPOSURE);
+	
 	gui_show();
 		
 	// start music

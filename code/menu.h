@@ -15,6 +15,12 @@ SOUND *menuBackgroundMusic = "menu.ogg";
 FONT *menuFont = "Courier#64";
 BMAP *menuBackgroundImage = NULL;
 
+// hdr
+
+	#define LVL_MENU_HDR_THRESHOLD 50
+	#define LVL_MENU_HDR_STRENGTH 10
+	#define LVL_MENU_HDR_EXPOSURE 0
+
 PANEL *menuMainmenuBackground = 
 {
 	pos_x = 0;

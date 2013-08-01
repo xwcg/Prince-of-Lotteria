@@ -87,6 +87,7 @@ void creditsStart ()
 	wait(1);
 	
 	skychange(0.1);
+	setHdr(LVL_CREDITS_HDR_STRENGTH, LVL_CREDITS_HDR_THRESHOLD, LVL_CREDITS_HDR_EXPOSURE);
 	
 	detail_size = 64;	
 	level_load_ext("credits.wmb");
