@@ -4,6 +4,23 @@
 #include "endboss.h"
 #include "lvlBoss.h"
 
+void ebDoHit ()
+{
+	g_ebDoHit = true;
+	g_ebDoHitPercent = 0;
+	
+	while (g_ebDoHitPercent < 100)
+	{
+		proc_mode = PROC_GLOBAL;		
+		
+		g_ebDoHitPercent = clamp(g_ebDoHitPercent + time_step * 2, 0, 100);
+		
+		wait(1);
+	}
+	
+	g_ebDoHit = false;
+}
+
 int numChoppedEnt (ENTITY* entHand)
 {
 	BOOL* arr = NULL;
@@ -168,6 +185,10 @@ action ebStartSpeech ()
 		while (snd_playing(h))
 			wait(1);
 	}
+	
+	// switch warghost to model without hands
+	if (g_entEbWarghost != NULL)
+		ent_morph(g_entEbWarghost, "warghostChop.mdl");
 		
 	ent_create(NULL, nullvector, ebHandsBgFly);
 	ptr_remove(my);
@@ -421,6 +442,7 @@ void ebHandJoint ()
 							g_fingerChopped = true;
 							
 							doChopped(g_ebHand, g_ebHand->skill20, my->skill1);
+							ebDoHit();
 								
 							break;
 						}
@@ -720,6 +742,51 @@ void effEbBlood (VECTOR* pos, VECTOR* vecVel, var pSpeed, BOOL bInverse)
 			
 			if (p->alpha <= 0)
 				p->lifespan = 0;
-		}	
+		}
+		
+action ebWarghost ()
+{
+	g_entEbWarghost = my;
+	my->material = g_mtlBossGhost;
+	
+	while (1)
+	{
+		// pos
+		{
+			VECTOR vecPos;
+			vec_set(&vecPos, my->x);
+			
+			if (player != NULL)
+				vecPos.x = player.x;
+				
+			vec_lerp(my->x, my->x, &vecPos, time_step * 0.1);
+		}
+		
+		// ang
+		{
+			VECTOR vecLookAt, vecLook;
+			vec_set(&vecLookAt, my->x);
+			
+			vecLookAt.y -= 1000;
+			
+			if (player != NULL)
+			{
+				vecLookAt.x = player->x;
+				vecLookAt.y = player->y;
+			}
+			
+			vec_diff(&vecLook, &vecLookAt, my->x);
+			vec_to_angle(my->pan, &vecLook);
+		}
+		
+		if (g_ebDoHit)
+			ent_animate(my, "jump", g_ebDoHitPercent, ANM_CYCLE);
+		else
+			ent_animate(my, "attack", total_ticks % 100, ANM_CYCLE);
+			
+		
+		wait(1);
+	}
+}
 
 #endif /* endboss_c */

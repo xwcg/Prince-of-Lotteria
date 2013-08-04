@@ -88,7 +88,7 @@ action acBossBottle ()
 	lvlBossExit(true);
 }
 
-void zuzu ()
+void lbEndSwirl ()
 {
 	var fRadius = 0;
 	var fAngle = 0;
@@ -241,7 +241,7 @@ action acBossWarghost ()
 				if (!bToTheNextDimension)
 				{
 					bToTheNextDimension = true;
-					zuzu();
+					lbEndSwirl();
 				}
 			}
 		}
