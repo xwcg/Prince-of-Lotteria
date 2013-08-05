@@ -65,6 +65,11 @@ SOUND* g_sndHandBliss = "handBliss.ogg";
 SOUND* g_sndHandDrop = "handDrop.ogg";
 SOUND* g_sndHandUp = "handUp.ogg";
 
+BOOL g_ebDoHit = false;
+var g_ebDoHitPercent = 0;
+
+ENTITY* g_entEbWarghost = NULL;
+
 // sprites
 
 	BmapBank* g_bbEbBlood = NULL;
