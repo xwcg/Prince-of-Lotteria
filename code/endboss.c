@@ -343,6 +343,20 @@ void flyawaychoppedhand ()
 	
 	ptr_remove(my);
 }
+
+void ebDoCrazyness ()
+{
+	//hdrStrength += 1;
+	//hdrThreshold -= 1;
+	
+	g_lvlLavastageSwirlStrength += 0.015;
+	g_lvlLavastageSwirlSpeed += 0.07;
+	
+	camera.fog_end *= 0.9;
+	
+	g_lvlLavastageSwirlBlend += 0.005;
+	g_lvlLavastageFireFac += 0.15;
+}
 		
 void doChopped (ENTITY* entHand, int lr, int fingerId)
 {
@@ -442,6 +456,7 @@ void ebHandJoint ()
 							g_fingerChopped = true;
 							
 							doChopped(g_ebHand, g_ebHand->skill20, my->skill1);
+							ebDoCrazyness();
 							ebDoHit();
 								
 							break;
@@ -749,17 +764,24 @@ action ebWarghost ()
 	g_entEbWarghost = my;
 	my->material = g_mtlBossGhost;
 	
+	lvlLavaSuperReset ();
+	
 	while (1)
 	{
 		// pos
 		{
 			VECTOR vecPos;
-			vec_set(&vecPos, my->x);
+			vecPos.x = my->x;
+			vecPos.y = 1024;
+			vecPos.z = 150;
 			
 			if (player != NULL)
-				vecPos.x = player.x;
+			{
+				vecPos.x = player->x;
+				vecPos.z = player->z;
+			}
 				
-			vec_lerp(my->x, my->x, &vecPos, time_step * 0.1);
+			vec_lerp(my->x, my->x, &vecPos, time_step * 0.025);
 		}
 		
 		// ang

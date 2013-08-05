@@ -70,6 +70,8 @@ var g_ebDoHitPercent = 0;
 
 ENTITY* g_entEbWarghost = NULL;
 
+double g_ebCrazyness = 1;
+
 // sprites
 
 	BmapBank* g_bbEbBlood = NULL;
