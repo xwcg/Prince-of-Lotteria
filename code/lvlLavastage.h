@@ -21,6 +21,8 @@
 	void effLavaAsh (VECTOR* pos);
 	void effLavaAsh_p (PARTICLE* p);
 	void effLavaAsh_ev (PARTICLE* p);	
+	
+	void lvlLavaSuperReset ();
 
 // defines
 
@@ -28,8 +30,8 @@
 	
 // hdr
 
-	#define LVL_LAVASTAGE_HDR_THRESHOLD 30
-	#define LVL_LAVASTAGE_HDR_STRENGTH 75
+	#define LVL_LAVASTAGE_HDR_THRESHOLD 50
+	#define LVL_LAVASTAGE_HDR_STRENGTH 50
 	#define LVL_LAVASTAGE_HDR_EXPOSURE 0
 	
 // shaders and effects
@@ -56,6 +58,13 @@
 	var g_lvlLavastageSwirlAngle = 4;
 	var g_lvlLavastageSwirlBlend = 1;	
 	
+	double g_lvlLavastageFireFac = 1;
+	
+	double g_lvlLavastageSwirlStrength;
+	double g_lvlLavastageSwirlStrengthInit = 0.01;
+	
+	double g_lvlLavastageSwirlSpeed;
+	double g_lvlLavastageSwirlSpeedInit = 0.2;	
 	
 // sounds
 

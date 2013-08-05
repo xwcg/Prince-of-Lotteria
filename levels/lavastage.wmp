@@ -1,6 +1,6 @@
 // WMP2
 // WMPIO V 1.30
-// Created 04.08.2013
+// Created 05.08.2013
 
 version 710
 
@@ -210,10 +210,10 @@ model 13 {   // warhand_mdl_034
 
 model 14 {   // warghost_mdl_035
 	14.451108 14.451108 14.451108
-	<warghost.mdl>
+	<warghostEvil.mdl>
 	warghost_mdl_035
 	ebWarghost
-	0 0 0 0 0 0 0 0
+	0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 	0000
 	0
 	50
@@ -294,7 +294,7 @@ object 13 {  // warhand_mdl_034
 }
 
 object 14 {  // warghost_mdl_035
-	(112 1472 256) (-1.570796 0 0) (14.451108 14.451108 14.451108)
+	(496 6432 -480) (-1.570796 0 0) (14.451108 14.451108 14.451108)
 	model 14
 }
 
