@@ -18,6 +18,16 @@ void lvlLavastageInit ()
 	lvlLavastageStart();
 }
 
+void lvlLavaSuperReset ()
+{
+	g_lvlLavastageFireFac = 1;
+	setHdr(LVL_LAVASTAGE_HDR_STRENGTH, LVL_LAVASTAGE_HDR_THRESHOLD, LVL_LAVASTAGE_HDR_EXPOSURE);
+	camera.fog_start = 0;
+	camera.fog_end = 17500;	
+	g_lvlLavastageSwirlStrength = g_lvlLavastageSwirlStrengthInit;
+	g_lvlLavastageSwirlSpeed = g_lvlLavastageSwirlSpeedInit;
+}
+
 void lvlLavastageReset ()
 {
 	// physx hack
@@ -33,6 +43,7 @@ void lvlLavastageReset ()
 	flying_man = 0;
 	
 	g_bLvlLavastageRunning = false;
+	
 	
 	godmode = 0;
 	
@@ -98,10 +109,10 @@ void lvlLavastageSwirlOut ()
 	
 	while (g_bLvlLavastageRunning)
 	{	
-		a = (double)(-sin(t / 16) * 0.05);
+		a = (double)(-sin(t / 16) * g_lvlLavastageSwirlStrength);
 		setPpSwirl(g_lvlLavastageSwirlRadius, a, 0.5, 0.5, g_lvlLavastageSwirlBlend);
 		
-		t += time_step * 0.75;
+		t += time_step * g_lvlLavastageSwirlSpeed;
 		
 		wait(1);
 	}
@@ -113,7 +124,6 @@ void lvlLavastageStart ()
 		wait(1);
 		
 	skychange();
-	setHdr(LVL_LAVASTAGE_HDR_STRENGTH, LVL_LAVASTAGE_HDR_THRESHOLD, LVL_LAVASTAGE_HDR_EXPOSURE);
 	
 	g_bLvlLavastageRunning = true;
 	
@@ -290,7 +300,7 @@ void effLavaFire (VECTOR* pos)
 		p->flags |= (TRANSLUCENT);
 
 		p->alpha = 0;
-		p->size = 64 + random(128);
+		p->size = (64 + random(128)) * g_lvlLavastageFireFac;
 		
 		p->skill_b = 5 + random(5);
 		p->skill_c = 5 + random(10);
@@ -345,7 +355,7 @@ void effLavaAsh (VECTOR* pos)
 		p->flags |= (TRANSLUCENT);
 
 		p->alpha = 50 + random(50);
-		p->size = 8 + random(16);
+		p->size = (8 + random(16)) * g_lvlLavastageFireFac;
 		
 		if (random(100) < 33)
 			p->flags |= (BRIGHT);
