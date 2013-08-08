@@ -51,6 +51,10 @@ void game_start()
 			lvlBossInit();
 		#endif
 		
+		#ifdef SKIP_TO_LAVASTAGE
+			lvlLavastageInit();
+		#endif
+		
 		#ifdef SKIP_TO_CREDITS
 			creditsInit();
 		#endif
@@ -58,7 +62,8 @@ void game_start()
 	#endif
 }
 
-void game_restart(void) {
+void game_restart ()
+{
 	level_load(level_name);
 }
 
@@ -96,6 +101,7 @@ void level_load_ext(STRING* _lvl) {
 		set(panLoad, LIGHT | SHOW);
 		set(panLoadBar, LIGHT | SHOW);
 		
+		wait(1);
 		level_load(_lvl);
 	}
 }

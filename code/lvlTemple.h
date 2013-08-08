@@ -13,6 +13,12 @@
 
 	#define LVL_TEMPLE_WMB "level01_v7.wmb"
 	
+// hdr
+
+	#define LVL_TEMPLE_HDR_THRESHOLD 15
+	#define LVL_TEMPLE_HDR_STRENGTH 40
+	#define LVL_TEMPLE_HDR_EXPOSURE 0
+	
 // sounds
 
 	// music
@@ -27,7 +33,9 @@
 
 	var g_fhLvlTempleIntro = 0;
 	var g_fhLvlTempleSong = 0;
-	
+
+	var g_lvlTempleCamDist = 1200;	
+	var g_lvlTempleCamRaiseZ = 16;
 	var g_lvlTempleCamArc = 80;
 
 #include "lvlTemple.c"

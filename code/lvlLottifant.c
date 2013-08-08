@@ -16,14 +16,19 @@ void on_exit_lotti ()
 }
 
 void lvlLfReset ()
-{	
-	if (on_exit_restore == NULL)
-		on_exit_restore = on_exit;	
-		
-	on_exit = on_exit_lotti;
+{
+	// physx hack
+	{
+		if (on_exit_restore == NULL)
+			on_exit_restore = on_exit;	
+			
+		on_exit = on_exit_lotti;
+	}
 	
 	snd_stop(g_fhLvlLottifantSong);
 	g_fhLvlLottifantSong = 0;
+	
+	vPlayerWoho = false;
 	
 	level_load(NULL);
 	sky_active = 0;
@@ -33,7 +38,6 @@ void lvlLfReset ()
 		
 	pX_setgravity(vector(0,0,-g_lvlLfGravity));
 	
-	freeze_mode = 0;
 	sky_active = 0;
 }
 
@@ -43,6 +47,8 @@ void lvlLfStart ()
 		wait(1);
 		
 	skychange();
+	setHdr(LVL_LOTTIFANT_HDR_STRENGTH, LVL_LOTTIFANT_HDR_THRESHOLD, LVL_LOTTIFANT_HDR_EXPOSURE);
+	
 	gui_show();
 		
 	// start music
@@ -131,7 +137,7 @@ action lvlLfBall ()
 	pXent_setbodyflag(my, NX_BF_FROZEN_PAN, 1);
 	pXent_setbodyflag(my, NX_BF_FROZEN_ROLL, 1);
 	
-	pXent_setmaxspeed(my, 180);
+	pXent_setmaxspeed(my, g_lvlLfBallSpeedMax);
 	
 	pXent_setmass(my, 200);
 
@@ -150,7 +156,7 @@ action lvlLfBall ()
 		if (d < 2 && my->x < 23500)
 			lvlLfBallEv();
 			
-		pXent_addforceglobal(my, vector(0, 0, -120 * time_step), my->x);
+		pXent_addforceglobal(my, vector(0, 0, -g_lvlLfBallDownForce * time_step), my->x);
 		
 		vec_set(&g_vecEntLvlBallLast, my->x);
 		
@@ -418,13 +424,14 @@ action lvlLfLottiDummy ()
 	}
 }
 
-void zuzu ()
+void lvlLfLottifantJump ()
 {
 	VECTOR v;
 	vec_set(&v, g_entLvlLfPlayer->x);
 	v.z -= 200;
 	
 	pXent_addexplosion(g_entLvlLfPlayer, &v, g_lvlLfJumpForce, 250); 
+	snd_player_jump();
 }
 
 ENTITY* g_entLfLottifant = NULL;
@@ -457,9 +464,20 @@ action lvlLfLottifantDummy ()
 		t += (0.5 + animspeed) * time_step;
 		
 		if (my->skill3 > 0)
+		{
 			ent_animate(my, "jump", minv(my->skill3, 100), 0);
+			
+			if (my->skill3 > 100 && !vPlayerWoho)
+			{
+				vPlayerWoho = true;
+				snd_player_wohoo();				
+			}
+		}
 		else
+		{
 			ent_animate(my, "walk", (var)t % 100, ANM_CYCLE);
+			vPlayerWoho = false;
+		}
 		
 		wait(1);
 	}
@@ -533,28 +551,31 @@ action lvlLfLottifantRide ()
 			bInAir = (vec_dist(vec, my->x) > 100);
 		
 		if ((!bInAir || bNearBall) && key_cuu)
-			zuzu();
+			lvlLfLottifantJump();
 			
 		if (bInAir)
 			jumptimer += 5 * time_step;
 		else
 			jumptimer = 0;
 			
-		var dist = vec_dist(vector(my->x,0,0), vector(entLottifant->x,0,0));		
-	
-		if (dist / time_step < g_lvlLfSpeedMax) 
-			pXent_addforceglobal(my, vector(key_force.x * g_lvlLfRideForce * time_step, 0, 0), my->x);		
+		var dist = vec_dist(vector(my->x,0,0), vector(entLottifant->x,0,0));
+		var force = 1 + minv(key_force.x * 2, 0);
 		
+		if (dist / time_step < g_lvlLfSpeedMax) 
+		{
+			
+			pXent_addforceglobal(my, vector(force * g_lvlLfRideForce * time_step, 0, 0), my->x);
+		}
+			
 		pXent_addforceglobal(my, vector(0, 0, -g_lvlLfDownForce * time_step), my->x);
 			
 		cameraMove(my, g_lvlLottifantCamDist, 200, g_lvlLottifantCamArc);
-		//cameraMove(my, g_entLvlLfBall, g_lvlLottifantCamDist, 200, g_lvlLottifantCamArc);
 		
-		if (sign(key_force.x) != 0)
-			direction = sign(key_force.x);
+		if (sign(force) != 0)
+			direction = sign(force);
 			
 		entLottifant->skill1 = direction;
-		entLottifant->skill2 = dist; //vec_dist(vector(my->x,0,0), vector(entLottifant->x,0,0));
+		entLottifant->skill2 = dist;
 		entLottifant->skill3 = bInAir * jumptimer;
 		
 		vec_set(entLottifant->x, my->x);
