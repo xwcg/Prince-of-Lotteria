@@ -66,4 +66,6 @@ void main ()
 	initPostprocessing();
 	
 	menu_open();
+	
+	game_hotkeys();
 }
