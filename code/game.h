@@ -17,6 +17,12 @@ void game_restart ();
 void level_load_ext (STRING* _lvl);
 void game_hotkeys ();
 
+// hdr
+
+	#define LVL_INTRO_HDR_THRESHOLD 10
+	#define LVL_INTRO_HDR_STRENGTH 25
+	#define LVL_INTRO_HDR_EXPOSURE 10
+
 // sounds
 
 	SOUND* g_sndDoor = "door.ogg";

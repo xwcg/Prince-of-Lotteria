@@ -15,6 +15,9 @@ void game_start()
 		resetPpSwirl ();
 		level_load("menu2.wmb");
 		wait(3);
+		
+		setHdr(LVL_INTRO_HDR_STRENGTH, LVL_INTRO_HDR_THRESHOLD, LVL_INTRO_HDR_EXPOSURE);
+		
 		camera_path("path1");
 		PANEL* panBlack = pan_create(" ", 100);
 		vec_set(panBlack.blue, vector(8,8,8));

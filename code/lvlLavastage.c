@@ -118,6 +118,29 @@ void lvlLavastageSwirlOut ()
 	}
 }
 
+void lvlLavastageMusic ()
+{
+	g_fhLvlLavastageIntro = 0;
+	g_fhLvlLavastageSong = 0;
+	
+	g_fhLvlLavastageIntro = snd_play(g_introLavastage, 100, 0);
+	
+	while (g_bLvlLavastageRunning && g_fhLvlLavastageIntro != 0 && snd_playing(g_fhLvlLavastageIntro))
+		wait(1);
+
+	g_fhLvlLavastageIntro = 0;
+
+	if (g_bLvlLavastageRunning)
+	{
+		g_fhLvlLavastageSong = snd_loop(g_musicLavastage, 100, 0);
+		
+		while (g_bLvlLavastageRunning && g_fhLvlLavastageSong != 0 && snd_playing(g_fhLvlLavastageSong))
+			wait(1);
+			
+		g_fhLvlLavastageSong = 0;
+	}
+}
+
 void lvlLavastageStart ()
 {
 	while (total_frames < 1)
@@ -129,10 +152,9 @@ void lvlLavastageStart ()
 	
 	gui_show();
 	
-	// start music
-	g_fhLvlLavastageSong = snd_loop(g_musicLavastage, 100, 0);	
-	
 	lvlLavastageFog();
+	
+	lvlLavastageMusic();
 	
 	// set camera + player walk glide
 	setPlayerCamera(g_lvlLavastageCamDist, g_lvlLavastageCamRaiseZ, g_lvlLavastageCamArc);
