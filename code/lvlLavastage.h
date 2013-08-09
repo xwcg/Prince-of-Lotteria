@@ -46,7 +46,6 @@
 
 // globals
 
-	var g_fhLvlLavastageSong = 0;
 	BOOL g_bLvlLavastageRunning = false;
 	
 	var g_lvlLavastageCamDist = 1300;	
@@ -68,7 +67,11 @@
 	
 // sounds
 
+	SOUND* g_introLavastage = "lavastageIntro.ogg";
 	SOUND* g_musicLavastage = "lavastageLoop.ogg";
+	
+	var g_fhLvlLavastageIntro = 0;
+	var g_fhLvlLavastageSong = 0;	
 
 #include "lvlLavastage.c"
 
