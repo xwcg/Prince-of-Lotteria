@@ -11,6 +11,41 @@
 #include "zorroMesh.h"
 #include "camera.h"
 
+void pAlphafade(PARTICLE *p) {
+    p.alpha -= p.skill_a*time_step;
+    if (p.alpha <= 0) p.lifespan = 0;
+}
+
+
+void pZZZ(PARTICLE* p) {
+   //p.vel_x = -2 + random(4);
+   //p.vel_y = -2 + random(4);
+   p.vel_z = 0.1 + random(2);
+   p.bmap = bmapSleepParticle;
+   set(p, MOVE | BRIGHT | TRANSLUCENT);
+   p.alpha = 100;
+   p.size = 5+random(5);
+   p.gravity = 0;
+   p.skill_a = 3; // fade factor
+   p.event = pAlphafade;
+}
+
+action actPlayerSleep() {
+	player = me;
+	VECTOR vecMouth;
+	while(me) {
+		ent_animate(me, "sleep ", my.skill1, ANM_CYCLE);
+		
+		// lottis mouth #269
+		vec_for_vertex(&vecMouth, me, 269);
+		if (integer(random(100)) >= 91) {
+			effect(pZZZ, 1, vector(vecMouth.x - 10 + random(20), vecMouth.y - 10 + random(20), vecMouth.z+20), nullvector);
+		}
+		my.skill1 +=3 * time_step;
+		wait(1);
+	}
+}
+
 void setPlayerCamera (var dist, var raiseZ, var arc)
 {
 	g_playerCamDist = dist;
