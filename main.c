@@ -13,11 +13,11 @@
 	//#define SKIP_INTRO
 
 	// activate SKIP_TO and a target to redefine start level
-	//#define SKIP_TO
+	// #define SKIP_TO
 	//#define SKIP_TO_LOTTIFANTLEVEL
 	//#define SKIP_TO_BOSSLEVEL
 	//#define SKIP_TO_LAVASTAGE
-	//#define SKIP_TO_CREDITS
+	// #define SKIP_TO_CREDITS
 
 	//#define SKIP_CREDITS
 	
@@ -49,6 +49,9 @@
 
 void main ()
 {
+	warn_level = 0;
+	video_window(NULL, NULL, 0, "Prince of Lotteria - Zorro Edition v0.2");
+	
 	physX_open();
 	
 	fps_max = 60;
