@@ -60,6 +60,7 @@
 	int nPlayerLifes = 3;
 
 	BMAP* bmapBlood = "blood.tga";
+	BMAP* bmapSleepParticle = "particleZ2.tga";
 	
 	// to be set via setPlayerCamera
 	var g_playerCamDist = 1200;

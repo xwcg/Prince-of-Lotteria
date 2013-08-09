@@ -11,13 +11,16 @@ void game_start()
 {
 	#ifndef SKIP_INTRO
 	
+		
+		resetPpSwirl ();
+		level_load("menu2.wmb");
+		wait(3);
+		camera_path("path1");
 		PANEL* panBlack = pan_create(" ", 100);
 		vec_set(panBlack.blue, vector(8,8,8));
-		panBlack.size_x = screen_size.x;
-		panBlack.size_y = screen_size.y;
 		pan_setdigits(panBlack, 0, 5, 5, "Press [Space] to skip", font_create("Arial#24b"), 1, vDummy);
 		pan_setcolor(panBlack, 1, 1, vector(255,255,255));
-		set(panBlack, SHOW | LIGHT);
+		set(panBlack, SHOW | LIGHT | OVERLAY);
 		
 		var vMediaHandle = snd_play(g_musicIntro, 100, 0);
 		
@@ -27,6 +30,7 @@ void game_start()
 		while (snd_playing(vMediaHandle) && !key_esc && !key_space && !key_enter)
 			wait(1);
 		
+		proc_kill((void*)camera_path);
 		ptr_remove(panBlack);
 		
 		snd_stop(vMediaHandle);
