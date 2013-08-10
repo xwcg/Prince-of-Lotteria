@@ -11,13 +11,19 @@ void game_start()
 {
 	#ifndef SKIP_INTRO
 	
+		
+		resetPpSwirl ();
+		level_load("menu2.wmb");
+		wait(3);
+		
+		setHdr(LVL_INTRO_HDR_STRENGTH, LVL_INTRO_HDR_THRESHOLD, LVL_INTRO_HDR_EXPOSURE);
+		
+		camera_path("path1");
 		PANEL* panBlack = pan_create(" ", 100);
 		vec_set(panBlack.blue, vector(8,8,8));
-		panBlack.size_x = screen_size.x;
-		panBlack.size_y = screen_size.y;
 		pan_setdigits(panBlack, 0, 5, 5, "Press [Space] to skip", font_create("Arial#24b"), 1, vDummy);
 		pan_setcolor(panBlack, 1, 1, vector(255,255,255));
-		set(panBlack, SHOW | LIGHT);
+		set(panBlack, SHOW | LIGHT | OVERLAY);
 		
 		var vMediaHandle = snd_play(g_musicIntro, 100, 0);
 		
@@ -27,6 +33,7 @@ void game_start()
 		while (snd_playing(vMediaHandle) && !key_esc && !key_space && !key_enter)
 			wait(1);
 		
+		proc_kill((void*)camera_path);
 		ptr_remove(panBlack);
 		
 		snd_stop(vMediaHandle);
@@ -51,6 +58,10 @@ void game_start()
 			lvlBossInit();
 		#endif
 		
+		#ifdef SKIP_TO_LAVASTAGE
+			lvlLavastageInit();
+		#endif
+		
 		#ifdef SKIP_TO_CREDITS
 			creditsInit();
 		#endif
@@ -58,7 +69,8 @@ void game_start()
 	#endif
 }
 
-void game_restart(void) {
+void game_restart ()
+{
 	level_load(level_name);
 }
 
@@ -96,7 +108,32 @@ void level_load_ext(STRING* _lvl) {
 		set(panLoad, LIGHT | SHOW);
 		set(panLoadBar, LIGHT | SHOW);
 		
+		wait(1);
 		level_load(_lvl);
+	}
+}
+
+void game_hotkeys() {
+	panMute = pan_create("", 200);
+	panMute.bmap = bmapMute;
+	
+	while(1) {
+		if (key_f9) {
+			while(key_f9) wait(1);
+			
+			// Reposition because of possible resolution change
+			panMute.pos_x = screen_size.x - bmap_width(bmapMute) - 10;
+			panMute.pos_y = screen_size.y - bmap_height(bmapMute) - 10;
+			
+			if ((master_vol == -1) || (master_vol > 0)) {
+				set(panMute, SHOW);
+				master_vol = 0;
+			} else {
+				reset(panMute, SHOW);
+				master_vol = 100;
+			}
+		}
+		wait(1);
 	}
 }
 

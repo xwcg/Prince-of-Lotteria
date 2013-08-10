@@ -1,12 +1,12 @@
 // WMP2
 // WMPIO V 1.30
-// Created 26.06.2013
+// Created 05.07.2013
 
 version 710
 
 blocks 0
-entities 272
-objects 272
+entities 270
+objects 270
 
 wed {
 	palette {
@@ -1786,20 +1786,7 @@ model 134 {   // spikes_mdl_364
 	ndef
 }
 
-model 135 {   // spikes_mdl_365
-	0.776176 0.776176 0.776176
-	<spikes2.mdl>
-	spikes_mdl_365
-	lvlLfSpike
-	0 0 0 0 0 0 0 0
-	0000001000000000
-	0
-	50
-	ndef
-	ndef
-}
-
-model 136 {   // spikes_mdl_368
+model 135 {   // spikes_mdl_368
 	1.740645 1.740645 1.740645
 	<lionhead.mdl>
 	spikes_mdl_368
@@ -1812,7 +1799,7 @@ model 136 {   // spikes_mdl_368
 	ndef
 }
 
-model 137 {   // pathPieceA_mdl_372
+model 136 {   // pathPieceA_mdl_372
 	0.8 0.8 0.8
 	<pathPieceJ.mdl>
 	pathPieceA_mdl_372
@@ -1825,7 +1812,7 @@ model 137 {   // pathPieceA_mdl_372
 	ndef
 }
 
-model 138 {   // pathPieceA_mdl_374
+model 137 {   // pathPieceA_mdl_374
 	0.8 0.8 0.8
 	<pathPieceJ.mdl>
 	pathPieceA_mdl_374
@@ -1838,7 +1825,7 @@ model 138 {   // pathPieceA_mdl_374
 	ndef
 }
 
-model 139 {   // spikes_mdl_378
+model 138 {   // spikes_mdl_378
 	1.495026 1.495026 1.495026
 	<door.mdl>
 	spikes_mdl_378
@@ -1851,7 +1838,7 @@ model 139 {   // spikes_mdl_378
 	ndef
 }
 
-model 140 {   // zorrofantDummy_385
+model 139 {   // zorrofantDummy_385
 	1.340917 1.340917 1.340917
 	<chest1.mdl>
 	zorrofantDummy_385
@@ -1864,7 +1851,7 @@ model 140 {   // zorrofantDummy_385
 	ndef
 }
 
-model 141 {   // pathPieceI_mdl_393
+model 140 {   // pathPieceI_mdl_393
 	0.75 0.75 0.75
 	<pathPieceA.mdl>
 	pathPieceI_mdl_393
@@ -1877,7 +1864,7 @@ model 141 {   // pathPieceI_mdl_393
 	ndef
 }
 
-model 142 {   // pathPieceA_mdl_394
+model 141 {   // pathPieceA_mdl_394
 	0.8 0.8 0.8
 	<pathPieceJ.mdl>
 	pathPieceA_mdl_394
@@ -1890,7 +1877,7 @@ model 142 {   // pathPieceA_mdl_394
 	ndef
 }
 
-model 143 {   // pathPieceA_mdl_396
+model 142 {   // pathPieceA_mdl_396
 	0.664153 0.664153 0.664153
 	<pathPieceJ.mdl>
 	pathPieceA_mdl_396
@@ -1903,7 +1890,7 @@ model 143 {   // pathPieceA_mdl_396
 	ndef
 }
 
-model 144 {   // tree3_mdl_398
+model 143 {   // tree3_mdl_398
 	0.886364 0.886364 0.886364
 	<tree3.mdl>
 	tree3_mdl_398
@@ -1916,7 +1903,7 @@ model 144 {   // tree3_mdl_398
 	ndef
 }
 
-model 145 {   // tree3_mdl_401
+model 144 {   // tree3_mdl_401
 	0.886364 0.886364 0.886364
 	<tree3.mdl>
 	tree3_mdl_401
@@ -1929,7 +1916,7 @@ model 145 {   // tree3_mdl_401
 	ndef
 }
 
-model 146 {   // tree3_mdl_404
+model 145 {   // tree3_mdl_404
 	0.886364 0.886364 0.886364
 	<tree3.mdl>
 	tree3_mdl_404
@@ -1942,7 +1929,7 @@ model 146 {   // tree3_mdl_404
 	ndef
 }
 
-model 147 {   // tree3_mdl_405
+model 146 {   // tree3_mdl_405
 	0.886364 0.886364 0.886364
 	<tree3.mdl>
 	tree3_mdl_405
@@ -1955,7 +1942,7 @@ model 147 {   // tree3_mdl_405
 	ndef
 }
 
-model 148 {   // tree3_mdl_408
+model 147 {   // tree3_mdl_408
 	0.886364 0.886364 0.886364
 	<tree3.mdl>
 	tree3_mdl_408
@@ -1968,7 +1955,7 @@ model 148 {   // tree3_mdl_408
 	ndef
 }
 
-model 149 {   // tree3_mdl_409
+model 148 {   // tree3_mdl_409
 	0.886364 0.886364 0.886364
 	<tree3.mdl>
 	tree3_mdl_409
@@ -1981,7 +1968,7 @@ model 149 {   // tree3_mdl_409
 	ndef
 }
 
-model 150 {   // tree3_mdl_410
+model 149 {   // tree3_mdl_410
 	0.886364 0.886364 0.886364
 	<tree3.mdl>
 	tree3_mdl_410
@@ -1994,7 +1981,7 @@ model 150 {   // tree3_mdl_410
 	ndef
 }
 
-model 151 {   // Fence-1_mdl_411
+model 150 {   // Fence-1_mdl_411
 	0.501323 0.501323 0.501323
 	<Fence-1.mdl>
 	Fence-1_mdl_411
@@ -2007,7 +1994,7 @@ model 151 {   // Fence-1_mdl_411
 	ndef
 }
 
-model 152 {   // Fence-1_mdl_415
+model 151 {   // Fence-1_mdl_415
 	0.501323 0.501323 0.501323
 	<Fence-1.mdl>
 	Fence-1_mdl_415
@@ -2020,7 +2007,7 @@ model 152 {   // Fence-1_mdl_415
 	ndef
 }
 
-model 153 {   // Fence-1_mdl_416
+model 152 {   // Fence-1_mdl_416
 	0.501323 0.501323 0.501323
 	<Fence-1.mdl>
 	Fence-1_mdl_416
@@ -2033,7 +2020,7 @@ model 153 {   // Fence-1_mdl_416
 	ndef
 }
 
-model 154 {   // Fence-1_mdl_417
+model 153 {   // Fence-1_mdl_417
 	0.501323 0.501323 0.501323
 	<Fence-1.mdl>
 	Fence-1_mdl_417
@@ -2046,7 +2033,7 @@ model 154 {   // Fence-1_mdl_417
 	ndef
 }
 
-model 155 {   // Fence-1_mdl_418
+model 154 {   // Fence-1_mdl_418
 	0.501323 0.501323 0.501323
 	<Fence-1.mdl>
 	Fence-1_mdl_418
@@ -2059,7 +2046,7 @@ model 155 {   // Fence-1_mdl_418
 	ndef
 }
 
-model 156 {   // Fence-1_mdl_419
+model 155 {   // Fence-1_mdl_419
 	0.501323 0.501323 0.501323
 	<Fence-1.mdl>
 	Fence-1_mdl_419
@@ -2072,7 +2059,7 @@ model 156 {   // Fence-1_mdl_419
 	ndef
 }
 
-model 157 {   // Fence-1_mdl_420
+model 156 {   // Fence-1_mdl_420
 	0.501323 0.501323 0.501323
 	<Fence-1.mdl>
 	Fence-1_mdl_420
@@ -2085,7 +2072,7 @@ model 157 {   // Fence-1_mdl_420
 	ndef
 }
 
-model 158 {   // Fence-1_mdl_421
+model 157 {   // Fence-1_mdl_421
 	0.501323 0.501323 0.501323
 	<Fence-1.mdl>
 	Fence-1_mdl_421
@@ -2098,7 +2085,7 @@ model 158 {   // Fence-1_mdl_421
 	ndef
 }
 
-model 159 {   // Fence-1_mdl_422
+model 158 {   // Fence-1_mdl_422
 	0.501323 0.501323 0.501323
 	<Fence-1.mdl>
 	Fence-1_mdl_422
@@ -2111,7 +2098,7 @@ model 159 {   // Fence-1_mdl_422
 	ndef
 }
 
-model 160 {   // cloud0_tga_423
+model 159 {   // cloud0_tga_423
 	2 2 2
 	<cloud0.tga>
 	cloud0_tga_423
@@ -2124,7 +2111,7 @@ model 160 {   // cloud0_tga_423
 	ndef
 }
 
-model 161 {   // cloud0_tga_424
+model 160 {   // cloud0_tga_424
 	2.263377 2.263377 2.263377
 	<cloud1.tga>
 	cloud0_tga_424
@@ -2137,7 +2124,7 @@ model 161 {   // cloud0_tga_424
 	ndef
 }
 
-model 162 {   // cloud0_tga_425
+model 161 {   // cloud0_tga_425
 	2.263377 2.263377 2.263377
 	<cloud2.tga>
 	cloud0_tga_425
@@ -2150,7 +2137,7 @@ model 162 {   // cloud0_tga_425
 	ndef
 }
 
-model 163 {   // spikes_mdl_427
+model 162 {   // spikes_mdl_427
 	0.776176 0.776176 0.776176
 	<spikes2.mdl>
 	spikes_mdl_427
@@ -2163,7 +2150,7 @@ model 163 {   // spikes_mdl_427
 	ndef
 }
 
-model 164 {   // spikes_mdl_428
+model 163 {   // spikes_mdl_428
 	0.776176 0.776176 0.776176
 	<spikes2.mdl>
 	spikes_mdl_428
@@ -2176,7 +2163,7 @@ model 164 {   // spikes_mdl_428
 	ndef
 }
 
-model 165 {   // spikes_mdl_429
+model 164 {   // spikes_mdl_429
 	0.776176 0.776176 0.776176
 	<spikes2.mdl>
 	spikes_mdl_429
@@ -2189,7 +2176,7 @@ model 165 {   // spikes_mdl_429
 	ndef
 }
 
-model 166 {   // spikes_mdl_430
+model 165 {   // spikes_mdl_430
 	0.776176 0.776176 0.776176
 	<spikes2.mdl>
 	spikes_mdl_430
@@ -2202,7 +2189,7 @@ model 166 {   // spikes_mdl_430
 	ndef
 }
 
-model 167 {   // spikes_mdl_431
+model 166 {   // spikes_mdl_431
 	1 1 1
 	<spikes2.mdl>
 	spikes_mdl_431
@@ -2215,7 +2202,7 @@ model 167 {   // spikes_mdl_431
 	ndef
 }
 
-model 168 {   // a4Cube_mdl_431
+model 167 {   // a4Cube_mdl_431
 	1 1 1
 	<a4Cube.mdl>
 	a4Cube_mdl_431
@@ -2228,7 +2215,7 @@ model 168 {   // a4Cube_mdl_431
 	ndef
 }
 
-model 169 {   // a4Cube_mdl_435
+model 168 {   // a4Cube_mdl_435
 	1 1 1
 	<a4Cube.mdl>
 	a4Cube_mdl_435
@@ -2241,7 +2228,7 @@ model 169 {   // a4Cube_mdl_435
 	ndef
 }
 
-model 170 {   // a4Cube_mdl_436
+model 169 {   // a4Cube_mdl_436
 	1 1 1
 	<a4Cube.mdl>
 	a4Cube_mdl_436
@@ -2254,7 +2241,7 @@ model 170 {   // a4Cube_mdl_436
 	ndef
 }
 
-model 171 {   // a4Cube_mdl_437
+model 170 {   // a4Cube_mdl_437
 	1 1 1
 	<a4Cube.mdl>
 	a4Cube_mdl_437
@@ -2267,7 +2254,7 @@ model 171 {   // a4Cube_mdl_437
 	ndef
 }
 
-model 172 {   // a4Cube_mdl_438
+model 171 {   // a4Cube_mdl_438
 	1 1 1
 	<a4Cube.mdl>
 	a4Cube_mdl_438
@@ -2280,7 +2267,7 @@ model 172 {   // a4Cube_mdl_438
 	ndef
 }
 
-model 173 {   // a4Cube_mdl_439
+model 172 {   // a4Cube_mdl_439
 	1 1 1
 	<a4Cube.mdl>
 	a4Cube_mdl_439
@@ -2293,7 +2280,7 @@ model 173 {   // a4Cube_mdl_439
 	ndef
 }
 
-model 174 {   // a4Cube_mdl_440
+model 173 {   // a4Cube_mdl_440
 	1 1 1
 	<a4Cube.mdl>
 	a4Cube_mdl_440
@@ -2306,7 +2293,7 @@ model 174 {   // a4Cube_mdl_440
 	ndef
 }
 
-model 175 {   // a4Cube_mdl_441
+model 174 {   // a4Cube_mdl_441
 	1 1 1
 	<a4Cube.mdl>
 	a4Cube_mdl_441
@@ -2319,7 +2306,7 @@ model 175 {   // a4Cube_mdl_441
 	ndef
 }
 
-model 176 {   // a4Cube_mdl_442
+model 175 {   // a4Cube_mdl_442
 	1 1 1
 	<a4Cube.mdl>
 	a4Cube_mdl_442
@@ -2332,7 +2319,7 @@ model 176 {   // a4Cube_mdl_442
 	ndef
 }
 
-model 177 {   // a4Cube_mdl_443
+model 176 {   // a4Cube_mdl_443
 	1 1 1
 	<a4Cube.mdl>
 	a4Cube_mdl_443
@@ -2345,7 +2332,7 @@ model 177 {   // a4Cube_mdl_443
 	ndef
 }
 
-model 178 {   // a4Cube_mdl_444
+model 177 {   // a4Cube_mdl_444
 	1 1 1
 	<a4Cube.mdl>
 	a4Cube_mdl_444
@@ -2358,7 +2345,7 @@ model 178 {   // a4Cube_mdl_444
 	ndef
 }
 
-model 179 {   // a4Cube_mdl_445
+model 178 {   // a4Cube_mdl_445
 	1 1 1
 	<a4Cube.mdl>
 	a4Cube_mdl_445
@@ -2371,7 +2358,7 @@ model 179 {   // a4Cube_mdl_445
 	ndef
 }
 
-model 180 {   // a4Cube_mdl_446
+model 179 {   // a4Cube_mdl_446
 	1 1 1
 	<a4Cube.mdl>
 	a4Cube_mdl_446
@@ -2384,7 +2371,7 @@ model 180 {   // a4Cube_mdl_446
 	ndef
 }
 
-model 181 {   // a4Cube_mdl_447
+model 180 {   // a4Cube_mdl_447
 	1 1 1
 	<a4Cube.mdl>
 	a4Cube_mdl_447
@@ -2397,7 +2384,7 @@ model 181 {   // a4Cube_mdl_447
 	ndef
 }
 
-model 182 {   // a4Cube_mdl_448
+model 181 {   // a4Cube_mdl_448
 	1 1 1
 	<a4Cube.mdl>
 	a4Cube_mdl_448
@@ -2410,7 +2397,7 @@ model 182 {   // a4Cube_mdl_448
 	ndef
 }
 
-model 183 {   // a4Cube_mdl_449
+model 182 {   // a4Cube_mdl_449
 	1 1 1
 	<a4Cube.mdl>
 	a4Cube_mdl_449
@@ -2423,7 +2410,7 @@ model 183 {   // a4Cube_mdl_449
 	ndef
 }
 
-model 184 {   // a4Cube_mdl_450
+model 183 {   // a4Cube_mdl_450
 	1 1 1
 	<a4Cube.mdl>
 	a4Cube_mdl_450
@@ -2436,7 +2423,7 @@ model 184 {   // a4Cube_mdl_450
 	ndef
 }
 
-model 185 {   // a4Cube_mdl_451
+model 184 {   // a4Cube_mdl_451
 	1 1 1
 	<a4Cube.mdl>
 	a4Cube_mdl_451
@@ -2449,7 +2436,7 @@ model 185 {   // a4Cube_mdl_451
 	ndef
 }
 
-model 186 {   // a4Cube_mdl_452
+model 185 {   // a4Cube_mdl_452
 	1 1 1
 	<a4Cube.mdl>
 	a4Cube_mdl_452
@@ -2462,7 +2449,7 @@ model 186 {   // a4Cube_mdl_452
 	ndef
 }
 
-model 187 {   // a4Cube_mdl_453
+model 186 {   // a4Cube_mdl_453
 	1 1 1
 	<a4Cube.mdl>
 	a4Cube_mdl_453
@@ -2475,7 +2462,7 @@ model 187 {   // a4Cube_mdl_453
 	ndef
 }
 
-model 188 {   // a4Cube_mdl_454
+model 187 {   // a4Cube_mdl_454
 	1 1 1
 	<a4Cube.mdl>
 	a4Cube_mdl_454
@@ -2488,7 +2475,7 @@ model 188 {   // a4Cube_mdl_454
 	ndef
 }
 
-model 189 {   // a4Cube_mdl_455
+model 188 {   // a4Cube_mdl_455
 	1 1 1
 	<a4Cube.mdl>
 	a4Cube_mdl_455
@@ -2501,7 +2488,7 @@ model 189 {   // a4Cube_mdl_455
 	ndef
 }
 
-model 190 {   // a4Cube_mdl_456
+model 189 {   // a4Cube_mdl_456
 	1 1 1
 	<a4Cube.mdl>
 	a4Cube_mdl_456
@@ -2514,7 +2501,7 @@ model 190 {   // a4Cube_mdl_456
 	ndef
 }
 
-model 191 {   // a4Cube_mdl_457
+model 190 {   // a4Cube_mdl_457
 	1 1 1
 	<a4Cube.mdl>
 	a4Cube_mdl_457
@@ -2527,7 +2514,7 @@ model 191 {   // a4Cube_mdl_457
 	ndef
 }
 
-model 192 {   // a4Cube_mdl_459
+model 191 {   // a4Cube_mdl_459
 	1 1 1
 	<a4Cube.mdl>
 	a4Cube_mdl_459
@@ -2540,7 +2527,7 @@ model 192 {   // a4Cube_mdl_459
 	ndef
 }
 
-model 193 {   // a4Cube_mdl_460
+model 192 {   // a4Cube_mdl_460
 	1 1 1
 	<a4Cube.mdl>
 	a4Cube_mdl_460
@@ -2553,7 +2540,7 @@ model 193 {   // a4Cube_mdl_460
 	ndef
 }
 
-model 194 {   // a4Cube_mdl_461
+model 193 {   // a4Cube_mdl_461
 	1 1 1
 	<a4Cube.mdl>
 	a4Cube_mdl_461
@@ -2566,7 +2553,7 @@ model 194 {   // a4Cube_mdl_461
 	ndef
 }
 
-model 195 {   // a4Cube_mdl_462
+model 194 {   // a4Cube_mdl_462
 	1 1 1
 	<a4Cube.mdl>
 	a4Cube_mdl_462
@@ -2579,7 +2566,7 @@ model 195 {   // a4Cube_mdl_462
 	ndef
 }
 
-model 196 {   // a4Cube_mdl_463
+model 195 {   // a4Cube_mdl_463
 	1 1 1
 	<a4Cube.mdl>
 	a4Cube_mdl_463
@@ -2592,7 +2579,7 @@ model 196 {   // a4Cube_mdl_463
 	ndef
 }
 
-model 197 {   // a4Cube_mdl_487
+model 196 {   // a4Cube_mdl_487
 	1 1 1
 	<a4Cube.mdl>
 	a4Cube_mdl_487
@@ -2605,7 +2592,7 @@ model 197 {   // a4Cube_mdl_487
 	ndef
 }
 
-model 198 {   // a4Cube_mdl_488
+model 197 {   // a4Cube_mdl_488
 	1 1 1
 	<a4Cube.mdl>
 	a4Cube_mdl_488
@@ -2618,7 +2605,7 @@ model 198 {   // a4Cube_mdl_488
 	ndef
 }
 
-model 199 {   // a4Cube_mdl_489
+model 198 {   // a4Cube_mdl_489
 	1 1 1
 	<a4Cube.mdl>
 	a4Cube_mdl_489
@@ -2631,7 +2618,7 @@ model 199 {   // a4Cube_mdl_489
 	ndef
 }
 
-model 200 {   // a4Cube_mdl_490
+model 199 {   // a4Cube_mdl_490
 	1 1 1
 	<a4Cube.mdl>
 	a4Cube_mdl_490
@@ -2644,7 +2631,7 @@ model 200 {   // a4Cube_mdl_490
 	ndef
 }
 
-model 201 {   // a4Cube_mdl_491
+model 200 {   // a4Cube_mdl_491
 	1 1 1
 	<a4Cube.mdl>
 	a4Cube_mdl_491
@@ -2657,7 +2644,7 @@ model 201 {   // a4Cube_mdl_491
 	ndef
 }
 
-model 202 {   // a4Cube_mdl_492
+model 201 {   // a4Cube_mdl_492
 	1 1 1
 	<a4Cube.mdl>
 	a4Cube_mdl_492
@@ -2670,7 +2657,7 @@ model 202 {   // a4Cube_mdl_492
 	ndef
 }
 
-model 203 {   // a4Cube_mdl_493
+model 202 {   // a4Cube_mdl_493
 	1 1 1
 	<a4Cube.mdl>
 	a4Cube_mdl_493
@@ -2683,7 +2670,7 @@ model 203 {   // a4Cube_mdl_493
 	ndef
 }
 
-model 204 {   // a4Cube_mdl_494
+model 203 {   // a4Cube_mdl_494
 	1 1 1
 	<a4Cube.mdl>
 	a4Cube_mdl_494
@@ -2696,7 +2683,7 @@ model 204 {   // a4Cube_mdl_494
 	ndef
 }
 
-model 205 {   // a4Cube_mdl_495
+model 204 {   // a4Cube_mdl_495
 	1 1 1
 	<a4Cube.mdl>
 	a4Cube_mdl_495
@@ -2709,7 +2696,7 @@ model 205 {   // a4Cube_mdl_495
 	ndef
 }
 
-model 206 {   // a4Cube_mdl_496
+model 205 {   // a4Cube_mdl_496
 	1 1 1
 	<a4Cube.mdl>
 	a4Cube_mdl_496
@@ -2722,7 +2709,7 @@ model 206 {   // a4Cube_mdl_496
 	ndef
 }
 
-model 207 {   // a4Cube_mdl_497
+model 206 {   // a4Cube_mdl_497
 	1 1 1
 	<a4Cube.mdl>
 	a4Cube_mdl_497
@@ -2735,7 +2722,7 @@ model 207 {   // a4Cube_mdl_497
 	ndef
 }
 
-model 208 {   // a4Cube_mdl_498
+model 207 {   // a4Cube_mdl_498
 	1 1 1
 	<a4Cube.mdl>
 	a4Cube_mdl_498
@@ -2748,7 +2735,7 @@ model 208 {   // a4Cube_mdl_498
 	ndef
 }
 
-model 209 {   // a4Cube_mdl_499
+model 208 {   // a4Cube_mdl_499
 	1 1 1
 	<a4Cube.mdl>
 	a4Cube_mdl_499
@@ -2761,7 +2748,7 @@ model 209 {   // a4Cube_mdl_499
 	ndef
 }
 
-model 210 {   // a4Cube_mdl_500
+model 209 {   // a4Cube_mdl_500
 	1 1 1
 	<a4Cube.mdl>
 	a4Cube_mdl_500
@@ -2774,7 +2761,7 @@ model 210 {   // a4Cube_mdl_500
 	ndef
 }
 
-model 211 {   // a4Cube_mdl_501
+model 210 {   // a4Cube_mdl_501
 	1 1 1
 	<a4Cube.mdl>
 	a4Cube_mdl_501
@@ -2787,7 +2774,7 @@ model 211 {   // a4Cube_mdl_501
 	ndef
 }
 
-model 212 {   // a4Cube_mdl_502
+model 211 {   // a4Cube_mdl_502
 	1 1 1
 	<a4Cube.mdl>
 	a4Cube_mdl_502
@@ -2800,7 +2787,7 @@ model 212 {   // a4Cube_mdl_502
 	ndef
 }
 
-model 213 {   // a4Cube_mdl_503
+model 212 {   // a4Cube_mdl_503
 	1 1 1
 	<a4Cube.mdl>
 	a4Cube_mdl_503
@@ -2813,7 +2800,7 @@ model 213 {   // a4Cube_mdl_503
 	ndef
 }
 
-model 214 {   // a4Cube_mdl_504
+model 213 {   // a4Cube_mdl_504
 	1 1 1
 	<a4Cube.mdl>
 	a4Cube_mdl_504
@@ -2826,7 +2813,7 @@ model 214 {   // a4Cube_mdl_504
 	ndef
 }
 
-model 215 {   // a4Cube_mdl_505
+model 214 {   // a4Cube_mdl_505
 	1 1 1
 	<a4Cube.mdl>
 	a4Cube_mdl_505
@@ -2839,7 +2826,7 @@ model 215 {   // a4Cube_mdl_505
 	ndef
 }
 
-model 216 {   // a4Cube_mdl_506
+model 215 {   // a4Cube_mdl_506
 	1 1 1
 	<a4Cube.mdl>
 	a4Cube_mdl_506
@@ -2852,7 +2839,7 @@ model 216 {   // a4Cube_mdl_506
 	ndef
 }
 
-model 217 {   // a4Cube_mdl_508
+model 216 {   // a4Cube_mdl_508
 	1 1 1
 	<a4Cube.mdl>
 	a4Cube_mdl_508
@@ -2865,7 +2852,7 @@ model 217 {   // a4Cube_mdl_508
 	ndef
 }
 
-model 218 {   // a4Cube_mdl_511
+model 217 {   // a4Cube_mdl_511
 	1 1 1
 	<a4Cube.mdl>
 	a4Cube_mdl_511
@@ -2878,7 +2865,7 @@ model 218 {   // a4Cube_mdl_511
 	ndef
 }
 
-model 219 {   // a4Cube_mdl_512
+model 218 {   // a4Cube_mdl_512
 	1 1 1
 	<a4Cube.mdl>
 	a4Cube_mdl_512
@@ -2891,7 +2878,7 @@ model 219 {   // a4Cube_mdl_512
 	ndef
 }
 
-model 220 {   // a4Cube_mdl_514
+model 219 {   // a4Cube_mdl_514
 	1 1 1
 	<a4Cube.mdl>
 	a4Cube_mdl_514
@@ -2904,7 +2891,7 @@ model 220 {   // a4Cube_mdl_514
 	ndef
 }
 
-model 221 {   // a4Cube_mdl_516
+model 220 {   // a4Cube_mdl_516
 	1 1 1
 	<a4Cube.mdl>
 	a4Cube_mdl_516
@@ -2917,7 +2904,7 @@ model 221 {   // a4Cube_mdl_516
 	ndef
 }
 
-model 222 {   // a4Cube_mdl_518
+model 221 {   // a4Cube_mdl_518
 	1 1 1
 	<a4Cube.mdl>
 	a4Cube_mdl_518
@@ -2930,7 +2917,7 @@ model 222 {   // a4Cube_mdl_518
 	ndef
 }
 
-model 223 {   // a4Cube_mdl_520
+model 222 {   // a4Cube_mdl_520
 	1 1 1
 	<a4Cube.mdl>
 	a4Cube_mdl_520
@@ -2943,7 +2930,7 @@ model 223 {   // a4Cube_mdl_520
 	ndef
 }
 
-model 224 {   // a4Cube_mdl_522
+model 223 {   // a4Cube_mdl_522
 	1 1 1
 	<a4Cube.mdl>
 	a4Cube_mdl_522
@@ -2956,7 +2943,7 @@ model 224 {   // a4Cube_mdl_522
 	ndef
 }
 
-model 225 {   // a4Cube_mdl_524
+model 224 {   // a4Cube_mdl_524
 	1 1 1
 	<a4Cube.mdl>
 	a4Cube_mdl_524
@@ -2969,7 +2956,7 @@ model 225 {   // a4Cube_mdl_524
 	ndef
 }
 
-model 226 {   // a4Cube_mdl_526
+model 225 {   // a4Cube_mdl_526
 	1 1 1
 	<a4Cube.mdl>
 	a4Cube_mdl_526
@@ -2982,7 +2969,7 @@ model 226 {   // a4Cube_mdl_526
 	ndef
 }
 
-model 227 {   // a4Cube_mdl_527
+model 226 {   // a4Cube_mdl_527
 	1 1 1
 	<a4Cube.mdl>
 	a4Cube_mdl_527
@@ -2995,7 +2982,7 @@ model 227 {   // a4Cube_mdl_527
 	ndef
 }
 
-model 228 {   // a4Cube_mdl_528
+model 227 {   // a4Cube_mdl_528
 	1 1 1
 	<a4Cube.mdl>
 	a4Cube_mdl_528
@@ -3008,7 +2995,7 @@ model 228 {   // a4Cube_mdl_528
 	ndef
 }
 
-model 229 {   // a4Cube_mdl_529
+model 228 {   // a4Cube_mdl_529
 	1 1 1
 	<a4Cube.mdl>
 	a4Cube_mdl_529
@@ -3021,7 +3008,7 @@ model 229 {   // a4Cube_mdl_529
 	ndef
 }
 
-model 230 {   // a4Cube_mdl_530
+model 229 {   // a4Cube_mdl_530
 	1 1 1
 	<a4Cube.mdl>
 	a4Cube_mdl_530
@@ -3034,7 +3021,7 @@ model 230 {   // a4Cube_mdl_530
 	ndef
 }
 
-model 231 {   // a4Cube_mdl_531
+model 230 {   // a4Cube_mdl_531
 	1 1 1
 	<a4Cube.mdl>
 	a4Cube_mdl_531
@@ -3047,7 +3034,7 @@ model 231 {   // a4Cube_mdl_531
 	ndef
 }
 
-model 232 {   // a4Cube_mdl_532
+model 231 {   // a4Cube_mdl_532
 	1 1 1
 	<a4Cube.mdl>
 	a4Cube_mdl_532
@@ -3060,7 +3047,7 @@ model 232 {   // a4Cube_mdl_532
 	ndef
 }
 
-model 233 {   // a4Cube_mdl_533
+model 232 {   // a4Cube_mdl_533
 	1 1 1
 	<a4Cube.mdl>
 	a4Cube_mdl_533
@@ -3073,7 +3060,7 @@ model 233 {   // a4Cube_mdl_533
 	ndef
 }
 
-model 234 {   // a4Cube_mdl_534
+model 233 {   // a4Cube_mdl_534
 	1 1 1
 	<a4Cube.mdl>
 	a4Cube_mdl_534
@@ -3086,7 +3073,7 @@ model 234 {   // a4Cube_mdl_534
 	ndef
 }
 
-model 235 {   // spikes_mdl_537
+model 234 {   // spikes_mdl_537
 	0.776176 0.776176 0.776176
 	<spikes2.mdl>
 	spikes_mdl_537
@@ -3099,7 +3086,7 @@ model 235 {   // spikes_mdl_537
 	ndef
 }
 
-model 236 {   // spikes_mdl_540
+model 235 {   // spikes_mdl_540
 	0.776176 0.776176 0.776176
 	<spikes2.mdl>
 	spikes_mdl_540
@@ -3112,7 +3099,7 @@ model 236 {   // spikes_mdl_540
 	ndef
 }
 
-model 237 {   // spikes_mdl_542
+model 236 {   // spikes_mdl_542
 	0.776176 0.776176 0.776176
 	<spikes2.mdl>
 	spikes_mdl_542
@@ -3125,7 +3112,7 @@ model 237 {   // spikes_mdl_542
 	ndef
 }
 
-model 238 {   // spikes_mdl_543
+model 237 {   // spikes_mdl_543
 	0.776176 0.776176 0.776176
 	<spikes2.mdl>
 	spikes_mdl_543
@@ -3138,7 +3125,7 @@ model 238 {   // spikes_mdl_543
 	ndef
 }
 
-model 239 {   // spikes_mdl_545
+model 238 {   // spikes_mdl_545
 	0.776176 0.776176 0.776176
 	<spikes2.mdl>
 	spikes_mdl_545
@@ -3151,7 +3138,7 @@ model 239 {   // spikes_mdl_545
 	ndef
 }
 
-model 240 {   // spikes_mdl_547
+model 239 {   // spikes_mdl_547
 	0.776176 0.776176 0.776176
 	<spikes2.mdl>
 	spikes_mdl_547
@@ -3164,7 +3151,7 @@ model 240 {   // spikes_mdl_547
 	ndef
 }
 
-model 241 {   // spikes_mdl_550
+model 240 {   // spikes_mdl_550
 	0.776176 0.776176 0.776176
 	<spikes2.mdl>
 	spikes_mdl_550
@@ -3177,7 +3164,7 @@ model 241 {   // spikes_mdl_550
 	ndef
 }
 
-model 242 {   // spikes_mdl_551
+model 241 {   // spikes_mdl_551
 	0.776176 0.776176 0.776176
 	<spikes2.mdl>
 	spikes_mdl_551
@@ -3190,7 +3177,7 @@ model 242 {   // spikes_mdl_551
 	ndef
 }
 
-model 243 {   // spikes_mdl_552
+model 242 {   // spikes_mdl_552
 	0.776176 0.776176 0.776176
 	<spikes2.mdl>
 	spikes_mdl_552
@@ -3203,7 +3190,7 @@ model 243 {   // spikes_mdl_552
 	ndef
 }
 
-model 244 {   // spikes_mdl_553
+model 243 {   // spikes_mdl_553
 	0.776176 0.776176 0.776176
 	<spikes2.mdl>
 	spikes_mdl_553
@@ -3216,7 +3203,7 @@ model 244 {   // spikes_mdl_553
 	ndef
 }
 
-model 245 {   // spikes_mdl_557
+model 244 {   // spikes_mdl_557
 	0.776176 0.776176 0.776176
 	<spikes2.mdl>
 	spikes_mdl_557
@@ -3229,7 +3216,7 @@ model 245 {   // spikes_mdl_557
 	ndef
 }
 
-model 246 {   // spikes_mdl_558
+model 245 {   // spikes_mdl_558
 	0.776176 0.776176 0.776176
 	<spikes2.mdl>
 	spikes_mdl_558
@@ -3242,7 +3229,7 @@ model 246 {   // spikes_mdl_558
 	ndef
 }
 
-model 247 {   // spikes_mdl_559
+model 246 {   // spikes_mdl_559
 	0.776176 0.776176 0.776176
 	<spikes2.mdl>
 	spikes_mdl_559
@@ -3255,20 +3242,7 @@ model 247 {   // spikes_mdl_559
 	ndef
 }
 
-model 248 {   // spikes_mdl_560
-	0.776176 0.776176 0.776176
-	<spikes2.mdl>
-	spikes_mdl_560
-	lvlLfSpike
-	0 0 0 0 0 0 0 0
-	0000001000000000
-	0
-	50
-	ndef
-	ndef
-}
-
-model 249 {   // lotter_dummy_560
+model 247 {   // lotter_dummy_560
 	1 1 1
 	<lotter_dummy.mdl>
 	lotter_dummy_560
@@ -3281,7 +3255,7 @@ model 249 {   // lotter_dummy_560
 	ndef
 }
 
-model 250 {   // a4Cube_mdl_566
+model 248 {   // a4Cube_mdl_566
 	1 1 1
 	<a4Cube.mdl>
 	a4Cube_mdl_566
@@ -3294,7 +3268,7 @@ model 250 {   // a4Cube_mdl_566
 	ndef
 }
 
-model 251 {   // spikes_mdl_568
+model 249 {   // spikes_mdl_568
 	0.776176 0.776176 0.776176
 	<spikes2.mdl>
 	spikes_mdl_568
@@ -3307,7 +3281,7 @@ model 251 {   // spikes_mdl_568
 	ndef
 }
 
-model 252 {   // a4Cube_mdl_569
+model 250 {   // a4Cube_mdl_569
 	1 1 1
 	<a4Cube.mdl>
 	a4Cube_mdl_569
@@ -3320,7 +3294,7 @@ model 252 {   // a4Cube_mdl_569
 	ndef
 }
 
-model 253 {   // a4Cube_mdl_570
+model 251 {   // a4Cube_mdl_570
 	1 1 1
 	<a4Cube.mdl>
 	a4Cube_mdl_570
@@ -3333,7 +3307,7 @@ model 253 {   // a4Cube_mdl_570
 	ndef
 }
 
-model 254 {   // a4Cube_mdl_571
+model 252 {   // a4Cube_mdl_571
 	1 1 1
 	<a4Cube.mdl>
 	a4Cube_mdl_571
@@ -3346,7 +3320,7 @@ model 254 {   // a4Cube_mdl_571
 	ndef
 }
 
-model 255 {   // a4Cube_mdl_572
+model 253 {   // a4Cube_mdl_572
 	1 1 1
 	<a4Cube.mdl>
 	a4Cube_mdl_572
@@ -3359,7 +3333,7 @@ model 255 {   // a4Cube_mdl_572
 	ndef
 }
 
-model 256 {   // a4Cube_mdl_573
+model 254 {   // a4Cube_mdl_573
 	1 1 1
 	<a4Cube.mdl>
 	a4Cube_mdl_573
@@ -3372,7 +3346,7 @@ model 256 {   // a4Cube_mdl_573
 	ndef
 }
 
-model 257 {   // a4Cube_mdl_574
+model 255 {   // a4Cube_mdl_574
 	1 1 1
 	<a4Cube.mdl>
 	a4Cube_mdl_574
@@ -3385,7 +3359,7 @@ model 257 {   // a4Cube_mdl_574
 	ndef
 }
 
-model 258 {   // a4Cube_mdl_575
+model 256 {   // a4Cube_mdl_575
 	1 1 1
 	<a4Cube.mdl>
 	a4Cube_mdl_575
@@ -3398,7 +3372,7 @@ model 258 {   // a4Cube_mdl_575
 	ndef
 }
 
-model 259 {   // a4Cube_mdl_576
+model 257 {   // a4Cube_mdl_576
 	1 1 1
 	<a4Cube.mdl>
 	a4Cube_mdl_576
@@ -3411,7 +3385,7 @@ model 259 {   // a4Cube_mdl_576
 	ndef
 }
 
-model 260 {   // a4Cube_mdl_577
+model 258 {   // a4Cube_mdl_577
 	1 1 1
 	<a4Cube.mdl>
 	a4Cube_mdl_577
@@ -3424,7 +3398,7 @@ model 260 {   // a4Cube_mdl_577
 	ndef
 }
 
-model 261 {   // a4Cube_mdl_578
+model 259 {   // a4Cube_mdl_578
 	1 1 1
 	<a4Cube.mdl>
 	a4Cube_mdl_578
@@ -3437,7 +3411,7 @@ model 261 {   // a4Cube_mdl_578
 	ndef
 }
 
-model 262 {   // a4Cube_mdl_579
+model 260 {   // a4Cube_mdl_579
 	1 1 1
 	<a4Cube.mdl>
 	a4Cube_mdl_579
@@ -3450,7 +3424,7 @@ model 262 {   // a4Cube_mdl_579
 	ndef
 }
 
-model 263 {   // cloud0_tga_580
+model 261 {   // cloud0_tga_580
 	2 2 2
 	<cloud0.tga>
 	cloud0_tga_580
@@ -3463,7 +3437,7 @@ model 263 {   // cloud0_tga_580
 	ndef
 }
 
-model 264 {   // cloud0_tga_581
+model 262 {   // cloud0_tga_581
 	2 2 2
 	<cloud0.tga>
 	cloud0_tga_581
@@ -3476,7 +3450,7 @@ model 264 {   // cloud0_tga_581
 	ndef
 }
 
-model 265 {   // cloud0_tga_582
+model 263 {   // cloud0_tga_582
 	2.263377 2.263377 2.263377
 	<cloud2.tga>
 	cloud0_tga_582
@@ -3489,7 +3463,7 @@ model 265 {   // cloud0_tga_582
 	ndef
 }
 
-model 266 {   // cloud0_tga_583
+model 264 {   // cloud0_tga_583
 	2.263377 2.263377 2.263377
 	<cloud1.tga>
 	cloud0_tga_583
@@ -3502,7 +3476,7 @@ model 266 {   // cloud0_tga_583
 	ndef
 }
 
-model 267 {   // cloud0_tga_584
+model 265 {   // cloud0_tga_584
 	2.263377 2.263377 2.263377
 	<cloud1.tga>
 	cloud0_tga_584
@@ -3515,7 +3489,7 @@ model 267 {   // cloud0_tga_584
 	ndef
 }
 
-model 268 {   // cloud0_tga_587
+model 266 {   // cloud0_tga_587
 	2.263377 2.263377 2.263377
 	<cloud1.tga>
 	cloud0_tga_587
@@ -3528,7 +3502,7 @@ model 268 {   // cloud0_tga_587
 	ndef
 }
 
-model 269 {   // cloud0_tga_588
+model 267 {   // cloud0_tga_588
 	2.263377 2.263377 2.263377
 	<cloud1.tga>
 	cloud0_tga_588
@@ -3541,7 +3515,7 @@ model 269 {   // cloud0_tga_588
 	ndef
 }
 
-model 270 {   // cloud0_tga_589
+model 268 {   // cloud0_tga_589
 	2.263377 2.263377 2.263377
 	<cloud1.tga>
 	cloud0_tga_589
@@ -3554,7 +3528,7 @@ model 270 {   // cloud0_tga_589
 	ndef
 }
 
-model 271 {   // cloud0_tga_590
+model 269 {   // cloud0_tga_590
 	2.263377 2.263377 2.263377
 	<cloud1.tga>
 	cloud0_tga_590
@@ -3595,8 +3569,7 @@ object 0 {  // Root
 	object 231, 232, 233, 234, 235, 236, 237, 238, 239, 240
 	object 241, 242, 243, 244, 245, 246, 247, 248, 249, 250
 	object 251, 252, 253, 254, 255, 256, 257, 258, 259, 260
-	object 261, 262, 263, 264, 265, 266, 267, 268, 269, 270
-	object 271
+	object 261, 262, 263, 264, 265, 266, 267, 268, 269
 	level 0
 }
 
@@ -4270,688 +4243,678 @@ object 134 {  // spikes_mdl_364
 	model 134
 }
 
-object 135 {  // spikes_mdl_365
-	(25342 1 -8826) (-0 0 0) (0.776176 0.776176 0.776176)
+object 135 {  // spikes_mdl_368
+	(26149 26 -8238) (-2.356194 0 0) (1.740645 1.740645 1.740645)
 	model 135
 }
 
-object 136 {  // spikes_mdl_368
-	(26149 26 -8238) (-2.356194 0 0) (1.740645 1.740645 1.740645)
+object 136 {  // pathPieceA_mdl_372
+	(26381 327 -8243) (0.785398 0 0) (0.8 0.8 0.8)
 	model 136
 }
 
-object 137 {  // pathPieceA_mdl_372
-	(26381 327 -8243) (0.785398 0 0) (0.8 0.8 0.8)
+object 137 {  // pathPieceA_mdl_374
+	(25832 693 -8227.208984) (-0 0 0) (0.8 0.8 0.8)
 	model 137
 }
 
-object 138 {  // pathPieceA_mdl_374
-	(25832 693 -8227.208984) (-0 0 0) (0.8 0.8 0.8)
+object 138 {  // spikes_mdl_378
+	(26199 55 -8684) (0.785398 0 0) (1.495026 1.495026 1.495026)
 	model 138
 }
 
-object 139 {  // spikes_mdl_378
-	(26199 55 -8684) (0.785398 0 0) (1.495026 1.495026 1.495026)
+object 139 {  // zorrofantDummy_385
+	(25803 -176 -8911) (1.570796 0 0) (1.340917 1.340917 1.340917)
 	model 139
 }
 
-object 140 {  // zorrofantDummy_385
-	(25803 -176 -8911) (1.570796 0 0) (1.340917 1.340917 1.340917)
+object 140 {  // pathPieceI_mdl_393
+	(25898 0 -9231) (-0 0 0) (0.75 0.75 0.75)
 	model 140
 }
 
-object 141 {  // pathPieceI_mdl_393
-	(25898 0 -9231) (-0 0 0) (0.75 0.75 0.75)
+object 141 {  // pathPieceA_mdl_394
+	(27209 0 -8243) (-0 0 0) (0.8 0.8 0.8)
 	model 141
 }
 
-object 142 {  // pathPieceA_mdl_394
-	(27209 0 -8243) (-0 0 0) (0.8 0.8 0.8)
+object 142 {  // pathPieceA_mdl_396
+	(22326 0 -9478) (-0 0 0) (0.664153 0.664153 0.664153)
 	model 142
 }
 
-object 143 {  // pathPieceA_mdl_396
-	(22326 0 -9478) (-0 0 0) (0.664153 0.664153 0.664153)
+object 143 {  // tree3_mdl_398
+	(25462 162 -8489) (-0 0 0) (0.886364 0.886364 0.886364)
 	model 143
 }
 
-object 144 {  // tree3_mdl_398
-	(25462 162 -8489) (-0 0 0) (0.886364 0.886364 0.886364)
+object 144 {  // tree3_mdl_401
+	(26402 -377 -8534) (1.047198 0 0) (0.886364 0.886364 0.886364)
 	model 144
 }
 
-object 145 {  // tree3_mdl_401
-	(26402 -377 -8534) (1.047198 0 0) (0.886364 0.886364 0.886364)
+object 145 {  // tree3_mdl_404
+	(13338 182 -4086) (-0 0 0) (0.886364 0.886364 0.886364)
 	model 145
 }
 
-object 146 {  // tree3_mdl_404
-	(13338 182 -4086) (-0 0 0) (0.886364 0.886364 0.886364)
+object 146 {  // tree3_mdl_405
+	(12070 307 -4084) (-1.570796 0 0) (0.886364 0.886364 0.886364)
 	model 146
 }
 
-object 147 {  // tree3_mdl_405
-	(12070 307 -4084) (-1.570796 0 0) (0.886364 0.886364 0.886364)
+object 147 {  // tree3_mdl_408
+	(5290 -387 -500) (-1.570796 0 0) (0.886364 0.886364 0.886364)
 	model 147
 }
 
-object 148 {  // tree3_mdl_408
-	(5290 -387 -500) (-1.570796 0 0) (0.886364 0.886364 0.886364)
+object 148 {  // tree3_mdl_409
+	(281 -442 -146) (-1.570796 0 0) (0.886364 0.886364 0.886364)
 	model 148
 }
 
-object 149 {  // tree3_mdl_409
-	(281 -442 -146) (-1.570796 0 0) (0.886364 0.886364 0.886364)
+object 149 {  // tree3_mdl_410
+	(-41 404 543) (2.617994 0 0) (0.886364 0.886364 0.886364)
 	model 149
 }
 
-object 150 {  // tree3_mdl_410
-	(-41 404 543) (2.617994 0 0) (0.886364 0.886364 0.886364)
+object 150 {  // Fence-1_mdl_411
+	(24901 293 -8644) (-1.570796 0 0) (0.501323 0.501323 0.501323)
 	model 150
 }
 
-object 151 {  // Fence-1_mdl_411
-	(24901 293 -8644) (-1.570796 0 0) (0.501323 0.501323 0.501323)
+object 151 {  // Fence-1_mdl_415
+	(18680 295 -6552) (-1.570796 0 0) (0.501323 0.501323 0.501323)
 	model 151
 }
 
-object 152 {  // Fence-1_mdl_415
-	(18680 295 -6552) (-1.570796 0 0) (0.501323 0.501323 0.501323)
+object 152 {  // Fence-1_mdl_416
+	(18142 295 -6318) (-1.570796 0 0) (0.501323 0.501323 0.501323)
 	model 152
 }
 
-object 153 {  // Fence-1_mdl_416
-	(18142 295 -6318) (-1.570796 0 0) (0.501323 0.501323 0.501323)
+object 153 {  // Fence-1_mdl_417
+	(17576 295 -6001) (-1.570796 0 0) (0.501323 0.501323 0.501323)
 	model 153
 }
 
-object 154 {  // Fence-1_mdl_417
-	(17576 295 -6001) (-1.570796 0 0) (0.501323 0.501323 0.501323)
+object 154 {  // Fence-1_mdl_418
+	(10839 295 -3062) (-1.570796 0 0) (0.501323 0.501323 0.501323)
 	model 154
 }
 
-object 155 {  // Fence-1_mdl_418
-	(10839 295 -3062) (-1.570796 0 0) (0.501323 0.501323 0.501323)
+object 155 {  // Fence-1_mdl_419
+	(10278 295 -2167) (-1.570796 0 0) (0.501323 0.501323 0.501323)
 	model 155
 }
 
-object 156 {  // Fence-1_mdl_419
-	(10278 295 -2167) (-1.570796 0 0) (0.501323 0.501323 0.501323)
+object 156 {  // Fence-1_mdl_420
+	(9777 295 -1358) (-1.570796 0 0) (0.501323 0.501323 0.501323)
 	model 156
 }
 
-object 157 {  // Fence-1_mdl_420
-	(9777 295 -1358) (-1.570796 0 0) (0.501323 0.501323 0.501323)
+object 157 {  // Fence-1_mdl_421
+	(506 -445 -290) (-1.570796 0 0) (0.501323 0.501323 0.501323)
 	model 157
 }
 
-object 158 {  // Fence-1_mdl_421
-	(506 -445 -290) (-1.570796 0 0) (0.501323 0.501323 0.501323)
+object 158 {  // Fence-1_mdl_422
+	(-400 -325 7) (-1.570796 0 0) (0.501323 0.501323 0.501323)
 	model 158
 }
 
-object 159 {  // Fence-1_mdl_422
-	(-400 -325 7) (-1.570796 0 0) (0.501323 0.501323 0.501323)
+object 159 {  // cloud0_tga_423
+	(21478.333984 923 -7905.666504) (1.570796 0 0) (2 2 2)
 	model 159
 }
 
-object 160 {  // cloud0_tga_423
-	(21478.333984 923 -7905.666504) (1.570796 0 0) (2 2 2)
+object 160 {  // cloud0_tga_424
+	(22388.333984 1270 -8224.666016) (1.570796 0 0) (2.263377 2.263377 2.263377)
 	model 160
 }
 
-object 161 {  // cloud0_tga_424
-	(22388.333984 1270 -8224.666016) (1.570796 0 0) (2.263377 2.263377 2.263377)
+object 161 {  // cloud0_tga_425
+	(23360.333984 1025 -7554.666504) (1.570796 0 0) (2.263377 2.263377 2.263377)
 	model 161
 }
 
-object 162 {  // cloud0_tga_425
-	(23360.333984 1025 -7554.666504) (1.570796 0 0) (2.263377 2.263377 2.263377)
+object 162 {  // spikes_mdl_427
+	(17122 2 -5387) (-0 0 0) (0.776176 0.776176 0.776176)
 	model 162
 }
 
-object 163 {  // spikes_mdl_427
-	(17122 2 -5387) (-0 0 0) (0.776176 0.776176 0.776176)
+object 163 {  // spikes_mdl_428
+	(9970 2 -1402) (-0 0 0) (0.776176 0.776176 0.776176)
 	model 163
 }
 
-object 164 {  // spikes_mdl_428
-	(9970 2 -1402) (-0 0 0) (0.776176 0.776176 0.776176)
+object 164 {  // spikes_mdl_429
+	(5131 -2 -727) (-0 0 0) (0.776176 0.776176 0.776176)
 	model 164
 }
 
-object 165 {  // spikes_mdl_429
-	(5131 -2 -727) (-0 0 0) (0.776176 0.776176 0.776176)
+object 165 {  // spikes_mdl_430
+	(1687 -2 -336) (-0 0 0) (0.776176 0.776176 0.776176)
 	model 165
 }
 
-object 166 {  // spikes_mdl_430
-	(1687 -2 -336) (-0 0 0) (0.776176 0.776176 0.776176)
+object 166 {  // spikes_mdl_431
+	(8787 -94 -1773) (-0 -0 0.261799) (1 1 1)
 	model 166
 }
 
-object 167 {  // spikes_mdl_431
-	(8787 -94 -1773) (-0 -0 0.261799) (1 1 1)
+object 167 {  // a4Cube_mdl_431
+	(1496 0 -5) (-0 0 0) (1 1 1)
 	model 167
 }
 
-object 168 {  // a4Cube_mdl_431
-	(1496 0 -5) (-0 0 0) (1 1 1)
+object 168 {  // a4Cube_mdl_435
+	(1315 0 -34) (-0 0 0) (1 1 1)
 	model 168
 }
 
-object 169 {  // a4Cube_mdl_435
-	(1315 0 -34) (-0 0 0) (1 1 1)
+object 169 {  // a4Cube_mdl_436
+	(1695 0 -23) (-0 0 0) (1 1 1)
 	model 169
 }
 
-object 170 {  // a4Cube_mdl_436
-	(1695 0 -23) (-0 0 0) (1 1 1)
+object 170 {  // a4Cube_mdl_437
+	(1873 0 -89) (-0 0 0) (1 1 1)
 	model 170
 }
 
-object 171 {  // a4Cube_mdl_437
-	(1873 0 -89) (-0 0 0) (1 1 1)
+object 171 {  // a4Cube_mdl_438
+	(2012 0 -225) (-0 0 0) (1 1 1)
 	model 171
 }
 
-object 172 {  // a4Cube_mdl_438
-	(2012 0 -225) (-0 0 0) (1 1 1)
+object 172 {  // a4Cube_mdl_439
+	(3523 0 -399) (-0 0 0) (1 1 1)
 	model 172
 }
 
-object 173 {  // a4Cube_mdl_439
-	(3523 0 -399) (-0 0 0) (1 1 1)
+object 173 {  // a4Cube_mdl_440
+	(3731 0 -311) (-0 0 0) (1 1 1)
 	model 173
 }
 
-object 174 {  // a4Cube_mdl_440
-	(3731 0 -311) (-0 0 0) (1 1 1)
+object 174 {  // a4Cube_mdl_441
+	(3938 0 -390) (-0 0 0) (1 1 1)
 	model 174
 }
 
-object 175 {  // a4Cube_mdl_441
-	(3938 0 -390) (-0 0 0) (1 1 1)
+object 175 {  // a4Cube_mdl_442
+	(5278 0 -658) (-0 0 0) (1 1 1)
 	model 175
 }
 
-object 176 {  // a4Cube_mdl_442
-	(5278 0 -658) (-0 0 0) (1 1 1)
+object 176 {  // a4Cube_mdl_443
+	(4967 0 -642) (-0 0 0) (1 1 1)
 	model 176
 }
 
-object 177 {  // a4Cube_mdl_443
-	(4967 0 -642) (-0 0 0) (1 1 1)
+object 177 {  // a4Cube_mdl_444
+	(8571 0 -1266) (-0 0 0) (1 1 1)
 	model 177
 }
 
-object 178 {  // a4Cube_mdl_444
-	(8571 0 -1266) (-0 0 0) (1 1 1)
+object 178 {  // a4Cube_mdl_445
+	(8743 0 -1354) (-0 0 0) (1 1 1)
 	model 178
 }
 
-object 179 {  // a4Cube_mdl_445
-	(8743 0 -1354) (-0 0 0) (1 1 1)
+object 179 {  // a4Cube_mdl_446
+	(8920 0 -1420) (-0 0 0) (1 1 1)
 	model 179
 }
 
-object 180 {  // a4Cube_mdl_446
-	(8920 0 -1420) (-0 0 0) (1 1 1)
+object 180 {  // a4Cube_mdl_447
+	(9120 0 -1413) (-0 0 0) (1 1 1)
 	model 180
 }
 
-object 181 {  // a4Cube_mdl_447
-	(9120 0 -1413) (-0 0 0) (1 1 1)
+object 181 {  // a4Cube_mdl_448
+	(9297 0 -1353) (-0 0 0) (1 1 1)
 	model 181
 }
 
-object 182 {  // a4Cube_mdl_448
-	(9297 0 -1353) (-0 0 0) (1 1 1)
+object 182 {  // a4Cube_mdl_449
+	(9467 0 -1260) (-0 0 0) (1 1 1)
 	model 182
 }
 
-object 183 {  // a4Cube_mdl_449
-	(9467 0 -1260) (-0 0 0) (1 1 1)
+object 183 {  // a4Cube_mdl_450
+	(9634 0 -1262) (-0 0 0) (1 1 1)
 	model 183
 }
 
-object 184 {  // a4Cube_mdl_450
-	(9634 0 -1262) (-0 0 0) (1 1 1)
+object 184 {  // a4Cube_mdl_451
+	(8420 0 -1263) (-0 0 0) (1 1 1)
 	model 184
 }
 
-object 185 {  // a4Cube_mdl_451
-	(8420 0 -1263) (-0 0 0) (1 1 1)
+object 185 {  // a4Cube_mdl_452
+	(10306 0 -1979) (-0 0 0) (1 1 1)
 	model 185
 }
 
-object 186 {  // a4Cube_mdl_452
-	(10306 0 -1979) (-0 0 0) (1 1 1)
+object 186 {  // a4Cube_mdl_453
+	(10887 0 -2888) (-0 0 0) (1 1 1)
 	model 186
 }
 
-object 187 {  // a4Cube_mdl_453
-	(10887 0 -2888) (-0 0 0) (1 1 1)
+object 187 {  // a4Cube_mdl_454
+	(11218 0 -3797) (-0 0 0) (1 1 1)
 	model 187
 }
 
-object 188 {  // a4Cube_mdl_454
-	(11218 0 -3797) (-0 0 0) (1 1 1)
+object 188 {  // a4Cube_mdl_455
+	(12192 0 -4229) (-0 0 0) (1 1 1)
 	model 188
 }
 
-object 189 {  // a4Cube_mdl_455
-	(12192 0 -4229) (-0 0 0) (1 1 1)
+object 189 {  // a4Cube_mdl_456
+	(12337 0 -4229) (-0 0 0) (1 1 1)
 	model 189
 }
 
-object 190 {  // a4Cube_mdl_456
-	(12337 0 -4229) (-0 0 0) (1 1 1)
+object 190 {  // a4Cube_mdl_457
+	(12648 0 -4367) (-0 0 0) (1 1 1)
 	model 190
 }
 
-object 191 {  // a4Cube_mdl_457
-	(12648 0 -4367) (-0 0 0) (1 1 1)
+object 191 {  // a4Cube_mdl_459
+	(12824 0 -4367) (-0 0 0) (1 1 1)
 	model 191
 }
 
-object 192 {  // a4Cube_mdl_459
-	(12824 0 -4367) (-0 0 0) (1 1 1)
+object 192 {  // a4Cube_mdl_460
+	(14366 0 -4519) (-0 0 0) (1 1 1)
 	model 192
 }
 
-object 193 {  // a4Cube_mdl_460
-	(14366 0 -4519) (-0 0 0) (1 1 1)
+object 193 {  // a4Cube_mdl_461
+	(14587 0 -4587) (-0 0 0) (1 1 1)
 	model 193
 }
 
-object 194 {  // a4Cube_mdl_461
-	(14587 0 -4587) (-0 0 0) (1 1 1)
+object 194 {  // a4Cube_mdl_462
+	(14844 0 -4628) (-0 0 0) (1 1 1)
 	model 194
 }
 
-object 195 {  // a4Cube_mdl_462
-	(14844 0 -4628) (-0 0 0) (1 1 1)
+object 195 {  // a4Cube_mdl_463
+	(15101 0 -4642) (-0 0 0) (1 1 1)
 	model 195
 }
 
-object 196 {  // a4Cube_mdl_463
-	(15101 0 -4642) (-0 0 0) (1 1 1)
+object 196 {  // a4Cube_mdl_487
+	(24054 0 -9812) (-0 0 0) (1 1 1)
 	model 196
 }
 
-object 197 {  // a4Cube_mdl_487
-	(24054 0 -9812) (-0 0 0) (1 1 1)
+object 197 {  // a4Cube_mdl_488
+	(24191 0 -9705) (-0 0 0) (1 1 1)
 	model 197
 }
 
-object 198 {  // a4Cube_mdl_488
-	(24191 0 -9705) (-0 0 0) (1 1 1)
+object 198 {  // a4Cube_mdl_489
+	(23869 0 -9727) (-0 0 0) (1 1 1)
 	model 198
 }
 
-object 199 {  // a4Cube_mdl_489
-	(23869 0 -9727) (-0 0 0) (1 1 1)
+object 199 {  // a4Cube_mdl_490
+	(23699 0 -9597) (-0 0 0) (1 1 1)
 	model 199
 }
 
-object 200 {  // a4Cube_mdl_490
-	(23699 0 -9597) (-0 0 0) (1 1 1)
+object 200 {  // a4Cube_mdl_491
+	(24342 0 -9550) (-0 0 0) (1 1 1)
 	model 200
 }
 
-object 201 {  // a4Cube_mdl_491
-	(24342 0 -9550) (-0 0 0) (1 1 1)
+object 201 {  // a4Cube_mdl_492
+	(23751 0 -8210) (-0 0 0) (1 1 1)
 	model 201
 }
 
-object 202 {  // a4Cube_mdl_492
-	(23751 0 -8210) (-0 0 0) (1 1 1)
+object 202 {  // a4Cube_mdl_493
+	(24574 0 -8232) (-0 0 0) (1 1 1)
 	model 202
 }
 
-object 203 {  // a4Cube_mdl_493
-	(24574 0 -8232) (-0 0 0) (1 1 1)
+object 203 {  // a4Cube_mdl_494
+	(23063 0 -8347) (-0 0 0) (1 1 1)
 	model 203
 }
 
-object 204 {  // a4Cube_mdl_494
+object 204 {  // a4Cube_mdl_495
 	(23063 0 -8347) (-0 0 0) (1 1 1)
 	model 204
 }
 
-object 205 {  // a4Cube_mdl_495
-	(23063 0 -8347) (-0 0 0) (1 1 1)
+object 205 {  // a4Cube_mdl_496
+	(22544 0 -8621) (-0 0 0) (1 1 1)
 	model 205
 }
 
-object 206 {  // a4Cube_mdl_496
-	(22544 0 -8621) (-0 0 0) (1 1 1)
+object 206 {  // a4Cube_mdl_497
+	(23241 0 -8420) (-0 0 0) (1 1 1)
 	model 206
 }
 
-object 207 {  // a4Cube_mdl_497
-	(23241 0 -8420) (-0 0 0) (1 1 1)
+object 207 {  // a4Cube_mdl_498
+	(23565 0 -8981) (-0 0 0) (1 1 1)
 	model 207
 }
 
-object 208 {  // a4Cube_mdl_498
+object 208 {  // a4Cube_mdl_499
 	(23565 0 -8981) (-0 0 0) (1 1 1)
 	model 208
 }
 
-object 209 {  // a4Cube_mdl_499
-	(23565 0 -8981) (-0 0 0) (1 1 1)
+object 209 {  // a4Cube_mdl_500
+	(25336 0 -8752) (-0 0 0) (1 1 1)
 	model 209
 }
 
-object 210 {  // a4Cube_mdl_500
-	(25336 0 -8752) (-0 0 0) (1 1 1)
+object 210 {  // a4Cube_mdl_501
+	(25336 0 -8664) (-0 0 0) (1 1 1)
 	model 210
 }
 
-object 211 {  // a4Cube_mdl_501
-	(25336 0 -8664) (-0 0 0) (1 1 1)
+object 211 {  // a4Cube_mdl_502
+	(23404 0 -8460) (-0 0 0) (1 1 1)
 	model 211
 }
 
-object 212 {  // a4Cube_mdl_502
+object 212 {  // a4Cube_mdl_503
 	(23404 0 -8460) (-0 0 0) (1 1 1)
 	model 212
 }
 
-object 213 {  // a4Cube_mdl_503
-	(23404 0 -8460) (-0 0 0) (1 1 1)
+object 213 {  // a4Cube_mdl_504
+	(24182 0 -8353) (-0 0 0) (1 1 1)
 	model 213
 }
 
-object 214 {  // a4Cube_mdl_504
+object 214 {  // a4Cube_mdl_505
 	(24182 0 -8353) (-0 0 0) (1 1 1)
 	model 214
 }
 
-object 215 {  // a4Cube_mdl_505
-	(24182 0 -8353) (-0 0 0) (1 1 1)
+object 215 {  // a4Cube_mdl_506
+	(18853 0 -6585) (-0 0 0) (1 1 1)
 	model 215
 }
 
-object 216 {  // a4Cube_mdl_506
-	(18853 0 -6585) (-0 0 0) (1 1 1)
+object 216 {  // a4Cube_mdl_508
+	(17597 0 -5880) (-0 0 0) (1 1 1)
 	model 216
 }
 
-object 217 {  // a4Cube_mdl_508
-	(17597 0 -5880) (-0 0 0) (1 1 1)
+object 217 {  // a4Cube_mdl_511
+	(18204 0 -6166) (-0 0 0) (1 1 1)
 	model 217
 }
 
-object 218 {  // a4Cube_mdl_511
-	(18204 0 -6166) (-0 0 0) (1 1 1)
+object 218 {  // a4Cube_mdl_512
+	(17213 0 -5218) (-0 0 0) (1 1 1)
 	model 218
 }
 
-object 219 {  // a4Cube_mdl_512
-	(17213 0 -5218) (-0 0 0) (1 1 1)
+object 219 {  // a4Cube_mdl_514
+	(17522 0 -5375) (-0 0 0) (1 1 1)
 	model 219
 }
 
-object 220 {  // a4Cube_mdl_514
-	(17522 0 -5375) (-0 0 0) (1 1 1)
+object 220 {  // a4Cube_mdl_516
+	(17574 0 -5645) (-0 0 0) (1 1 1)
 	model 220
 }
 
-object 221 {  // a4Cube_mdl_516
-	(17574 0 -5645) (-0 0 0) (1 1 1)
+object 221 {  // a4Cube_mdl_518
+	(17813 0 -5968) (-0 0 0) (1 1 1)
 	model 221
 }
 
-object 222 {  // a4Cube_mdl_518
-	(17813 0 -5968) (-0 0 0) (1 1 1)
+object 222 {  // a4Cube_mdl_520
+	(18016 0 -6068) (-0 0 0) (1 1 1)
 	model 222
 }
 
-object 223 {  // a4Cube_mdl_520
-	(18016 0 -6068) (-0 0 0) (1 1 1)
+object 223 {  // a4Cube_mdl_522
+	(18428 0 -6279) (-0 0 0) (1 1 1)
 	model 223
 }
 
-object 224 {  // a4Cube_mdl_522
-	(18428 0 -6279) (-0 0 0) (1 1 1)
+object 224 {  // a4Cube_mdl_524
+	(18642 0 -6450) (-0 0 0) (1 1 1)
 	model 224
 }
 
-object 225 {  // a4Cube_mdl_524
-	(18642 0 -6450) (-0 0 0) (1 1 1)
+object 225 {  // a4Cube_mdl_526
+	(19128 0 -6780) (-0 0 0) (1 1 1)
 	model 225
 }
 
-object 226 {  // a4Cube_mdl_526
+object 226 {  // a4Cube_mdl_527
 	(19128 0 -6780) (-0 0 0) (1 1 1)
 	model 226
 }
 
-object 227 {  // a4Cube_mdl_527
-	(19128 0 -6780) (-0 0 0) (1 1 1)
+object 227 {  // a4Cube_mdl_528
+	(12739 0 -4253) (-0 0 0) (1 1 1)
 	model 227
 }
 
-object 228 {  // a4Cube_mdl_528
-	(12739 0 -4253) (-0 0 0) (1 1 1)
+object 228 {  // a4Cube_mdl_529
+	(12265 0 -4154) (-0 0 0) (1 1 1)
 	model 228
 }
 
-object 229 {  // a4Cube_mdl_529
-	(12265 0 -4154) (-0 0 0) (1 1 1)
+object 229 {  // a4Cube_mdl_530
+	(5139 0 -645) (-0 0 0) (1 1 1)
 	model 229
 }
 
-object 230 {  // a4Cube_mdl_530
-	(5139 0 -645) (-0 0 0) (1 1 1)
+object 230 {  // a4Cube_mdl_531
+	(267 0 296) (-0 0 0) (1 1 1)
 	model 230
 }
 
-object 231 {  // a4Cube_mdl_531
-	(267 0 296) (-0 0 0) (1 1 1)
+object 231 {  // a4Cube_mdl_532
+	(603 0 48) (-0 0 0) (1 1 1)
 	model 231
 }
 
-object 232 {  // a4Cube_mdl_532
-	(603 0 48) (-0 0 0) (1 1 1)
+object 232 {  // a4Cube_mdl_533
+	(776 0 -2) (-0 0 0) (1 1 1)
 	model 232
 }
 
-object 233 {  // a4Cube_mdl_533
-	(776 0 -2) (-0 0 0) (1 1 1)
+object 233 {  // a4Cube_mdl_534
+	(982 0 -31) (-0 0 0) (1 1 1)
 	model 233
 }
 
-object 234 {  // a4Cube_mdl_534
-	(982 0 -31) (-0 0 0) (1 1 1)
+object 234 {  // spikes_mdl_537
+	(2700 -2 -516) (-0 0 0) (0.776176 0.776176 0.776176)
 	model 234
 }
 
-object 235 {  // spikes_mdl_537
-	(2700 -2 -516) (-0 0 0) (0.776176 0.776176 0.776176)
+object 235 {  // spikes_mdl_540
+	(6270 -2 -949) (-0 0 0) (0.776176 0.776176 0.776176)
 	model 235
 }
 
-object 236 {  // spikes_mdl_540
-	(6270 -2 -949) (-0 0 0) (0.776176 0.776176 0.776176)
+object 236 {  // spikes_mdl_542
+	(6091 -2 -850) (-0 0 0) (0.776176 0.776176 0.776176)
 	model 236
 }
 
-object 237 {  // spikes_mdl_542
-	(6091 -2 -850) (-0 0 0) (0.776176 0.776176 0.776176)
+object 237 {  // spikes_mdl_543
+	(10089 -2 -2189) (-0 0 0) (0.776176 0.776176 0.776176)
 	model 237
 }
 
-object 238 {  // spikes_mdl_543
-	(10089 -2 -2189) (-0 0 0) (0.776176 0.776176 0.776176)
+object 238 {  // spikes_mdl_545
+	(10660 -2 -3085) (-0 0 0) (0.776176 0.776176 0.776176)
 	model 238
 }
 
-object 239 {  // spikes_mdl_545
-	(10660 -2 -3085) (-0 0 0) (0.776176 0.776176 0.776176)
+object 239 {  // spikes_mdl_547
+	(11341 -2 -4164) (-0 0 0) (0.776176 0.776176 0.776176)
 	model 239
 }
 
-object 240 {  // spikes_mdl_547
-	(11341 -2 -4164) (-0 0 0) (0.776176 0.776176 0.776176)
+object 240 {  // spikes_mdl_550
+	(14297 -2 -4646) (-0 0 0) (0.776176 0.776176 0.776176)
 	model 240
 }
 
-object 241 {  // spikes_mdl_550
-	(14297 -2 -4646) (-0 0 0) (0.776176 0.776176 0.776176)
+object 241 {  // spikes_mdl_551
+	(15079 -2 -4787) (-0 0 0) (0.776176 0.776176 0.776176)
 	model 241
 }
 
-object 242 {  // spikes_mdl_551
-	(15079 -2 -4787) (-0 0 0) (0.776176 0.776176 0.776176)
+object 242 {  // spikes_mdl_552
+	(19042 -2 -7205) (-0 0 0) (0.776176 0.776176 0.776176)
 	model 242
 }
 
-object 243 {  // spikes_mdl_552
-	(19042 -2 -7205) (-0 0 0) (0.776176 0.776176 0.776176)
+object 243 {  // spikes_mdl_553
+	(20698 -2 -8184) (-0 0 0) (0.776176 0.776176 0.776176)
 	model 243
 }
 
-object 244 {  // spikes_mdl_553
-	(20698 -2 -8184) (-0 0 0) (0.776176 0.776176 0.776176)
+object 244 {  // spikes_mdl_557
+	(22694 -2 -8911) (-0 0 0) (0.776176 0.776176 0.776176)
 	model 244
 }
 
-object 245 {  // spikes_mdl_557
-	(22694 -2 -8911) (-0 0 0) (0.776176 0.776176 0.776176)
+object 245 {  // spikes_mdl_558
+	(23548 -2 -9226) (-0 0 0) (0.776176 0.776176 0.776176)
 	model 245
 }
 
-object 246 {  // spikes_mdl_558
-	(23548 -2 -9226) (-0 0 0) (0.776176 0.776176 0.776176)
+object 246 {  // spikes_mdl_559
+	(23370 -2 -9192) (-0 0 0) (0.776176 0.776176 0.776176)
 	model 246
 }
 
-object 247 {  // spikes_mdl_559
-	(23370 -2 -9192) (-0 0 0) (0.776176 0.776176 0.776176)
+object 247 {  // lotter_dummy_560
+	(12745 0 -4374) (-0 0 0) (1 1 1)
 	model 247
 }
 
-object 248 {  // spikes_mdl_560
-	(24668 -2 -8781) (-0 0 0) (0.776176 0.776176 0.776176)
+object 248 {  // a4Cube_mdl_566
+	(13123 0 -4326) (-0 0 0) (1 1 1)
 	model 248
 }
 
-object 249 {  // lotter_dummy_560
-	(12745 0 -4374) (-0 0 0) (1 1 1)
+object 249 {  // spikes_mdl_568
+	(16277 -2 -5162) (-0 0 0) (0.776176 0.776176 0.776176)
 	model 249
 }
 
-object 250 {  // a4Cube_mdl_566
-	(13123 0 -4326) (-0 0 0) (1 1 1)
+object 250 {  // a4Cube_mdl_569
+	(20347 0 -7783) (-0 0 0) (1 1 1)
 	model 250
 }
 
-object 251 {  // spikes_mdl_568
-	(16277 -2 -5162) (-0 0 0) (0.776176 0.776176 0.776176)
+object 251 {  // a4Cube_mdl_570
+	(20504 0 -7883) (-0 0 0) (1 1 1)
 	model 251
 }
 
-object 252 {  // a4Cube_mdl_569
-	(20347 0 -7783) (-0 0 0) (1 1 1)
+object 252 {  // a4Cube_mdl_571
+	(20648 0 -7983) (-0 0 0) (1 1 1)
 	model 252
 }
 
-object 253 {  // a4Cube_mdl_570
-	(20504 0 -7883) (-0 0 0) (1 1 1)
+object 253 {  // a4Cube_mdl_572
+	(20767 0 -8090) (-0 0 0) (1 1 1)
 	model 253
 }
 
-object 254 {  // a4Cube_mdl_571
-	(20648 0 -7983) (-0 0 0) (1 1 1)
+object 254 {  // a4Cube_mdl_573
+	(20917 0 -8178) (-0 0 0) (1 1 1)
 	model 254
 }
 
-object 255 {  // a4Cube_mdl_572
-	(20767 0 -8090) (-0 0 0) (1 1 1)
+object 255 {  // a4Cube_mdl_574
+	(21061 0 -8253) (-0 0 0) (1 1 1)
 	model 255
 }
 
-object 256 {  // a4Cube_mdl_573
-	(20917 0 -8178) (-0 0 0) (1 1 1)
+object 256 {  // a4Cube_mdl_575
+	(22200 0 -8737) (-0 0 0) (1 1 1)
 	model 256
 }
 
-object 257 {  // a4Cube_mdl_574
-	(21061 0 -8253) (-0 0 0) (1 1 1)
+object 257 {  // a4Cube_mdl_576
+	(22357 0 -8712) (-0 0 0) (1 1 1)
 	model 257
 }
 
-object 258 {  // a4Cube_mdl_575
-	(22200 0 -8737) (-0 0 0) (1 1 1)
+object 258 {  // a4Cube_mdl_577
+	(22714 0 -8518) (-0 0 0) (1 1 1)
 	model 258
 }
 
-object 259 {  // a4Cube_mdl_576
-	(22357 0 -8712) (-0 0 0) (1 1 1)
+object 259 {  // a4Cube_mdl_578
+	(22902 0 -8399) (-0 0 0) (1 1 1)
 	model 259
 }
 
-object 260 {  // a4Cube_mdl_577
-	(22714 0 -8518) (-0 0 0) (1 1 1)
+object 260 {  // a4Cube_mdl_579
+	(25336 0 -8564) (-0 0 0) (1 1 1)
 	model 260
 }
 
-object 261 {  // a4Cube_mdl_578
-	(22902 0 -8399) (-0 0 0) (1 1 1)
+object 261 {  // cloud0_tga_580
+	(27889 -846 -8588) (1.570796 0 0) (2 2 2)
 	model 261
 }
 
-object 262 {  // a4Cube_mdl_579
-	(25336 0 -8564) (-0 0 0) (1 1 1)
+object 262 {  // cloud0_tga_581
+	(29275 -1344 -8088) (1.570796 0 0) (2 2 2)
 	model 262
 }
 
-object 263 {  // cloud0_tga_580
-	(27889 -846 -8588) (1.570796 0 0) (2 2 2)
+object 263 {  // cloud0_tga_582
+	(16931 602 -5280) (1.570796 0 0) (2.263377 2.263377 2.263377)
 	model 263
 }
 
-object 264 {  // cloud0_tga_581
-	(29275 -1344 -8088) (1.570796 0 0) (2 2 2)
+object 264 {  // cloud0_tga_583
+	(4804 578 -116) (1.570796 0 0) (2.263377 2.263377 2.263377)
 	model 264
 }
 
-object 265 {  // cloud0_tga_582
-	(16931 602 -5280) (1.570796 0 0) (2.263377 2.263377 2.263377)
+object 265 {  // cloud0_tga_584
+	(8162 -921 -1179) (1.570796 0 0) (2.263377 2.263377 2.263377)
 	model 265
 }
 
-object 266 {  // cloud0_tga_583
-	(4804 578 -116) (1.570796 0 0) (2.263377 2.263377 2.263377)
+object 266 {  // cloud0_tga_587
+	(11529 -1053 -2486) (1.570796 0 0) (2.263377 2.263377 2.263377)
 	model 266
 }
 
-object 267 {  // cloud0_tga_584
-	(8162 -921 -1179) (1.570796 0 0) (2.263377 2.263377 2.263377)
+object 267 {  // cloud0_tga_588
+	(-895 -1037 392) (1.570796 0 0) (2.263377 2.263377 2.263377)
 	model 267
 }
 
-object 268 {  // cloud0_tga_587
-	(11529 -1053 -2486) (1.570796 0 0) (2.263377 2.263377 2.263377)
+object 268 {  // cloud0_tga_589
+	(-33 -960 -843) (1.570796 0 0) (2.263377 2.263377 2.263377)
 	model 268
 }
 
-object 269 {  // cloud0_tga_588
-	(-895 -1037 392) (1.570796 0 0) (2.263377 2.263377 2.263377)
-	model 269
-}
-
-object 270 {  // cloud0_tga_589
-	(-33 -960 -843) (1.570796 0 0) (2.263377 2.263377 2.263377)
-	model 270
-}
-
-object 271 {  // cloud0_tga_590
+object 269 {  // cloud0_tga_590
 	(11078 -1053 -1133) (1.570796 0 0) (2.263377 2.263377 2.263377)
-	model 271
+	model 269
 }
 

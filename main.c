@@ -13,12 +13,15 @@
 	//#define SKIP_INTRO
 
 	// activate SKIP_TO and a target to redefine start level
-	//#define SKIP_TO
+	// #define SKIP_TO
 	//#define SKIP_TO_LOTTIFANTLEVEL
 	//#define SKIP_TO_BOSSLEVEL
-	//#define SKIP_TO_CREDITS
+	//#define SKIP_TO_LAVASTAGE
+	// #define SKIP_TO_CREDITS
 
 	//#define SKIP_CREDITS
+	
+	//#define PL_DEBUG
 	
 //----------------------------------------------------------------------------------------
 
@@ -37,28 +40,35 @@
 #include "credits.h"
 #include "trigger.h"
 #include "geist.c"
+#include "postprocessing.h"
 
 #include "lvlTemple.h"
 #include "lvlLottifant.h"
 #include "lvlBoss.h"
+#include "lvlLavastage.h"
 
 void main ()
 {
+	warn_level = 0;
+	video_window(NULL, NULL, 0, "Prince of Lotteria - Zorro Edition v0.2");
+	
 	physX_open();
 	
 	fps_max = 60;
 	video_mode = 10;
 	mouse_pointer = 0;
 	
-	d3d_antialias = 9;
+	d3d_antialias = 0;
 	mip_shaded = 2;
 	mip_flat = 2;
 	
 	preload_mode = 2+4;
 	
-	freeze_mode = 1;
-	
 	random_seed(0);
 	
+	initPostprocessing();
+	
 	menu_open();
+	
+	game_hotkeys();
 }

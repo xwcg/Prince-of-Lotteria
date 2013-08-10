@@ -33,6 +33,8 @@ void creditsReset ()
 	creditsFinished = 0;
 	currentRow = 0;
 	
+	resetPpSwirl();
+	
 	camera->clip_far = 30000;
 	
 	vec_set(&g_vecCreditsCamShake, nullvector);
@@ -52,8 +54,6 @@ void creditsReset ()
 	on_space = NULL;
 	
 	level_load(NULL);
-	
-	freeze_mode = 0;
 }
 
 void creditsExit ()
@@ -66,7 +66,9 @@ void creditsFog ()
 {
 	camera.fog_start = 128;
 	camera.fog_end = 4000;
+	
 	fog_color = 1;
+	vec_set(&d3d_fogcolor1.blue, vector(162, 174, 123));
 	
 	VECTOR fogColor;
 	vec_set(&fogColor, vector(d3d_fogcolor1.blue, d3d_fogcolor1.green, d3d_fogcolor1.red));
@@ -85,12 +87,12 @@ void creditsStart ()
 	wait(1);
 	
 	skychange(0.1);
+	setHdr(LVL_CREDITS_HDR_STRENGTH, LVL_CREDITS_HDR_THRESHOLD, LVL_CREDITS_HDR_EXPOSURE);
 	
 	detail_size = 64;	
-	level_load("credits.wmb");
+	level_load_ext("credits.wmb");
 
 	creditsFog();
-	credits_populate();
 	creditsText();
 	
 	camera.arc = 65;
@@ -98,6 +100,11 @@ void creditsStart ()
 	wait(1);
 	
 	set(camera, SHOW);
+	
+	credits_populate();
+	
+	while (key_a && key_c && key_k)
+		wait(1);
 	
 	while (!creditsFinished)
 	{

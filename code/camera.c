@@ -114,4 +114,26 @@ void move_camera ()
 	}
 }
 
+void camera_path(STRING* _pathname) {
+	me = ent_create(NULL,nullvector,NULL);
+	path_set(me,_pathname);
+	var dist = 0;
+	var vLastPos[3];
+	var vDir[3];
+	while(1)  {
+		
+		// place the camera on the path
+		path_spline(me,camera.x,dist);
+		dist += 5*time_step;
+		
+		if (player != NULL) {
+			// let the camera look at the player	
+			vec_diff(vDir,player.x,vLastPos);
+			vec_to_angle(camera.pan,vDir);
+			vec_set(vLastPos,camera.x);
+		}
+		wait(1);
+	}
+}
+
 #endif /* _CAMERA_C_ */

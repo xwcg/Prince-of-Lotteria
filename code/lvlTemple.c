@@ -15,8 +15,9 @@ void lvlTempleReset ()
 	snd_stop(g_fhLvlTempleSong);
 	g_fhLvlTempleSong = 0;
 	
+	resetPpSwirl ();
+	
 	level_load(NULL);
-	freeze_mode = 0;
 	sky_active = 0;
 }
 
@@ -49,6 +50,7 @@ void lvlTempleStart ()
 		wait(1);
 		
 	skychange();
+	setHdr(LVL_TEMPLE_HDR_STRENGTH, LVL_TEMPLE_HDR_THRESHOLD, LVL_TEMPLE_HDR_EXPOSURE);
 	
 	g_bLvlTempleRunning = true;
 	
@@ -57,7 +59,10 @@ void lvlTempleStart ()
 	gui_show();
 	
 	fog_color = 0;
-	camera.arc = g_lvlTempleCamArc;
+	
+	// set camera + walk glide
+	setPlayerCamera(g_lvlTempleCamDist, g_lvlTempleCamRaiseZ, g_lvlTempleCamArc);
+	setPlayerWalkGlide(true);
 	
 	level_load_ext(LVL_TEMPLE_WMB);
 }

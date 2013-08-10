@@ -1,16 +1,25 @@
 #ifndef _MENU_H_
 #define _MENU_H_
 
-// opens main menu
-void menu_open(void);
+// prototypes
 
-// closes the main menu.
-void menu_close(void);
+	void menu_open();
+	void menu_close();
 
-SOUND *menuBackgroundMusic = "lotteria_menu_mono.wav";
+// globals
+
+	var g_menuFxSpeed = 0.2;
+
+SOUND *menuBackgroundMusic = "menu.ogg";
 
 FONT *menuFont = "Courier#64";
 BMAP *menuBackgroundImage = NULL;
+
+// hdr
+
+	#define LVL_MENU_HDR_THRESHOLD 50
+	#define LVL_MENU_HDR_STRENGTH 10
+	#define LVL_MENU_HDR_EXPOSURE 0
 
 PANEL *menuMainmenuBackground = 
 {
@@ -36,34 +45,9 @@ TEXT *menuInfo =
 	flags = OUTLINE;
 }
 
-MATERIAL *menuBackgroundMaterial = 
+MATERIAL* g_menuMtlFx = 
 {
-	effect = "
-	float4 vecSkill1;
-	float4 ps(float2 pos : TEXCOORD0) : COLOR0
-	{
-		float4 color = 0;
-		
-		float3 time = vecSkill1.x * float3(1.2, -0.9, 1.0);
-		
-		color.rgb = 
-			0.5 + 
-			0.5 * sin(time + float3(0, 1, 2) + float3(10, -10, 5) * pos.y) * 
-			cos(time + float3(3, 2, 1) - float3(-6, 8, -2) * pos.x);
-		color.a = 1;
-		
-		color.rgb = pow(0.5 + color.rgb, 2) - 0.5;
-		
-		return color;
-	}
-	
-	technique
-	{
-		pass
-		{
-			PixelShader = compile ps_2_0 ps();
-		}
-	}";
+	effect = "menu.fx";
 }
 
 TEXT **menuTexts;
