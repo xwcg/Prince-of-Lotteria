@@ -47,7 +47,7 @@ void lvlBossStart ()
 	setPlayerCamera(g_lvlBossCamDist, g_lvlBossCamRaiseZ, g_lvlBossCamArc);
 	setPlayerWalkGlide(true);
 	
-	level_load_ext(LVL_BOSS_WMB);
+	level_load(LVL_BOSS_WMB);
 }
 
 void lvlBossExit (BOOL bNextLevel)

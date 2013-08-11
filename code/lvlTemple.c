@@ -64,7 +64,7 @@ void lvlTempleStart ()
 	setPlayerCamera(g_lvlTempleCamDist, g_lvlTempleCamRaiseZ, g_lvlTempleCamArc);
 	setPlayerWalkGlide(true);
 	
-	level_load_ext(LVL_TEMPLE_WMB);
+	level_load(LVL_TEMPLE_WMB);
 }
 
 void lvlTempleExit (BOOL bNextLevel)

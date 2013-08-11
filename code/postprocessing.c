@@ -12,6 +12,7 @@ void initPostprocessing ()
 	pp_viewLuma->stage = pp_viewFxaa;
 	pp_viewFxaa->stage = pp_viewSwirl;
 	pp_set(pp_viewSwirl, mtl_hdr);
+	pp_viewSwirl->stage = pp_viewRedness;
 	
 	while (1)
 	{
@@ -71,5 +72,6 @@ void updateHdr ()
 	mtl_hdr.skill2 = floatv(hdrThreshold);
 	mtl_hdr.skill3 = floatv(hdrExposure);
 }
+
 	
 #endif /* postprocessing_c */
