@@ -414,6 +414,8 @@ action lvlLfLottiDummy ()
 	}
 	else
 	{
+		txtGameOver.pos_x = screen_size.x / 2;
+		txtGameOver.pos_y = screen_size.y / 2;	
 		set(txtGameOver, SHOW);
 		
 		wait(-2.5);
