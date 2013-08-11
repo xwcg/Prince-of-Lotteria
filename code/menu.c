@@ -13,6 +13,8 @@ action acMenuSphere ()
 
 void menu_open ()
 {
+	redness = 0;
+	
 	// fix
 	g_bLvlTempleRunning = false;
 	g_bLvlLavastageRunning = false;

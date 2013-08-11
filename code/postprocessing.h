@@ -41,6 +41,13 @@
 
 		MATERIAL* g_mtlFxaa = { effect = "fxaa.fx"; }
 		VIEW* pp_viewFxaa = { material = g_mtlFxaa; flags = CHILD | PROCESS_TARGET; }	
+		
+	// redness
+	
+		var redness = 0;
+	
+		MATERIAL* g_mtlRedness = { effect = "red.fx"; }
+		VIEW* pp_viewRedness = { material = g_mtlRedness; flags = CHILD | PROCESS_TARGET; }	
 
 #include "postprocessing.c"
 
