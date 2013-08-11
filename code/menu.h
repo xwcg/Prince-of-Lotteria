@@ -12,6 +12,8 @@
 
 SOUND *menuBackgroundMusic = "menu.ogg";
 
+var menuTextsY = 0.75;
+
 FONT *menuFont = "Courier#64";
 BMAP *menuBackgroundImage = NULL;
 
@@ -31,7 +33,7 @@ PANEL *menuMainmenuBackground =
 PANEL *menuTitle =
 {
 	bmap = "title.png";
-	//bmap = "title.png";
+	flags = FILTER;
 	layer = 51;
 	pos_y = 24;
 }
