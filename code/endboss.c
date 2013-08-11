@@ -4,6 +4,14 @@
 #include "endboss.h"
 #include "lvlBoss.h"
 
+void endboss_c_startup ()
+{
+	g_handChop[HAND_CHOP_L] = &g_handChopL;
+	g_handChop[HAND_CHOP_R] = &g_handChopR;
+	
+	g_bbEbBlood = newBmapBank(5, "bloodSht%d.TGA");
+}
+
 void ebDoHit ()
 {
 	g_ebDoHit = true;
@@ -105,13 +113,15 @@ void doHandChopBlood (ENTITY* entHand)
 		if (arr[fingerId] == true)
 		{
 			handFingerPos(entHand, bLeftHand, fingerId, &fingerPos, &fingerDir);
-			effEbBlood(&fingerPos, &fingerDir, 25, false);
+			effEbBlood(&fingerPos, &fingerDir, 25, false, 1, 1);
 		}			
 	}
 }
 
 void updateHandChopped (ENTITY* entHand)
 {
+	proc_mode = PROC_LATE;
+
 	BOOL* arr = NULL;
 	
 	BOOL bLeftHand = (entHand->skill20 == 1);
@@ -126,11 +136,11 @@ void updateHandChopped (ENTITY* entHand)
 	{
 		if (arr[fingerId] != true)
 		{
-			entHand->vmask &= ~(1 << (4 - fingerId + 1));
+			entHand->vmask &= ~(1 << (4 - fingerId));
 		}
 		else
 		{
-			entHand->vmask |= 1 << (4 - fingerId + 1);
+			entHand->vmask |= 1 << (4 - fingerId);
 		}
 	}
 }
@@ -147,6 +157,16 @@ void ebReset ()
 	
 	g_handDropping = false;
 	g_fingerChopped = false;
+	
+	g_warghostAlive = true;
+	
+	g_facTimeEbHandsFly = 1;
+	g_facTimeEbHandWatch = 1;
+	g_facTimeEbHandDropped = 1;
+	
+	g_sndEbVol = 100;
+	
+	redness = 0;
 }
 
 void ebDoSparkle (ENTITY* e, int modulo)
@@ -194,51 +214,72 @@ action ebStartSpeech ()
 	ptr_remove(my);
 }
 
+BOOL isEbWarghostAlive ()
+{
+	int i, j;
+	
+	int numFingers = 0;
+	
+	for (j = 0; j < HAND_FINGERS; j++)
+	{
+		if (g_handChopL[j]) numFingers++;
+		if (g_handChopR[j]) numFingers++;
+	}
+				
+	return (numFingers < 1);
+}
+
 void ebHandsBgFly ()
 {
-	var handRadius = 500;
-	
-	snd_play(g_sndSparkle, 100, 0);
+	if (isEbWarghostAlive())
+	{
+		var handRadius = 500;
+		
+		snd_play(g_sndSparkle, 100, 0);
 
-	ENTITY* hands [2];
-	hands[0] = ent_create("warhand.mdl", vector(-handRadius, 500, 400), ebHandFlyL);
-	hands[1] = ent_create("warhand.mdl", vector(handRadius, 500, 400), ebHandFlyR);
+		ENTITY* hands [2];
+		hands[0] = ent_create("warhand.mdl", vector(-handRadius, 500, 400), ebHandFlyL);
+		hands[1] = ent_create("warhand.mdl", vector(handRadius, 500, 400), ebHandFlyR);	
 	
-	var t = (5 + random(5)) * 16;
-	
-	snd_play(g_sndHandFlyBoth, 100, 0);
-	
-	while (t > 0)
-	{
-		t -= time_step;
-		wait(1);
+		var t = maxv(g_facTimeEbHandsFlyMin, g_facTimeEbHandsFly * (5 + random(5))) * 16;
+		
+		snd_play(g_sndHandFlyBoth, 100, 0);
+		
+		while (t > 0)
+		{
+			t -= time_step;
+			wait(1);
+		}
+		
+		g_facTimeEbHandsFly *= g_facTimeEbHandsFlyDec;
+		
+		snd_play(g_sndWarghostBattleNoChance, 100, 0);
+		
+		int i;
+		var m = (1 + random(2)) * 16;
+		for (i = 0; i < 2; i++)
+		{
+			(hands[i])->skill1 = 1;
+			(hands[i])->skill2 = m;
+		}
+		
+		while (m > 0)
+		{
+			m -= time_step;
+			wait(1);
+		}
+		
+		snd_play(g_sndSparkle, 100, 0);
+		
+		wait(-0.5);
+		
+		VECTOR v;
+		vec_set(&v, player->x);
+		v.z += 400;
+		
+		ent_create("warhand.mdl", &v, ebHandWatchSelect);
 	}
 	
-	snd_play(g_sndWarghostBattleNoChance, 100, 0);
-	
-	int i;
-	var m = (1 + random(2)) * 16;
-	for (i = 0; i < 2; i++)
-	{
-		(hands[i])->skill1 = 1;
-		(hands[i])->skill2 = m;
-	}
-	
-	while (m > 0)
-	{
-		m -= time_step;
-		wait(1);
-	}
-	
-	snd_play(g_sndSparkle, 100, 0);
-	
-	wait(-(0.5+random(1)));
-	
-	VECTOR v;
-	vec_set(&v, player->x);
-	v.z += 400;
-	
-	ent_create("warhand.mdl", &v, ebHandWatchSelect);
 	ptr_remove(my);
 }
 
@@ -278,6 +319,8 @@ void ebHandsBgFly ()
 			
 			vec_scale(my->scale_x, g_handScale);
 			
+			var targetRoll = -90;
+			
 			while (my->skill1 == 0)
 			{
 				if (t <= 0)
@@ -300,9 +343,16 @@ void ebHandsBgFly ()
 				vec_lerp(my->x, my->x, &nuPos, moveLerp * time_step);
 					
 				ent_animate(my, "idleH", (total_ticks * moveAnim) % 100, ANM_CYCLE);
-				my->roll += (-90 - my->roll) * 0.05 * clamp(time_step, 0.001, 1);
+				my->roll += (targetRoll - my->roll) * 0.05 * clamp(time_step, 0.001, 1);
 				
 				doHandChopBlood(my);
+				
+				if (!isEbWarghostAlive())
+				{
+					startPos.z -= 10 * time_step;
+					targetPos.z -= 10 * time_step;
+					targetRoll -= 10 * time_step;
+				}
 				
 				wait(1);
 			}
@@ -312,7 +362,7 @@ void ebHandsBgFly ()
 				my->skill2 -= time_step;
 				my->z += 10 * time_step;
 				my->y -= 20 * time_step;
-				my->roll += 5 * time_step;
+				my->roll += 2 * time_step;
 				
 				doHandChopBlood(my);
 				
@@ -346,8 +396,8 @@ void flyawaychoppedhand ()
 
 void ebDoCrazyness ()
 {
-	//hdrStrength += 1;
-	//hdrThreshold -= 1;
+	hdrStrength += 1;
+	hdrThreshold -= 1;
 	
 	g_lvlLavastageSwirlStrength += 0.015;
 	g_lvlLavastageSwirlSpeed += 0.07;
@@ -360,21 +410,21 @@ void ebDoCrazyness ()
 		
 void doChopped (ENTITY* entHand, int lr, int fingerId)
 {
-	ENTITY* entzzz = ent_create(entHand->type, entHand->x, flyawaychoppedhand);
+	ENTITY* entFinger = ent_create(entHand->type, entHand->x, flyawaychoppedhand);
 	
-	entzzz->skill20 = lr;
+	entFinger->skill20 = lr;
 	
-	vec_set(entzzz->scale_x, entHand->scale_x);
+	vec_set(entFinger->scale_x, entHand->scale_x);
 	
-	entzzz->frame = entHand->frame;
-	entzzz->next_frame = entHand->next_frame;
+	entFinger->frame = entHand->frame;
+	entFinger->next_frame = entHand->next_frame;
 	
 	if (lr == 1)
-		entzzz->material = g_mtlHandL;
+		entFinger->material = g_mtlHandL;
 	else
-		entzzz->material = g_mtlHandR;
+		entFinger->material = g_mtlHandR;
 		
-	entzzz->skill1 = fingerId;
+	entFinger->skill1 = fingerId;
 	
 	BOOL* arr = NULL;
 	
@@ -385,9 +435,9 @@ void doChopped (ENTITY* entHand, int lr, int fingerId)
 		
 	int i;
 	for (i = 0; i <= 5; i++)
-		entzzz->vmask |= 1 << i;
+		entFinger->vmask |= 1 << i;
 	
-	entzzz->vmask &= ~(1 << (4-fingerId+1));
+	entFinger->vmask &= ~(1 << (4 - fingerId));
 	
 	snd_play(g_sndFingerChop, 100, 0);
 }
@@ -455,7 +505,9 @@ void ebHandJoint ()
 							isChopped = true;
 							g_fingerChopped = true;
 							
-							doChopped(g_ebHand, g_ebHand->skill20, my->skill1);
+							doChopped(g_ebHand, g_ebHand->skill20, my->skill1);							
+							updateHandChopped(g_ebHand);
+							
 							ebDoCrazyness();
 							ebDoHit();
 								
@@ -523,7 +575,7 @@ void ebHandWatch ()
 	
 	var moveAnim = 10;
 	
-	var t = (5 + random(3)) * 16;
+	var t = maxv(g_facTimeEbHandWatchMin, g_facTimeEbHandWatch * (5 + random(3))) * 16;
 	
 	vec_scale(my->scale_x, g_handScale);
 	
@@ -569,6 +621,8 @@ void ebHandWatch ()
 		
 		wait(1);
 	}
+	
+	g_facTimeEbHandWatch *= g_facTimeEbHandWatchDec;
 	
 	reset(player, FLAG2);
 	
@@ -619,7 +673,7 @@ void ebHandWatch ()
 	
 	g_ebHand->skill2 = 0; // joints death = off
 	
-	t = (3+random(2)) * 16;
+	t = maxv(g_facTimeEbHandDroppedMin, g_facTimeEbHandDropped * (3+random(2)) * 16);
 	
 	g_fingerChopped = false;
 	
@@ -633,6 +687,8 @@ void ebHandWatch ()
 		
 		wait(1);
 	}
+	
+	g_facTimeEbHandDropped *= g_facTimeEbHandDroppedDec;
 	
 	snd_play(g_sndHandUp, 100, 0);
 	
@@ -727,14 +783,16 @@ void ebHandWatchSelect ()
 	}
 }
 
-void effEbBlood (VECTOR* pos, VECTOR* vecVel, var pSpeed, BOOL bInverse)
+void effEbBlood (VECTOR* pos, VECTOR* vecVel, var pSpeed, BOOL bInverse, int num, double scale)
 {
 	vec_normalize(vecVel, pSpeed);
 	
 	if (bInverse)
 		vec_scale(vecVel, -1);
+		
+	g_effEbBloodScale = scale;
 	
-	effect(effEbBlood_p, 1, pos, vecVel);
+	effect(effEbBlood_p, num, pos, vecVel);
 }
 
 	void effEbBlood_p (PARTICLE* p)
@@ -746,7 +804,7 @@ void effEbBlood (VECTOR* pos, VECTOR* vecVel, var pSpeed, BOOL bInverse)
 		p->gravity = 2;
 		
 		p->alpha = 100;
-		p->size = 64 + random(128);
+		p->size = g_effEbBloodScale * (64 + random(128));
 		
 		p->event = effEbBlood_ev;
 	}
@@ -765,6 +823,13 @@ action ebWarghost ()
 	my->material = g_mtlBossGhost;
 	
 	lvlLavaSuperReset ();
+	
+	var deadRotate = 0;
+	
+	var origScale = my->scale_x;
+	var deadScale = origScale;
+	
+	BOOL isSpining = false;
 	
 	while (1)
 	{
@@ -799,6 +864,32 @@ action ebWarghost ()
 			
 			vec_diff(&vecLook, &vecLookAt, my->x);
 			vec_to_angle(my->pan, &vecLook);
+			
+			if (!isEbWarghostAlive())
+			{
+				setPlayerControls(false);
+				setPlayerPan(my);
+				
+				deadRotate += 10 * time_step;
+				deadScale += 0.3 * time_step;
+				
+				g_sndEbVol = clamp(g_sndEbVol - g_sndEbVolDec * time_step, 0, 100);
+				snd_tune(g_fhLvlLavastageSong, g_sndEbVol, 3, 0);
+				
+				if (!isSpining)
+				{
+					snd_play(g_sndBossSpin, 100, 0);
+					snd_play(g_sndBossDeadSpeech, 100, 0);
+					
+					isSpining = true;
+				}
+			}
+			
+			my->pan += deadRotate;
+			my->scale_x = my->scale_y = my->scale_z = deadScale;
+			
+			if (my->scale_x / origScale > 3)
+				break;
 		}
 		
 		if (g_ebDoHit)
@@ -806,9 +897,44 @@ action ebWarghost ()
 		else
 			ent_animate(my, "attack", total_ticks % 100, ANM_CYCLE);
 			
+		wait(1);
+	}
+	
+	snd_play(g_sndBossSplatter, 100, 0);
+	
+	VECTOR vecPos, vecDir;
+	int i, j, numVerts = ent_status(my, 0);
+	
+	snd_play(g_sndBossDead, 100, 0);
+	
+	set(my, INVISIBLE);
+	
+	for (i = 0; i < numVerts; i++)
+	{
+		vec_for_vertex(&vecPos, my, i+1);
+		
+		vec_diff(&vecDir, &vecPos, my->x);
+		vec_normalize(&vecDir, 1);
+		
+		effEbBlood(&vecPos, &vecDir, 25+random(100), false, 1, 4 + random(4));
+	}
+	
+	while (redness < 100)
+	{
+		redness = clamp(redness + g_rednessInc * time_step, 0, 100);
+		
+		g_sndEbVol = clamp(g_sndEbVol - g_sndEbVolDec * time_step, 0, 100);
+		snd_tune(g_fhLvlLavastageSong, g_sndEbVol, 5, 0);		
 		
 		wait(1);
 	}
+	
+	wait(-1);
+	
+	proc_mode = PROC_GLOBAL;
+	ptr_remove(my);
+	
+	creditsInit();
 }
 
 #endif /* endboss_c */

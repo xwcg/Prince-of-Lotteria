@@ -42,6 +42,8 @@ void creditsReset ()
 	snd_stopall(4);
 	g_fhCreditsSong = 0;
 	
+	resetPpSwirl ();
+	
 	reset(g_txtCreditsSpace, SHOW);
 	
 	reset(creditsHead1, SHOW);
@@ -82,22 +84,25 @@ void creditsFog ()
 
 void creditsStart ()
 {
-	reset(camera, SHOW);
+	redness = 100;
 	
 	wait(1);
+	
+	//reset(camera, SHOW);
+	//wait(1);
 	
 	skychange(0.1);
 	setHdr(LVL_CREDITS_HDR_STRENGTH, LVL_CREDITS_HDR_THRESHOLD, LVL_CREDITS_HDR_EXPOSURE);
 	
 	detail_size = 64;	
-	level_load_ext("credits.wmb");
+	level_load("credits.wmb");
 
 	creditsFog();
 	creditsText();
 	
 	camera.arc = 65;
 	
-	wait(1);
+	//wait(1);
 	
 	set(camera, SHOW);
 	
@@ -108,6 +113,9 @@ void creditsStart ()
 	
 	while (!creditsFinished)
 	{
+		resetPpSwirl ();
+		redness = clamp(redness - g_rednessInc * time_step, 0, 100);
+	
 		if (key_a && key_c && key_k)
 			break;
 		

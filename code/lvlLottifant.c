@@ -46,6 +46,12 @@ void lvlLfStart ()
 	while (total_frames < 1)
 		wait(1);
 		
+	freeze_mode = 1;
+	physX_open();
+	wait(1);
+	freeze_mode = 0;
+	
+		
 	skychange();
 	setHdr(LVL_LOTTIFANT_HDR_STRENGTH, LVL_LOTTIFANT_HDR_THRESHOLD, LVL_LOTTIFANT_HDR_EXPOSURE);
 	
@@ -57,7 +63,7 @@ void lvlLfStart ()
 	fog_color = 0;
 	camera.arc = g_lvlLottifantCamArc;
 	
-	level_load_ext(LVL_LOTTIFANT_WMB);
+	level_load(LVL_LOTTIFANT_WMB);
 }
 
 void lvlLfExit (BOOL bNextLevel)
@@ -85,6 +91,8 @@ void lvlLfExit (BOOL bNextLevel)
 	g_lvlLfDeregister = false;
 	
 	wait(1);
+	
+	physX_close();
 	
 	level_load("");
 	

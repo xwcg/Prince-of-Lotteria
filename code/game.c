@@ -18,6 +18,10 @@ void game_start()
 		
 		setHdr(LVL_INTRO_HDR_STRENGTH, LVL_INTRO_HDR_THRESHOLD, LVL_INTRO_HDR_EXPOSURE);
 		
+		camera->arc = 60;
+		camera->ambient = 0;
+		fog_color = 0;
+		
 		camera_path("path1");
 		PANEL* panBlack = pan_create(" ", 100);
 		vec_set(panBlack.blue, vector(8,8,8));
