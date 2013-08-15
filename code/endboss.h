@@ -21,6 +21,8 @@
 	void effEbBlood (VECTOR* pos, VECTOR* vecVel, var pSpeed, BOOL bInverse, int num, double scale);
 	void effEbBlood_p (PARTICLE* p);
 	void effEbBlood_ev (PARTICLE* p);
+	
+	void ebSndAttack ();
 
 // defines
 
@@ -88,7 +90,6 @@
 // sounds
 
 	SOUND* g_sndWarghostBattleSpeechStart = "warghostBattleSpeechStart.ogg";
-	SOUND* g_sndWarghostBattleNoChance = "warghostBattleNoChance.ogg";
 
 	SOUND* g_sndFingerChop = "fingerChop.ogg";
 
@@ -105,6 +106,14 @@
 	SOUND* g_sndBossDead = "bossDead.ogg";
 	
 	SOUND* g_sndBossDeadSpeech = "bossDeadSpeech.ogg";
+	
+	SOUND* g_sndBossAttack01 = "boss01.wav";
+	SOUND* g_sndBossAttack02 = "boss02.wav";
+	SOUND* g_sndBossAttack03 = "boss03.wav";
+	SOUND* g_sndBossAttack04 = "boss04.wav";
+	SOUND* g_sndBossAttack05 = "boss05.wav";
+	SOUND* g_sndBossAttack06 = "boss06.wav";
+	
 
 // sprites
 
