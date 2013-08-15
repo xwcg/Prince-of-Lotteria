@@ -225,8 +225,12 @@ BOOL isEbWarghostAlive ()
 		if (g_handChopL[j]) numFingers++;
 		if (g_handChopR[j]) numFingers++;
 	}
-				
-	return (numFingers < 1);
+
+	#ifdef BOSS_DIE_1FINGER
+		return (numFingers < 1);
+	#else
+		return (numFingers < 8);
+	#endif
 }
 
 void ebHandsBgFly ()
@@ -253,7 +257,7 @@ void ebHandsBgFly ()
 		
 		g_facTimeEbHandsFly *= g_facTimeEbHandsFlyDec;
 		
-		snd_play(g_sndWarghostBattleNoChance, 100, 0);
+		ebSndAttack();
 		
 		int i;
 		var m = (1 + random(2)) * 16;
@@ -935,6 +939,21 @@ action ebWarghost ()
 	ptr_remove(my);
 	
 	creditsInit();
+}
+
+void ebSndAttack ()
+{
+	int n = (int)(random(6));
+
+	switch (n)
+	{
+		case 0: snd_play(g_sndBossAttack01, 100, 0); break;
+		case 1: snd_play(g_sndBossAttack02, 100, 0); break;
+		case 2: snd_play(g_sndBossAttack03, 100, 0); break;
+		case 3: snd_play(g_sndBossAttack04, 100, 0); break;
+		case 4: snd_play(g_sndBossAttack05, 100, 0); break;
+		case 5: snd_play(g_sndBossAttack06, 100, 0); break;
+	}
 }
 
 #endif /* endboss_c */
