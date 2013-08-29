@@ -76,6 +76,9 @@
 	var g_sndEbVolDec = 2;
 	
 	var g_rednessInc = 1;
+	
+	// Falling stones
+	var g_playerJustBeenHit = 0;
 
 // shaders
 
@@ -113,6 +116,9 @@
 	SOUND* g_sndBossAttack04 = "boss04.wav";
 	SOUND* g_sndBossAttack05 = "boss05.wav";
 	SOUND* g_sndBossAttack06 = "boss06.wav";
+	
+	SOUND* g_sndStoneImpact = "stone_impact.wav";
+	SOUND* g_sndHitByStone = "die.wav";
 	
 
 // sprites

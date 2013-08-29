@@ -18,15 +18,13 @@ void pAlphafade(PARTICLE *p) {
 
 
 void pZZZ(PARTICLE* p) {
-   //p.vel_x = -2 + random(4);
-   //p.vel_y = -2 + random(4);
    p.vel_z = 0.1 + random(2);
    p.bmap = bmapSleepParticle;
    set(p, MOVE | BRIGHT | TRANSLUCENT);
    p.alpha = 100;
    p.size = 5+random(5);
    p.gravity = 0;
-   p.skill_a = 3; // fade factor
+   p.skill_a = 3;
    p.event = pAlphafade;
 }
 
