@@ -16,6 +16,7 @@ void lvlTempleReset ()
 	g_fhLvlTempleSong = 0;
 	
 	resetPpSwirl ();
+	camera->ambient = 0; 
 	
 	level_load(NULL);
 	sky_active = 0;
@@ -59,6 +60,8 @@ void lvlTempleStart ()
 	gui_show();
 	
 	fog_color = 0;
+	
+	camera->ambient = 8; 
 	
 	// set camera + walk glide
 	setPlayerCamera(g_lvlTempleCamDist, g_lvlTempleCamRaiseZ, g_lvlTempleCamArc);
