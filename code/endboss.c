@@ -300,6 +300,46 @@ void ebHandsBgFly ()
 		ebHandFly();
 	}
 	
+		// Stone rain
+		action ebHandStone () {
+			set(me, PASSABLE);
+			var randomFallSpeed = random(20);
+			while(my.z > -100) {
+				my.z -=(20+randomFallSpeed) * time_step;
+				my.pan +=randomFallSpeed * time_step;
+				my.tilt +=randomFallSpeed * time_step;
+				my.roll +=randomFallSpeed * time_step;
+				
+				// Give player 2 seconds to recover from last hit
+				if (g_playerJustBeenHit == 0) {
+					
+					// Stone hits player?
+					if (vec_dist(player.x, my.x) < 30) {
+						
+						// Play sounds
+						if (!snd_playing(vPlayerSndHandle))
+							vPlayerSndHandle = snd_play(g_sndHitByStone, 100, 0);
+						snd_play(g_sndStoneImpact, 100, 0);	
+							
+						player.PL_HEALTH -=1;
+						ent_remove(me);
+						
+						g_playerJustBeenHit = 2;
+						
+						// Wait 2 seconds
+						while(g_playerJustBeenHit > 0) {
+							g_playerJustBeenHit -=1;
+							wait(-1);
+						}
+						return;
+					}
+				}
+				
+				wait(1);
+			}
+			ent_remove(me);
+		}
+	
 		void ebHandFly ()
 		{
 			updateHandChopped(my);
@@ -324,6 +364,10 @@ void ebHandsBgFly ()
 			vec_scale(my->scale_x, g_handScale);
 			
 			var targetRoll = -90;
+			
+			// Stone rain
+			var randomStoneRain = 0;
+			var randomStoneModel = 0;
 			
 			while (my->skill1 == 0)
 			{
@@ -357,6 +401,20 @@ void ebHandsBgFly ()
 					targetPos.z -= 10 * time_step;
 					targetRoll -= 10 * time_step;
 				}
+				
+				// Stone rain
+				
+				randomStoneRain = random(1000);
+				if (randomStoneRain > 950) {
+					randomStoneModel = integer(random(2));
+					switch(randomStoneModel) {
+						case 0: ent_create("stein1.mdl", vector(player.x - 500 + random(1000), player.y, my.z + 300 + random(50)), ebHandStone); break;
+						case 1: ent_create("stein2.mdl", vector(player.x - 500 + random(1000), player.y, my.z + 300 + random(50)), ebHandStone); break;
+						case 2: ent_create("stein3.mdl", vector(player.x - 500 + random(1000), player.y, my.z + 300 + random(50)), ebHandStone); break;
+					}
+				}
+				
+				// -- end stone rain
 				
 				wait(1);
 			}
