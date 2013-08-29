@@ -1,5 +1,5 @@
 #include <acknex.h>
-#include <default.c>
+//#include <default.c>
 #include <ackphysx.h>
 
 #define PRAGMA_PATH "code"
