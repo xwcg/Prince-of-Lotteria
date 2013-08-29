@@ -11,8 +11,8 @@ void initPostprocessing ()
 	camera->stage = pp_viewLuma;
 	pp_viewLuma->stage = pp_viewFxaa;
 	pp_viewFxaa->stage = pp_viewSwirl;
-	pp_set(pp_viewSwirl, mtl_hdr);
 	pp_viewSwirl->stage = pp_viewRedness;
+	pp_set(pp_viewRedness, mtl_hdr);
 	
 	while (1)
 	{
